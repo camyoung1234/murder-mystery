@@ -496,11 +496,14 @@
     </div>
 
     <div class="header-controls">
-      <label class="toggle-pill active" id="tvModeToggle" title="Hides Shadow Team roles & spoilers so you can project this screen on a TV">
-        <input type="checkbox" id="tvModeCheckbox" checked style="display:none" />
-        <span id="tvModeLabel">TV Mode: Spoilers Hidden</span>
+      <label class="toggle-pill active" id="voiceToggle" onclick="toggleVoice()" title="Reads Prologue & Blackout instructions aloud so NO human host has to sit out">
+        <span id="voiceLabel">Voice Auto-Host: ON</span>
       </label>
-      <button class="btn btn-sm" onclick="openBlackoutScreen()">Dim for Blackout</button>
+      <label class="toggle-pill active" id="tvModeToggle" title="Hides Shadow Team roles & spoilers so everyone (including you!) can play blind">
+        <input type="checkbox" id="tvModeCheckbox" checked style="display:none" />
+        <span id="tvModeLabel">Spoiler-Free Mode: ON</span>
+      </label>
+      <button class="btn btn-gold btn-sm" onclick="startAutoBlackout()">Start Auto-Blackout</button>
       <button class="btn btn-sm" onclick="resetGame()">Reset</button>
     </div>
   </header>
@@ -560,6 +563,7 @@
             <button class="btn btn-sm" onclick="selectAct('act2')">Act II</button>
             <button class="btn btn-sm" onclick="selectAct('blackout2')">Blackout II</button>
             <button class="btn btn-sm" onclick="selectAct('act3')">Act III</button>
+            <button class="btn btn-gold btn-sm" onclick="narrateCurrentAct()">Read Aloud</button>
           </div>
         </div>
         <div id="actScriptContainer"></div>
@@ -570,25 +574,12 @@
     <section id="tab-evidence" class="tab-panel">
       <div class="card">
         <div class="card-header">
-          <h2>Ravenshollow Manor Map</h2>
+          <h2>Ravenshollow Manor Floorplan</h2>
+          <button class="btn btn-sm" onclick="openMapModal()">Expand Map Full-Screen</button>
         </div>
-        <pre class="map-pre">+-------------------------------------------------------------------+
-|                     SECOND FLOOR (THE STUDY WING)                 |
-|  +-------------------------+   +-------------------------------+  |
-|  |   ARTHUR'S LOCKED STUDY |   |    UPSTAIRS GALLERY / HALL    |  |
-|  |  [Desk]  [Automaton]    |===|  (Oak Door: Bolted Inside)    |  |
-|  |  [Fireplace]  [Cliff    |   |  [Laundry Chute]  [Stairs]    |  |
-|  |                Window]  |   +-------------------------------+  |
-|  +-------------------------+                                      |
-+-------------------------------------------------------------------+
-|                       GROUND FLOOR (GALA)                         |
-|  +-------------------------+   +-------------------------------+  |
-|  |       GRAND HALL        |   |      DINING / SIDEBOARD       |  |
-|  |  [Astronomical Clock]   |   |  [Wine Decanter]  [Kitchen]   |  |
-|  |  [Champagne Station]    |   +-------------------------------+  |
-|  +-------------------------+   |   BASEMENT: GENERATOR ROOM    |  |
-|                                +-------------------------------+  |
-+-------------------------------------------------------------------+</pre>
+        <div style="text-align:center; background:#090b10; padding:12px; border-radius:8px; border:1px solid var(--gold-dim);">
+          <img src="../assets/ravenshollow-manor-map.jpg" alt="Ravenshollow Manor Floorplan" onclick="openMapModal()" style="max-width:100%; max-height:460px; border-radius:4px; cursor:pointer; box-shadow:0 6px 24px rgba(0,0,0,0.6);" />
+        </div>
       </div>
 
       <div class="card">
@@ -667,11 +658,12 @@
     </div>
   </div>
 
-  <!-- Full-Screen Blackout Mode -->
-  <div class="blackout-overlay" id="blackoutOverlay">
-    <h1 class="serif">THE LIGHTS GO OUT...</h1>
-    <p>Everyone close your eyes and gently tap your knees.<br/>Host: Quietly wake the <strong>Shadow Team</strong> (Intimidate 1 guest or Plant a False Lead), then wake <strong>Inspector Harriet (#8)</strong> to inspect 1 Detention Card.</p>
-    <button class="btn btn-gold" onclick="closeBlackoutScreen()">Restore Lights</button>
+  <!-- Full-Screen Automated Spoiler-Free Blackout Wizard -->
+  <div class="blackout-overlay" id="blackoutOverlay" style="overflow-y:auto;">
+    <div id="blackoutContent" style="max-width:760px; width:100%;">
+      <h1 class="serif">THE LIGHTS GO OUT...</h1>
+      <p>Everyone close your eyes and gently tap your knees.</p>
+    </div>
   </div>
 
   <script>
@@ -730,13 +722,9 @@
       },
       blackout1: {
         label: "BLACKOUT PHASE I (1 MIN)",
-        sub: "Eyes closed! Shadow Team acts (25s), then Inspector Harriet (#8) peeks at 1 Detention Card (25s).",
-        html: `<ol style="margin-left:20px; line-height:1.9;">
-          <li>Click <strong>Dim for Blackout</strong> in the top bar. Everyone closes their eyes and lightly taps their knees.</li>
-          <li><strong>Shadow Team Wakes:</strong> Silently recognize each other. If Dr. Mercer (#4) is not Detained, point to 1 guest to <strong>Intimidate (Shaken)</strong> OR hold up 2 fingers to <strong>Plant a False Lead</strong>.</li>
-          <li><strong>Inspector Harriet (#8) Wakes:</strong> If not Detained, point to 1 player to secretly read their Sealed Detention Card for 10–15 seconds.</li>
-          <li>Restore lights and announce any Shaken guest or planted False Lead!</li>
-        </ol>`
+        sub: "100% Spoiler-Free Automated Blackout — everyone closes their eyes!",
+        html: `<p style="margin-bottom:14px;">Click <strong>Start Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team to make a silent tap, then waking the Inspector to privately inspect 1 Detention Card—so <strong>nobody has to sit out as a human host!</strong></p>
+        <button class="btn btn-gold" onclick="startAutoBlackout()">Launch Auto-Blackout Phase I</button>`
       },
       act2: {
         label: "ACT II — SHADOWS IN THE CLOCKWORK (6 MIN)",
@@ -750,13 +738,9 @@
       },
       blackout2: {
         label: "BLACKOUT PHASE II (1 MIN)",
-        sub: "Eyes closed! Shadow Team acts (25s), then Inspector Harriet (#8) peeks at 1 Detention Card (25s).",
-        html: `<ol style="margin-left:20px; line-height:1.9;">
-          <li>Click <strong>Dim for Blackout</strong> in the top bar. Everyone closes their eyes and lightly taps their knees.</li>
-          <li><strong>Shadow Team Wakes:</strong> If Dr. Mercer (#4) is not Detained, point to 1 guest to <strong>Intimidate (Shaken)</strong> OR hold up 2 fingers to <strong>Plant a False Lead</strong>.</li>
-          <li><strong>Inspector Harriet (#8) Wakes:</strong> If not Detained, point to 1 player to secretly read their Sealed Detention Card for 10–15 seconds.</li>
-          <li>Restore lights and proceed to Act III!</li>
-        </ol>`
+        sub: "100% Spoiler-Free Automated Blackout — everyone closes their eyes!",
+        html: `<p style="margin-bottom:14px;">Click <strong>Start Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team, then waking the Inspector—with zero spoilers for anyone!</p>
+        <button class="btn btn-gold" onclick="startAutoBlackout()">Launch Auto-Blackout Phase II</button>`
       },
       act3: {
         label: "ACT III — THE LAST CHIME (5 MIN)",
@@ -808,9 +792,12 @@
       });
     });
 
-    // TV Mode Toggle
+    // Spoiler-Free Mode Toggle (with confirmation gate)
     const tvToggle = document.getElementById("tvModeToggle");
     tvToggle.addEventListener("click", () => {
+      if (state.tvMode) {
+        if (!confirm("WARNING: Turning off Spoiler-Free Mode will reveal hidden Killer, Accomplice, and Inspector roles on screen. Continue?")) return;
+      }
       state.tvMode = !state.tvMode;
       saveState();
       renderAll();
@@ -1016,8 +1003,189 @@
       } catch (e) {}
     }
 
-    function openBlackoutScreen() { document.getElementById("blackoutOverlay").classList.add("open"); playChime(); }
-    function closeBlackoutScreen() { document.getElementById("blackoutOverlay").classList.remove("open"); }
+    // Voice Auto-Host (Web Speech API)
+    let voiceEnabled = true;
+    function toggleVoice() {
+      voiceEnabled = !voiceEnabled;
+      document.getElementById("voiceToggle").classList.toggle("active", voiceEnabled);
+      document.getElementById("voiceLabel").textContent = voiceEnabled ? "Voice Auto-Host: ON" : "Voice Auto-Host: OFF";
+      if (!voiceEnabled && window.speechSynthesis) window.speechSynthesis.cancel();
+    }
+
+    function speakText(text) {
+      if (!voiceEnabled || !("speechSynthesis" in window)) return;
+      try {
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(text);
+        u.rate = 0.96;
+        u.pitch = 0.92;
+        window.speechSynthesis.speak(u);
+      } catch (e) {}
+    }
+
+    function narrateCurrentAct() {
+      const container = document.getElementById("actScriptContainer");
+      const text = container.innerText.replace(/\s+/g, " ").trim();
+      if (text) speakText(text);
+    }
+
+    function openMapModal() {
+      document.getElementById("modalTitle").textContent = "Ravenshollow Manor — Estate Floorplan";
+      document.getElementById("modalBody").innerHTML = `<img src="../assets/ravenshollow-manor-map.jpg" alt="Ravenshollow Manor Floorplan" style="width:100%; height:auto; border-radius:4px; border:1px solid #8a6830;" />`;
+      document.getElementById("modalOverlay").classList.add("open");
+    }
+
+    // Spoiler-Free Automated Blackout Wizard (Zero Human Host Required!)
+    let boState = { pendingShaken: null, pendingFalseLead: false, inspectTimer: null };
+
+    function startAutoBlackout() {
+      boState = { pendingShaken: null, pendingFalseLead: false, inspectTimer: null };
+      document.getElementById("blackoutOverlay").classList.add("open");
+      playChime();
+      const box = document.getElementById("blackoutContent");
+      box.innerHTML = `
+        <h1 class="serif">THE LIGHTS GO OUT...</h1>
+        <p>Everyone, close your eyes and gently tap your knees.<br/>No human host is needed — the app will guide the Blackout automatically.</p>
+        <p style="font-size:0.9rem; color:var(--gold);">Starting Shadow Team turn in 5 seconds...</p>
+        <button class="btn btn-sm" onclick="closeBlackoutScreen()" style="margin-top:10px;">Cancel Blackout</button>`;
+      speakText("The lights go out across Ravenshollow Manor. Everyone, close your eyes and gently tap your knees.");
+      setTimeout(() => {
+        if (document.getElementById("blackoutOverlay").classList.contains("open")) boShadowStep();
+      }, 5500);
+    }
+
+    function boShadowStep() {
+      const box = document.getElementById("blackoutContent");
+      const killerDetained = state.detained.includes(4);
+      const active = getActiveCharacters();
+      if (killerDetained) {
+        box.innerHTML = `
+          <h1 class="serif" style="font-size:1.9rem;">SHADOW TEAM — SILENT CHECK</h1>
+          <p>The Killer is currently Detained, so no sabotage may occur this Blackout. Tap <strong>Continue</strong> to keep cover and close your eyes.</p>
+          <button class="btn btn-gold" onclick="boAfterShadow()">Continue &amp; Close Eyes</button>`;
+      } else {
+        const guestBtns = active.map(c => {
+          const gName = state.guestNames[c.id] ? ` (${state.guestNames[c.id]})` : "";
+          return `<button class="btn btn-sm" style="margin:4px;" onclick="boPickShaken(${c.id})">#${c.id} ${c.name}${gName}</button>`;
+        }).join("");
+        box.innerHTML = `
+          <h1 class="serif" style="font-size:1.9rem;">SHADOW TEAM — OPEN YOUR EYES</h1>
+          <p style="font-size:0.95rem; margin-bottom:14px;">Silently recognize each other. Tap <strong>ONE guest to Intimidate (Shaken)</strong> OR choose <strong>Plant a False Lead</strong>, then close your eyes.</p>
+          <div style="margin-bottom:16px; display:flex; flex-wrap:wrap; justify-content:center; gap:4px;">${guestBtns}</div>
+          <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+            <button class="btn btn-crimson" onclick="boPickFalseLead()">Plant a False Lead on Evidence Board</button>
+            <button class="btn" onclick="boAfterShadow()">Skip Action</button>
+          </div>`;
+      }
+      speakText("Shadow Team, open your eyes. Silently recognize each other. Quietly step to the screen, make your choice, and then close your eyes.");
+    }
+
+    function boPickShaken(charId) {
+      boState.pendingShaken = charId;
+      boAfterShadow();
+    }
+
+    function boPickFalseLead() {
+      boState.pendingFalseLead = true;
+      boAfterShadow();
+    }
+
+    function boAfterShadow() {
+      const box = document.getElementById("blackoutContent");
+      box.innerHTML = `
+        <h1 class="serif" style="font-size:1.9rem;">SHADOW TEAM — CLOSE YOUR EYES</h1>
+        <p>Choice recorded secretly. Moving to Inspector turn in 4 seconds...</p>`;
+      speakText("Shadow Team, close your eyes.");
+      setTimeout(() => {
+        if (document.getElementById("blackoutOverlay").classList.contains("open")) boInspectorStep();
+      }, 4200);
+    }
+
+    function boInspectorStep() {
+      const box = document.getElementById("blackoutContent");
+      const inspectorDetained = state.detained.includes(8);
+      const active = getActiveCharacters();
+      if (inspectorDetained) {
+        box.innerHTML = `
+          <h1 class="serif" style="font-size:1.9rem;">INSPECTOR — SILENT CHECK</h1>
+          <p>The Inspector is currently Detained and cannot inspect a card this Blackout. Tap <strong>Continue</strong> to keep cover and close your eyes.</p>
+          <button class="btn btn-gold" onclick="finishAutoBlackout()">Continue &amp; Close Eyes</button>`;
+      } else {
+        const guestBtns = active.map(c => {
+          const gName = state.guestNames[c.id] ? ` (${state.guestNames[c.id]})` : "";
+          return `<button class="btn btn-sm" style="margin:4px;" onclick="boInspectCard(${c.id})">#${c.id} ${c.name}${gName}</button>`;
+        }).join("");
+        box.innerHTML = `
+          <h1 class="serif" style="font-size:1.9rem;">INSPECTOR — OPEN YOUR EYES</h1>
+          <p style="font-size:0.95rem; margin-bottom:14px;">Quietly step to the screen and tap <strong>ONE guest</strong> to privately read their Sealed Detention Card for 12 seconds.</p>
+          <div style="margin-bottom:16px; display:flex; flex-wrap:wrap; justify-content:center; gap:4px;">${guestBtns}</div>
+          <button class="btn" onclick="finishAutoBlackout()">Skip Inspection</button>`;
+      }
+      speakText("Inspector, open your eyes. Quietly step to the screen and select one guest to inspect their sealed detention card.");
+    }
+
+    function boInspectCard(charId) {
+      const ch = CHARACTERS.find(c => c.id === charId);
+      let secs = 12;
+      const box = document.getElementById("blackoutContent");
+      box.innerHTML = `
+        <div style="background:var(--parchment); color:var(--parchment-text); padding:22px; border-radius:8px; border:2px solid var(--gold); text-align:left; margin-bottom:16px;">
+          <h2 class="serif" style="color:#6b1d1d; margin-bottom:8px;">PRIVATE INSPECTION — #${ch.id} ${ch.name}</h2>
+          <p style="color:#221d15; font-size:1rem; line-height:1.6;">${ch.detention}</p>
+        </div>
+        <p style="color:var(--gold); margin-bottom:12px;">Hiding automatically in <strong id="boInspectSec">${secs}</strong>s...</p>
+        <button class="btn btn-gold" onclick="boAfterInspector()">Done — Hide Card &amp; Close Eyes</button>`;
+      boState.inspectTimer = setInterval(() => {
+        secs--;
+        const el = document.getElementById("boInspectSec");
+        if (el) el.textContent = secs;
+        if (secs <= 0) { clearInterval(boState.inspectTimer); boAfterInspector(); }
+      }, 1000);
+    }
+
+    function boAfterInspector() {
+      clearInterval(boState.inspectTimer);
+      const box = document.getElementById("blackoutContent");
+      box.innerHTML = `
+        <h1 class="serif" style="font-size:1.9rem;">INSPECTOR — CLOSE YOUR EYES</h1>
+        <p>Restoring lights in 3 seconds...</p>`;
+      speakText("Inspector, close your eyes.");
+      setTimeout(() => {
+        if (document.getElementById("blackoutOverlay").classList.contains("open")) finishAutoBlackout();
+      }, 3200);
+    }
+
+    function finishAutoBlackout() {
+      clearInterval(boState.inspectTimer);
+      let summary = "The lights flicker back on. All guests appear unharmed.";
+      if (boState.pendingShaken) {
+        if (!state.shaken.includes(boState.pendingShaken)) state.shaken.push(boState.pendingShaken);
+        const ch = CHARACTERS.find(c => c.id === boState.pendingShaken);
+        const gName = state.guestNames[ch.id] ? ` (${state.guestNames[ch.id]})` : "";
+        summary = `In the darkness, ${ch.name}${gName} was cornered and threatened! They are SHAKEN and cannot vote in the next Town Hall.`;
+      } else if (boState.pendingFalseLead) {
+        const nextFL = !state.unlockedExhibits.includes("FL1") ? "FL1" : (!state.unlockedExhibits.includes("FL2") ? "FL2" : null);
+        if (nextFL) {
+          state.unlockedExhibits.push(nextFL);
+          summary = "In the darkness, a mysterious slip of paper was left behind! Check the Evidence Board for a newly discovered clue.";
+        }
+      }
+      saveState();
+      renderAll();
+      playChime();
+      const box = document.getElementById("blackoutContent");
+      box.innerHTML = `
+        <h1 class="serif">THE LIGHTS RETURN!</h1>
+        <p style="color:var(--text); font-size:1.15rem; margin-bottom:24px;">${summary}</p>
+        <button class="btn btn-gold" onclick="closeBlackoutScreen()">Return to Manor Dashboard</button>`;
+      speakText("Everyone, open your eyes! " + summary);
+    }
+
+    function closeBlackoutScreen() {
+      clearInterval(boState.inspectTimer);
+      if (window.speechSynthesis) window.speechSynthesis.cancel();
+      document.getElementById("blackoutOverlay").classList.remove("open");
+    }
 
     function resetGame() {
       if (!confirm("Reset all votes, detentions, unlocked exhibits, and guest names?")) return;
@@ -1031,7 +1199,7 @@
       document.getElementById("playerCountValue").textContent = state.playerCount;
       const shadowCount = getShadowTeam(state.playerCount).length;
       document.getElementById("scalingSummary").innerHTML =
-        `Active Roster: <strong>Characters #1 – #${state.playerCount}</strong> &nbsp;|&nbsp; Hidden Shadow Team: <strong>${shadowCount}</strong> (1 Killer + ${shadowCount - 1} Accomplice${shadowCount > 2 ? "s" : ""}) &nbsp;|&nbsp; Inspector: <strong>Harriet Vance-Cole (#8)</strong>`;
+        `Active Roster: <strong>Characters #1 – #${state.playerCount}</strong> &nbsp;|&nbsp; Hidden Shadow Team: <strong>${shadowCount}</strong> (1 Killer + ${shadowCount - 1} Accomplice${shadowCount > 2 ? "s" : ""}) &nbsp;|&nbsp; Inspector: <strong>1 Special Role</strong>`;
 
       const grid = document.getElementById("setupCastGrid");
       grid.innerHTML = getActiveCharacters().map(c => {
@@ -1112,7 +1280,7 @@
 
     function renderAll() {
       tvToggle.classList.toggle("active", state.tvMode);
-      document.getElementById("tvModeLabel").textContent = state.tvMode ? "TV Mode: Spoilers Hidden" : "Host Mode: Spoilers Visible";
+      document.getElementById("tvModeLabel").textContent = state.tvMode ? "Spoiler-Free Mode: ON" : "Host Mode: Spoilers Visible";
       renderSetup();
       renderEvidence();
       renderVoting();

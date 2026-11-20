@@ -23,27 +23,20 @@
 | File | Purpose |
 | :--- | :--- |
 | [`print/character-packets.html`](print/character-packets.html) | **Print-Ready Character Sheets (`#1`–`#20`):** Open in any browser, pick your player count (`8–20`), and hit Print! Exactly 1 ink-friendly page per character with checkboxes for Act I–III dialogues and a cut-and-fold **Sealed Detention Card**. |
-| [`print/evidence-cards.html`](print/evidence-cards.html) | **Print-Ready Evidence Board:** Manor Map, Exhibits A–F, and False Lead slips formatted for home printers. |
-| [`host-guide.md`](host-guide.md) | Complete Host Manual: storyline, true timeline, 4-pillar deduction proof, 30–45 min pacing guide, voting rules, and Grand Reveal. **(SPOILERS — Host Only!)** |
-| [`evidence-packets.md`](evidence-packets.md) | Markdown version of the Manor Map, Exhibits A–F, and False Lead slips. |
+| [`print/evidence-cards-stylized.html`](print/evidence-cards-stylized.html) | **Stylized Vintage Evidence Packet (Color):** Aged parchment styling, wax seals, and the illustrated **Ravenshollow Manor Map** (`assets/ravenshollow-manor-map.jpg`). |
+| [`print/evidence-cards.html`](print/evidence-cards.html) | **Ink-Friendly B&W Evidence Packet:** Clean black-and-white printable Exhibits A–F, Manor Map, and False Lead slips. |
+| [`companion/index.html`](companion/index.html) | **Spoiler-Free Auto-Host Digital Companion:** Lets **everyone** (including you!) play blind! Features Voice Auto-Host narration, an automated eyes-closed Blackout wizard, illustrated Manor Map, 30–45 min sprint timer, Evidence Board, and Town Hall voting tracker. |
+| [`host-guide.md`](host-guide.md) | Optional Human Host Manual: storyline, true timeline, 4-pillar proof, 30–45 min pacing, and Grand Reveal. **(SPOILERS — Skip this if using the Auto-Host Companion!)** |
+| [`evidence-packets.md`](evidence-packets.md) | Markdown source of Exhibits A–F and False Lead slips. |
 | [`characters/core-cast-1-to-8.md`](characters/core-cast-1-to-8.md) | Markdown source for the **Core Cast (Players 1–8)** — required for every game. |
 | [`characters/expansion-cast-9-to-20.md`](characters/expansion-cast-9-to-20.md) | Markdown source for the **Expansion Cast (Players 9–20)** — add in numerical order. |
-| [`companion/index.html`](companion/index.html) | Self-contained, offline **Digital Host & Living-Room Companion** (cast scaler, 30–45 min sprint timer, scripted openers, Evidence Board, Werewolf voting & Detention tracker, and Blackout assistant). |
 
 ---
 
-## Quick Start for the Host
+## Quick Start (Spoiler-Free — Everyone Plays!)
 
-1. **Read [`host-guide.md`](host-guide.md)** first (keep it away from players!).
-2. **Count your players (`N`, from 8 to 20)** and select **Characters `#1` through `#N`**:
-   - **8–13 Players:** 1 Killer (`#4`) + 1 Accomplice (`#6`) — *2 Shadow Team*
-   - **14–17 Players:** 1 Killer (`#4`) + 2 Accomplices (`#6`, `#14`) — *3 Shadow Team*
-   - **18–20 Players:** 1 Killer (`#4`) + 3 Accomplices (`#6`, `#14`, `#18`) — *4 Shadow Team*
-   - *Note:* If the Host also wants to play, assign the Host **Character `#2` (Clara Sterling)** or **Character `#3` (Thomas Graves)**, or run as a dedicated non-playing narrator.
-3. **Prepare Materials:**
-   - Print (or digitally distribute) each player's individual Character Dossier from `characters/`. Fold or seal each player's **Detention Card** in a small envelope labeled with their name.
-   - Print [`evidence-packets.md`](evidence-packets.md) (or display the exhibits on a TV/laptop using [`companion/index.html`](companion/index.html)).
-4. **Launch the Digital Companion (Optional):**
-   - Open `companion/index.html` in any web browser—no server or internet required. Project it onto a living-room TV or run it from a tablet/laptop to track rounds, timers, evidence, and Town Hall votes.
-5. **Run the 3 Acts:**
-   - **Prologue** → **Act I** (Open Script → Mingle & Mandatory Dialogues → Town Hall Vote #1 → Blackout Phase #1) → **Act II** (Open Script → Mingle → Town Hall Vote #2 → Blackout Phase #2) → **Act III** (Open Script → Mingle → Final Verdict → Grand Reveal).
+You do **not** need a dedicated human host! To play completely blind alongside your friends:
+1. **Do NOT open `host-guide.md` or `characters/*.md`.**
+2. **Print Character Sheets Blind:** Open [`print/character-packets.html`](print/character-packets.html), set the slider to your guest count (`8–20`), and click **Print**. Fold each sheet in half (or stuff into numbered envelopes `#1`–`#N`) without reading them, and let everyone draw randomly!
+3. **Print Evidence (Optional):** Print [`print/evidence-cards-stylized.html`](print/evidence-cards-stylized.html) (color parchment + illustrated map) or [`print/evidence-cards.html`](print/evidence-cards.html) (ink-friendly B&W)—or just display them on a TV using the Digital Companion!
+4. **Launch [`companion/index.html`](companion/index.html):** Leave **Spoiler-Free Mode: ON** and **Voice Auto-Host: ON**. Anyone can click to advance Acts, unlock Exhibits, tally Town Hall votes, and trigger **Start Auto-Blackout**—the app narrates the eyes-closed Blackout phases aloud and handles all secret actions privately on screen!
