@@ -94,7 +94,7 @@ You were secretly skimming small sums from the manor's wine cellar budget to pay
 - **Act III — Response to Clara Sterling (`#2`):** *"I was a junior resident at St. Jude's eighteen years ago, Clara—hardly in charge of calibration logs! And if Arthur's watch really stopped at 8:48, then he must have been alive and arguing with someone at 8:55 after dropping it. Don't let a clever frame-up fool you."*
 
 ### SEALED DETENTION CARD (Open Only If Detained)
-> **Searched from Dr. Mercer's Medical Bag:** An empty velvet-lined pocket case smelling faintly of crushed herbs, PLUS a torn 2008 dated stub bearing the initials **"J.M."** and a hurried margin note: *"Archive Box #4 — must be settled before 9:00 PM."*
+> **Searched from Dr. Mercer's Medical Bag:** A folded dinner napkin smudged with faint fireplace soot and an unsigned note in Mercer's handwriting: *"Speak to Arthur privately before the 9:00 PM announcement—he cannot open that 2008 file tonight."*
 
 ---
 

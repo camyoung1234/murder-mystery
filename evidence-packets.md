@@ -35,14 +35,14 @@ Print these exhibits (or project them via `companion/index.html`) and reveal the
 >
 > - **Door:** Heavy oak, steel deadbolt engaged from the **inside**. Forced open at 9:01 PM.
 > - **Window:** Latched from the inside; sheer 80-foot drop to coastal rocks.
-> - **The Body:** Lord Arthur Vance found slumped **face-down** across his leather desk blotter, facing **away from the door**. Rolled over by Dr. Julian Mercer at 9:01 PM.
+> - **The Body:** Lord Arthur Vance found slumped across his leather desk blotter. First reached and rolled over by Dr. Julian Mercer at 9:01 PM.
 > - **On the Desk:**
 >   1. The **New Will** — lying open, **unsigned**.
->   2. A **crystal wine glass** — filled with red wine, **completely full and untouched**.
->   3. A single poured porcelain **cup of chamomile tea** — untouched, **barely lukewarm** by 9:02 PM.
+>   2. A **crystal wine glass** filled with red wine.
+>   3. A single poured porcelain **cup of chamomile tea** — **barely lukewarm** by 9:02 PM.
 >   4. A **broken pocket watch** on the desk corner.
 > - **On the Floor (below the Chronos Automaton):**
->   - A **shattered glass water carafe** in a puddle of **clear, completely odorless liquid**.
+>   - **Shattered glass** in a pool of **spilled liquid**.
 >   - A heavy **brass counterweight** resting beside the shattered glass.
 
 ---
@@ -77,7 +77,7 @@ Print these exhibits (or project them via `companion/index.html`) and reveal the
 
 ---
 
-### EXHIBIT D — The Chronos Automaton Blueprint & Wax Cylinder
+### EXHIBIT D — The Chronos Automaton Blueprint, Wax Cylinder & Study Re-Inspection
 > **Inspected by Celeste Moreau & Clara Sterling**
 >
 > - **Device:** *The Chronos Automaton* — a 4-foot brass clockwork figure mounted beside Arthur's desk.
@@ -85,6 +85,7 @@ Print these exhibits (or project them via `companion/index.html`) and reveal the
 >   1. **Phonograph Drum:** Plays a removable brass wax cylinder at a scheduled minute. Currently set to **`8:55 PM`**.
 >   2. **Release Cam:** Drops a 5-pound brass counterweight onto a resonance chime (or directly onto the desk edge if shifted 2 inches) at **`9:00 PM`**.
 > - **Cylinder Found Inside:** Paper label reads *"9:00 PM Gala Greeting"*, **but** the label is peeling and has been hastily glued over a scratched-out title: *"Memoir Draft — Confrontation."*
+> - **Study Re-Inspection (Clear Light):** The crystal wine glass on the desk is **completely full and untouched**; the shattered vessel on the floor is a **glass water carafe** in a puddle of **clear, completely odorless liquid** (zero wine, zero bitter-almond odor). Desk-blotter impressions confirm Arthur collapsed **face-down, facing away from the door** until Dr. Julian Mercer rolled him over.
 
 ---
 

@@ -38,8 +38,8 @@ Players can deduce **Dr. Julian Mercer (`#4`)** before the Final Verdict by conn
 | Pillar | What Players Must Connect | Sources |
 | :--- | :--- | :--- |
 | **1. Time of Death Was 8:48 PM (Not 9:00 PM)** | Arthur's pocket watch stopped at **8:48 PM** (Exhibit B). Mercer claims the watch ran 12 minutes slow—**contradicted** by Arthur's Horologist Journal (Exhibit E: *"My pocket watch is calibrated daily to the naval observatory"*). Butler Graves confirms the single cup of 8:40 PM tea sat untouched and barely lukewarm by 9:02 PM, and Evelyn/Celeste confirm the Chronos Automaton can play recorded brass cylinders and drop counterweights on a timer (Exhibit D). | Exhibit B, Exhibit D, Exhibit E, Evelyn (`#1`), Clara (`#2`), Graves (`#3`), Celeste (`#7`) |
-| **2. The Poison Was in the 8:45 PM Tonic (Not the Wine)** | Victor (`#5`) admits he spiked the **wine decanter** with sedative—**not** lethal poison. Exhibit A & Exhibit F prove the wine glass was **full and untouched**, and Arthur died of **concentrated Aconite**, not sedative. Since the door was bolted from inside at 8:45 PM, the only thing Arthur consumed between 8:45 and 8:48 PM was the **Heart Tonic** handed to him by **Dr. Mercer** at 8:42 PM. | Exhibit A, Exhibit F, Graves (`#3`), Victor (`#5`) |
-| **3. Mercer's Fatal Dialogue Slip** | In the Act I Opening Script, Mercer claims: *"The moment the lights came on, I saw Arthur's chalk-pale lips and smelled bitter almonds from the spilled wine."* **Two fatal lies:** (1) Exhibit A proves the shattered vessel was a **water carafe** (clear, odorless puddle), not wine; (2) Arthur was slumped **face-down** on his desk blotter—nobody could see his lips until Mercer rolled him over! | Act I Opening Script, Exhibit A, Exhibit F |
+| **2. The Poison Was in the 8:45 PM Tonic (Not the Wine)** | Victor (`#5`) admits he spiked the **wine decanter** with sedative—**not** lethal poison. Exhibit D & Exhibit F prove the wine glass was **full and untouched**, and Arthur died of **concentrated Aconite**, not sedative. Since the door was bolted from inside at 8:45 PM, the only thing Arthur consumed between 8:45 and 8:48 PM was the **Heart Tonic** handed to him by **Dr. Mercer** at 8:42 PM. | Exhibit D, Exhibit F, Graves (`#3`), Victor (`#5`) |
+| **3. Mercer's Fatal Dialogue Slip** | In the Act I Opening Script, Mercer claims: *"The moment the lights came on, I saw Arthur's chalk-pale lips and smelled bitter almonds from the spilled wine."* **Two fatal lies** exposed in Act II: (1) Exhibit D's Study Re-Inspection proves the shattered vessel was a **water carafe** (clear, odorless puddle), not wine; (2) Arthur was slumped **face-down** on his desk blotter—nobody could see his lips until Mercer rolled him over! | Act I Opening Script, Exhibit D, Exhibit F |
 | **4. The "J.M." Motive Trap** | Exhibit C shows a charred 2008 St. Jude's Clinic audit log falsified by **"J.M."** Most groups will suspect **Jasper Moore (`#6`)** because his initials are J.M. and he tripped the breaker. **However**, Exhibit E (Employment Ledger) proves Jasper wasn't hired until **2012** (he was in college in 2008)—whereas **Dr. Julian Mercer (`#4`)** was Chief Resident at St. Jude's Clinic in **2008**! | Exhibit C, Exhibit E, Clara (`#2`), Jasper (`#6`), Mercer (`#4`) |
 
 ---
@@ -89,11 +89,11 @@ Every player (including Detained and Shaken players!) submits a final ballot wit
 
 ## 5. Round-by-Round Host Script (30–45 Minute Pacing)
 
-> **Target Runtime: ~38 Minutes** (flexes naturally between 30–45 min)
+> **Target Runtime: ~40 Minutes** (flexes naturally between 30–45 min)
 > - **Setup & Prologue:** 4 min *(1 min sheet skim + 2 min Prologue + 1 min Act I Opener)*
 > - **Act I:** 11 min *(7 min mingle + 3 min Town Hall Vote #1 + 1 min Blackout #1)*
 > - **Act II:** 11 min *(1 min Opener + 6 min mingle + 3 min Town Hall Vote #2 + 1 min Blackout #2)*
-> - **Act III & Reveal:** 12 min *(1 min Opener + 5 min mingle + 3 min Final Verdict + 3 min Grand Reveal)*
+> - **Act III & Reveal:** 14 min *(1 min Opener + 7 min mingle + 3 min Final Verdict + 3 min Grand Reveal)*
 
 ### PROLOGUE (Read Aloud to Start the Game — 2 Min)
 > *"Welcome to Ravenshollow Manor. Outside, a November nor'easter has washed out the wooden bridge to the mainland, and the telephone lines are dead. You are all guests of Lord Arthur Vance, the eccentric billionaire clockmaker celebrating his 72nd birthday.*
@@ -124,20 +124,20 @@ Every player (including Detained and Shaken players!) submits a final ballot wit
 ---
 
 ### ACT II — SHADOWS IN THE CLOCKWORK (6 Min Mingle + 3 Min Vote + 1 Min Blackout)
-**Unveil Exhibits:** Place **Exhibit C (Charred Audit Log "J.M.")** and **Exhibit D (Chronos Automaton Blueprint & Wax Cylinder)** on the Evidence Board.
+**Unveil Exhibits:** Place **Exhibit C (Charred Audit Log "J.M.")** and **Exhibit D (Chronos Automaton Blueprint, Wax Cylinder & Study Re-Inspection)** on the Evidence Board.
 
 **Act II Public Opening Script** *(Have Jasper `#6`, Celeste `#7`, Victor `#5`, and Clara `#2` read aloud)*:
 1. **Clara Sterling (`#2`):** *"While the upstairs gallery was cleared, I inspected the Study fireplace and the Chronos Automaton. We have two new pieces of evidence—a half-burned 2008 audit log signed 'J.M.', and a scratched brass wax cylinder inside the Automaton."*
 2. **Celeste Moreau (`#7`):** *"Wait—a scratched cylinder? Arthur built the Chronos Automaton to play a recorded greeting at 9:00 PM. You can also program its brass counterweight to drop on the hour. If someone swapped the cylinder..."*
 3. **Jasper Moore (`#6`):** *"Don't look at me just because my initials are J.M.! Half the people in this house had a reason to hate Arthur. And if you're wondering why the lights went out at nine, the storm probably surged the old breaker!"*
 4. **Victor Vance (`#5`):** *"Oh, spare us, Jasper! Everyone knows you've been tinkering in that generator room all week. And what about the wine? Dr. Mercer said he smelled poison in the wine—who poured Arthur's glass?!"*
-5. **Clara Sterling (`#2`):** *"Actually, Victor... look at the floor sketch. The wine glass on the desk is completely full. It was the water carafe that shattered."*
+5. **Clara Sterling (`#2`):** *"Actually, Victor... look at our Study re-inspection on Exhibit D. In clear light, the wine glass on the desk is completely full and untouched—it was the water carafe that shattered in odorless water, and Arthur was slumped face-down!"*
 
 *(Start 6-minute timer. Players complete **Act II Mandatory Dialogue**. Run **Town Hall Vote #2** [3 min] and **Blackout Phase #2** [1 min].)*
 
 ---
 
-### ACT III — THE LAST CHIME (5 Min Mingle + 3 Min Final Verdict + 3 Min Reveal)
+### ACT III — THE LAST CHIME (7 Min Mingle + 3 Min Final Verdict + 3 Min Reveal)
 **Unveil Exhibits:** Place **Exhibit E (2012 Employment Ledger & Arthur's Horologist Journal)** and **Exhibit F (Medical Vial Lab Note)** on the Evidence Board.
 
 **Act III Public Opening Script** *(Have Harriet `#8`, Clara `#2`, Thomas Graves `#3`, and Dr. Mercer `#4` read aloud)*:
@@ -146,7 +146,7 @@ Every player (including Detained and Shaken players!) submits a final ballot wit
 3. **Thomas Graves (`#3`):** *"And there is one more thing, everyone. When I poured Lord Arthur his single cup of chamomile tea at 8:40 PM, it was piping hot. By 9:02 PM, it was untouched and barely lukewarm. He never took a single sip."*
 4. **Dr. Julian Mercer (`#4`):** *"Careful, everyone—wild theories will only let the real killer slip away. Look at who had the motive to steal the Will, who rigged the power, and who had access to the Study. Let's settle this."*
 
-*(Start 5-minute timer. Players complete **Act III Mandatory Dialogue**. Then convene the **Final Verdict** [3 min]!)*
+*(Start 7-minute timer. Players complete **Act III Mandatory Dialogue**. Then convene the **Final Verdict** [3 min]!)*
 
 ---
 
