@@ -122,5 +122,5 @@ If the Shadow Team chooses **"Plant a False Lead"** during a Blackout Phase, the
 > *(Misdirection: Implicates Victor `#5` and Evelyn `#1`, even though it's a forgery planted in the dark!)*
 
 ### FALSE LEAD #2 — Rumor Slip: The Missing Kitchen Knife & Bitter Almonds
-> *"An anonymous note slipped under the Parlor door: 'Check the sideboard! Someone wiped down the wine decanter with an almond-scented handkerchief right before 9:00 PM.'"*
+> *"An anonymous note slipped under the Library door: 'Check the Dining & Sideboard! Someone wiped down the wine decanter with an almond-scented handkerchief right before 9:00 PM.'"*
 > *(Misdirection: Reinforces Mercer's false bitter-almond wine theory!)*

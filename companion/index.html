@@ -551,6 +551,7 @@
             <button class="btn btn-gold btn-sm" onclick="rollNewRandomCase()" title="Randomly selects any character #1-#N as Killer (hidden in the scrambled Case Code)">Roll Random Killer</button>
             <a class="btn btn-sm" id="printSheetsLink" href="../print/character-packets.html" target="_blank" style="text-decoration:none;">Print Sheets</a>
             <a class="btn btn-sm" id="printEvidenceLink" href="../print/evidence-cards-stylized.html" target="_blank" style="text-decoration:none;">Print Evidence</a>
+            <a class="btn btn-sm" id="printHostGuideLink" href="../print/host-guide.html" target="_blank" style="text-decoration:none;">Host Guide</a>
           </div>
         </div>
         <p style="color:var(--muted); margin-bottom:14px;" id="scalingSummary"></p>
@@ -1114,6 +1115,7 @@
       const q = `?case=${encodeURIComponent(scenario.code)}&players=${state.playerCount}`;
       document.getElementById("printSheetsLink").href = "../print/character-packets.html" + q;
       document.getElementById("printEvidenceLink").href = "../print/evidence-cards-stylized.html" + q;
+      document.getElementById("printHostGuideLink").href = "../print/host-guide.html" + q;
 
       const shadowCount = scenario.shadowIds.length;
       document.getElementById("scalingSummary").innerHTML =

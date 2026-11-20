@@ -117,7 +117,7 @@ Last Tuesday, Arthur confessed to you that he had spent eighteen years **"shield
 > **SECRET ROLE:** You are **Dr. Julian Mercer's (`#4`)** hired corporate fixer and a member of the **Shadow Team**! You win ONLY if **Dr. Mercer escapes indictment** in the Final Verdict. During Blackout Phases, wake up with Dr. Mercer and Jasper (`#6`) to coordinate sabotage.
 
 ### What You Actually Did
-- Years ago, you were paid to bury the **2008 St. Jude's Clinic** investigation alongside Arthur and Dr. Mercer. If Arthur's transparency foundation releases Vault Ledger #4, **you go to federal prison for obstruction of justice** right alongside Mercer!
+- Years ago, you were paid to bury the **2008 St. Jude's Clinic** investigation alongside Arthur and Dr. Mercer. If Arthur's transparency foundation releases Archive Box #4, **you go to federal prison for obstruction of justice** right alongside Mercer!
 - Earlier tonight, you confirmed the phone lines were dead and helped Mercer keep guests away from the upstairs hallway between **8:10 and 8:20 PM** while Mercer rigged the Chronos Automaton.
 - **Your Job in the Room:** Act like a tough, cynical security pro. Aggressively push the theory that **Victor Vance (`#5`)** poisoned the wine OR that **Evelyn (`#1`)** and **Jasper (`#6`)** conspired to steal the Will!
 
@@ -127,7 +127,7 @@ Last Tuesday, Arthur confessed to you that he had spent eighteen years **"shield
 - **Act III — Say to Dr. Julian Mercer (`#4`):** *(Stage-managed defense to help Mercer look innocent)* *"Look, Doctor, I don't care what a dusty 2008 ledger says—you were standing in the middle of the Grand Hall with witnesses when Arthur was shouting at 8:55! Tell everyone how that's even possible!"*
 
 ### SEALED DETENTION CARD (Open Only If Detained)
-> **Searched from Damien's Inner Jacket:** A burner phone with a deleted-draft text message: *"J.M. — Corridor clear 8:10 to 8:20 PM. Do what you have to do to stop Vault Ledger #4."*
+> **Searched from Damien's Inner Jacket:** A burner phone with a deleted-draft text message: *"J.M. — Corridor clear 8:10 to 8:20 PM. Do what you have to do to stop Archive Box #4."*
 
 ---
 
@@ -246,7 +246,7 @@ You're obsessed with precision timekeeping (which is why you and Arthur got alon
 You are 52, theatrical, scatterbrained, and have been living at Ravenshollow Manor for two months ghostwriting Arthur Vance's tell-all memoirs.
 
 ### Your Secret
-Arthur fired you yesterday for trying to sneak a look at his sealed **2008 Vault Ledger #4**—which makes you look bitter and suspicious!
+Arthur fired you yesterday for trying to sneak a look at his sealed **2008 Archive Box #4**—which makes you look bitter and suspicious!
 
 ### Crucial Knowledge You Hold
 - Two days ago, you personally helped Arthur record a dramatic chapter of his memoirs onto a **blank brass phonograph cylinder** for the Chronos Automaton—including the exact line: *"You've gone too far! I'm calling the police as soon as the lines are back!"*

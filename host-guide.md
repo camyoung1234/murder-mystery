@@ -1,6 +1,8 @@
 # Host Guide — *The Last Chime of Ravenshollow*
 
-> **SPOILER WARNING:** This document contains the complete solution, hidden roles, and logical proof. Only the **Host** should read this before the game!
+> **SPOILER WARNING:** This document contains the complete solution, hidden roles, and logical proof for the **Classic Default Case (Dr. Julian Mercer `#4`)**. Only a non-playing **Host** should read this before the game!
+>
+> **Playing a Randomized Case Code (`RV-XXXX`)?** Do **NOT** use this static file—open [`print/host-guide.html`](print/host-guide.html) (dynamically synced to your Case Code & player count) or use the spoiler-free Auto-Host in [`companion/index.html`](companion/index.html)!
 
 ---
 
@@ -125,7 +127,7 @@ Every player (including Detained and Shaken players!) submits a final ballot wit
 **Unveil Exhibits:** Place **Exhibit C (Charred Audit Log "J.M.")** and **Exhibit D (Chronos Automaton Blueprint & Wax Cylinder)** on the Evidence Board.
 
 **Act II Public Opening Script** *(Have Jasper `#6`, Celeste `#7`, Victor `#5`, and Clara `#2` read aloud)*:
-1. **Clara Sterling (`#2`):** *"While the parlor was cleared, I inspected the Study fireplace and the Chronos Automaton. We have two new pieces of evidence—a half-burned 2008 audit log signed 'J.M.', and a scratched brass wax cylinder inside the Automaton."*
+1. **Clara Sterling (`#2`):** *"While the upstairs gallery was cleared, I inspected the Study fireplace and the Chronos Automaton. We have two new pieces of evidence—a half-burned 2008 audit log signed 'J.M.', and a scratched brass wax cylinder inside the Automaton."*
 2. **Celeste Moreau (`#7`):** *"Wait—a scratched cylinder? Arthur built the Chronos Automaton to play a recorded greeting at 9:00 PM. You can also program its brass counterweight to drop on the hour. If someone swapped the cylinder..."*
 3. **Jasper Moore (`#6`):** *"Don't look at me just because my initials are J.M.! Half the people in this house had a reason to hate Arthur. And if you're wondering why the lights went out at nine, the storm probably surged the old breaker!"*
 4. **Victor Vance (`#5`):** *"Oh, spare us, Jasper! Everyone knows you've been tinkering in that generator room all week. And what about the wine? Dr. Mercer said he smelled poison in the wine—who poured Arthur's glass?!"*

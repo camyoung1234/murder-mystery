@@ -237,6 +237,7 @@
       <button class="btn" onclick="rollNewCase()" title="Picks any character #1-#N randomly as Killer (hidden in the code)">Roll Random Killer</button>
       <button class="btn" id="blurBtn" onclick="toggleBlur()">Unblur Preview</button>
       <a class="btn" id="evidenceLink" href="evidence-cards-stylized.html" target="_blank">Stylized Evidence</a>
+      <a class="btn" id="hostGuideLink" href="host-guide.html" target="_blank">Host Guide</a>
       <a class="btn" id="companionLink" href="../companion/index.html" target="_blank">Companion App</a>
       <button class="print-btn" onclick="window.print()">Print <span id="btnCount">8</span> Sheets</button>
     </div>
@@ -291,6 +292,7 @@
       document.getElementById("btnCount").textContent = playerCount;
       const q = `?case=${encodeURIComponent(caseCode)}&players=${playerCount}`;
       document.getElementById("evidenceLink").href = "evidence-cards-stylized.html" + q;
+      document.getElementById("hostGuideLink").href = "host-guide.html" + q;
       document.getElementById("companionLink").href = "../companion/index.html" + q;
 
       const scenario = E.buildScenario(caseCode, playerCount);

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dynamic Host Guide — The Last Chime of Ravenshollow</title>
+  <script src="../assets/mystery-engine.js"></script>
+  <style>
+    @page { size: letter portrait; margin: 0.45in 0.5in; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      color: #181818;
+      background: #e9e9e9;
+      line-height: 1.44;
+    }
+
+    .toolbar {
+      background: #141821;
+      color: #f4ebd8;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid #d4a853;
+    }
+    .toolbar h1 { font-size: 1.02rem; color: #d4a853; }
+    .toolbar p { font-size: 0.8rem; color: #b5bcc9; }
+    .controls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .code-input {
+      background: #0b0d12;
+      color: #d4a853;
+      border: 1.5px solid #d4a853;
+      padding: 6px 10px;
+      border-radius: 5px;
+      font-family: "Courier New", monospace;
+      font-weight: 700;
+      width: 104px;
+      text-align: center;
+      font-size: 0.92rem;
+    }
+    .btn {
+      background: #232a3a;
+      color: #f4ebd8;
+      border: 1px solid #3c465c;
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.84rem;
+      text-decoration: none;
+    }
+    .btn:hover { border-color: #d4a853; color: #d4a853; }
+    .print-btn {
+      background: #d4a853;
+      color: #111;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.88rem;
+    }
+    .print-btn:hover { filter: brightness(1.08); }
+
+    .privacy-shield .guide-doc { filter: blur(8px); user-select: none; }
+
+    .guide-doc {
+      max-width: 8.5in;
+      background: #fff;
+      margin: 20px auto;
+      padding: 0.5in 0.55in;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.16);
+    }
+
+    .doc-header {
+      border-bottom: 3px double #111;
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .kicker {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #6b1d1d;
+      font-weight: 700;
+    }
+    .doc-header h1 { font-size: 1.65rem; margin-top: 2px; }
+    .case-pill {
+      font-family: "Courier New", monospace;
+      font-size: 0.9rem;
+      font-weight: 700;
+      border: 2px solid #111;
+      padding: 4px 10px;
+      background: #f5f5f5;
+    }
+
+    .spoiler-banner {
+      border: 2px solid #7d1a1a;
+      background: #fdf4f4;
+      color: #5b1111;
+      padding: 9px 12px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.82rem;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 1.18rem;
+      border-bottom: 1.5px solid #222;
+      padding-bottom: 4px;
+      margin: 18px 0 10px;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+    h3 {
+      font-size: 0.98rem;
+      margin: 12px 0 6px;
+      color: #222;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+    p { font-size: 0.9rem; margin-bottom: 8px; }
+    ul, ol { margin: 0 0 10px 20px; font-size: 0.89rem; }
+    li { margin-bottom: 5px; }
+
+    .role-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .role-box {
+      border: 1.5px solid #222;
+      padding: 8px 10px;
+      background: #fafafa;
+      font-size: 0.86rem;
+    }
+    .role-box.killer { border-color: #7d1a1a; background: #fdf4f4; }
+    .role-box.inspector { border-style: double; border-width: 3px; }
+    .role-label {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: #444;
+      margin-bottom: 2px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 14px;
+      font-size: 0.85rem;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 6px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f0f0f0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .script-line {
+      border-left: 3px solid #333;
+      background: #f7f7f7;
+      padding: 7px 11px;
+      margin-bottom: 7px;
+      font-size: 0.88rem;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .script-speaker {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #5b1111;
+      margin-bottom: 2px;
+    }
+
+    .reveal-card {
+      border: 2px solid #111;
+      background: #faf8f3;
+      padding: 14px 16px;
+      margin-top: 10px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .reveal-card h2 { border-bottom-color: #8a6830; color: #5b1111 !important; margin-top: 0; }
+    .reveal-card span { color: #111 !important; }
+
+    .page-break { page-break-before: always; break-before: page; }
+
+    @media print {
+      body { background: #fff; }
+      .toolbar { display: none !important; }
+      .privacy-shield .guide-doc { filter: none !important; }
+      .guide-doc { max-width: none; margin: 0; padding: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body class="privacy-shield" id="bodyEl">
+
+  <div class="toolbar">
+    <div>
+      <h1>Dynamic Host Guide — Synced to Active Case Code</h1>
+      <p>Blurred on screen by default to prevent accidental spoilers. Unblur if you are the human Host (or use Companion Auto-Host to play blind!).</p>
+    </div>
+    <div class="controls">
+      <label style="font-size:0.85rem;">Players:</label>
+      <input type="range" id="countSlider" min="8" max="20" value="8" oninput="updateConfig()" />
+      <strong id="countVal" style="color:#d4a853; font-size:1.1rem; min-width:24px;">8</strong>
+
+      <label style="font-size:0.85rem; margin-left:4px;">Case:</label>
+      <input type="text" id="caseCodeInput" class="code-input" onchange="applyManualCode()" />
+      <button class="btn" id="blurBtn" onclick="toggleBlur()">Unblur Host Guide</button>
+      <a class="btn" id="sheetsLink" href="character-packets.html" target="_blank">Character Sheets</a>
+      <a class="btn" id="evidenceLink" href="evidence-cards-stylized.html" target="_blank">Evidence Packet</a>
+      <a class="btn" id="companionLink" href="../companion/index.html" target="_blank">Auto-Host App</a>
+      <button class="print-btn" onclick="window.print()">Print Host Guide</button>
+    </div>
+  </div>
+
+  <div class="guide-doc" id="guideContainer"></div>
+
+  <script>
+    const E = window.RavenshollowEngine;
+    const params = new URLSearchParams(window.location.search);
+    let playerCount = parseInt(params.get("players") || localStorage.getItem("ravenshollow_players") || "8", 10);
+    let caseCode = params.get("case") || localStorage.getItem("ravenshollow_case_code") || E.CLASSIC_CODE;
+
+    document.getElementById("countSlider").value = playerCount;
+    document.getElementById("caseCodeInput").value = caseCode;
+
+    function toggleBlur() {
+      const b = document.getElementById("bodyEl");
+      if (b.classList.contains("privacy-shield")) {
+        if (!confirm("WARNING: Unblurring the Host Guide reveals the Killer, Accomplices, and full solution for this Case Code! Continue?")) return;
+        b.classList.remove("privacy-shield");
+        document.getElementById("blurBtn").textContent = "Blur (Spoiler-Free)";
+      } else {
+        b.classList.add("privacy-shield");
+        document.getElementById("blurBtn").textContent = "Unblur Host Guide";
+      }
+    }
+
+    function applyManualCode() {
+      const dec = E.decodeCaseCode(document.getElementById("caseCodeInput").value);
+      caseCode = dec.code;
+      document.getElementById("caseCodeInput").value = caseCode;
+      render();
+    }
+
+    function updateConfig() {
+      playerCount = parseInt(document.getElementById("countSlider").value, 10);
+      render();
+    }
+
+    function render() {
+      localStorage.setItem("ravenshollow_case_code", caseCode);
+      localStorage.setItem("ravenshollow_players", String(playerCount));
+      document.getElementById("countVal").textContent = playerCount;
+
+      const q = `?case=${encodeURIComponent(caseCode)}&players=${playerCount}`;
+      document.getElementById("sheetsLink").href = "character-packets.html" + q;
+      document.getElementById("evidenceLink").href = "evidence-cards-stylized.html" + q;
+      document.getElementById("companionLink").href = "../companion/index.html" + q;
+
+      const sc = E.buildScenario(caseCode, playerCount);
+      const K = sc.killerBase;
+      const A = sc.coreAccompliceBase;
+      const I = sc.inspectorBase;
+      const W = sc.witnessBase;
+      const WS = sc.wineSpikerBase;
+      const AW = sc.alibiWitnessBase;
+      const accompliceList = sc.accomplices.map(id => {
+        const c = E.BASE_CHARACTERS[id - 1];
+        return `${c.name} (#${c.id}, ${c.initials})`;
+      }).join(", ");
+
+      const extraAccomplices = sc.accomplices.slice(1).map(id => {
+        const c = E.BASE_CHARACTERS[id - 1];
+        return `${c.name} (#${c.id})`;
+      });
+
+      const pillar4Text = sc.sameInitials
+        ? `Exhibit C shows a charred 2008 audit log for <strong>${K.scandalTitle}</strong> signed <strong>"${K.initials}"</strong>—matching BOTH <strong>${K.name} (#${K.id})</strong> and <strong>${A.name} (#${A.id})</strong>. Exhibit E clears ${A.name} (no 2008 access to Archive Box #4) and directly ties ${K.name} (${K.ledger2008}) to the 2008 cover-up.`
+        : `Exhibit C shows a charred 2008 audit log for <strong>${K.scandalTitle}</strong> flagging both <strong>"${sc.auditPair[0].initials}"</strong> and <strong>"${sc.auditPair[1].initials}"</strong> (roles &amp; dates burned). Exhibit E clears <strong>${A.name} (#${A.id})</strong> (no 2008 access to Archive Box #4) and directly ties <strong>${K.name} (#${K.id})</strong> (${K.ledger2008}) to the 2008 cover-up.`;
+
+      const extraAccTimeline = extraAccomplices.length > 0
+        ? `<li><strong>8:10–8:20 PM (Lookout):</strong> Shadow Team accomplice${extraAccomplices.length > 1 ? "s" : ""} <strong>${extraAccomplices.join(" &amp; ")}</strong> helped keep the upstairs gallery clear while ${K.name} rigged the Automaton.</li>`
+        : "";
+
+      document.getElementById("guideContainer").innerHTML = `
+        <div class="doc-header">
+          <div>
+            <div class="kicker">The Last Chime of Ravenshollow &bull; Human Host Manual</div>
+            <h1>Dynamic Host Guide (${playerCount} Players)</h1>
+          </div>
+          <div class="case-pill">CASE ${sc.code}</div>
+        </div>
+
+        <div class="spoiler-banner">
+          <strong>SPOILER WARNING:</strong> This Host Guide is dynamically generated for <strong>Case ${sc.code} (${playerCount} players)</strong>. Only a non-playing Human Host should read it. If everyone wants to play blind, skip this sheet and use the <strong>Companion Auto-Host App</strong> (<code>companion/index.html</code>) instead!
+        </div>
+
+        <h2>1. Active Cast &amp; Secret Roles (#1–#${playerCount})</h2>
+        <div class="role-grid">
+          <div class="role-box killer">
+            <div class="role-label">Shadow Team — Killer</div>
+            <strong>${K.name} (#${K.id})</strong> — Initials: <strong>${K.initials}</strong><br/>
+            <span>2008 Scandal: ${K.scandalTitle}</span><br/>
+            <span>Murder Weapon: ${sc.deliveryWithArticle} (laced with Aconite)</span>
+          </div>
+          <div class="role-box">
+            <div class="role-label">Shadow Team — Accomplice${sc.accomplices.length > 1 ? "s" : ""} (${sc.accomplices.length})</div>
+            <strong>${accompliceList}</strong><br/>
+            <span>Core Blackout Accomplice: <strong>${A.name} (#${A.id})</strong></span>
+          </div>
+          <div class="role-box inspector">
+            <div class="role-label">Innocent — Inspector (Blackout Power)</div>
+            <strong>${I.name} (#${I.id})</strong><br/>
+            <span>Wakes during each Blackout (if not Detained) to inspect 1 Sealed Detention Card.</span>
+          </div>
+          <div class="role-box">
+            <div class="role-label">Key Story Anchors (Innocent)</div>
+            <strong>8:42 PM Witness:</strong> ${W.name} (#${W.id})<br/>
+            <strong>Wine-Spiker Red Herring:</strong> ${WS.name} (#${WS.id})<br/>
+            <strong>8:55 PM Alibi Witness:</strong> ${AW.name} (#${AW.id})
+          </div>
+        </div>
+
+        <h2>2. The True Timeline (Case ${sc.code})</h2>
+        <ul>
+          <li><strong>2008 (The Motive):</strong> <strong>${K.name} (#${K.id})</strong> (${K.ledger2008}) was behind <em>"${K.scandalTitle}"</em> (${K.scandalDetail}). Arthur Vance buried the audit in <strong>Archive Box #4</strong>—until tonight's New Will ordered full public release.</li>
+          <li><strong>2 Days Ago:</strong> Arthur recorded an angry memoir line onto a blank brass wax cylinder: <em>"You've gone too far! I'm calling the police as soon as the lines are back!"</em></li>
+          <li><strong>8:00 PM (Red Herring):</strong> <strong>${WS.name} (#${WS.id})</strong> sneaks into the Study and slips non-lethal <strong>Chloral Hydrate (sleeping powder)</strong> into Arthur's red wine decanter to steal the New Will.</li>
+          ${extraAccTimeline}
+          <li><strong>8:15 PM (The Rigging):</strong> <strong>${K.name} (#${K.id})</strong> slips into the Study, swaps the Chronos Automaton's cylinder to play Arthur's angry recording at <strong>8:55 PM</strong>, and shifts the 5-lb brass counterweight to smash the water carafe at <strong>9:00 PM</strong>.</li>
+          <li><strong>8:35 PM (The Blackmail):</strong> <strong>${K.name} (#${K.id})</strong> blackmails <strong>${A.name} (#${A.id})</strong> into cutting the basement Generator Room breaker for 15 seconds at <strong>9:00 PM sharp</strong>.</li>
+          <li><strong>8:40 PM:</strong> Piping-hot chamomile tea is delivered to Arthur's Study.</li>
+          <li><strong>8:42 PM (The Poisoning):</strong> In the Grand Hall—witnessed by <strong>${W.name} (#${W.id})</strong>—<strong>${K.name} (#${K.id})</strong> hands Arthur <strong>${sc.deliveryWithArticle}</strong> laced with odorless, fast-acting <strong>concentrated Aconite</strong>.</li>
+          <li><strong>8:45 PM:</strong> Arthur enters his Study alone, bolts the oak door from the inside, and ingests the laced item. He never touches his tea or his wine.</li>
+          <li><strong>8:48 PM (Actual Time of Death):</strong> Arthur suffers sudden cardiac arrest, collapses <strong>face-down</strong> onto his desk blotter, and smashes his gold pocket watch—freezing its hands at <strong>8:48 PM</strong>.</li>
+          <li><strong>8:55 PM (The Alibi):</strong> The Automaton plays Arthur's recorded shout while <strong>${K.name} (#${K.id})</strong> stands right beside <strong>${AW.name} (#${AW.id})</strong> in the Grand Hall.</li>
+          <li><strong>9:00 PM (The Blackout):</strong> <strong>${A.name} (#${A.id})</strong> cuts the generator breaker for 15 seconds while the Automaton counterweight smashes the <strong>water carafe</strong>.</li>
+          <li><strong>9:01 PM (The Cover-Up):</strong> Guests break down the bolted Study door. <strong>${K.name} (#${K.id})</strong> rushes to Arthur first, rolls him over, snaps the 8:48 PM pocket watch shut (claiming it <em>"always ran twelve minutes slow"</em>), and slips up by claiming to have seen Arthur's <em>"chalk-pale lips"</em> and smelled <em>"bitter almonds from the spilled wine."</em></li>
+        </ul>
+
+        <h2>3. The 4-Pillar Logical Deduction Proof</h2>
+        <table>
+          <thead>
+            <tr><th style="width:24%;">Deduction Pillar</th><th>What Players Must Connect</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. Time of Death Was 8:48 PM</strong></td>
+              <td>Arthur's watch froze at <strong>8:48 PM</strong> (Exhibit B). ${K.name}'s claim that it ran 12 minutes slow is disproved by Arthur's Horologist Journal (Exhibit E). The 8:40 PM tea was stone cold by 9:02 PM, and Exhibit D proves the Automaton faked both the 8:55 PM voice and 9:00 PM crash.</td>
+            </tr>
+            <tr>
+              <td><strong>2. Odorless Aconite via ${K.deliveryItem}</strong></td>
+              <td>${WS.name} (#${WS.id}) confesses to putting harmless Chloral Hydrate in the wine, which Arthur never drank (Exhibits A &amp; F). Exhibit F proves Arthur died of <strong>concentrated Aconite</strong> from ${sc.deliveryWithArticle}—which ${W.name} (#${W.id}) saw ${K.name} (#${K.id}) hand Arthur at 8:42 PM.</td>
+            </tr>
+            <tr>
+              <td><strong>3. ${K.name}'s Fatal Act I Slip</strong></td>
+              <td>In Act I (Opening Script, ${K.name}'s sheet, &amp; Exhibit A), ${K.name} claimed to see Arthur's <em>"chalk-pale lips"</em> and smell <em>"bitter almonds from the spilled wine"</em> at 9:01 PM—impossible, because Arthur was <strong>face-down</strong> and the puddle was <strong>clear, odorless water</strong>!</td>
+            </tr>
+            <tr>
+              <td><strong>4. Archive Box #4 (${sc.auditInitialsLabel})</strong></td>
+              <td>${pillar4Text}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="page-break"></div>
+
+        <h2>4. Voting, Detention &amp; Blackout Narration (Synced to Case ${sc.code})</h2>
+        <ul>
+          <li><strong>Town Hall Votes (End of Act I &amp; Act II — 3 min):</strong> 2 min rapid debate + 1 min vote to <strong>Search &amp; Detain</strong> 1 suspect. Detained players stay in the game, keep mingling, and complete all dialogues—but their <strong>Sealed Detention Card</strong> is immediately read aloud, and they skip their next Town Hall vote &amp; Blackout action.</li>
+          <li><strong>Blackout Phases (Between Act I&rarr;II and Act II&rarr;III — 1 min):</strong> Dim lights, everyone closes their eyes and lightly taps their knees:
+            <ol style="margin-top:4px;">
+              <li><strong>Shadow Team Wakes (25 sec):</strong> <em>"Shadow Team, open your eyes and silently recognize each other. If <strong>${K.name} (#${K.id})</strong> is not Detained, point silently to ONE guest to <strong>Intimidate (Shaken)</strong>—OR hold up TWO fingers to <strong>Plant a False Lead</strong> on the Evidence Board. Shadow Team, close your eyes."</em></li>
+              <li><strong>Inspector Wakes (25 sec):</strong> <em>"Inspector <strong>${I.name} (#${I.id})</strong>, if you are not Detained, open your eyes and point silently to ONE player whose Sealed Detention Card you wish to read."</em> (Show that card for 12 seconds.) <em>"Inspector, close your eyes."</em></li>
+              <li><strong>Lights Up (10 sec):</strong> Announce who was Shaken (cannot vote in next Town Hall) OR place False Lead #1 / #2 on the Evidence Board.</li>
+            </ol>
+          </li>
+          <li><strong>Win Conditions (Final Verdict — End of Act III):</strong> <strong>Innocent Guests Win</strong> if a plurality indicts <strong>${K.name} (#${K.id})</strong>. <strong>Shadow Team Wins</strong> if anyone else is indicted!</li>
+        </ul>
+
+        <h2>5. Round-by-Round Host Script (30–45 Min Pacing)</h2>
+        <h3>Prologue — 9:00 PM (Read Aloud — 2 Min)</h3>
+        <div style="margin-bottom:10px;">${sc.acts.prologue.html}</div>
+
+        <h3>Act I — The Locked Study (Unveil Exhibits A &amp; B | 7m Mingle + 3m Vote + 1m Blackout)</h3>
+        <p style="font-style:italic; color:#444;">Have the listed characters read these lines aloud to open Act I:</p>
+        ${sc.acts.act1.html}
+
+        <h3>Act II — Shadows in the Clockwork (Unveil Exhibits C &amp; D | 6m Mingle + 3m Vote + 1m Blackout)</h3>
+        <p style="font-style:italic; color:#444;">Have the listed characters read these lines aloud to open Act II:</p>
+        ${sc.acts.act2.html}
+
+        <h3>Act III — The Last Chime (Unveil Exhibits E &amp; F | 5m Mingle + 3m Final Verdict + 3m Reveal)</h3>
+        <p style="font-style:italic; color:#444;">Have the listed characters read these lines aloud to open Act III:</p>
+        ${sc.acts.act3.html}
+
+        <h3>The Grand Reveal (Read After Tallying Final Verdict Ballots)</h3>
+        <div class="reveal-card">${sc.revealHtml}</div>
+      `;
+    }
+
+    render();
+  </script>
+</body>
+</html>

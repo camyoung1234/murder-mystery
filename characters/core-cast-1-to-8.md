@@ -36,7 +36,7 @@ You are 44, razor-sharp, composed, and have been Arthur Vance's personal attorne
 You advised Arthur **against** publishing the **2008 St. Jude's Clinic Medical Trial Audit** in his transparency foundation because you knew it would destroy someone's life and put a target on Arthur's back. Arthur refused to listen.
 
 ### Crucial Knowledge You Hold
-- You know Arthur's New Will specifically mandated releasing **Vault Ledger #4 (2008 St. Jude's Clinic Surgical Pump Trial)**.
+- You know Arthur's New Will specifically mandated releasing **Archive Box #4 (2008 St. Jude's Clinic Surgical Pump Trial)**.
 - In **Act III**, you help Harriet unlock **Exhibit E** (showing Jasper Moore wasn't hired until 2012, and Arthur's pocket watch never lost a second).
 
 ### Mandatory Dialogues
