@@ -11,7 +11,7 @@
 You are 36, sharp-tongued, glamorous, and spent the last decade running Arthur's charitable galas expecting to inherit Ravenshollow Manor. Tonight, Arthur told you he was leaving everything to a transparency foundation instead. At **8:30 PM**, you had a furious shouting match with him in the Grand Hall where you said, *"You'll regret this before the clock strikes nine!"* You look terribly guilty—and you know it.
 
 ### Your Secret
-At **8:50 PM**, you snuck halfway up the stairs toward the Study to eavesdrop on Arthur, hoping to hear who he was leaving his fortune to. You heard **total silence** from the Study at 8:50 PM, then hurried back down before anyone saw you. You were standing right next to **Dr. Julian Mercer (`#4`)** in the Grand Hall at **8:55 PM** when Arthur's angry voice suddenly boomed from upstairs!
+At **8:50 PM**, you snuck along the **Upstairs Gallery** to eavesdrop outside the Study door, hoping to hear who Arthur was leaving his fortune to. You heard **total silence** from the Study at 8:50 PM, then hurried back down before anyone saw you. You were standing right next to **Dr. Julian Mercer (`#4`)** in the Grand Hall at **8:55 PM** when Arthur's angry voice suddenly boomed from upstairs!
 
 ### Crucial Knowledge You Hold
 - Two days ago, you walked past Arthur's Study while he was recording an angry speech onto a **blank brass phonograph cylinder** for his memoirs: *"You've gone too far! I'm calling the police as soon as the lines are back!"* (You won't connect this until **Act II** when Exhibit D reveals the scratched cylinder!)
@@ -22,7 +22,7 @@ At **8:50 PM**, you snuck halfway up the stairs toward the Study to eavesdrop on
 - **Act III — Say to Thomas Graves (`#3`):** *"Thomas, think back carefully! Dr. Mercer stood right beside me in the Grand Hall at 8:55 PM—almost like he WANTED me to remember he was there. Did you see Mercer give Arthur anything before Arthur went upstairs?"*
 
 ### SEALED DETENTION CARD (Open Only If Detained)
-> **Searched from Lady Evelyn's Clutch:** A crumpled draft of a furious letter to Arthur reading *"I won't let you ruin this family tonight,"* PLUS a tiny note in Evelyn's handwriting: *"8:50 PM — Stood on the upper stairs outside Arthur's Study. Complete silence inside. Not a sound until 8:55 PM."*
+> **Searched from Lady Evelyn's Clutch:** A crumpled draft of a furious letter to Arthur reading *"I won't let you ruin this family tonight,"* PLUS a tiny note in Evelyn's handwriting: *"8:50 PM — Stood in the Upstairs Gallery outside Arthur's Study door. Complete silence inside. Not a sound until 8:55 PM."*
 
 ---
 
@@ -59,17 +59,17 @@ You are 61, dignified, observant, and have served Ravenshollow Manor since **199
 You were secretly skimming small sums from the manor's wine cellar budget to pay your sister's medical bills—which is why you were nervous when Victor asked about the wine decanter. However, you had nothing to do with Arthur's death.
 
 ### Crucial Knowledge You Hold
-- At **8:40 PM**, you personally placed a piping-hot pot of **chamomile tea** on Arthur's desk. At **9:02 PM**, you touched the teapot—it was **stone cold**, meaning Arthur never drank it and had been dead or incapacitated well before 9:00 PM.
+- At **8:40 PM**, you personally poured a piping-hot single cup of **chamomile tea** on Arthur's desk. At **9:02 PM**, you touched the cup—it was **untouched and barely lukewarm**, meaning Arthur never drank it and had been dead or incapacitated well before 9:00 PM.
 - At **8:42 PM**, you personally watched **Dr. Julian Mercer (`#4`)** hand Arthur his nightly **sealed amber Heart Tonic vial** in the Grand Hall, which Arthur always drinks at 8:45 PM sharp.
 - At **9:02 PM**, you saw Arthur's smashed pocket watch frozen at **8:48 PM** right before Mercer snapped the lid shut.
 
 ### Mandatory Dialogues
 - **Act I — Say to Celeste Moreau (`#7`):** *"Forgive me, Miss Moreau, but I saw you on the upstairs gallery at 8:20 PM—well before the gala toast. Did you see anyone else near Lord Arthur's Study?"*
-- **Act II — Response to Victor Vance (`#5`)** *(or initiate if Victor hasn't asked)*: *"The wine decanter? Sir, the wine glass on his desk was completely full. What troubles me is the chamomile tea I poured at 8:40 PM—by 9:02 PM, the pot was stone cold."*
+- **Act II — Response to Victor Vance (`#5`)** *(or initiate if Victor hasn't asked)*: *"The wine decanter? Sir, the wine glass on his desk was completely full. What troubles me is the single cup of chamomile tea I poured at 8:40 PM—by 9:02 PM, it was untouched and barely lukewarm."*
 - **Act III — Response to Lady Evelyn (`#1`)**: *"Yes, Miss Evelyn. At precisely 8:42 PM, I saw Dr. Mercer hand Lord Arthur his nightly sealed amber Heart Tonic vial in the Grand Hall. Lord Arthur carried it straight up to the Study and locked the door."*
 
 ### SEALED DETENTION CARD (Open Only If Detained)
-> **Searched from Graves's Coat Pocket:** A butler's service log for tonight: *"8:40 PM — Hot chamomile tea delivered to Study. 8:42 PM — Dr. Mercer hands Lord Arthur his 8:45 PM Heart Tonic vial. 9:02 PM — Teapot stone cold; watch crystal smashed at 8:48 PM."*
+> **Searched from Graves's Coat Pocket:** A butler's service log for tonight: *"8:40 PM — Poured hot cup of chamomile tea in Study. 8:42 PM — Dr. Mercer hands Lord Arthur his 8:45 PM Heart Tonic vial. 9:02 PM — Cup untouched & barely lukewarm; watch crystal smashed at 8:48 PM."*
 
 ---
 
@@ -94,7 +94,7 @@ You were secretly skimming small sums from the manor's wine cellar budget to pay
 - **Act III — Response to Clara Sterling (`#2`):** *"I was a junior resident at St. Jude's eighteen years ago, Clara—hardly in charge of calibration logs! And if Arthur's watch really stopped at 8:48, then he must have been alive and arguing with someone at 8:55 after dropping it. Don't let a clever frame-up fool you."*
 
 ### SEALED DETENTION CARD (Open Only If Detained)
-> **Searched from Dr. Mercer's Medical Bag:** A small velvet-lined leather case with slots for **six** amber Heart Tonic vials—**five** are sealed and full, and the **sixth slot is empty**. Tucked inside the lining is a faded **2008 St. Jude's Clinic ID badge** reading: *"Dr. Julian Mercer — Chief Resident."*
+> **Searched from Dr. Mercer's Medical Bag:** An empty velvet-lined pocket case smelling faintly of crushed herbs, PLUS a torn 2008 dated stub bearing the initials **"J.M."** and a hurried margin note: *"Archive Box #4 — must be settled before 9:00 PM."*
 
 ---
 
@@ -105,13 +105,13 @@ You were secretly skimming small sums from the manor's wine cellar budget to pay
 You are 39, charming, desperate, and owe \$400,000 to dangerous creditors. You desperately needed Arthur's inheritance—and when you learned he was signing the New Will at 9:00 PM, you panicked.
 
 ### Your Secret (HUGE RED HERRING!)
-At **8:00 PM**, you snuck into Arthur's empty Study and slipped **chloral hydrate (sleeping powder)** into his **red wine decanter**. You didn't want to kill him—you just wanted him to fall asleep before 9:00 PM so you could steal the New Will! When Arthur turned up dead of poison, you were **terrified** you accidentally overdosed him.
+At **7:58 PM**, you snuck into the **Dining & Sideboard** and slipped **chloral hydrate (sleeping powder)** into Arthur's **1998 Bordeaux wine decanter** (before a glass was carried up to his Study), then slipped into the Study around **8:05 PM** to locate the New Will! You didn't want to kill him—you just wanted him to fall asleep before 9:00 PM so you could steal the New Will! When Arthur turned up dead of poison, you were **terrified** you accidentally overdosed him.
 - *(Note: Once Exhibit F reveals Arthur never drank the wine and died of Aconite, you realize you are innocent—and you MUST confess to the sleeping powder in Act III so people stop wasting their vote on you!)*
 
 ### Mandatory Dialogues
 - **Act I — Response to Lady Evelyn (`#1`):** *"Keep your voice down, Evelyn! I went to the Study at 8:05 PM to ask Arthur for a loan—he wasn't even there! Funny how you're pointing fingers after screaming at him at 8:30 that he'd 'regret this before nine!'"*
 - **Act II — Say to Thomas Graves (`#3`):** *"Thomas, between us—did Lord Arthur drink much of that red wine tonight? I just... Dr. Mercer said it smelled of poison, and I'm worried about the vintage."*
-- **Act III — Response to Harriet Vance-Cole (`#8`):** *(Break down and confess)* *"Fine! Alright, I did it—I put sleeping powder in the wine decanter at 8:00 PM so I could steal the Will! Chloral hydrate! Not Aconite! And the lab note proves he NEVER EVEN DRANK THE WINE! I'm a thief, not a murderer!"*
+- **Act III — Response to Harriet Vance-Cole (`#8`):** *(Break down and confess)* *"Fine! Alright, I did it—I put sleeping powder in the Bordeaux decanter in the Dining & Sideboard at 7:58 PM so I could steal the Will! Chloral hydrate! Not Aconite! And the lab note proves he NEVER EVEN DRANK THE WINE! I'm a thief, not a murderer!"*
 
 ### SEALED DETENTION CARD (Open Only If Detained)
 > **Searched from Victor's Jacket Pocket:** A tiny folded paper packet containing white powder labeled **"Chloral Hydrate (Sleep Aid)"** and a crumpled \$400,000 gambling IOU due tomorrow morning.

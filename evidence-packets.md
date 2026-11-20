@@ -39,7 +39,7 @@ Print these exhibits (or project them via `companion/index.html`) and reveal the
 > - **On the Desk:**
 >   1. The **New Will** — lying open, **unsigned**.
 >   2. A **crystal wine glass** — filled with red wine, **completely full and untouched**.
->   3. A porcelain **chamomile teapot & cup** — untouched, **stone cold** by 9:02 PM.
+>   3. A single poured porcelain **cup of chamomile tea** — untouched, **barely lukewarm** by 9:02 PM.
 >   4. A **broken pocket watch** on the desk corner.
 > - **On the Floor (below the Chronos Automaton):**
 >   - A **shattered glass water carafe** in a puddle of **clear, completely odorless liquid**.
@@ -93,11 +93,13 @@ Print these exhibits (or project them via `companion/index.html`) and reveal the
 ### EXHIBIT E — Employment Ledger & Horologist's Journal
 > **Unlocked from Arthur's private desk drawer by Inspector Harriet Vance-Cole**
 >
-> **1. Vance Precision Instruments — Executive Hire Dates:**
-> - *Thomas Graves (Head Butler):* Hired **1999**
-> - *Clara Sterling (Estate Attorney):* Retained **2005**
+> **1. Vance Precision Instruments — Selected 2008 Archive & Employment Records:**
+> - *Lady Evelyn Vance:* Director of Vance Charity Gala Fund (**2006–2008**)
+> - *Clara Sterling (Estate Attorney):* Lead Trust Counsel, Vance Legal Holdings (**2005–present**)
+> - *Thomas Graves (Head Butler):* Estate Steward & Keyholder, Ravenshollow (**1999–present**)
 > - *Dr. Julian Mercer (Personal Physician):* Retained **2009** *(Prior post: Chief Resident, **St. Jude's Clinic, 2006–2008**)*
-> - *Jasper Moore (Chief Engineer):* Hired **2012** *(Graduated MIT Engineering, **2011**)*
+> - *Victor Vance:* Junior Commodities Broker, Vance Capital (**2007–2008**)
+> - *Jasper Moore (Chief Engineer):* Hired **2012** *(Graduated MIT Engineering, **2011** — no access to Archive Box #4 in 2008)*
 >
 > **2. Excerpt from Arthur Vance's Personal Horologist Journal (Nov 15):**
 > > *"A clockmaker whose own pocket watch loses a single second is a fraud. As always, my gold chronometer is calibrated every morning at 7:00 AM to the U.S. Naval Observatory signal. It has not drifted by half a second in eleven years."*
@@ -107,7 +109,7 @@ Print these exhibits (or project them via `companion/index.html`) and reveal the
 ### EXHIBIT F — Field Toxicology Note (Arthur's Chemistry Kit)
 > **Tested by Inspector Harriet Vance-Cole**
 >
-> - **Sample 1 (Red Wine in Decanter & Untouched Wine Glass):** Tests positive for **Chloral Hydrate** (a non-lethal sleeping sedative). *Conclusion: Someone tried to drug Arthur's wine to put him to sleep, NOT kill him—and Arthur never drank it.*
+> - **Sample 1 (Red Wine in Dining Sideboard Decanter & Untouched Study Glass):** Tests positive for **Chloral Hydrate** (a non-lethal sleeping sedative). *Conclusion: Someone tried to drug Arthur's wine to put him to sleep, NOT kill him—and Arthur never drank it.*
 > - **Sample 2 (Trace Residue on Arthur's Lips & Shirt Cuff):** Tests positive for **Concentrated Aconite** (fast-acting, completely **odorless** cardiac poison; fatal within **2–3 minutes** of ingestion).
 > - **Sample 3 (Puddle on Floor):** Plain spring water. Zero wine, zero poison, zero bitter-almond odor.
 
@@ -122,5 +124,5 @@ If the Shadow Team chooses **"Plant a False Lead"** during a Blackout Phase, the
 > *(Misdirection: Implicates Victor `#5` and Evelyn `#1`, even though it's a forgery planted in the dark!)*
 
 ### FALSE LEAD #2 — Rumor Slip: The Missing Kitchen Knife & Bitter Almonds
-> *"An anonymous note slipped under the Library door: 'Check the Dining & Sideboard! Someone wiped down the wine decanter with an almond-scented handkerchief right before 9:00 PM.'"*
+> *"An anonymous note slipped under the Library door: 'Check the Dining & Sideboard! Someone wiped down the Bordeaux decanter left on the sideboard with an almond-scented handkerchief right before 9:00 PM.'"*
 > *(Misdirection: Reinforces Mercer's false bitter-almond wine theory!)*

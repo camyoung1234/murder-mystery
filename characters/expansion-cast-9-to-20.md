@@ -24,7 +24,7 @@ At **7:58 PM**, you stepped into the dining sideboard and saw **Victor Vance (`#
 ### Mandatory Dialogues
 - **Act I — Say to Victor Vance (`#5`):** *"Monsieur Victor, do not insult my cellar! I saw you hovering over the 1998 Bordeaux decanter at 7:58 PM with a little white paper packet. What did you put in my wine?!"*
 - **Act II — Say to Dr. Julian Mercer (`#4`):** *"Doctor, you claimed you smelled 'bitter almonds' from spilled wine. First, my Bordeaux has notes of dark cherry, NEVER almond—and second, the floor sketch says the puddle was odorless water! Are you certain of your own nose?"*
-- **Act III — Say to Thomas Graves (`#3`):** *"Thomas, I brewed that chamomile tea at 8:38 PM at a rolling boil. If the teapot was stone cold by 9:02 PM, then Lord Arthur never even poured a cup—he was already gone before nine!"*
+- **Act III — Say to Thomas Graves (`#3`):** *"Thomas, I brewed that chamomile tea at 8:38 PM at a rolling boil. If that single poured cup sat untouched until it was barely lukewarm by 9:02 PM, then Lord Arthur never took a sip—he was already gone before nine!"*
 
 ### SEALED DETENTION CARD (Open Only If Detained)
 > **Searched from Chef Henri's Apron:** A kitchen inventory sheet signed at 7:45 PM confirming the Bordeaux decanter was sealed and pristine, plus a scribbled angry note: *"Saw Victor V. near the wine at 7:58 PM with white powder!"*

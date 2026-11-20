@@ -13,9 +13,9 @@
     {
       id: 1, name: "Lady Evelyn Vance", role: "Arthur's Disinherited Niece", initials: "E.V.",
       persona: "Sharp-tongued, glamorous heiress. At 8:30 PM, you had a furious public argument with Arthur about being disinherited and shouted, 'You'll regret this before nine!'",
-      secret: "At 8:50 PM, you snuck halfway up the Study stairs to eavesdrop and heard TOTAL SILENCE inside—not a sound until Arthur's voice boomed at 8:55 PM!",
+      secret: "At 8:50 PM, you snuck along the Upstairs Gallery to eavesdrop outside the Study door and heard TOTAL SILENCE inside—not a sound until Arthur's voice boomed at 8:55 PM!",
       clue: "Two days ago, you heard Arthur recording that exact angry phrase ('You've gone too far! I'm calling the police as soon as the lines are back!') onto a blank brass phonograph cylinder for his memoirs.",
-      detention: "Searched from Lady Evelyn's Clutch: A crumpled furious letter ('I won't let you ruin this family tonight'), PLUS a note in Evelyn's hand: '8:50 PM — Stood on upper stairs outside Arthur's Study. Complete silence inside until 8:55 PM.'",
+      detention: "Searched from Lady Evelyn's Clutch: A crumpled furious letter ('I won't let you ruin this family tonight'), PLUS a note in Evelyn's hand: '8:50 PM — Stood in the Upstairs Gallery outside Arthur's Study door. Complete silence inside until 8:55 PM.'",
       ledger2008: "Director of Vance Charity Gala Fund (2006–2008)",
       scandalTitle: "2008 Vance Charity Endowment — Embezzlement Audit",
       scandalDetail: "$2.4M diverted from children's hospital endowment; ledger forged",
@@ -38,8 +38,8 @@
       id: 3, name: "Thomas Graves", role: "Head Butler (Hired 1999)", initials: "T.G.",
       persona: "Dignified, observant butler who notices everything and speaks quietly. You have served Ravenshollow Manor since 1999.",
       secret: "You skimmed small sums from the wine cellar budget for your sister's medical bills (making you nervous about wine questions), though you are innocent of murder.",
-      clue: "At 8:40 PM you delivered piping-hot chamomile tea to the Study—by 9:02 PM the pot was STONE COLD. You also saw Arthur's watch smashed at 8:48 PM.",
-      detention: "Searched from Graves's Coat Pocket: Tonight's butler log: '8:40 PM — Hot chamomile tea delivered to Study. 9:02 PM — Teapot stone cold; watch crystal smashed at 8:48 PM.'",
+      clue: "At 8:40 PM you poured a piping-hot cup of chamomile tea in the Study—by 9:02 PM the untouched cup was barely lukewarm. You also saw Arthur's watch smashed at 8:48 PM.",
+      detention: "Searched from Graves's Coat Pocket: Tonight's butler log: '8:40 PM — Poured hot cup of chamomile tea in Study. 9:02 PM — Cup untouched and barely lukewarm; watch crystal smashed at 8:48 PM.'",
       ledger2008: "Estate Steward & Keyholder, Ravenshollow (1999–present)",
       scandalTitle: "2008 Estate Insurance — Staged Clock Vault Theft",
       scandalDetail: "Priceless 18th-century chronometers vanished; security log falsified",
@@ -61,7 +61,7 @@
     {
       id: 5, name: "Victor Vance", role: "Debt-Ridden Nephew", initials: "V.V.",
       persona: "Charming, desperate nephew who owes $400,000 to dangerous creditors and desperately needed Arthur's inheritance.",
-      secret: "At 8:00 PM, you snuck into the Study and put CHLORAL HYDRATE (non-lethal sleeping powder) into Arthur's RED WINE DECANTER so you could steal the New Will later! Exhibit F proves he never drank the wine.",
+      secret: "At 7:58 PM, you snuck into the Dining & Sideboard and put CHLORAL HYDRATE (non-lethal sleeping powder) into Arthur's 1998 Bordeaux wine decanter before a glass was carried up to his Study, then slipped into the Study around 8:05 PM to locate the New Will! Exhibit F proves he never drank the wine.",
       clue: "Once Exhibit F drops in Act III, confess to the sleeping powder so the room stops wasting votes on you and hunts the real killer!",
       detention: "Searched from Victor's Jacket Pocket: A folded white paper packet labeled 'Chloral Hydrate (Sleep Aid)' and a crumpled $400,000 gambling IOU due tomorrow morning.",
       ledger2008: "Junior Commodities Broker, Vance Capital (2007–2008)",
@@ -109,9 +109,9 @@
     {
       id: 9, name: "Chef Henri Laurent", role: "Head Chef of Ravenshollow Manor", initials: "H.L.",
       persona: "Dramatic, fiercely proud head chef—offended anyone would suggest Arthur was poisoned by your food or wine!",
-      secret: "At 7:58 PM, you saw someone hovering nervously over the opened 1998 Bordeaux decanter with a tiny white paper packet.",
-      clue: "You decanted the Bordeaux at 7:45 PM (zero almond scent, zero cyanide in your kitchen) and brewed Arthur's chamomile tea at a rolling boil at 8:38 PM.",
-      detention: "Searched from Chef Henri's Apron: Kitchen inventory sheet signed 7:45 PM confirming the Bordeaux decanter was pristine, plus an angry note about someone near the wine at 7:58 PM.",
+      secret: "At 7:58 PM in the Dining & Sideboard, you saw someone hovering nervously over the opened 1998 Bordeaux decanter with a tiny white paper packet.",
+      clue: "You decanted the Bordeaux in the Dining & Sideboard at 7:45 PM (zero almond scent, zero cyanide in your kitchen) and brewed Arthur's single cup of chamomile tea at a rolling boil at 8:38 PM.",
+      detention: "Searched from Chef Henri's Apron: Kitchen inventory sheet signed 7:45 PM confirming the Bordeaux decanter on the Dining & Sideboard was pristine, plus an angry note about someone near the wine at 7:58 PM.",
       ledger2008: "Executive Chef, Le Chronomètre Paris (2006–2008)",
       scandalTitle: "2008 Paris Kitchen — Fatal Allergen Cover-Up",
       scandalDetail: "VIP guest fatality hushed up by Arthur Vance; supplier log FALSIFIED",
@@ -364,7 +364,7 @@
         special = `YOU ARE THE KILLER! Win by avoiding indictment in the Final Verdict (frame ${coreAccompliceBase.name} #${coreAccompliceId} or ${wineSpikerBase.name} #${wineSpikerId}!). Your Shadow Team allies: ${allyNames}. During Blackouts, wake up to Intimidate 1 guest OR Plant a False Lead.`;
         secret = `In 2008, YOU were behind "${killerBase.scandalTitle}" (signed "${killerBase.initials}"). Tonight: at 8:15 PM you rigged the Chronos Automaton (8:55 PM voice + 9:00 PM carafe smash); at 8:35 PM you blackmailed ${coreAccompliceBase.name} (#${coreAccompliceId}) to cut the generator at 9:00 PM; at 8:42 PM you handed Arthur ${deliveryWithArticle} laced with concentrated Aconite (he died at 8:48 PM). You stood next to ${alibiWitnessBase.name} (#${alibiWitnessId}) at 8:55 PM for an alibi, then slipped up at 9:01 PM by claiming you saw his chalk-pale lips (he was face-down!), smelled 'bitter-almond wine,' and lied about the 8:48 PM watch.`;
         clue = `STRATEGY: Stay calm! Let the room suspect ${wineSpikerBase.name} (#${wineSpikerId}) for drugging the wine and ${coreAccompliceBase.name} (#${coreAccompliceId}) for the blackout and Exhibit C. If pressed on Exhibit E, claim Arthur's watch broke earlier or someone forged "${killerBase.initials}" to frame you!`;
-        detention = `Searched from ${base.name}'s Effects: Trace residue of concentrated Aconite matching the ${killerBase.deliveryItem} handed to Arthur at 8:42 PM, PLUS a folded 2008 credential reading "${base.name} — ${base.ledger2008}."`;
+        detention = `Searched from ${base.name}'s Effects: An empty velvet-lined pocket case smelling faintly of crushed herbs, PLUS a torn 2008 dated stub bearing the initials "${base.initials}" and a hurried margin note: "Archive Box #4 — must be settled before 9:00 PM."`;
       } else if (isAccomplice) {
         team = "accomplice";
         badge = "SHADOW TEAM — ACCOMPLICE";
@@ -386,13 +386,13 @@
       }
 
       if (isWineSpiker && !isKiller && !isAccomplice) {
-        secret = `RED HERRING! At 8:00 PM, you snuck into the Study and put CHLORAL HYDRATE (non-lethal sleeping powder) into Arthur's RED WINE DECANTER so you could steal the New Will! You're terrified you killed him—until Exhibit F proves he never drank the wine!`;
+        secret = `RED HERRING! At 7:58 PM, you snuck into the Dining & Sideboard and put CHLORAL HYDRATE (non-lethal sleeping powder) into Arthur's 1998 Bordeaux wine decanter before a glass was carried up to his Study, then slipped into the Study around 8:05 PM to locate the New Will! You're terrified you killed him—until Exhibit F proves he never drank the wine!`;
         detention = `Searched from ${base.name}'s Pocket: A folded white paper packet labeled 'Chloral Hydrate (Sleep Aid)' and a desperate note about stealing the unsigned New Will.`;
       }
 
       if (isWitness && !isKiller && !isAccomplice) {
-        clue = `1) At 8:40 PM hot chamomile tea was placed in the Study—by 9:02 PM it was STONE COLD. 2) At 8:42 PM, YOU PERSONALLY SAW ${killerBase.name} (#${killerId}) hand Arthur ${deliveryWithArticle} in the Grand Hall right before Arthur locked himself in the Study!`;
-        detention = `Searched from ${base.name}'s Pocket: Tonight's handwritten note: '8:40 PM — Hot tea in Study. 8:42 PM — Watched ${killerBase.name} (#${killerId}) hand Arthur ${deliveryWithArticle} in the Grand Hall. 9:02 PM — Watch smashed at 8:48 PM.'`;
+        clue = `1) At 8:40 PM a piping-hot cup of chamomile tea was poured in the Study—by 9:02 PM the untouched cup was barely lukewarm. 2) At 8:42 PM, YOU PERSONALLY SAW ${killerBase.name} (#${killerId}) hand Arthur ${deliveryWithArticle} in the Grand Hall right before Arthur locked himself in the Study!`;
+        detention = `Searched from ${base.name}'s Pocket: Tonight's handwritten note: '8:40 PM — Poured hot cup of tea in Study. 8:42 PM — Watched ${killerBase.name} (#${killerId}) hand Arthur ${deliveryWithArticle} in the Grand Hall. 9:02 PM — Tea untouched & barely lukewarm; watch smashed at 8:48 PM.'`;
       }
 
       // Dynamic Act I-III Mandatory Dialogues
@@ -413,11 +413,24 @@
       ? `VANCE PRECISION INSTRUMENTS — CONFIDENTIAL AUDIT\nARCHIVE BOX #4 (SLATED FOR RELEASE WITH NEW WILL)\n-------------------------------------------------\nSUBJECT:   ${killerBase.scandalTitle}\nFINDING:   ${killerBase.scandalDetail}\nSIGNED BY: "${killerBase.initials}" [REST OF LINE BURNED]\nSTATUS:    Suppressed by A. Vance (2008). Full disclosure\n           ordered upon execution of New Will.`
       : `VANCE PRECISION INSTRUMENTS — CONFIDENTIAL AUDIT\nARCHIVE BOX #4 (SLATED FOR RELEASE WITH NEW WILL)\n-------------------------------------------------\nSUBJECT:   ${killerBase.scandalTitle}\nFINDING:   ${killerBase.scandalDetail}\nFLAGGED INITIALS: "${auditPair[0].initials}" / "${auditPair[1].initials}" [ROLES & DATES BURNED]\nNOTE:      One party falsified the 2008 record; the other had\n           no 2008 access to Archive Box #4.\nSTATUS:    Suppressed by A. Vance (2008). Full disclosure\n           ordered upon execution of New Will.`;
 
-    // Sort Exhibit E records by character ID so the Killer is not always listed first
+    // Build Exhibit E with 6 active guests (Killer, Core Accomplice, Wine Spiker + 3 active innocents with 2008 ties)
+    // so players must cross-reference Exhibit C, Exhibit E, and Exhibit F rather than getting an easy giveaway.
+    const extraExhibitEIds = [];
+    const preferredExtras = [2, 3, 1, 7, 8, 10, 12, 13, 14, 16];
+    for (let i = 0; i < preferredExtras.length && extraExhibitEIds.length < 3; i++) {
+      const cid = preferredExtras[i];
+      if (cid <= n && cid !== killerId && cid !== coreAccompliceId && cid !== wineSpikerId) {
+        extraExhibitEIds.push(cid);
+      }
+    }
     const exhibitERecords = [
       { id: killerId, html: `&bull; <strong>${killerBase.name} (#${killerId}):</strong> ${killerBase.ledger2008}` },
       { id: coreAccompliceId, html: `&bull; <strong>${coreAccompliceBase.name} (#${coreAccompliceId}):</strong> <em>No access to Archive Box #4 in 2008 (outside the 2008 incident window).</em>` },
-      { id: wineSpikerId, html: `&bull; <strong>${wineSpikerBase.name} (#${wineSpikerId}):</strong> <em>Unrelated to "${killerBase.scandalTitle}".</em>` }
+      { id: wineSpikerId, html: `&bull; <strong>${wineSpikerBase.name} (#${wineSpikerId}):</strong> ${wineSpikerBase.ledger2008}` },
+      ...extraExhibitEIds.map(cid => {
+        const c = BASE_CHARACTERS[cid - 1];
+        return { id: cid, html: `&bull; <strong>${c.name} (#${cid}):</strong> ${c.ledger2008}` };
+      })
     ].sort((a, b) => a.id - b.id).map(r => r.html).join("<br/>\n            ");
 
     // Dynamic Exhibits A–F + False Leads
@@ -428,7 +441,7 @@
           <li><strong>Door &amp; Window:</strong> Heavy oak double-door bolted from the <em>inside</em>; cliff window latched inside.</li>
           <li><strong>The Body:</strong> Lord Arthur Vance slumped <strong>face-down</strong> on his desk blotter, facing <strong>away from the door</strong>. Rolled over first by <strong>${killerBase.name} (#${killerId})</strong> at 9:01 PM.</li>
           <li><strong>Initial Statement (9:01 PM):</strong> The instant the lights returned, <strong>${killerBase.name} (#${killerId})</strong> loudly claimed to see Arthur's <em>"chalk-pale lips"</em> and smell <em>"bitter almonds from the spilled wine."</em></li>
-          <li><strong>On the Desk:</strong> Unsigned New Will; crystal wine glass <strong>completely full &amp; untouched</strong>; chamomile teapot <strong>stone cold</strong> by 9:02 PM; broken pocket watch.</li>
+          <li><strong>On the Desk:</strong> Unsigned New Will; crystal wine glass <strong>completely full &amp; untouched</strong>; single poured porcelain cup of chamomile tea <strong>untouched &amp; barely lukewarm</strong> by 9:02 PM; broken pocket watch.</li>
           <li><strong>On the Floor:</strong> Shattered <strong>water carafe</strong> in a puddle of <strong>clear, odorless liquid</strong>, beside a heavy 5-lb brass counterweight.</li>
         </ul>`
       },
@@ -465,7 +478,7 @@
       {
         id: "F", act: 3, title: "Exhibit F — Field Toxicology Report",
         html: `<ul>
-          <li><strong>Red Wine (Decanter &amp; Untouched Glass):</strong> Positive for <strong>Chloral Hydrate</strong> (non-lethal sleeping sedative). Arthur never drank it.</li>
+          <li><strong>Red Wine (Dining Sideboard Decanter &amp; Untouched Study Glass):</strong> Positive for <strong>Chloral Hydrate</strong> (non-lethal sleeping sedative). Arthur never drank it.</li>
           <li><strong>Residue on Arthur's Lips &amp; Cuff:</strong> Positive for <strong>Concentrated Aconite</strong> (fast-acting, completely <strong>odorless</strong> cardiac poison; fatal in <strong>2–3 minutes</strong>) — matching trace contact from ${deliveryWithArticle.replace(killerBase.deliveryItem, `<strong>${killerBase.deliveryItem}</strong>`)}.</li>
           <li><strong>Floor Puddle:</strong> Plain spring water. Zero wine, zero bitter-almond odor.</li>
         </ul>`
@@ -476,7 +489,7 @@
       },
       {
         id: "FL2", act: 0, title: "False Lead #2 — Anonymous Library Rumor (Blackout Action)",
-        html: `<p><em>Slipped under the Library door during the blackout:</em></p><pre>"Check the Dining &amp; Sideboard! Someone wiped down the wine decanter with an almond-scented handkerchief right before 9:00 PM."</pre>`
+        html: `<p><em>Slipped under the Library door during the blackout:</em></p><pre>"Check the Dining &amp; Sideboard! Someone wiped down the Bordeaux decanter left on the sideboard with an almond-scented handkerchief right before 9:00 PM."</pre>`
       }
     ];
 
@@ -531,7 +544,7 @@
         sub: "Read Public Opener, unlock Exhibits E & F, mingle (5m), then Final Verdict (3m) & Reveal!",
         html: `
           <div class="script-line"><div class="script-speaker">${inspectorBase.name} (#${inspectorId})</div>"Enough games. We unlocked Arthur's private Horologist Journal and the 2008 Archive Ledger—and tested the residue in the Study with a field chemistry kit."</div>
-          <div class="script-line"><div class="script-speaker">${witnessBase.name} (#${witnessId})</div>"Look closely at Exhibit E and Exhibit F before you cast your final vote. The chamomile tea poured at 8:40 PM was stone cold by 9:02 PM—and Arthur never touched his wine."</div>
+          <div class="script-line"><div class="script-speaker">${witnessBase.name} (#${witnessId})</div>"Look closely at Exhibit E and Exhibit F before you cast your final vote. The single cup of chamomile tea poured at 8:40 PM was untouched and barely lukewarm by 9:02 PM—and Arthur never touched his wine."</div>
           <div class="script-line"><div class="script-speaker">${killerBase.name} (#${killerId})</div>"Careful, everyone—wild theories will only let the real killer slip away. Look at who had the motive to steal the Will, who rigged the power, and who wasn't in the Grand Hall at nine. Let's settle this."</div>`
       }
     };
@@ -602,7 +615,7 @@
 
     if (isKiller) {
       return [
-        { act: "ACT I", target: `Say to ${witnessBase.name} (#${witnessBase.id}):`, line: `"I was standing right beside ${alibiWitnessBase.name} in the Grand Hall at 8:55 PM when Arthur was shouting! The moment the lights came back on at 9:01, I saw Arthur's chalk-pale lips and smelled bitter almonds from the spilled wine—check who touched that decanter."` },
+        { act: "ACT I", target: `Say to ${witnessBase.name} (#${witnessBase.id}):`, line: `"I was standing right beside ${alibiWitnessBase.name} in the Grand Hall at 8:55 PM when Arthur was shouting! Since you oversee the Study service, who had access to Arthur's Bordeaux decanter tonight? Someone clearly poisoned that wine before nine."` },
         { act: "ACT II", target: `Say to ${inspectorBase.name} (#${inspectorBase.id}):`, line: `"I rolled Arthur over at 9:01 to check his pulse—pure reflex! Don't get distracted by a half-burned 2008 page; ask ${coreAccompliceBase.name} why the lights conveniently died at nine!"` },
         { act: "ACT III", target: `Say to ${witnessBase.name} (#${witnessBase.id}):`, line: `"Yes, I handed Arthur ${deliveryWithArticle} at 8:42 PM—completely harmless! If his watch stopped at 8:48, he must have dropped it before arguing at 8:55. Don't fall for a frame-up!"` }
       ];
@@ -627,7 +640,7 @@
         const t1 = pickTarget([2, inspectorBase.id, 1]);
         const t2 = pickTarget([inspectorBase.id, 7, 2]);
         return [
-          { act: "ACT I", target: `Say to ${t1.name} (#${t1.id}):`, line: `"Let's not overcomplicate this—${wineSpikerBase.name} was spotted near the Study at 8:00 PM, and everyone heard Arthur shouting at 8:55. This is a panicked family job over the Will, plain and simple."` },
+          { act: "ACT I", target: `Say to ${t1.name} (#${t1.id}):`, line: `"Let's not overcomplicate this—${wineSpikerBase.name} was spotted sneaking out of the Study around 8:05 PM, and everyone heard Arthur shouting at 8:55. This is a panicked family job over the Will, plain and simple."` },
           { act: "ACT II", target: `Say to ${t2.name} (#${t2.id}) [after Exhibit C]:`, line: `"Careful chasing ghosts in a half-burned 2008 audit page. Someone cut the power at nine sharp and someone tampered with the wine—focus on who had the motive to stop the Will tonight!"` },
           { act: "ACT III", target: `Say to ${killerBase.name} (#${killerBase.id}) [stage-managed defense]:`, line: `"Look, ${killerBase.name}, I don't care what a dusty 2008 ledger says—you were standing right beside ${alibiWitnessBase.name} in the Grand Hall when Arthur was shouting at 8:55! Tell everyone how you could possibly be in two places at once!"` }
         ];
@@ -637,16 +650,16 @@
       const t3 = pickTarget([2, inspectorBase.id, 3]);
       return [
         { act: "ACT I", target: `Say to ${t1.name} (#${t1.id}):`, line: `"If ${killerBase.name} smelled bitter almonds the moment we opened the door, that's textbook fast-acting poison in the wine. Why are we ignoring the decanter on the sideboard?"` },
-        { act: "ACT II", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}):`, line: `"You've been sweating since 9:01 PM! Everybody knows you slipped into the Study around eight—stop trying to pin this on a clockwork toy and admit what you put in that wine!"` },
+        { act: "ACT II", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}):`, line: `"You've been sweating since 9:01 PM! Everybody knows you slipped into the Study around 8:05—stop trying to pin this on a clockwork toy and admit what you put in that wine!"` },
         { act: "ACT III", target: `Say to ${t3.name} (#${t3.id}) [after Exhibit F]:`, line: `"Even if Exhibit F found Aconite, trace residue can transfer from anything in a crowded hall—it doesn't prove ${killerBase.name} killed Arthur! Don't let an 18-year-old audit blind you!"` }
       ];
     }
 
     if (isWineSpiker) {
       return [
-        { act: "ACT I", target: `Say to ${alibiWitnessBase.name} (#${alibiWitnessBase.id}):`, line: `"Keep your voice down! Yes, I stepped into the Study at 8:00 PM to talk to Arthur—he wasn't even there! Why is everyone blaming the wine?"` },
+        { act: "ACT I", target: `Say to ${alibiWitnessBase.name} (#${alibiWitnessBase.id}):`, line: `"Keep your voice down! Yes, I stepped into the Study around 8:05 PM to talk to Arthur—he wasn't even there! Why is everyone blaming the wine?"` },
         { act: "ACT II", target: `Say to ${witnessBase.name} (#${witnessBase.id}):`, line: `"Between us—did Lord Arthur drink any of that red wine tonight? ${killerBase.name} claimed it smelled of poison, and I'm worried..."` },
-        { act: "ACT III", target: `Confess to ${inspectorBase.name} (#${inspectorBase.id}) [after Exhibit F]:`, line: `"Fine! I put sleeping powder—chloral hydrate—in the wine decanter at 8:00 PM to steal the Will! NOT Aconite! And Exhibit F proves he NEVER DRANK THE WINE! I'm a thief, not a murderer!"` }
+        { act: "ACT III", target: `Confess to ${inspectorBase.name} (#${inspectorBase.id}) [after Exhibit F]:`, line: `"Fine! I put sleeping powder—chloral hydrate—in the Bordeaux decanter in the Dining & Sideboard at 7:58 PM to steal the Will! NOT Aconite! And Exhibit F proves he NEVER DRANK THE WINE! I'm a thief, not a murderer!"` }
       ];
     }
 
@@ -654,7 +667,7 @@
       const t1 = pickTarget([7, 2, 1]);
       return [
         { act: "ACT I", target: `Say to ${t1.name} (#${t1.id}):`, line: `"Did you see anyone near Lord Arthur's Study around 8:20 PM? Something about this 9:00 PM timeline doesn't add up—his watch smashed at 8:48!"` },
-        { act: "ACT II", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}):`, line: `"The wine glass on Arthur's desk was completely full. What troubles me is the hot chamomile tea poured at 8:40 PM—by 9:02 PM, the pot was stone cold!"` },
+        { act: "ACT II", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}):`, line: `"The wine glass on Arthur's desk was completely full. What troubles me is the single cup of hot chamomile tea poured at 8:40 PM—by 9:02 PM, it was untouched and barely lukewarm!"` },
         { act: "ACT III", target: `Say to ${alibiWitnessBase.name} (#${alibiWitnessBase.id}):`, line: `"Think back! At 8:42 PM in the Grand Hall, I personally watched ${killerBase.name} (#${killerBase.id}) hand Arthur ${deliveryWithArticle}—and Arthur carried it straight up to his locked Study!"` }
       ];
     }
@@ -674,7 +687,7 @@
         return [
           { act: "ACT I", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}):`, line: `"Don't play innocent with me! I saw you slipping out of Arthur's Study around 8:05 PM looking like you'd seen a ghost. What were you doing in there?"` },
           { act: "ACT II", target: `Say to ${t2.name} (#${t2.id}) [after Exhibit D]:`, line: `"Wait a second—a brass wax cylinder?! Two days ago I heard Arthur recording that exact line—'You've gone too far! I'm calling the police'—for his memoirs! Could the Automaton have played it?!"` },
-          { act: "ACT III", target: `Say to ${witnessBase.name} (#${witnessBase.id}):`, line: `"I snuck halfway up the Study stairs at 8:50 PM and heard TOTAL SILENCE inside! Think back—did anyone hand Arthur something right before he locked himself in at 8:45?"` }
+          { act: "ACT III", target: `Say to ${witnessBase.name} (#${witnessBase.id}):`, line: `"I snuck along the Upstairs Gallery to eavesdrop outside the Study door at 8:50 PM and heard TOTAL SILENCE inside! Think back—did anyone hand Arthur something right before he locked himself in at 8:45?"` }
         ];
       }
       case 2: { // Clara Sterling
@@ -689,7 +702,7 @@
         const t3 = pickTarget([2, inspectorBase.id, 1]);
         return [
           { act: "ACT I", target: `Say to ${t1.name} (#${t1.id}):`, line: `"Forgive me, but I saw someone on the upstairs gallery at 8:20 PM well before the gala toast. Did you spot anyone slipping out of Lord Arthur's Study?"` },
-          { act: "ACT II", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}):`, line: `"Everyone keeps talking about the wine, yet the crystal glass on Lord Arthur's desk was completely full. What troubles me is the piping-hot chamomile tea I delivered at 8:40 PM—stone cold by 9:02!"` },
+          { act: "ACT II", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}):`, line: `"Everyone keeps talking about the wine, yet the crystal glass on Lord Arthur's desk was completely full. What troubles me is the piping-hot cup of chamomile tea I poured at 8:40 PM—untouched and barely lukewarm by 9:02!"` },
           { act: "ACT III", target: `Say to ${t3.name} (#${t3.id}):`, line: `"When we entered the Study at 9:02 PM, Lord Arthur's pocket watch had smashed at 8:48 PM—and someone snapped the gold lid shut almost immediately. Why hide the time?"` }
         ];
       }
@@ -739,7 +752,7 @@
         return [
           { act: "ACT I", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}):`, line: `"Do not insult my kitchen! At 7:58 PM I stepped into the Dining & Sideboard and saw someone hovering nervously over my 1998 Bordeaux decanter with a tiny white paper packet. What did you put in my wine?!"` },
           { act: "ACT II", target: `Say to ${inspectorBase.name} (#${inspectorBase.id}):`, line: `"I personally decanted that Bordeaux at 7:45 PM—notes of dark cherry, NEVER bitter almonds! And Exhibit A says the puddle on the Study floor was odorless water. Someone lied about smelling almonds!"` },
-          { act: "ACT III", target: `Say to ${witnessBase.name} (#${witnessBase.id}):`, line: `"I brewed Lord Arthur's chamomile tea at a rolling boil at 8:38 PM! If the teapot was stone cold by 9:02 PM, then Arthur never poured a single cup—he was already dead well before nine!"` }
+          { act: "ACT III", target: `Say to ${witnessBase.name} (#${witnessBase.id}):`, line: `"I brewed Lord Arthur's chamomile tea at a rolling boil at 8:38 PM! If that single poured cup sat untouched until it was barely lukewarm by 9:02 PM, then he never took a sip—he was already gone well before nine!"` }
         ];
       }
       case 10: { // Margot Bell
