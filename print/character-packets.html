@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Printable Character Sheets (1–20) — The Last Chime of Ravenshollow</title>
+  <style>
+    @page {
+      size: letter portrait;
+      margin: 0.4in 0.45in;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      color: #111;
+      background: #e9e9e9;
+      line-height: 1.38;
+    }
+
+    /* Screen-only print control bar */
+    .toolbar {
+      background: #141821;
+      color: #f4ebd8;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid #d4a853;
+    }
+    .toolbar h1 { font-size: 1.05rem; color: #d4a853; }
+    .toolbar p { font-size: 0.82rem; color: #b5bcc9; }
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .print-btn {
+      background: #d4a853;
+      color: #111;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.92rem;
+    }
+    .print-btn:hover { filter: brightness(1.08); }
+
+    /* One US Letter Page per Character */
+    .sheet {
+      width: 8.5in;
+      height: 10.2in;
+      background: #fff;
+      margin: 18px auto;
+      padding: 0.35in 0.45in;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.16);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+      break-after: page;
+    }
+    .sheet.hidden { display: none !important; }
+    .sheet:last-of-type {
+      page-break-after: auto;
+      break-after: auto;
+    }
+
+    .sheet-header {
+      border-bottom: 2.5px solid #111;
+      padding-bottom: 7px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 12px;
+    }
+    .game-kicker {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #555;
+    }
+    .char-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+    .char-subtitle {
+      font-size: 0.92rem;
+      font-style: italic;
+      color: #333;
+    }
+    .alignment-box {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border: 2px solid #111;
+      padding: 4px 10px;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .alignment-box.shadow {
+      background: #111;
+      color: #fff;
+    }
+    .alignment-box.inspector {
+      border-style: double;
+      border-width: 4px;
+    }
+
+    .section {
+      margin-bottom: 9px;
+    }
+    .section-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      color: #222;
+      border-bottom: 1px solid #bbb;
+      padding-bottom: 2px;
+      margin-bottom: 5px;
+    }
+    .section p {
+      font-size: 0.88rem;
+      margin-bottom: 4px;
+    }
+
+    .special-callout {
+      border: 1.5px solid #111;
+      background: #f5f5f5;
+      padding: 7px 10px;
+      font-size: 0.84rem;
+      margin-bottom: 9px;
+    }
+
+    .dialogue-box {
+      border: 1.5px solid #222;
+      padding: 8px 10px;
+      border-radius: 3px;
+      margin-bottom: 8px;
+    }
+    .dialogue-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 6px;
+      font-size: 0.85rem;
+    }
+    .dialogue-item:last-child { margin-bottom: 0; }
+    .checkbox {
+      width: 13px;
+      height: 13px;
+      border: 1.5px solid #111;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .act-pill {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      background: #222;
+      color: #fff;
+      padding: 1px 5px;
+      margin-right: 4px;
+    }
+
+    .rules-strip {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.72rem;
+      color: #333;
+      background: #f7f7f7;
+      border: 1px solid #ccc;
+      padding: 5px 8px;
+      margin-bottom: 8px;
+    }
+
+    /* Bottom Cut & Fold Sealed Detention Card */
+    .detention-wrapper {
+      margin-top: auto;
+    }
+    .cut-line {
+      border-top: 1.5px dashed #333;
+      text-align: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: #444;
+      padding-top: 3px;
+      margin-bottom: 6px;
+    }
+    .detention-card {
+      border: 2px solid #111;
+      padding: 9px 12px;
+      background: #fafafa;
+    }
+    .detention-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-bottom: 1px solid #999;
+      padding-bottom: 4px;
+      margin-bottom: 6px;
+    }
+    .detention-card p {
+      font-size: 0.85rem;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .toolbar { display: none !important; }
+      .sheet {
+        width: auto;
+        height: 10.1in;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <div>
+      <h1>Printable Character Sheets — The Last Chime of Ravenshollow (30–45 Min Edition)</h1>
+      <p>Select your player count (8–20), then click Print. Exactly 1 ink-friendly page per player with a cut-and-fold Detention Card.</p>
+    </div>
+    <div class="controls">
+      <label for="countSelect" style="font-size:0.9rem;">Players:</label>
+      <input type="range" id="countSlider" min="8" max="20" value="8" oninput="setCount(this.value)" />
+      <strong id="countVal" style="color:#d4a853; font-size:1.15rem; min-width:26px;">8</strong>
+      <button class="print-btn" onclick="window.print()">Print <span id="btnCount">8</span> Character Sheets</button>
+    </div>
+  </div>
+
+  <div id="sheetsContainer"></div>
+
+  <script>
+    const SHEETS = [
+      {
+        id: 1, name: "Lady Evelyn Vance", role: "Arthur's Disinherited Niece", badge: "INNOCENT", badgeClass: "",
+        persona: "Sharp-tongued, glamorous heiress. At 8:30 PM, you had a furious public argument with Arthur about being disinherited and shouted, 'You'll regret this before nine!' You look guilty—and you know it.",
+        secret: "At 8:50 PM, you snuck halfway up the Study stairs to eavesdrop and heard TOTAL SILENCE inside. At 8:55 PM, you stood right beside Dr. Julian Mercer (#4) in the Grand Hall when Arthur's angry voice boomed from upstairs!",
+        clue: "Two days ago, you heard Arthur recording that exact angry phrase ('You've gone too far! I'm calling the police as soon as the lines are back!') onto a blank brass phonograph cylinder for his memoirs.",
+        dialogues: [
+          { act: "ACT I", target: "Say to Victor Vance (#5):", line: "\"Don't play innocent, Victor. I saw you slipping out of Arthur's Study at 8:05 PM looking like you'd seen a ghost. What were you doing in there?\"" },
+          { act: "ACT II", target: "Say to Celeste Moreau (#7) [after Exhibit D]:", line: "\"Wait—a brass wax cylinder?! Two days ago I heard Arthur dictating that exact phrase—'You've gone too far! I'm calling the police'—onto a blank cylinder! Could the Automaton have played it?!\"" },
+          { act: "ACT III", target: "Say to Thomas Graves (#3):", line: "\"Thomas, think carefully! Dr. Mercer stood right beside me in the Grand Hall at 8:55 PM—almost like he WANTED an alibi. Did you see Mercer give Arthur anything before Arthur went upstairs?\"" }
+        ],
+        detention: "Searched from Lady Evelyn's Clutch: A crumpled furious letter ('I won't let you ruin this family tonight'), PLUS a note in Evelyn's hand: '8:50 PM — Stood on upper stairs outside Arthur's Study. Complete silence inside. Not a sound until 8:55 PM.'"
+      },
+      {
+        id: 2, name: "Clara Sterling", role: "Arthur's Estate Attorney", badge: "INNOCENT", badgeClass: "",
+        persona: "Composed, razor-sharp attorney retained since 2005. You drafted Arthur's New Will and have zero financial motive—making you the room's natural anchor for facts and timelines.",
+        secret: "You advised Arthur AGAINST publishing the 2008 St. Jude's Clinic Medical Trial Audit in his New Will because you knew it would put a target on his back. He refused.",
+        clue: "Arthur's New Will specifically mandated releasing Vault Ledger #4 (2008 St. Jude's Surgical Pump Trial). In Act III, Exhibit E reveals the Executive Hire Dates & Arthur's Horologist Journal.",
+        dialogues: [
+          { act: "ACT I", target: "Say to Dr. Julian Mercer (#4):", line: "\"Julian, Arthur's heart was fine at dinner—and I saw you hand him his 8:45 PM Heart Tonic at 8:42 PM. Are you certain his death was poison from the wine?\"" },
+          { act: "ACT II", target: "Say to Jasper Moore (#6) [after Exhibit C]:", line: "\"Jasper, look at this charred 2008 audit log—'Falsified by J.M.' You're the Chief Engineer, those are your initials, and the lights died on your watch. Explain yourself!\"" },
+          { act: "ACT III", target: "Say to Dr. Julian Mercer (#4) [after Exhibit E]:", line: "\"Julian, you told everyone Arthur's watch ran twelve minutes slow—yet his journal says it hasn't lost half a second in eleven years. And you were Chief Resident at St. Jude's Clinic in 2008. Explain!\"" }
+        ],
+        detention: "Searched from Clara's Briefcase: A confidential memo from Arthur dated yesterday: 'Clara — Do NOT remove the 2008 St. Jude's clause. The doctor has had eighteen years of my silence; my conscience won't wait another day.'"
+      },
+      {
+        id: 3, name: "Thomas Graves", role: "Head Butler (Hired 1999)", badge: "INNOCENT", badgeClass: "",
+        persona: "Dignified, observant butler who notices everything and speaks quietly. You deeply respected Lord Arthur.",
+        secret: "You skimmed small sums from the wine cellar budget for your sister's medical bills (so you're nervous about wine questions), but you are 100% innocent of murder.",
+        clue: "1) At 8:40 PM you delivered piping-hot chamomile tea to the Study—by 9:02 PM the pot was STONE COLD. 2) At 8:42 PM you watched Dr. Mercer (#4) hand Arthur his sealed amber 8:45 PM Heart Tonic vial. 3) At 9:02 PM you saw Arthur's watch smashed at 8:48 PM.",
+        dialogues: [
+          { act: "ACT I", target: "Say to Celeste Moreau (#7):", line: "\"Forgive me, Miss Moreau, but I saw you on the upstairs gallery at 8:20 PM. Did you see anyone else near Lord Arthur's Study?\"" },
+          { act: "ACT II", target: "Say to Victor Vance (#5):", line: "\"The wine decanter? Sir, the wine glass on his desk was completely full. What troubles me is the chamomile tea I poured at 8:40 PM—by 9:02 PM, the pot was stone cold.\"" },
+          { act: "ACT III", target: "Say to Lady Evelyn (#1):", line: "\"Yes, Miss Evelyn. At precisely 8:42 PM, I saw Dr. Mercer hand Lord Arthur his nightly sealed amber Heart Tonic vial in the Grand Hall. Lord Arthur carried it straight upstairs.\"" }
+        ],
+        detention: "Searched from Graves's Coat Pocket: Tonight's butler log: '8:40 PM — Hot chamomile tea delivered to Study. 8:42 PM — Dr. Mercer hands Lord Arthur his 8:45 PM Heart Tonic vial. 9:02 PM — Teapot stone cold; watch smashed at 8:48 PM.'"
+      },
+      {
+        id: 4, name: "Dr. Julian Mercer", role: "Arthur's Personal Physician", badge: "SHADOW TEAM — KILLER", badgeClass: "shadow",
+        special: "YOU ARE THE KILLER! Win by avoiding indictment in the Final Verdict (frame Jasper #6 or Victor #5!). Your Shadow Team allies are Jasper (#6) [+ Damien #14 at 14+, + Nadia #18 at 18+]. During Blackout Phases, wake up to Intimidate 1 guest OR Plant a False Lead.",
+        persona: "Calm, helpful, clinical physician with an 'airtight' 9:00 PM alibi (standing next to Evelyn #1 in the Grand Hall at 8:55–9:00 PM).",
+        secret: "In 2008 at St. Jude's Clinic, YOU forged Calibration Log 08-B ('J.M.'). Tonight: at 8:15 PM you rigged the Automaton (8:55 PM voice + 9:00 PM carafe smash); at 8:35 PM you blackmailed Jasper (#6) to kill the power at 9:00; at 8:42 PM you laced Arthur's 8:45 PM Heart Tonic with Aconite (he died at 8:48 PM). At 9:01 PM you pocketed the vial and lied about the watch & 'bitter-almond wine.'",
+        clue: "STRATEGY: Stay calm and redirect onto Victor's wine-spiking and Jasper's blackout/initials. If pressed in Act III, claim Arthur's watch broke earlier or someone forged 'J.M.' to frame you!",
+        dialogues: [
+          { act: "ACT I", target: "Respond to Clara Sterling (#2):", line: "\"Arthur's heart was under terrible stress, Clara. I gave him his usual sealed tonic at 8:42. No, it was fast-acting poison in the wine; I smelled bitter almonds the moment we broke the door down.\"" },
+          { act: "ACT II", target: "Respond to Harriet Vance-Cole (#8):", line: "\"I rolled Arthur over to check his pulse—standard reflex! He always tosses empty tonic vials in the bin. Look at Exhibit C—'J.M.'—and ask Jasper why the lights conveniently died at nine.\"" },
+          { act: "ACT III", target: "Respond to Clara Sterling (#2):", line: "\"I was a junior resident eighteen years ago, Clara—hardly in charge of logs! And if his watch stopped at 8:48, he must have dropped it before arguing at 8:55. Don't fall for a clever frame-up.\"" }
+        ],
+        detention: "Searched from Dr. Mercer's Medical Bag: A velvet leather case holding 6 amber Heart Tonic vials — 5 are full and sealed, the 6th slot is EMPTY. Tucked in the lining: a faded 2008 St. Jude's Clinic ID badge reading 'Dr. Julian Mercer — Chief Resident.'"
+      },
+      {
+        id: 5, name: "Victor Vance", role: "Debt-Ridden Nephew", badge: "INNOCENT", badgeClass: "",
+        persona: "Charming, desperate nephew who owes $400,000 to dangerous creditors and desperately needed Arthur's inheritance.",
+        secret: "At 8:00 PM, you snuck into the Study and put CHLORAL HYDRATE (non-lethal sleeping powder) into Arthur's RED WINE DECANTER so you could steal the New Will later! You're terrified you accidentally killed him—until Exhibit F proves he never drank the wine!",
+        clue: "Once Exhibit F drops in Act III, confess to the sleeping powder so the room stops wasting votes on you and hunts the real killer!",
+        dialogues: [
+          { act: "ACT I", target: "Respond to Lady Evelyn (#1):", line: "\"Keep your voice down, Evelyn! I went to the Study at 8:05 PM to ask for a loan—he wasn't there! Funny you're pointing fingers after screaming at 8:30 that he'd 'regret this before nine!'\"" },
+          { act: "ACT II", target: "Say to Thomas Graves (#3):", line: "\"Thomas, between us—did Lord Arthur drink much of that red wine tonight? Dr. Mercer said it smelled of poison, and I'm worried about the vintage.\"" },
+          { act: "ACT III", target: "Respond to Harriet Vance-Cole (#8) [Confess!]:", line: "\"Fine! I put sleeping powder—chloral hydrate—in the wine decanter at 8:00 PM to steal the Will! NOT Aconite! And the lab note proves he NEVER DRANK THE WINE! I'm a thief, not a murderer!\"" }
+        ],
+        detention: "Searched from Victor's Jacket Pocket: A folded white paper packet labeled 'Chloral Hydrate (Sleep Aid)' and a crumpled $400,000 gambling IOU due tomorrow morning."
+      },
+      {
+        id: 6, name: "Jasper Moore", role: "Chief Engineer (Hired 2012)", badge: "SHADOW TEAM — ACCOMPLICE", badgeClass: "shadow",
+        special: "YOU ARE DR. MERCER'S (#4) BLACKMAILED ACCOMPLICE! You win ONLY if Dr. Mercer escapes indictment in the Final Verdict. Wake up with the Shadow Team during Blackout Phases.",
+        persona: "Intense Chief Engineer whose initials are 'J.M.'—making you the ultimate decoy suspect!",
+        secret: "Dr. Mercer caught you selling Vance Precision blueprints and blackmailed you into cutting the generator breaker for 15 seconds at 9:00 PM sharp. You didn't know he was going to murder Arthur, but if Mercer falls, you go to prison as an accessory!",
+        clue: "STRATEGY: Defend yourself truthfully on the 2008 date (you were in college in 2008 and hired in 2012!), while sowing doubt and pushing suspicion onto Victor (#5) and Evelyn (#1)!",
+        dialogues: [
+          { act: "ACT I", target: "Respond to Harriet Vance-Cole (#8):", line: "\"I wasn't in the Grand Hall at 9:00 because I heard a shutter banging loose near the basement stairs, Harriet. Maybe ask why YOU were hovering by the Study door!\"" },
+          { act: "ACT II", target: "Respond to Clara Sterling (#2):", line: "\"Are you kidding me, Clara?! Look at the date on that log—2008! I was a sophomore in college in 2008! I wasn't even hired until 2012! Check your own employment ledger!\"" },
+          { act: "ACT III", target: "Respond to Celeste Moreau (#7):", line: "\"Sure I know how the Automaton works—I'm an engineer! But I didn't touch it tonight, and I know nothing about poison! Look at the family fighting over Arthur's billions!\"" }
+        ],
+        detention: "Searched from Jasper's Tool Roll: Rubber-insulated electrical gloves (smelling of ozone) and a torn note in neat doctor's handwriting: '9:00 PM sharp. Fifteen seconds of dark, or your blueprint theft goes to the police.' (Unsigned!)"
+      },
+      {
+        id: 7, name: "Celeste Moreau", role: "Rival Master Horologist", badge: "INNOCENT", badgeClass: "",
+        persona: "Brilliant, fiercely proud master clockmaker and Arthur's former fiancée (he stole your escapement design 30 years ago). Invited tonight to appraise the Chronos Automaton.",
+        secret: "At 8:20 PM, you snuck upstairs to peek at the Automaton and saw a tall figure in a dark jacket slip out of Arthur's Study carrying a small black leather case and vanish down the back stairs.",
+        clue: "You know the Chronos Automaton can be programmed to play a pre-recorded brass cylinder at 8:55 PM AND drop its 5-lb counterweight at 9:00 PM—proving Arthur could have died BEFORE 8:55!",
+        dialogues: [
+          { act: "ACT I", target: "Respond to Thomas Graves (#3):", line: "\"Alright, Thomas, I went upstairs at 8:20 PM to glimpse the Automaton. I never entered the Study—because I saw someone in a dark jacket slip out carrying a small black case and vanish down the back stairs.\"" },
+          { act: "ACT II", target: "Respond to Lady Evelyn (#1):", line: "\"Mon Dieu... Evelyn, if Arthur recorded that line two days ago, then the Automaton played his voice at 8:55 PM on a timer—and the counterweight smashed the carafe at 9:00! He could have been dead BEFORE 8:55!\"" },
+          { act: "ACT III", target: "Say to Jasper Moore (#6):", line: "\"Jasper, you're the only engineer here besides me. The Automaton's counterweight was shifted two inches to hit that carafe, and the lights died at the exact same second. Don't call that coincidence!\"" }
+        ],
+        detention: "Searched from Celeste's Handbag: A 30-year-old patent blueprint signed 'C. Moreau' ('He stole my life's work') PLUS a fresh sketch showing the Chronos Automaton's timer gear can be programmed 60 minutes in advance."
+      },
+      {
+        id: 8, name: "Harriet Vance-Cole", role: "Arthur's Sister & Retired Magistrate", badge: "INNOCENT — INSPECTOR", badgeClass: "inspector",
+        special: "SPECIAL ABILITY (BLACKOUT PHASE): During each Blackout, if you are NOT Detained, the Host wakes you alone. Silently point to 1 player to secretly read their Sealed Detention Card for 10–15 seconds!",
+        persona: "Sharp-eyed retired magistrate estranged from Arthur because you suspected he covered up something rotten back in 2008.",
+        secret: "You brought a miniature field chemistry kit in your coat and use it between Acts II and III to produce Exhibit F (testing the wine vs. Arthur's cuff).",
+        clue: "Use your Blackout inspections strategically—don't out yourself too early or the Shadow Team will Intimidate you to strip your vote!",
+        dialogues: [
+          { act: "ACT I", target: "Say to Jasper Moore (#6):", line: "\"Jasper, I did a headcount in the Grand Hall when the clock struck nine. You weren't there. Where exactly were you when the lights went out?\"" },
+          { act: "ACT II", target: "Say to Dr. Julian Mercer (#4):", line: "\"Doctor, something bothers me. At 9:01, Arthur was slumped face-down—yet you rolled him over in two seconds flat. And where on earth is the empty vial from his 8:45 PM Heart Tonic?\"" },
+          { act: "ACT III", target: "Say to Victor Vance (#5) [after Exhibit F]:", line: "\"Victor, my field test found chloral hydrate—sleeping powder—in the red wine decanter, and Evelyn saw you leaving the Study at 8:05. Tell the truth right now, or I'm voting for you!\"" }
+        ],
+        detention: "Searched from Harriet's Coat: A retired magistrate's badge, a miniature glass chemistry testing kit, and a handwritten note from Arthur: 'Harriet — Tonight I am finally exposing the 2008 St. Jude's cover-up. Watch the people I trust most.'"
+      },
+      {
+        id: 9, name: "Chef Henri Laurent", role: "Head Chef of Ravenshollow Manor", badge: "INNOCENT", badgeClass: "",
+        persona: "Dramatic, fiercely proud head chef—furious anyone would suggest Arthur was poisoned by your food or wine!",
+        secret: "At 7:58 PM, you saw Victor Vance (#5) hovering nervously over the opened 1998 Bordeaux decanter with a tiny white paper packet.",
+        clue: "You decanted the Bordeaux at 7:45 PM (zero almond scent, zero cyanide in your kitchen) and brewed Arthur's chamomile tea at a rolling boil at 8:38 PM.",
+        dialogues: [
+          { act: "ACT I", target: "Say to Victor Vance (#5):", line: "\"Monsieur Victor, do not insult my cellar! I saw you hovering over the 1998 Bordeaux decanter at 7:58 PM with a little white paper packet. What did you put in my wine?!\"" },
+          { act: "ACT II", target: "Say to Dr. Julian Mercer (#4):", line: "\"Doctor, you claimed you smelled 'bitter almonds' from spilled wine. My Bordeaux NEVER smells of almond—and the floor sketch says the puddle was odorless water! Are you certain of your nose?\"" },
+          { act: "ACT III", target: "Say to Thomas Graves (#3):", line: "\"Thomas, I brewed that chamomile tea at 8:38 PM at a rolling boil. If the teapot was stone cold by 9:02 PM, then Lord Arthur never poured a cup—he was already gone before nine!\"" }
+        ],
+        detention: "Searched from Chef Henri's Apron: Kitchen inventory sheet signed 7:45 PM confirming the Bordeaux decanter was pristine, plus an angry note: 'Saw Victor V. near the wine at 7:58 PM with white powder!'"
+      },
+      {
+        id: 10, name: "Margot Bell", role: "Undercover Investigative Journalist", badge: "INNOCENT", badgeClass: "",
+        persona: "Sharp Boston Chronicle reporter who secretly crashed the gala posing as Victor Vance's (#5) date to investigate a 2008 medical cover-up.",
+        secret: "You aren't dating Victor—you paid his bar tab to get inside Ravenshollow Manor and dig up proof of the 2008 St. Jude's Clinic scandal.",
+        clue: "You carry a 2008 news clipping noting that after a fatal Vance pump error at St. Jude's Clinic, the Chief Resident abruptly resigned in 2009 to become a 'private physician.'",
+        dialogues: [
+          { act: "ACT I", target: "Say to Clara Sterling (#2):", line: "\"Miss Sterling, forgive my curiosity—does Arthur's 'transparency foundation' happen to include anything from 2008? Say, a medical trial at St. Jude's Clinic?\"" },
+          { act: "ACT II", target: "Say to Jasper Moore (#6):", line: "\"You're the Chief Engineer, right? I've been researching a 2008 St. Jude's Clinic pump failure. Did you work on Vance medical pumps back in 2008, or did you join later?\"" },
+          { act: "ACT III", target: "Say to Dr. Julian Mercer (#4):", line: "\"Dr. Mercer, I'm a reporter with the Boston Chronicle. My 2008 clipping says the Chief Resident at St. Jude's resigned abruptly in 2009 to become a private physician. That wouldn't be you, would it?\"" }
+        ],
+        detention: "Searched from Margot's Bag: A Boston Chronicle press pass and a 2008 clipping: 'St. Jude's Pump Fatality Closed Without Charges; Chief Resident Resigns for Private Practice in 2009.'"
+      },
+      {
+        id: 11, name: "Sebastian Cole", role: "Fine Art & Antique Appraiser", badge: "INNOCENT", badgeClass: "",
+        persona: "Suave antique appraiser with a suspicious habit of disappearing into side rooms.",
+        secret: "Drowning in auction debt, you snuck into the upstairs gallery at 8:45 PM to swap a priceless Fabergé clock with a replica! You're an art thief, NOT a killer.",
+        clue: "At 8:48 PM, while hiding behind a curtain in the upstairs gallery, you heard a heavy muffled THUMP inside Arthur's locked Study—followed by dead silence!",
+        dialogues: [
+          { act: "ACT I", target: "Say to Lady Evelyn (#1):", line: "\"Evelyn, don't let anyone say Arthur was fine at 8:50. I was... admiring the upstairs portraits around 8:48 PM, and I distinctly heard a heavy thump inside his Study—followed by dead silence.\"" },
+          { act: "ACT II", target: "Say to Celeste Moreau (#7):", line: "\"Celeste, could a clockwork device mimic a human voice AND drop a weight five minutes later? Because whatever thumped at 8:48 PM sounded like a man hitting the floor.\"" },
+          { act: "ACT III", target: "Say to Harriet Vance-Cole (#8):", line: "\"Harriet, I had no business upstairs at 8:48 PM—I was eyeing a Fabergé clock, alright? Arrest me for theft, not murder! Something heavy hit the Study floor at 8:48 PM!\"" }
+        ],
+        detention: "Searched from Sebastian's Coat: A counterfeit brass Fabergé clock wrapped in velvet and a pawnshop receipt. (Proves he's an art thief, NOT a murderer!)"
+      },
+      {
+        id: 12, name: "Lydia Vance", role: "Victor's Calculating Wife", badge: "INNOCENT", badgeClass: "",
+        persona: "Icy, ambitious, and furious with your husband Victor (#5) for gambling away your savings.",
+        secret: "At 8:35 PM near the basement stairs, you overheard two men whispering: one calm voice said, 'Fifteen seconds of dark at nine sharp, or your stolen blueprints go to the police.'",
+        clue: "Right after the two men walked away from the basement stairs at 8:35 PM, the hallway smelled distinctly of clinical rubbing alcohol / antiseptic!",
+        dialogues: [
+          { act: "ACT I", target: "Say to Victor Vance (#5):", line: "\"Victor, look me in the eye. You swore you wouldn't do anything stupid tonight. If you touched that wine because of your gambling debts, I am divorcing you before dawn.\"" },
+          { act: "ACT II", target: "Say to Jasper Moore (#6):", line: "\"Funny thing, Jasper—at 8:35 PM near the basement stairs, I overheard a calm man threatening someone over 'stolen blueprints' and demanding 'fifteen seconds of dark at nine sharp.' Who was blackmailing you?\"" },
+          { act: "ACT III", target: "Say to Dr. Julian Mercer (#4):", line: "\"Doctor, when I walked past the basement stairs at 8:35 PM after overhearing a blackmail threat, the hallway smelled distinctly of clinical antiseptic. You wouldn't have been down there, would you?\"" }
+        ],
+        detention: "Searched from Lydia's Purse: Signed divorce papers naming Victor's $400k debt, plus a cocktail napkin note: '8:35 PM basement stairs — overheard: 15 seconds of dark at 9 sharp or blueprints go to police. Smelled antiseptic.'"
+      },
+      {
+        id: 13, name: "Father Silas Ward", role: "Local Parish Priest & Confessor", badge: "INNOCENT", badgeClass: "",
+        persona: "Gentle, solemn parish priest who has been Arthur Vance's spiritual confessor for twenty years.",
+        secret: "Last Tuesday, Arthur confessed he had spent eighteen years 'shielding a physician who falsified a lethal medical log in 2008.' Bound by the Seal of Confession, you speak in pointed moral truths!",
+        clue: "You know the guilty party from 2008 is NOT an engineer and NOT a nephew—it is 'a man who swore an oath to do no harm.'",
+        dialogues: [
+          { act: "ACT I", target: "Say to Dr. Julian Mercer (#4):", line: "\"Julian, you looked after Arthur's body for eighteen years, and I his soul. Did he seem burdened this week? He spoke to me of an old sin from 2008 he could no longer keep buried.\"" },
+          { act: "ACT II", target: "Say to Clara Sterling (#2):", line: "\"Clara, I cannot break the Seal of Confession, so listen carefully: the man Arthur feared exposing tonight is not an engineer, and not a nephew. He is a man who swore an oath to do no harm.\"" },
+          { act: "ACT III", target: "Say to Harriet Vance-Cole (#8):", line: "\"Harriet, your brother wanted to clear his conscience before he died. Look closely at the men of medicine in this house—not the men of gears.\"" }
+        ],
+        detention: "Searched from Father Silas's Breviary: A Nov 14 prayer bookmark in Arthur's hand: 'Father, pray for me. On the 19th I am ending eighteen years of silence about St. Jude's Clinic. May God forgive the doctor—and me.'"
+      },
+      {
+        id: 14, name: "Damien Cross", role: "Security Consultant & Corporate Fixer", badge: "SHADOW TEAM — ACCOMPLICE", badgeClass: "shadow",
+        special: "YOU ARE ON THE SHADOW TEAM! You win ONLY if Dr. Julian Mercer (#4) escapes indictment in the Final Verdict. Wake up with Dr. Mercer & Jasper (#6) during Blackout Phases.",
+        persona: "Tough, cynical head of security who aggressively pushes simple theories to shut down deeper digging.",
+        secret: "You were paid to bury the 2008 St. Jude's Clinic investigation alongside Mercer—if Vault Ledger #4 goes public, you go to prison for obstruction! Tonight you kept the upstairs hall clear from 8:10–8:20 PM while Mercer rigged the Automaton.",
+        clue: "STRATEGY: Push hard that Victor (#5) poisoned the wine OR that Jasper (#6) & Evelyn (#1) conspired—and defend Dr. Mercer's 9:00 PM Grand Hall alibi!",
+        dialogues: [
+          { act: "ACT I", target: "Say to Clara Sterling (#2):", line: "\"As head of security, this is an inside family job. Evelyn threatened Arthur at 8:30, Victor snuck out of the Study at 8:05—we don't need wild conspiracy theories.\"" },
+          { act: "ACT II", target: "Say to Margot Bell (#10) [or Harriet #8]:", line: "\"Careful digging into old corporate audits. That charred page says 'J.M.'—and Jasper Moore is the only guy in this house who knows how to kill the generator.\"" },
+          { act: "ACT III", target: "Say to Dr. Julian Mercer (#4) [Defend him!]:", line: "\"Look, Doctor, I don't care what a dusty 2008 ledger says—you were standing in the middle of the Grand Hall with witnesses when Arthur was shouting at 8:55! Tell everyone how that's even possible!\"" }
+        ],
+        detention: "Searched from Damien's Jacket: A burner phone with a draft text: 'J.M. — Corridor clear 8:10 to 8:20 PM. Do what you have to do to stop Vault Ledger #4.'"
+      },
+      {
+        id: 15, name: "Beatrice \"Bea\" Holloway", role: "Head Housekeeper", badge: "INNOCENT", badgeClass: "",
+        persona: "Brisk, sharp-eyed housekeeper who notices everything dropped in a bin or tossed down a laundry chute.",
+        secret: "At 9:04 PM, you heard glass clink down the upstairs laundry chute and pulled a CRUSHED AMBER GLASS VIAL (identical to Arthur's 8:45 PM Heart Tonic!) out of the basement laundry bin.",
+        clue: "The upstairs laundry chute is right outside the Study—directly beside the back stairs leading to Dr. Mercer's (#4) guest room!",
+        dialogues: [
+          { act: "ACT I", target: "Say to Thomas Graves (#3):", line: "\"Thomas, something's odd. Right after we broke into the Study at 9:01, I heard glass drop down the upstairs laundry chute. Who was throwing away tiny amber glass vials tonight?\"" },
+          { act: "ACT II", target: "Say to Lady Evelyn (#1):", line: "\"Miss Evelyn, your room is near the upstairs laundry chute. Did you toss a tiny amber medicine vial tonight? Because I pulled a shattered one out of the laundry bin at 9:04 PM!\"" },
+          { act: "ACT III", target: "Say to Harriet Vance-Cole (#8):", line: "\"Miss Harriet, I found a crushed amber vial at the bottom of the laundry chute at 9:04 PM—the exact amber glass Lord Arthur's Heart Tonic comes in! Someone pocketed it in the Study and dumped it!\"" }
+        ],
+        detention: "Searched from Bea's Apron Pocket: A folded linen handkerchief containing shattered fragments of a tiny amber medicine vial—identical to Arthur's 8:45 PM Heart Tonic vials!"
+      },
+      {
+        id: 16, name: "Gideon Thorne", role: "Rival Tech CEO (Thorne Robotics)", badge: "INNOCENT", badgeClass: "",
+        persona: "Slick, ruthless business rival invited tonight so Arthur could gloat over the Chronos Automaton.",
+        secret: "You are the secret buyer of Jasper Moore's (#6) stolen blueprints—you don't want to get caught for corporate espionage, but you had zero part in a murder!",
+        clue: "At 8:38 PM, Jasper panicked and whispered to you: 'The deal is off—the doctor found out about the blueprints and is forcing me to kill the power at nine!'",
+        dialogues: [
+          { act: "ACT I", target: "Say to Jasper Moore (#6):", line: "\"Jasper, a word in private. You promised me the schematics tonight, and then you vanish into the basement at nine? What the hell is going on?\"" },
+          { act: "ACT II", target: "Say to Clara Sterling (#2):", line: "\"Look, Clara, Arthur and I were rivals, not killers. Stop blaming the storm for the blackout—someone in this house was blackmailing your Chief Engineer!\"" },
+          { act: "ACT III", target: "Say to Jasper Moore (#6):", line: "\"Forget our deal, Jasper—a man is dead! You told me at 8:38 PM that 'the doctor' caught you with the blueprints and forced you to cut the power at nine! Tell the room the truth!\"" }
+        ],
+        detention: "Searched from Gideon's Briefcase: A $150,000 cashier's check to 'J. Moore' plus a scribbled note: '8:38 PM — Jasper panicked. Says the doctor caught him and forced a 9:00 PM blackout.'"
+      },
+      {
+        id: 17, name: "Vivienne Sterling", role: "Clara's Junior Law Associate", badge: "INNOCENT", badgeClass: "",
+        persona: "Meticulous, ambitious junior attorney who personally typed up Arthur's New Will this afternoon.",
+        secret: "You secretly copied the corporate restructuring pages of the New Will onto a thumb drive to shop to a rival firm—shady ambition, NOT murder.",
+        clue: "At 4:00 PM today, you caught Dr. Julian Mercer (#4) alone in the library reading Page 14 (the 2008 St. Jude's Audit Clause) of the New Will—he went pale as a ghost!",
+        dialogues: [
+          { act: "ACT I", target: "Say to Clara Sterling (#2):", line: "\"Clara, I should have told you earlier—at 4:00 PM today in the library, I came back to my desk and caught Dr. Mercer reading the 2008 St. Jude's clause of the New Will.\"" },
+          { act: "ACT II", target: "Say to Dr. Julian Mercer (#4):", line: "\"Dr. Mercer, I saw you reading the New Will draft in the library at 4:00 PM today. You went pale as a sheet at the 2008 St. Jude's clause—why did a corporate audit upset you so much?\"" },
+          { act: "ACT III", target: "Say to Victor Vance (#5):", line: "\"Victor, you didn't even know about the 2008 clause, did you? Someone else in this room read that Will at 4:00 PM and decided Arthur couldn't live to sign it at nine.\"" }
+        ],
+        detention: "Searched from Vivienne's Portfolio: A 4:00 PM legal sticky note: 'Found Dr. Mercer reading page 14 (2008 St. Jude's Audit Clause) of the New Will in the library. He looked terrified.'"
+      },
+      {
+        id: 18, name: "Nadia Vance", role: "Pharmacology Student & Mercer's Protégé", badge: "SHADOW TEAM — ACCOMPLICE", badgeClass: "shadow",
+        special: "YOU ARE ON THE SHADOW TEAM! You win ONLY if Dr. Julian Mercer (#4) escapes indictment in the Final Verdict. Wake up with Dr. Mercer, Jasper (#6), & Damien (#14) during Blackout Phases.",
+        persona: "Brilliant pharmacology student whose tuition is funded by Dr. Julian Mercer (#4).",
+        secret: "Two days ago, Dr. Mercer asked you to extract concentrated ACONITE from the university botanical conservatory for a 'research paper.' Your name is on the lab log—if Mercer goes down, you go down as an accessory!",
+        clue: "STRATEGY: Use your pharmacology jargon to back up Mercer's 'bitter-almond wine' story and cast doubt on Exhibit F!",
+        dialogues: [
+          { act: "ACT I", target: "Say to Harriet Vance-Cole (#8):", line: "\"Aunt Harriet, I'm a pharmacology student—if Dr. Mercer says it smelled like bitter almonds, that's classic cyanide in the wine. Let's not second-guess the only licensed physician here!\"" },
+          { act: "ACT II", target: "Say to Chef Henri (#9):", line: "\"Chef, nobody is blaming your cooking—someone slipped a toxin into the wine after you decanted it. Everyone saw Victor near the sideboard!\"" },
+          { act: "ACT III", target: "Say to Clara Sterling (#2):", line: "\"Clara, even if Exhibit F says Aconite, Aconite can be absorbed through skin or water—it doesn't prove it came from the Heart Tonic! Dr. Mercer wouldn't murder over an 18-year-old log!\"" }
+        ],
+        detention: "Searched from Nadia's Clutch: A university botanical checkout slip signed by Nadia Vance two days ago for Aconitum napellus (Aconite), with a $25,000 'Tuition Grant' check from Dr. Julian Mercer."
+      },
+      {
+        id: 19, name: "Capt. Roderick Hale", role: "Coastal Harbormaster", badge: "INNOCENT", badgeClass: "",
+        persona: "Booming, weathered retired naval navigator stranded at the manor by the washed-out bridge.",
+        secret: "You're obsessed with precision timekeeping—at 8:55 PM you checked your U.S. Naval Observatory chronometer against the manor's Grand Clock (dead-on to the second).",
+        clue: "Yesterday afternoon at the pier, you and Arthur synchronized your pocket watches! Arthur's watch did NOT run 12 minutes slow—proving Dr. Mercer (#4) lied in Act I!",
+        dialogues: [
+          { act: "ACT I", target: "Say to Dr. Julian Mercer (#4):", line: "\"Hold on, Doctor! You just said Arthur's watch ran twelve minutes slow? Impossible—I synced my naval chronometer with Arthur's pocket watch at the pier yesterday, and it was dead-on to the second!\"" },
+          { act: "ACT II", target: "Say to Thomas Graves (#3):", line: "\"Thomas, if Arthur's watch never lost a second and smashed at 8:48 PM, then whoever we heard yelling at 8:55 PM wasn't Arthur—unless ghosts can shout through oak doors!\"" },
+          { act: "ACT III", target: "Say to Clara Sterling (#2):", line: "\"Clara, your journal backs me up 100%. Arthur's watch stopped at 8:48 PM—which means Dr. Mercer lied to this entire room in the first five minutes!\"" }
+        ],
+        detention: "Searched from Capt. Hale's Pea Coat: A brass U.S. Naval Observatory chronometer and harbor log from yesterday: '14:00 — Synchronized chronometers with Lord Arthur Vance. His gold pocket watch is accurate to ±0.1 sec.'"
+      },
+      {
+        id: 20, name: "Alistair Finch", role: "Arthur's Eccentric Biographer", badge: "INNOCENT", badgeClass: "",
+        persona: "Theatrical, scatterbrained ghostwriter living at the manor for two months to write Arthur's tell-all memoirs.",
+        secret: "Arthur fired you yesterday for peeking at his sealed 2008 Vault Ledger #4 (making you look bitter!), though you are completely innocent of murder.",
+        clue: "Two days ago, you helped Arthur record Chapter 12 of his memoirs onto a blank brass cylinder—word-for-word: 'You've gone too far! I'm calling the police as soon as the lines are back!'—about 'my silent shadow in a white coat.'",
+        dialogues: [
+          { act: "ACT I", target: "Say to Lady Evelyn (#1):", line: "\"Evelyn, don't you find it bizarre? The exact words we heard at 8:55 PM—'You've gone too far! I'm calling the police as soon as the lines are back!'—are word-for-word from Chapter 12 of Arthur's memoir!\"" },
+          { act: "ACT II", target: "Say to Celeste Moreau (#7):", line: "\"Celeste, I helped Arthur record that line onto a blank brass cylinder two days ago! If that cylinder is inside the Automaton right now, someone swapped it to fake his voice at 8:55 PM!\"" },
+          { act: "ACT III", target: "Say to Harriet Vance-Cole (#8):", line: "\"Harriet, Chapter 12 of Arthur's memoir was all about the 2008 St. Jude's cover-up. He never gave the doctor's name—he just called him 'my silent shadow in a white coat.'\"" }
+        ],
+        detention: "Searched from Alistair's Notebook: Nov 17 shorthand notes: 'Recorded Arthur's Ch. 12 quote onto brass cylinder (You've gone too far! I'm calling the police!). Subject: 2008 St. Jude's cover-up — my silent shadow in a white coat.'"
+      }
+    ];
+
+    function renderSheets() {
+      const container = document.getElementById("sheetsContainer");
+      container.innerHTML = SHEETS.map(s => `
+        <div class="sheet" data-id="${s.id}">
+          <div>
+            <div class="sheet-header">
+              <div>
+                <div class="game-kicker">The Last Chime of Ravenshollow &bull; Character #${s.id}</div>
+                <div class="char-title">${s.name}</div>
+                <div class="char-subtitle">${s.role}</div>
+              </div>
+              <div class="alignment-box ${s.badgeClass}">${s.badge}</div>
+            </div>
+
+            ${s.special ? `<div class="special-callout"><strong>SECRET ROLE:</strong> ${s.special}</div>` : ""}
+
+            <div class="section">
+              <div class="section-title">Who You Are</div>
+              <p>${s.persona}</p>
+            </div>
+
+            <div class="section">
+              <div class="section-title">Your Secret</div>
+              <p>${s.secret}</p>
+            </div>
+
+            <div class="section">
+              <div class="section-title">Crucial Knowledge</div>
+              <p>${s.clue}</p>
+            </div>
+
+            <div class="section">
+              <div class="section-title">Mandatory Dialogues (Check Off Each Act — Fast 5–7 Min Mingles!)</div>
+              <div class="dialogue-box">
+                ${s.dialogues.map(d => `
+                  <div class="dialogue-item">
+                    <div class="checkbox"></div>
+                    <div><span class="act-pill">${d.act}</span><strong>${d.target}</strong> ${d.line}</div>
+                  </div>
+                `).join("")}
+              </div>
+            </div>
+
+            <div class="rules-strip">
+              <strong>30–45 Min Pacing:</strong> Act I (7m mingle + 3m vote + 1m blackout) &rarr; Act II (6m + 3m + 1m) &rarr; Act III (5m + Final Verdict). If you are <strong>Detained</strong> in Town Hall, you stay in the game—open &amp; read your Detention Card below, and skip your next Town Hall vote.
+            </div>
+          </div>
+
+          <div class="detention-wrapper">
+            <div class="cut-line">&#9986; HOST: FOLD UP &amp; TAPE SHUT (OR CUT &amp; ENVELOPE) — DO NOT OPEN UNLESS DETAINED OR INSPECTED &#9986;</div>
+            <div class="detention-card">
+              <div class="detention-header">
+                <span>SEALED DETENTION CARD &bull; #${s.id} ${s.name}</span>
+                <span>OPEN ONLY IF DETAINED</span>
+              </div>
+              <p>${s.detention}</p>
+            </div>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function setCount(val) {
+      const n = parseInt(val, 10);
+      document.getElementById("countVal").textContent = n;
+      document.getElementById("btnCount").textContent = n;
+      document.querySelectorAll(".sheet").forEach(el => {
+        const id = parseInt(el.dataset.id, 10);
+        el.classList.toggle("hidden", id > n);
+      });
+    }
+
+    renderSheets();
+    setCount(8);
+  </script>
+</body>
+</html>

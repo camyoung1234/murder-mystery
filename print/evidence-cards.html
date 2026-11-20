@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Printable Evidence Board — The Last Chime of Ravenshollow</title>
+  <style>
+    @page {
+      size: letter portrait;
+      margin: 0.5in;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      color: #111;
+      background: #eee;
+      line-height: 1.45;
+    }
+
+    /* Screen-only toolbar */
+    .toolbar {
+      background: #141821;
+      color: #f4ebd8;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid #d4a853;
+    }
+    .toolbar h1 { font-size: 1.05rem; color: #d4a853; }
+    .toolbar p { font-size: 0.82rem; color: #b5bcc9; }
+    .print-btn {
+      background: #d4a853;
+      color: #111;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.92rem;
+    }
+    .print-btn:hover { filter: brightness(1.08); }
+
+    /* Printable Pages */
+    .page {
+      width: 8.5in;
+      min-height: 10in;
+      background: #fff;
+      margin: 20px auto;
+      padding: 0.45in 0.55in;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      page-break-after: always;
+      break-after: page;
+    }
+    .page:last-child {
+      page-break-after: auto;
+      break-after: auto;
+    }
+
+    .page-title {
+      text-align: center;
+      border-bottom: 2px solid #111;
+      padding-bottom: 8px;
+      margin-bottom: 4px;
+    }
+    .page-title .sub {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #444;
+    }
+    .page-title h2 {
+      font-size: 1.45rem;
+      margin-top: 2px;
+    }
+
+    .exhibit-box {
+      border: 2px solid #111;
+      padding: 18px 20px;
+      border-radius: 4px;
+      flex: 1;
+    }
+    .exhibit-tag {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      background: #111;
+      color: #fff;
+      display: inline-block;
+      padding: 3px 9px;
+      margin-bottom: 8px;
+    }
+    .exhibit-box h3 {
+      font-size: 1.25rem;
+      border-bottom: 1px solid #999;
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+    }
+    .exhibit-box ul {
+      margin-left: 20px;
+      font-size: 0.97rem;
+    }
+    .exhibit-box li { margin-bottom: 7px; }
+    .exhibit-box pre {
+      font-family: "Courier New", monospace;
+      font-size: 0.88rem;
+      background: #f6f6f6;
+      border: 1px solid #bbb;
+      padding: 12px 14px;
+      white-space: pre-wrap;
+      line-height: 1.45;
+      margin: 8px 0;
+    }
+
+    .map-box pre {
+      font-family: "Courier New", monospace;
+      font-size: 0.92rem;
+      line-height: 1.45;
+      border: 2px solid #111;
+      padding: 18px;
+      background: #fafafa;
+      text-align: left;
+      overflow: hidden;
+    }
+
+    .cut-line {
+      border-top: 1.5px dashed #444;
+      text-align: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: #555;
+      padding-top: 4px;
+      margin: 4px 0;
+    }
+
+    .note-quote {
+      border-left: 3px solid #111;
+      padding: 8px 14px;
+      font-style: italic;
+      background: #f8f8f8;
+      margin-top: 8px;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .toolbar { display: none !important; }
+      .page {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <div>
+      <h1>Printable Evidence Board — The Last Chime of Ravenshollow</h1>
+      <p>5 US Letter pages: Manor Map + Acts I, II, III Exhibits + Optional Blackout False Leads (Ink-friendly B&amp;W)</p>
+    </div>
+    <button class="print-btn" onclick="window.print()">Print Evidence Packet (5 Pages)</button>
+  </div>
+
+  <!-- PAGE 1: MANOR MAP & TIMELINE -->
+  <div class="page">
+    <div class="page-title">
+      <div class="sub">The Last Chime of Ravenshollow — Public Evidence Board</div>
+      <h2>Ravenshollow Manor Map &amp; Known Timeline</h2>
+    </div>
+
+    <div class="map-box">
+      <pre>+-------------------------------------------------------------------+
+|                     SECOND FLOOR (THE STUDY WING)                 |
+|  +-------------------------+   +-------------------------------+  |
+|  |   ARTHUR'S LOCKED STUDY |   |    UPSTAIRS GALLERY / HALL    |  |
+|  |  [Desk]  [Automaton]    |===|  (Oak Door: Bolted Inside)    |  |
+|  |  [Fireplace]  [Cliff    |   |  [Laundry Chute]  [Stairs]    |  |
+|  |                Window]  |   +-------------------------------+  |
+|  +-------------------------+                                      |
++-------------------------------------------------------------------+
+|                       GROUND FLOOR (GALA)                         |
+|  +-------------------------+   +-------------------------------+  |
+|  |       GRAND HALL        |   |      DINING / SIDEBOARD       |  |
+|  |  [Astronomical Clock]   |   |  [Wine Decanter]  [Kitchen]   |  |
+|  |  [Champagne Station]    |   +-------------------------------+  |
+|  +-------------------------+   |   BASEMENT: GENERATOR ROOM    |  |
+|                                +-------------------------------+  |
++-------------------------------------------------------------------+</pre>
+    </div>
+
+    <div class="exhibit-box">
+      <div class="exhibit-tag">Always Visible — Public Facts</div>
+      <h3>Known Sequence of Events (Nov 19)</h3>
+      <ul>
+        <li><strong>8:45 PM:</strong> Lord Arthur Vance retires alone to his second-floor Study to retrieve his unsigned <strong>New Will</strong>, bolting the heavy oak door from the <strong>inside</strong>.</li>
+        <li><strong>8:55 PM:</strong> Guests in the Grand Hall hear Arthur's voice shouting from upstairs: <em>"You've gone too far! I'm calling the police as soon as the lines are back!"</em></li>
+        <li><strong>9:00 PM Sharp:</strong> As the Grand Astronomical Clock chimes nine, the backup generator cuts out—plunging the manor into <strong>total darkness for 15 seconds</strong>. A sharp crack and heavy thud echo from the Study.</li>
+        <li><strong>9:01 PM:</strong> Lights return. Guests force open the bolted Study door and find Lord Arthur Vance <strong>dead at his desk</strong>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PAGE 2: ACT I EXHIBITS -->
+  <div class="page">
+    <div class="page-title">
+      <div class="sub">Reveal at Start of Act I</div>
+      <h2>Act I Evidence — Exhibits A &amp; B</h2>
+    </div>
+
+    <div class="exhibit-box">
+      <div class="exhibit-tag">Exhibit A — Act I</div>
+      <h3>Study Crime Scene Sketch (Recorded 9:02 PM)</h3>
+      <ul>
+        <li><strong>Door &amp; Window:</strong> Heavy oak door bolted from the <strong>inside</strong>. Cliff window latched inside (80-foot sheer drop to rocks).</li>
+        <li><strong>The Body:</strong> Lord Arthur Vance found slumped <strong>face-down</strong> across his leather desk blotter, facing <strong>away from the door</strong>. Rolled over by Dr. Julian Mercer at 9:01 PM.</li>
+        <li><strong>On the Desk:</strong>
+          1) The <strong>New Will</strong> — lying open, unsigned.<br/>
+          2) A <strong>crystal wine glass</strong> — filled with red wine, <strong>completely full and untouched</strong>.<br/>
+          3) A porcelain <strong>chamomile teapot &amp; cup</strong> — untouched, <strong>stone cold</strong> by 9:02 PM.<br/>
+          4) A <strong>broken pocket watch</strong> on the desk corner.
+        </li>
+        <li><strong>On the Floor (below the Chronos Automaton):</strong> A <strong>shattered glass water carafe</strong> in a puddle of <strong>clear, completely odorless liquid</strong>, beside a heavy <strong>5-lb brass counterweight</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="cut-line">&#9986; CUT HERE IF DISPLAYING SEPARATELY &#9986;</div>
+
+    <div class="exhibit-box">
+      <div class="exhibit-tag">Exhibit B — Act I</div>
+      <h3>Arthur's Shattered Pocket Watch</h3>
+      <ul>
+        <li><strong>Make:</strong> Custom Vance Precision Gold Chronometer (engraved <em>"A.V. — Time Never Lies"</em>).</li>
+        <li><strong>Condition:</strong> Glass crystal cracked cleanly across the face; internal escapement jammed from impact against the desk corner.</li>
+        <li><strong>Frozen Time:</strong> <strong>8:48 PM</strong> (precisely 12 minutes before the 9:00 PM blackout).</li>
+        <li><strong>Witness Note:</strong> Dr. Julian Mercer snapped the gold lid shut at 9:02 PM, stating Arthur's watch <em>"always ran twelve minutes slow."</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PAGE 3: ACT II EXHIBITS -->
+  <div class="page">
+    <div class="page-title">
+      <div class="sub">Reveal at Start of Act II</div>
+      <h2>Act II Evidence — Exhibits C &amp; D</h2>
+    </div>
+
+    <div class="exhibit-box">
+      <div class="exhibit-tag">Exhibit C — Act II</div>
+      <h3>Charred Audit Ledger Page (Pulled from Study Fireplace)</h3>
+      <pre>VANCE PRECISION INSTRUMENTS — CONFIDENTIAL INTERNAL AUDIT
+ARCHIVE BOX #4 (SLATED FOR PUBLIC RELEASE WITH NEW WILL)
+---------------------------------------------------------
+SUBJECT:   2008 St. Jude's Clinic — Surgical Pump Trial
+INCIDENT:  Patient fatality (Nov 2008); valve dosing error
+FINDING:   Calibration Log 08-B was deliberately FALSIFIED
+           to conceal operator negligence.
+SIGNED BY: "J.M." [REST OF LINE BURNED]
+STATUS:    Suppressed by A. Vance (2008). Full disclosure
+           ordered upon execution of New Will.</pre>
+    </div>
+
+    <div class="cut-line">&#9986; CUT HERE IF DISPLAYING SEPARATELY &#9986;</div>
+
+    <div class="exhibit-box">
+      <div class="exhibit-tag">Exhibit D — Act II</div>
+      <h3>The Chronos Automaton Blueprint &amp; Wax Cylinder</h3>
+      <ul>
+        <li><strong>Device:</strong> <em>The Chronos Automaton</em> — a 4-foot brass clockwork figure mounted beside Arthur's desk.</li>
+        <li><strong>Programmable Phonograph Drum:</strong> Plays a removable brass wax cylinder at a scheduled minute. Currently set to <strong>8:55 PM</strong>.</li>
+        <li><strong>Programmable Release Cam:</strong> Drops a 5-pound brass counterweight at <strong>9:00 PM</strong> (shifted 2 inches to strike the water carafe on the desk edge).</li>
+        <li><strong>Cylinder Found Inside:</strong> Paper label reads <em>"9:00 PM Gala Greeting"</em>—<strong>but</strong> the label is peeling and hastily glued over a scratched-out title: <strong>"Memoir Draft — Confrontation."</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PAGE 4: ACT III EXHIBITS -->
+  <div class="page">
+    <div class="page-title">
+      <div class="sub">Reveal at Start of Act III</div>
+      <h2>Act III Evidence — Exhibits E &amp; F</h2>
+    </div>
+
+    <div class="exhibit-box">
+      <div class="exhibit-tag">Exhibit E — Act III</div>
+      <h3>Employment Ledger &amp; Arthur's Horologist Journal</h3>
+      <p><strong>1. Vance Precision Instruments — Executive Hire Dates:</strong></p>
+      <ul style="margin-top:6px; margin-bottom:10px;">
+        <li><strong>Thomas Graves</strong> (Head Butler): Hired <strong>1999</strong></li>
+        <li><strong>Clara Sterling</strong> (Estate Attorney): Retained <strong>2005</strong></li>
+        <li><strong>Dr. Julian Mercer</strong> (Personal Physician): Retained <strong>2009</strong> <em>(Prior: Chief Resident, <strong>St. Jude's Clinic, 2006–2008</strong>)</em></li>
+        <li><strong>Jasper Moore</strong> (Chief Engineer): Hired <strong>2012</strong> <em>(Graduated MIT Engineering, <strong>2011</strong>)</em></li>
+      </ul>
+      <p><strong>2. Excerpt from Arthur Vance's Personal Horologist Journal (Nov 15):</strong></p>
+      <div class="note-quote">
+        "A clockmaker whose own pocket watch loses a single second is a fraud. As always, my gold chronometer is calibrated every morning at 7:00 AM to the U.S. Naval Observatory signal. It has not drifted by half a second in eleven years."
+      </div>
+    </div>
+
+    <div class="cut-line">&#9986; CUT HERE IF DISPLAYING SEPARATELY &#9986;</div>
+
+    <div class="exhibit-box">
+      <div class="exhibit-tag">Exhibit F — Act III</div>
+      <h3>Field Toxicology Note (Tested by Inspector Harriet)</h3>
+      <ul>
+        <li><strong>Sample 1 (Red Wine in Decanter &amp; Untouched Glass):</strong> Tests positive for <strong>Chloral Hydrate</strong> (non-lethal sleeping sedative). <em>Conclusion: Someone tried to drug Arthur's wine to put him to sleep, NOT kill him—and Arthur never drank it.</em></li>
+        <li><strong>Sample 2 (Trace Residue on Arthur's Lips &amp; Shirt Cuff):</strong> Tests positive for <strong>Concentrated Aconite</strong> (fast-acting, completely <strong>odorless</strong> cardiac poison; fatal within <strong>2–3 minutes</strong>).</li>
+        <li><strong>Sample 3 (Puddle on Floor):</strong> Plain spring water. Zero wine, zero poison, zero bitter-almond odor.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PAGE 5: OPTIONAL FALSE LEADS -->
+  <div class="page">
+    <div class="page-title">
+      <div class="sub">Host Only — Place on Board Only If Shadow Team Plants a False Lead</div>
+      <h2>Optional Blackout False Lead Slips</h2>
+    </div>
+
+    <div class="exhibit-box">
+      <div class="exhibit-tag">False Lead #1 — Blackout Action</div>
+      <h3>Torn Note Found Near the Generator Room</h3>
+      <p style="margin-bottom:8px;"><em>Found crumpled on the basement stairs immediately after the blackout:</em></p>
+      <pre>"9:00 PM sharp. Pull the main breaker. Don't let Evelyn see you. — V."</pre>
+    </div>
+
+    <div class="cut-line">&#9986; CUT HERE &#9986;</div>
+
+    <div class="exhibit-box">
+      <div class="exhibit-tag">False Lead #2 — Blackout Action</div>
+      <h3>Anonymous Note Slipped Under the Parlor Door</h3>
+      <p style="margin-bottom:8px;"><em>Discovered on the Parlor floor when the lights came back on:</em></p>
+      <pre>"Check the sideboard! Someone wiped down the wine decanter with an almond-scented handkerchief right before 9:00 PM."</pre>
+    </div>
+  </div>
+
+</body>
+</html>
