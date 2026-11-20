@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Last Chime of Ravenshollow — Digital Companion</title>
+  <script src="../assets/mystery-engine.js"></script>
   <style>
     :root {
       --bg: #0b0d12;
@@ -539,11 +540,17 @@
     <section id="tab-setup" class="tab-panel active">
       <div class="card">
         <div class="card-header">
-          <h2>Guest Count &amp; Scaling</h2>
-          <div style="display:flex; align-items:center; gap:12px;">
+          <h2>Guest Count &amp; Dynamic Case Setup</h2>
+          <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
             <label for="playerCountSlider" style="color:var(--muted);">Players:</label>
             <input type="range" id="playerCountSlider" min="8" max="20" value="8" oninput="updatePlayerCount(this.value)" />
-            <strong id="playerCountValue" style="color:var(--gold); font-size:1.25rem; min-width:28px;">8</strong>
+            <strong id="playerCountValue" style="color:var(--gold); font-size:1.25rem; min-width:26px;">8</strong>
+
+            <label for="caseCodeInput" style="color:var(--muted); margin-left:6px;">Case:</label>
+            <input id="caseCodeInput" type="text" class="guest-input" style="width:98px; text-align:center; font-family:'Courier New',monospace; font-weight:700; color:var(--gold);" onchange="applyCaseCode(this.value)" />
+            <button class="btn btn-gold btn-sm" onclick="rollNewRandomCase()" title="Randomly selects any character #1-#N as Killer (hidden in the scrambled Case Code)">Roll Random Killer</button>
+            <a class="btn btn-sm" id="printSheetsLink" href="../print/character-packets.html" target="_blank" style="text-decoration:none;">Print Sheets</a>
+            <a class="btn btn-sm" id="printEvidenceLink" href="../print/evidence-cards-stylized.html" target="_blank" style="text-decoration:none;">Print Evidence</a>
           </div>
         </div>
         <p style="color:var(--muted); margin-bottom:14px;" id="scalingSummary"></p>
@@ -627,22 +634,7 @@
           Every player (including Detained &amp; Shaken players) casts 1 final indictment vote on the <strong>Town Hall</strong> tab (or below). Click <strong>Check Verdict Result</strong> to see which team wins!
         </p>
         <div id="verdictResultBanner" style="margin-bottom:18px;"></div>
-        <div id="grandRevealPanel" style="display:none;" class="reveal-box">
-          <h2 class="serif" style="color:var(--gold); font-size:1.6rem; margin-bottom:12px;">The Truth Behind the Last Chime</h2>
-          <p style="margin-bottom:12px;">
-            <strong>The Killer:</strong> <span style="color:#ff7b7b; font-weight:700;">Dr. Julian Mercer (#4)</span><br/>
-            <strong>The Accomplices (Shadow Team):</strong> <span id="revealAccomplices" style="color:var(--gold);"></span>
-          </p>
-          <p style="margin-bottom:10px;">
-            Arthur Vance did <strong>not</strong> die at 9:00 PM. He died at <strong>8:48 PM</strong>—alone behind a bolted door—from <strong>concentrated Aconite</strong> slipped into his nightly <strong>8:45 PM Heart Tonic</strong> (handed to him by Dr. Mercer in plain sight at 8:42 PM).
-          </p>
-          <p style="margin-bottom:10px;">
-            Victor Vance spiked the red wine with harmless sleeping powder, which Arthur never touched. The 8:55 PM argument was a <strong>pre-recorded brass wax cylinder</strong> played by the Chronos Automaton, and the 9:00 PM crash was the Automaton's brass counterweight smashing the <strong>water carafe</strong> while blackmailed Chief Engineer <strong>Jasper Moore (#6)</strong> cut the generator breaker for 15 seconds.
-          </p>
-          <p style="margin-bottom:10px;">
-            <strong>The 4-Pillar Proof:</strong> (1) Arthur's pocket watch froze at <strong>8:48 PM</strong> and his Horologist Journal proves it never lost a second; (2) The wine was untouched and Arthur died of odorless Aconite from his 8:45 PM tonic; (3) Mercer slipped up in Act I by claiming he saw Arthur's pale lips (Arthur was face-down!) and smelled bitter almonds from spilled wine (the puddle was odorless water!); (4) Jasper Moore wasn't hired until <strong>2012</strong>—making <strong>Dr. Julian Mercer</strong> the only <strong>"J.M."</strong> at St. Jude's Clinic in <strong>2008</strong>!
-          </p>
-        </div>
+        <div id="grandRevealPanel" style="display:none;" class="reveal-box"></div>
       </div>
     </section>
   </main>
@@ -667,94 +659,12 @@
   </div>
 
   <script>
-    const CHARACTERS = [
-      { id: 1, name: "Lady Evelyn Vance", role: "Disinherited Niece", team: "innocent", detention: "Searched from Lady Evelyn's Clutch: A crumpled furious letter ('I won't let you ruin this family tonight'), PLUS a note: '8:50 PM — Stood on upper stairs outside Arthur's Study. Complete silence inside. Not a sound until 8:55 PM.'" },
-      { id: 2, name: "Clara Sterling", role: "Estate Attorney", team: "innocent", detention: "Searched from Clara's Briefcase: A confidential memo from Arthur dated yesterday: 'Clara — Do NOT remove the 2008 St. Jude's clause. The doctor has had eighteen years of my silence; my conscience won't wait another day.'" },
-      { id: 3, name: "Thomas Graves", role: "Head Butler", team: "innocent", detention: "Searched from Graves's Coat Pocket: Tonight's butler log: '8:40 PM — Hot chamomile tea delivered to Study. 8:42 PM — Dr. Mercer hands Lord Arthur his 8:45 PM Heart Tonic vial. 9:02 PM — Teapot stone cold; watch crystal smashed at 8:48 PM.'" },
-      { id: 4, name: "Dr. Julian Mercer", role: "Personal Physician", team: "killer", detention: "Searched from Dr. Mercer's Medical Bag: A velvet leather case holding 6 amber Heart Tonic vials — 5 are full and sealed, the 6th slot is EMPTY. Tucked in the lining: a faded 2008 St. Jude's Clinic ID badge reading 'Dr. Julian Mercer — Chief Resident.'" },
-      { id: 5, name: "Victor Vance", role: "Debt-Ridden Nephew", team: "innocent", detention: "Searched from Victor's Jacket Pocket: A folded white paper packet labeled 'Chloral Hydrate (Sleep Aid)' and a crumpled $400,000 gambling IOU due tomorrow morning." },
-      { id: 6, name: "Jasper Moore", role: "Chief Engineer", team: "accomplice", detention: "Searched from Jasper's Tool Roll: Rubber-insulated electrical gloves (smelling of ozone) and a torn note in neat doctor's handwriting: '9:00 PM sharp. Fifteen seconds of dark, or your blueprint theft goes to the police.' (Unsigned!)" },
-      { id: 7, name: "Celeste Moreau", role: "Rival Horologist", team: "innocent", detention: "Searched from Celeste's Handbag: A 30-year-old patent blueprint signed 'C. Moreau' ('He stole my life's work') PLUS a fresh sketch showing the Chronos Automaton's timer gear can be programmed 60 minutes in advance." },
-      { id: 8, name: "Harriet Vance-Cole", role: "Retired Magistrate", team: "inspector", detention: "Searched from Harriet's Coat: A retired magistrate's badge, a miniature field chemistry kit, and a note from Arthur: 'Harriet — Tonight I am finally exposing the 2008 St. Jude's cover-up. Watch the people I trust most.'" },
-      { id: 9, name: "Chef Henri Laurent", role: "Manor Head Chef", team: "innocent", detention: "Searched from Chef Henri's Apron: Kitchen inventory sheet signed 7:45 PM confirming the Bordeaux decanter was pristine, plus an angry note: 'Saw Victor V. near the wine at 7:58 PM with white powder!'" },
-      { id: 10, name: "Margot Bell", role: "Undercover Journalist", team: "innocent", detention: "Searched from Margot's Bag: A Boston Chronicle press pass and a 2008 clipping: 'St. Jude's Pump Fatality Closed Without Charges; Chief Resident Resigns for Private Practice in 2009.'" },
-      { id: 11, name: "Sebastian Cole", role: "Antique Appraiser", team: "innocent", detention: "Searched from Sebastian's Coat: A counterfeit brass Fabergé clock wrapped in velvet and a pawnshop receipt. (Art thief, NOT a murderer!)" },
-      { id: 12, name: "Lydia Vance", role: "Victor's Wife", team: "innocent", detention: "Searched from Lydia's Purse: Signed divorce papers naming Victor's $400k debt, plus a cocktail napkin note: '8:35 PM basement stairs — overheard: 15 seconds of dark at 9 sharp or blueprints go to police. Smelled antiseptic.'" },
-      { id: 13, name: "Father Silas Ward", role: "Parish Priest", team: "innocent", detention: "Searched from Father Silas's Breviary: A Nov 14 bookmark in Arthur's hand: 'Father, pray for me. On the 19th I am ending eighteen years of silence about St. Jude's Clinic. May God forgive the doctor—and me.'" },
-      { id: 14, name: "Damien Cross", role: "Corporate Fixer", team: "accomplice", detention: "Searched from Damien's Jacket: A burner phone with a draft text: 'J.M. — Corridor clear 8:10 to 8:20 PM. Do what you have to do to stop Vault Ledger #4.'" },
-      { id: 15, name: "Beatrice Holloway", role: "Head Housekeeper", team: "innocent", detention: "Searched from Bea's Apron: A folded linen handkerchief containing shattered fragments of a tiny amber medicine vial pulled from the laundry chute at 9:04 PM — identical to Arthur's 8:45 PM Heart Tonic!" },
-      { id: 16, name: "Gideon Thorne", role: "Rival Tech CEO", team: "innocent", detention: "Searched from Gideon's Briefcase: A $150,000 cashier's check to 'J. Moore' plus a note: '8:38 PM — Jasper panicked. Says the doctor caught him and forced a 9:00 PM blackout.'" },
-      { id: 17, name: "Vivienne Sterling", role: "Junior Law Associate", team: "innocent", detention: "Searched from Vivienne's Portfolio: A 4:00 PM sticky note: 'Found Dr. Mercer reading page 14 (2008 St. Jude's Audit Clause) of the New Will in the library. He looked terrified.'" },
-      { id: 18, name: "Nadia Vance", role: "Pharmacology Student", team: "accomplice", detention: "Searched from Nadia's Clutch: A university botanical checkout slip signed by Nadia Vance two days ago for Aconitum napellus (Aconite), with a $25,000 'Tuition Grant' check from Dr. Julian Mercer." },
-      { id: 19, name: "Capt. Roderick Hale", role: "Coastal Harbormaster", team: "innocent", detention: "Searched from Capt. Hale's Coat: A U.S. Naval Observatory chronometer and harbor log from yesterday: '14:00 — Synchronized chronometers with Lord Arthur Vance. His gold pocket watch is accurate to ±0.1 sec.'" },
-      { id: 20, name: "Alistair Finch", role: "Arthur's Biographer", team: "innocent", detention: "Searched from Alistair's Notebook: Nov 17 shorthand notes: 'Recorded Arthur's Ch. 12 quote onto brass cylinder (You've gone too far! I'm calling the police!). Subject: 2008 St. Jude's cover-up — my silent shadow in a white coat.'" }
-    ];
+    const E = window.RavenshollowEngine;
+    const urlParams = new URLSearchParams(window.location.search);
 
-    const EXHIBITS = [
-      { id: "A", act: 1, title: "Exhibit A — Study Crime Scene Sketch (9:02 PM)", html: `<ul><li><strong>Door &amp; Window:</strong> Heavy oak door bolted from the <em>inside</em>; cliff window latched inside.</li><li><strong>The Body:</strong> Lord Arthur Vance slumped <strong>face-down</strong> on his desk blotter, facing <strong>away from the door</strong>. Rolled over by Dr. Julian Mercer at 9:01 PM.</li><li><strong>On the Desk:</strong> Unsigned New Will; crystal wine glass <strong>completely full &amp; untouched</strong>; chamomile teapot <strong>stone cold</strong> by 9:02 PM; broken pocket watch.</li><li><strong>On the Floor:</strong> Shattered <strong>water carafe</strong> in a puddle of <strong>clear, odorless liquid</strong>, beside a heavy 5-lb brass counterweight.</li></ul>` },
-      { id: "B", act: 1, title: "Exhibit B — Arthur's Shattered Pocket Watch", html: `<ul><li><strong>Make:</strong> Custom Vance Precision Gold Chronometer (<em>"A.V. — Time Never Lies"</em>).</li><li><strong>Condition:</strong> Crystal cracked; internal gears jammed from hitting the desk corner.</li><li><strong>Frozen Time:</strong> <strong>8:48 PM</strong> (12 minutes before the 9:00 PM blackout).</li><li><strong>Note:</strong> Dr. Julian Mercer snapped the lid shut at 9:02 PM, claiming Arthur's watch "always ran twelve minutes slow."</li></ul>` },
-      { id: "C", act: 2, title: "Exhibit C — Charred Audit Log ('J.M.')", html: `<pre>VANCE PRECISION INSTRUMENTS — CONFIDENTIAL AUDIT\nARCHIVE BOX #4 (SLATED FOR RELEASE WITH NEW WILL)\n-------------------------------------------------\nSUBJECT:   2008 St. Jude's Clinic — Surgical Pump Trial\nINCIDENT:  Patient fatality (Nov 2008); valve dosing error\nFINDING:   Calibration Log 08-B deliberately FALSIFIED\nSIGNED BY: "J.M." [REST OF LINE BURNED]\nSTATUS:    Suppressed by A. Vance (2008).</pre>` },
-      { id: "D", act: 2, title: "Exhibit D — Chronos Automaton & Wax Cylinder", html: `<ul><li><strong>Phonograph Drum:</strong> Plays a removable brass wax cylinder at a scheduled minute. Currently set to <strong>8:55 PM</strong>.</li><li><strong>Release Cam:</strong> Drops a 5-lb brass counterweight at <strong>9:00 PM</strong> (shifted 2 inches to strike the water carafe).</li><li><strong>Cylinder Label:</strong> Reads <em>"9:00 PM Gala Greeting"</em> — hastily glued over a scratched-out title: <strong>"Memoir Draft — Confrontation."</strong></li></ul>` },
-      { id: "E", act: 3, title: "Exhibit E — Employment Ledger & Horologist Journal", html: `<ul><li><strong>Executive Hire Dates:</strong> Thomas Graves (1999) • Clara Sterling (2005) • <strong>Dr. Julian Mercer (2009 — Prior: Chief Resident, St. Jude's Clinic 2006–2008)</strong> • <strong>Jasper Moore (2012 — Graduated MIT 2011)</strong>.</li><li><strong>Arthur's Horologist Journal (Nov 15):</strong> <em>"A clockmaker whose own pocket watch loses a single second is a fraud. My gold chronometer is calibrated daily to the U.S. Naval Observatory signal. It has not drifted by half a second in eleven years."</em></li></ul>` },
-      { id: "F", act: 3, title: "Exhibit F — Field Toxicology Note", html: `<ul><li><strong>Red Wine (Decanter &amp; Untouched Glass):</strong> Positive for <strong>Chloral Hydrate</strong> (non-lethal sleeping sedative). Arthur never drank it.</li><li><strong>Residue on Arthur's Lips &amp; Cuff:</strong> Positive for <strong>Concentrated Aconite</strong> (fast-acting, completely <strong>odorless</strong> cardiac poison; fatal in 2–3 minutes).</li><li><strong>Floor Puddle:</strong> Plain spring water. Zero wine, zero bitter-almond odor.</li></ul>` },
-      { id: "FL1", act: 0, title: "False Lead #1 — Crumpled Generator Note (Shadow Action)", html: `<p><em>Found crumpled on the basement stairs during the blackout:</em></p><pre>"9:00 PM sharp. Pull the main breaker. Don't let Evelyn see you. — V."</pre>` },
-      { id: "FL2", act: 0, title: "False Lead #2 — Anonymous Parlor Rumor (Shadow Action)", html: `<p><em>Slipped under the Parlor door during the blackout:</em></p><pre>"Check the sideboard! Someone wiped down the wine decanter with an almond-scented handkerchief right before 9:00 PM."</pre>` }
-    ];
-
-    const ACTS = {
-      prologue: {
-        label: "PROLOGUE — 9:00 PM",
-        sub: "Read aloud to set the scene at Ravenshollow Manor.",
-        html: `<p style="margin-bottom:12px;">Welcome to <strong>Ravenshollow Manor</strong>. Outside, a violent November nor'easter has washed out the wooden bridge to the mainland, and the telephone lines are dead. You are guests of billionaire clockmaker <strong>Lord Arthur Vance (72)</strong>.</p>
-               <p style="margin-bottom:12px;">At 8:45 PM, Arthur retired alone to his second-floor Study to fetch his <strong>New Will</strong>, bolting the heavy oak door from the inside. At 8:55 PM, guests in the Grand Hall heard Arthur shouting from upstairs: <em>"You've gone too far! I'm calling the police as soon as the lines are back!"</em></p>
-               <p>At 9:00 PM sharp, as the Grand Astronomical Clock struck nine, the backup generator died—plunging the manor into darkness for 15 seconds. A sharp crack and heavy thud echoed from the Study. When the lights returned at 9:01 PM, you broke down the bolted door—and found Arthur Vance <strong>dead at his desk</strong>.</p>`
-      },
-      act1: {
-        label: "ACT I — THE LOCKED STUDY (7 MIN)",
-        sub: "Read Public Opener, unlock Exhibits A & B, mingle (7m), then Vote (3m) & Blackout (1m).",
-        html: `
-          <div class="script-line"><div class="script-speaker">Clara Sterling (#2)</div>"Nobody touch a thing! The oak door was bolted from the inside, and the window drops eighty feet to the rocks. How on earth could someone kill him in a locked room?"</div>
-          <div class="script-line"><div class="script-speaker">Lady Evelyn Vance (#1)</div>"He was shouting at someone at 8:55! We all heard him! Then at 9:00 the lights went out and—my God, was that a gunshot?"</div>
-          <div class="script-line"><div class="script-speaker">Dr. Julian Mercer (#4)</div>"There is no bullet wound, Evelyn. It was poison. The moment the lights came back on at 9:01, I saw Arthur's chalk-pale lips and smelled that unmistakable bitter-almond scent from the spilled wine. He died right around nine."</div>
-          <div class="script-line"><div class="script-speaker">Thomas Graves (#3)</div>"Begging your pardon, Doctor, but when I stepped beside the desk, I noticed Lord Arthur's pocket watch had smashed on the corner—its hands were stopped at 8:48."</div>
-          <div class="script-line"><div class="script-speaker">Dr. Julian Mercer (#4)</div>"Ah, yes, I closed the lid so it wouldn't upset Evelyn. Arthur's watch always ran twelve minutes slow—he told me so himself just yesterday."</div>
-          <div class="script-line"><div class="script-speaker">Clara Sterling (#2)</div>"Slow or not, the New Will is still on his desk—unsigned. Whoever wanted Arthur dead before 9:00 PM is standing in this room."</div>`
-      },
-      blackout1: {
-        label: "BLACKOUT PHASE I (1 MIN)",
-        sub: "100% Spoiler-Free Automated Blackout — everyone closes their eyes!",
-        html: `<p style="margin-bottom:14px;">Click <strong>Start Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team to make a silent tap, then waking the Inspector to privately inspect 1 Detention Card—so <strong>nobody has to sit out as a human host!</strong></p>
-        <button class="btn btn-gold" onclick="startAutoBlackout()">Launch Auto-Blackout Phase I</button>`
-      },
-      act2: {
-        label: "ACT II — SHADOWS IN THE CLOCKWORK (6 MIN)",
-        sub: "Read Public Opener, unlock Exhibits C & D, mingle (6m), then Vote (3m) & Blackout (1m).",
-        html: `
-          <div class="script-line"><div class="script-speaker">Clara Sterling (#2)</div>"While the parlor was cleared, I inspected the Study fireplace and the Chronos Automaton. We have two new pieces of evidence—a half-burned 2008 audit log signed 'J.M.', and a scratched brass wax cylinder inside the Automaton."</div>
-          <div class="script-line"><div class="script-speaker">Celeste Moreau (#7)</div>"Wait—a scratched cylinder? Arthur built the Chronos Automaton to play a recorded greeting at 9:00 PM. You can also program its brass counterweight to drop on the hour. If someone swapped the cylinder..."</div>
-          <div class="script-line"><div class="script-speaker">Jasper Moore (#6)</div>"Don't look at me just because my initials are J.M.! Half the people in this house had a reason to hate Arthur. And if you're wondering why the lights went out at nine, the storm probably surged the old breaker!"</div>
-          <div class="script-line"><div class="script-speaker">Victor Vance (#5)</div>"Oh, spare us, Jasper! Everyone knows you've been tinkering in that generator room all week. And what about the wine? Dr. Mercer said he smelled poison in the wine—who poured Arthur's glass?!"</div>
-          <div class="script-line"><div class="script-speaker">Clara Sterling (#2)</div>"Actually, Victor... look at the floor sketch. The wine glass on the desk is completely full. It was the water carafe that shattered."</div>`
-      },
-      blackout2: {
-        label: "BLACKOUT PHASE II (1 MIN)",
-        sub: "100% Spoiler-Free Automated Blackout — everyone closes their eyes!",
-        html: `<p style="margin-bottom:14px;">Click <strong>Start Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team, then waking the Inspector—with zero spoilers for anyone!</p>
-        <button class="btn btn-gold" onclick="startAutoBlackout()">Launch Auto-Blackout Phase II</button>`
-      },
-      act3: {
-        label: "ACT III — THE LAST CHIME (5 MIN)",
-        sub: "Read Public Opener, unlock Exhibits E & F, mingle (5m), then Final Verdict (3m) & Reveal!",
-        html: `
-          <div class="script-line"><div class="script-speaker">Harriet Vance-Cole (#8)</div>"Enough games. I found Arthur's private Horologist Journal and the Vance Precision Employment Ledger locked in his desk drawer—and I tested the residue in the Study using Arthur's chemistry kit."</div>
-          <div class="script-line"><div class="script-speaker">Clara Sterling (#2)</div>"The Employment Ledger changes everything about the 2008 St. Jude's scandal. Look at the hire dates carefully before you cast your final vote."</div>
-          <div class="script-line"><div class="script-speaker">Thomas Graves (#3)</div>"And there is one more thing, everyone. When I brought Lord Arthur his chamomile tea at 8:40 PM, it was piping hot. By 9:02 PM, the teapot was stone cold. He never took a single sip."</div>
-          <div class="script-line"><div class="script-speaker">Dr. Julian Mercer (#4)</div>"Careful, everyone—wild theories will only let the real killer slip away. Look at who had the motive to steal the Will, who rigged the power, and who had access to the Study. Let's settle this."</div>`
-      }
-    };
-
-    let state = JSON.parse(localStorage.getItem("ravenshollow_state_v1") || "null") || {
-      playerCount: 8,
+    let state = JSON.parse(localStorage.getItem("ravenshollow_state_v2") || "null") || {
+      playerCount: parseInt(urlParams.get("players") || localStorage.getItem("ravenshollow_players") || "8", 10),
+      caseCode: urlParams.get("case") || localStorage.getItem("ravenshollow_case_code") || E.CLASSIC_CODE,
       tvMode: true,
       currentAct: "prologue",
       guestNames: {},
@@ -764,22 +674,29 @@
       unlockedExhibits: []
     };
 
+    // Always honor explicit URL query params if passed from Print Sheets
+    if (urlParams.get("case")) state.caseCode = E.decodeCaseCode(urlParams.get("case")).code;
+    if (urlParams.get("players")) state.playerCount = Math.max(8, Math.min(20, parseInt(urlParams.get("players"), 10) || 8));
+
+    let scenario = E.buildScenario(state.caseCode, state.playerCount);
     let timerSeconds = 7 * 60;
     let timerInterval = null;
 
+    function rebuildScenario() {
+      scenario = E.buildScenario(state.caseCode, state.playerCount);
+      state.caseCode = scenario.code;
+      localStorage.setItem("ravenshollow_case_code", state.caseCode);
+      localStorage.setItem("ravenshollow_players", String(state.playerCount));
+    }
+
     function saveState() {
-      localStorage.setItem("ravenshollow_state_v1", JSON.stringify(state));
+      localStorage.setItem("ravenshollow_state_v2", JSON.stringify(state));
+      localStorage.setItem("ravenshollow_case_code", state.caseCode);
+      localStorage.setItem("ravenshollow_players", String(state.playerCount));
     }
 
     function getActiveCharacters() {
-      return CHARACTERS.slice(0, state.playerCount);
-    }
-
-    function getShadowTeam(count) {
-      const team = [4, 6];
-      if (count >= 14) team.push(14);
-      if (count >= 18) team.push(18);
-      return team;
+      return scenario.characters.slice(0, state.playerCount);
     }
 
     // Tabs
@@ -805,13 +722,41 @@
 
     function updatePlayerCount(val) {
       state.playerCount = parseInt(val, 10);
+      rebuildScenario();
+      saveState();
+      renderAll();
+    }
+
+    function applyCaseCode(val) {
+      const dec = E.decodeCaseCode(val);
+      state.caseCode = dec.code;
+      state.detained = [];
+      state.shaken = [];
+      state.votes = {};
+      state.unlockedExhibits = [];
+      document.getElementById("grandRevealPanel").style.display = "none";
+      document.getElementById("verdictResultBanner").innerHTML = "";
+      rebuildScenario();
+      saveState();
+      renderAll();
+    }
+
+    function rollNewRandomCase() {
+      state.caseCode = E.rollRandomCase(state.playerCount);
+      state.detained = [];
+      state.shaken = [];
+      state.votes = {};
+      state.unlockedExhibits = [];
+      document.getElementById("grandRevealPanel").style.display = "none";
+      document.getElementById("verdictResultBanner").innerHTML = "";
+      rebuildScenario();
       saveState();
       renderAll();
     }
 
     function selectAct(actKey) {
       state.currentAct = actKey;
-      const act = ACTS[actKey];
+      const act = scenario.acts[actKey];
       document.getElementById("currentPhaseLabel").textContent = act.label;
       document.getElementById("phaseSubtitle").textContent = act.sub;
       document.getElementById("actScriptContainer").innerHTML = act.html;
@@ -823,7 +768,7 @@
     }
 
     function unlockActExhibits(actNum) {
-      EXHIBITS.filter(e => e.act === actNum).forEach(e => {
+      scenario.exhibits.filter(e => e.act === actNum).forEach(e => {
         if (!state.unlockedExhibits.includes(e.id)) state.unlockedExhibits.push(e.id);
       });
       saveState();
@@ -831,18 +776,16 @@
     }
 
     function toggleExhibit(id) {
-      if (state.unlockedExhibits.includes(id)) {
-        openExhibitModal(id);
-      } else {
+      if (!state.unlockedExhibits.includes(id)) {
         state.unlockedExhibits.push(id);
         saveState();
         renderEvidence();
-        openExhibitModal(id);
       }
+      openExhibitModal(id);
     }
 
     function openExhibitModal(id) {
-      const ex = EXHIBITS.find(e => e.id === id);
+      const ex = scenario.exhibits.find(e => e.id === id);
       if (!ex) return;
       document.getElementById("modalTitle").textContent = ex.title;
       document.getElementById("modalBody").innerHTML = ex.html;
@@ -850,7 +793,7 @@
     }
 
     function openDetentionModal(charId) {
-      const ch = CHARACTERS.find(c => c.id === charId);
+      const ch = scenario.characters.find(c => c.id === charId);
       if (!ch) return;
       const gName = state.guestNames[charId] ? ` (${state.guestNames[charId]})` : "";
       document.getElementById("modalTitle").textContent = `DETENTION CARD — #${ch.id} ${ch.name}${gName}`;
@@ -876,11 +819,8 @@
     }
 
     function toggleShaken(charId) {
-      if (state.shaken.includes(charId)) {
-        state.shaken = state.shaken.filter(id => id !== charId);
-      } else {
-        state.shaken.push(charId);
-      }
+      if (state.shaken.includes(charId)) state.shaken = state.shaken.filter(id => id !== charId);
+      else state.shaken.push(charId);
       saveState();
       renderVoting();
     }
@@ -905,10 +845,7 @@
         const v = state.votes[c.id] || 0;
         if (v > maxV) { maxV = v; topId = c.id; }
       });
-      if (!topId) {
-        alert("No votes tallied yet!");
-        return;
-      }
+      if (!topId) { alert("No votes tallied yet!"); return; }
       detainCharacter(topId);
     }
 
@@ -925,9 +862,10 @@
         banner.innerHTML = `<div class="card" style="border-color:var(--gold);">Tally the Final Verdict ballots on the <strong>Town Hall</strong> tab first!</div>`;
         return;
       }
-      const indictedMercer = topChars.length === 1 && topChars[0].id === 4;
-      if (indictedMercer) {
-        banner.innerHTML = `<div class="card" style="border-color:var(--emerald); background:var(--emerald-bg);"><h3 style="color:#6be0a3;">INNOCENT GUESTS WIN!</h3><p>The room successfully indicted <strong>Dr. Julian Mercer (#4)</strong> with ${maxV} vote(s) and cracked the Last Chime of Ravenshollow!</p></div>`;
+      const caughtKiller = topChars.length === 1 && topChars[0].id === scenario.killerId;
+      if (caughtKiller) {
+        const k = topChars[0];
+        banner.innerHTML = `<div class="card" style="border-color:var(--emerald); background:var(--emerald-bg);"><h3 style="color:#6be0a3;">INNOCENT GUESTS WIN!</h3><p>The room successfully indicted <strong>${k.name} (#${k.id})</strong> with ${maxV} vote(s) and cracked Case ${scenario.code}!</p></div>`;
       } else {
         const names = topChars.map(c => `${c.name} (#${c.id})`).join(" & ");
         banner.innerHTML = `<div class="card" style="border-color:var(--crimson); background:var(--crimson-bg);"><h3 style="color:#ff7b7b;">SHADOW TEAM WINS!</h3><p>The room indicted <strong>${names}</strong> (${maxV} vote(s)) — allowing the true killer to slip away into the storm!</p></div>`;
@@ -937,11 +875,13 @@
 
     function toggleReveal() {
       const el = document.getElementById("grandRevealPanel");
-      el.style.display = el.style.display === "none" ? "block" : "none";
-      const shadowIds = getShadowTeam(state.playerCount).filter(id => id !== 4);
-      document.getElementById("revealAccomplices").textContent = shadowIds
-        .map(id => { const c = CHARACTERS.find(x => x.id === id); return `${c.name} (#${c.id})`; })
-        .join(", ");
+      if (el.style.display === "none") {
+        if (!confirm("Reveal the full solution and Killer identity to everyone?")) return;
+        el.innerHTML = scenario.revealHtml;
+        el.style.display = "block";
+      } else {
+        el.style.display = "none";
+      }
     }
 
     // Timer & Chime
@@ -950,23 +890,15 @@
       const s = (sec % 60).toString().padStart(2, "0");
       return `${m}:${s}`;
     }
-
-    function setTimer(mins) {
-      stopTimer();
-      timerSeconds = mins * 60;
-      renderTimer();
-    }
-
+    function setTimer(mins) { stopTimer(); timerSeconds = mins * 60; renderTimer(); }
     function renderTimer() {
       const el = document.getElementById("timerDisplay");
       el.textContent = formatTime(timerSeconds);
       el.classList.toggle("urgent", timerSeconds <= 60 && timerSeconds > 0);
     }
-
     function toggleTimer() {
-      if (timerInterval) {
-        stopTimer();
-      } else {
+      if (timerInterval) { stopTimer(); }
+      else {
         document.getElementById("timerStartBtn").textContent = "Pause";
         timerInterval = setInterval(() => {
           if (timerSeconds > 0) {
@@ -977,13 +909,11 @@
         }, 1000);
       }
     }
-
     function stopTimer() {
       clearInterval(timerInterval);
       timerInterval = null;
       document.getElementById("timerStartBtn").textContent = "Start";
     }
-
     function playChime() {
       try {
         const ctx = new (window.AudioContext || window.webkitAudioContext)();
@@ -1003,7 +933,7 @@
       } catch (e) {}
     }
 
-    // Voice Auto-Host (Web Speech API)
+    // Voice Auto-Host
     let voiceEnabled = true;
     function toggleVoice() {
       voiceEnabled = !voiceEnabled;
@@ -1011,39 +941,33 @@
       document.getElementById("voiceLabel").textContent = voiceEnabled ? "Voice Auto-Host: ON" : "Voice Auto-Host: OFF";
       if (!voiceEnabled && window.speechSynthesis) window.speechSynthesis.cancel();
     }
-
     function speakText(text) {
       if (!voiceEnabled || !("speechSynthesis" in window)) return;
       try {
         window.speechSynthesis.cancel();
         const u = new SpeechSynthesisUtterance(text);
-        u.rate = 0.96;
-        u.pitch = 0.92;
+        u.rate = 0.96; u.pitch = 0.92;
         window.speechSynthesis.speak(u);
       } catch (e) {}
     }
-
     function narrateCurrentAct() {
-      const container = document.getElementById("actScriptContainer");
-      const text = container.innerText.replace(/\s+/g, " ").trim();
+      const text = document.getElementById("actScriptContainer").innerText.replace(/\s+/g, " ").trim();
       if (text) speakText(text);
     }
-
     function openMapModal() {
       document.getElementById("modalTitle").textContent = "Ravenshollow Manor — Estate Floorplan";
       document.getElementById("modalBody").innerHTML = `<img src="../assets/ravenshollow-manor-map.jpg" alt="Ravenshollow Manor Floorplan" style="width:100%; height:auto; border-radius:4px; border:1px solid #8a6830;" />`;
       document.getElementById("modalOverlay").classList.add("open");
     }
 
-    // Spoiler-Free Automated Blackout Wizard (Zero Human Host Required!)
+    // Spoiler-Free Automated Blackout Wizard (Dynamic Killer & Inspector IDs!)
     let boState = { pendingShaken: null, pendingFalseLead: false, inspectTimer: null };
 
     function startAutoBlackout() {
       boState = { pendingShaken: null, pendingFalseLead: false, inspectTimer: null };
       document.getElementById("blackoutOverlay").classList.add("open");
       playChime();
-      const box = document.getElementById("blackoutContent");
-      box.innerHTML = `
+      document.getElementById("blackoutContent").innerHTML = `
         <h1 class="serif">THE LIGHTS GO OUT...</h1>
         <p>Everyone, close your eyes and gently tap your knees.<br/>No human host is needed — the app will guide the Blackout automatically.</p>
         <p style="font-size:0.9rem; color:var(--gold);">Starting Shadow Team turn in 5 seconds...</p>
@@ -1056,7 +980,7 @@
 
     function boShadowStep() {
       const box = document.getElementById("blackoutContent");
-      const killerDetained = state.detained.includes(4);
+      const killerDetained = state.detained.includes(scenario.killerId);
       const active = getActiveCharacters();
       if (killerDetained) {
         box.innerHTML = `
@@ -1080,19 +1004,11 @@
       speakText("Shadow Team, open your eyes. Silently recognize each other. Quietly step to the screen, make your choice, and then close your eyes.");
     }
 
-    function boPickShaken(charId) {
-      boState.pendingShaken = charId;
-      boAfterShadow();
-    }
-
-    function boPickFalseLead() {
-      boState.pendingFalseLead = true;
-      boAfterShadow();
-    }
+    function boPickShaken(charId) { boState.pendingShaken = charId; boAfterShadow(); }
+    function boPickFalseLead() { boState.pendingFalseLead = true; boAfterShadow(); }
 
     function boAfterShadow() {
-      const box = document.getElementById("blackoutContent");
-      box.innerHTML = `
+      document.getElementById("blackoutContent").innerHTML = `
         <h1 class="serif" style="font-size:1.9rem;">SHADOW TEAM — CLOSE YOUR EYES</h1>
         <p>Choice recorded secretly. Moving to Inspector turn in 4 seconds...</p>`;
       speakText("Shadow Team, close your eyes.");
@@ -1103,7 +1019,7 @@
 
     function boInspectorStep() {
       const box = document.getElementById("blackoutContent");
-      const inspectorDetained = state.detained.includes(8);
+      const inspectorDetained = state.detained.includes(scenario.inspectorId);
       const active = getActiveCharacters();
       if (inspectorDetained) {
         box.innerHTML = `
@@ -1125,10 +1041,9 @@
     }
 
     function boInspectCard(charId) {
-      const ch = CHARACTERS.find(c => c.id === charId);
+      const ch = scenario.characters.find(c => c.id === charId);
       let secs = 12;
-      const box = document.getElementById("blackoutContent");
-      box.innerHTML = `
+      document.getElementById("blackoutContent").innerHTML = `
         <div style="background:var(--parchment); color:var(--parchment-text); padding:22px; border-radius:8px; border:2px solid var(--gold); text-align:left; margin-bottom:16px;">
           <h2 class="serif" style="color:#6b1d1d; margin-bottom:8px;">PRIVATE INSPECTION — #${ch.id} ${ch.name}</h2>
           <p style="color:#221d15; font-size:1rem; line-height:1.6;">${ch.detention}</p>
@@ -1145,8 +1060,7 @@
 
     function boAfterInspector() {
       clearInterval(boState.inspectTimer);
-      const box = document.getElementById("blackoutContent");
-      box.innerHTML = `
+      document.getElementById("blackoutContent").innerHTML = `
         <h1 class="serif" style="font-size:1.9rem;">INSPECTOR — CLOSE YOUR EYES</h1>
         <p>Restoring lights in 3 seconds...</p>`;
       speakText("Inspector, close your eyes.");
@@ -1160,7 +1074,7 @@
       let summary = "The lights flicker back on. All guests appear unharmed.";
       if (boState.pendingShaken) {
         if (!state.shaken.includes(boState.pendingShaken)) state.shaken.push(boState.pendingShaken);
-        const ch = CHARACTERS.find(c => c.id === boState.pendingShaken);
+        const ch = scenario.characters.find(c => c.id === boState.pendingShaken);
         const gName = state.guestNames[ch.id] ? ` (${state.guestNames[ch.id]})` : "";
         summary = `In the darkness, ${ch.name}${gName} was cornered and threatened! They are SHAKEN and cannot vote in the next Town Hall.`;
       } else if (boState.pendingFalseLead) {
@@ -1173,8 +1087,7 @@
       saveState();
       renderAll();
       playChime();
-      const box = document.getElementById("blackoutContent");
-      box.innerHTML = `
+      document.getElementById("blackoutContent").innerHTML = `
         <h1 class="serif">THE LIGHTS RETURN!</h1>
         <p style="color:var(--text); font-size:1.15rem; margin-bottom:24px;">${summary}</p>
         <button class="btn btn-gold" onclick="closeBlackoutScreen()">Return to Manor Dashboard</button>`;
@@ -1189,7 +1102,7 @@
 
     function resetGame() {
       if (!confirm("Reset all votes, detentions, unlocked exhibits, and guest names?")) return;
-      localStorage.removeItem("ravenshollow_state_v1");
+      localStorage.removeItem("ravenshollow_state_v2");
       location.reload();
     }
 
@@ -1197,12 +1110,16 @@
     function renderSetup() {
       document.getElementById("playerCountSlider").value = state.playerCount;
       document.getElementById("playerCountValue").textContent = state.playerCount;
-      const shadowCount = getShadowTeam(state.playerCount).length;
-      document.getElementById("scalingSummary").innerHTML =
-        `Active Roster: <strong>Characters #1 – #${state.playerCount}</strong> &nbsp;|&nbsp; Hidden Shadow Team: <strong>${shadowCount}</strong> (1 Killer + ${shadowCount - 1} Accomplice${shadowCount > 2 ? "s" : ""}) &nbsp;|&nbsp; Inspector: <strong>1 Special Role</strong>`;
+      document.getElementById("caseCodeInput").value = scenario.code;
+      const q = `?case=${encodeURIComponent(scenario.code)}&players=${state.playerCount}`;
+      document.getElementById("printSheetsLink").href = "../print/character-packets.html" + q;
+      document.getElementById("printEvidenceLink").href = "../print/evidence-cards-stylized.html" + q;
 
-      const grid = document.getElementById("setupCastGrid");
-      grid.innerHTML = getActiveCharacters().map(c => {
+      const shadowCount = scenario.shadowIds.length;
+      document.getElementById("scalingSummary").innerHTML =
+        `Case <strong>${scenario.code}</strong> &nbsp;|&nbsp; Active Roster: <strong>#1–#${state.playerCount}</strong> &nbsp;|&nbsp; Hidden Shadow Team: <strong>${shadowCount}</strong> (1 Killer + ${shadowCount - 1} Accomplice${shadowCount > 2 ? "s" : ""}) &nbsp;|&nbsp; Inspector: <strong>1 Special Role</strong>`;
+
+      document.getElementById("setupCastGrid").innerHTML = getActiveCharacters().map(c => {
         let roleBadge = "";
         if (!state.tvMode) {
           if (c.team === "killer") roleBadge = `<span class="badge badge-shadow">KILLER</span>`;
@@ -1225,8 +1142,7 @@
     }
 
     function renderEvidence() {
-      const grid = document.getElementById("evidenceGrid");
-      grid.innerHTML = EXHIBITS.map(ex => {
+      document.getElementById("evidenceGrid").innerHTML = scenario.exhibits.map(ex => {
         const unlocked = state.unlockedExhibits.includes(ex.id);
         const tag = ex.act > 0 ? `Act ${ex.act}` : "Blackout False Lead";
         return `<div class="exhibit-card ${unlocked ? "unlocked" : "locked"}">
@@ -1243,8 +1159,7 @@
     }
 
     function renderVoting() {
-      const grid = document.getElementById("votingCastGrid");
-      grid.innerHTML = getActiveCharacters().map(c => {
+      document.getElementById("votingCastGrid").innerHTML = getActiveCharacters().map(c => {
         const isDetained = state.detained.includes(c.id);
         const isShaken = state.shaken.includes(c.id);
         const v = state.votes[c.id] || 0;
@@ -1288,6 +1203,7 @@
       selectAct(state.currentAct);
     }
 
+    rebuildScenario();
     renderAll();
   </script>
 </body>

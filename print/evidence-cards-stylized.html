@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <title>Stylized Evidence Packet — The Last Chime of Ravenshollow</title>
+  <script src="../assets/mystery-engine.js"></script>
   <style>
-    @page {
-      size: letter portrait;
-      margin: 0.4in;
-    }
+    @page { size: letter portrait; margin: 0.4in; }
     * {
       box-sizing: border-box;
       margin: 0;
@@ -22,7 +20,6 @@
       line-height: 1.45;
     }
 
-    /* Screen-only toolbar */
     .toolbar {
       background: #0e1118;
       color: #f4ebd8;
@@ -30,7 +27,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
       flex-wrap: wrap;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       position: sticky;
@@ -38,21 +35,45 @@
       z-index: 100;
       border-bottom: 2px solid #c99c46;
     }
-    .toolbar h1 { font-size: 1.05rem; color: #d4a853; }
-    .toolbar p { font-size: 0.82rem; color: #aeb6c4; }
+    .toolbar h1 { font-size: 1.02rem; color: #d4a853; }
+    .toolbar p { font-size: 0.8rem; color: #aeb6c4; }
+    .controls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .code-input {
+      background: #0b0d12;
+      color: #d4a853;
+      border: 1.5px solid #d4a853;
+      padding: 6px 10px;
+      border-radius: 5px;
+      font-family: "Courier New", monospace;
+      font-weight: 700;
+      width: 104px;
+      text-align: center;
+      font-size: 0.92rem;
+    }
+    .btn {
+      background: #232a3a;
+      color: #f4ebd8;
+      border: 1px solid #3c465c;
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.84rem;
+    }
+    .btn:hover { border-color: #d4a853; color: #d4a853; }
     .print-btn {
       background: linear-gradient(135deg, #d4a853, #a87e2e);
       color: #111;
       border: none;
-      padding: 9px 18px;
+      padding: 8px 16px;
       border-radius: 6px;
       font-weight: 700;
       cursor: pointer;
-      font-size: 0.92rem;
+      font-size: 0.88rem;
     }
-    .print-btn:hover { filter: brightness(1.08); }
 
-    /* Stylized Parchment Pages */
+    .privacy-shield .secret-page { filter: blur(8px); user-select: none; }
+
     .page {
       width: 8.5in;
       min-height: 10.2in;
@@ -69,12 +90,8 @@
       gap: 16px;
       page-break-after: always;
       break-after: page;
-      position: relative;
     }
-    .page:last-child {
-      page-break-after: auto;
-      break-after: auto;
-    }
+    .page:last-child { page-break-after: auto; break-after: auto; }
 
     .ornate-header {
       text-align: center;
@@ -91,28 +108,15 @@
       color: #6b4c1c;
       font-weight: 700;
     }
-    .ornate-header h2 {
-      font-size: 1.5rem;
-      color: #2b1d0e;
-      margin-top: 2px;
-      letter-spacing: 0.03em;
-    }
+    .ornate-header h2 { font-size: 1.45rem; color: #2b1d0e; margin-top: 2px; }
 
-    /* Map Frame */
     .map-frame {
       border: 3px solid #6b4c1c;
       padding: 6px;
       background: #efe3cb;
-      box-shadow: inset 0 0 12px rgba(60, 38, 12, 0.2);
     }
-    .map-frame img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border: 1px solid #8a6830;
-    }
+    .map-frame img { display: block; width: 100%; height: auto; border: 1px solid #8a6830; }
 
-    /* Stylized Exhibit Card */
     .exhibit-card {
       border: 2px solid #6b4c1c;
       outline: 1px solid #c5a365;
@@ -122,7 +126,6 @@
       position: relative;
       flex: 1;
     }
-
     .wax-seal {
       position: absolute;
       top: 14px;
@@ -137,9 +140,7 @@
       padding: 6px 11px;
       border-radius: 999px;
       border: 2px solid #520d0d;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     }
-
     .exhibit-kicker {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 0.7rem;
@@ -149,61 +150,26 @@
       color: #822222;
       margin-bottom: 4px;
     }
-
     .exhibit-card h3 {
-      font-size: 1.24rem;
+      font-size: 1.2rem;
       color: #24180c;
       border-bottom: 1.5px solid #bfa16a;
       padding-bottom: 6px;
       margin-bottom: 10px;
       padding-right: 110px;
     }
-
-    .exhibit-card ul {
-      margin-left: 18px;
-      font-size: 0.94rem;
-    }
+    .exhibit-card ul { margin-left: 18px; font-size: 0.94rem; }
     .exhibit-card li { margin-bottom: 7px; }
-
-    /* Special Document Treatments */
-    .charred-paper {
+    .exhibit-card pre {
       font-family: "Courier New", monospace;
-      font-size: 0.86rem;
+      font-size: 0.85rem;
       line-height: 1.48;
-      background:
-        radial-gradient(circle at bottom right, rgba(35, 22, 12, 0.35), transparent 55%),
-        #efe4cc;
+      background: radial-gradient(circle at bottom right, rgba(35, 22, 12, 0.3), transparent 55%), #efe4cc;
       border: 1.5px dashed #4a3319;
       padding: 14px 16px;
       white-space: pre-wrap;
-      color: #1f160d;
       margin-top: 8px;
-      box-shadow: inset 0 0 18px rgba(40, 22, 8, 0.22);
     }
-
-    .journal-excerpt {
-      border-left: 4px solid #822222;
-      background: rgba(255, 252, 244, 0.8);
-      padding: 10px 14px;
-      font-style: italic;
-      font-size: 0.94rem;
-      margin-top: 8px;
-      color: #2b1d0e;
-    }
-
-    .forensic-stamp {
-      display: inline-block;
-      font-family: "Courier New", monospace;
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: #822222;
-      border: 2px solid #822222;
-      padding: 2px 8px;
-      transform: rotate(-2deg);
-      margin-bottom: 8px;
-      letter-spacing: 0.08em;
-    }
-
     .cut-line {
       border-top: 1.5px dashed #7d5b24;
       text-align: center;
@@ -214,204 +180,121 @@
       padding-top: 3px;
     }
 
-    .false-lead-note {
-      font-family: "Courier New", monospace;
-      font-size: 0.95rem;
-      background: #fffdf8;
-      border: 1px solid #9c8256;
-      padding: 14px 18px;
-      margin-top: 10px;
-      box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.12);
-    }
-
     @media print {
       body { background: #fff; }
       .toolbar { display: none !important; }
-      .page {
-        width: auto;
-        min-height: 10.1in;
-        margin: 0;
-        box-shadow: none;
-        border: none;
-      }
+      .privacy-shield .secret-page { filter: none !important; }
+      .page { width: auto; min-height: 10.1in; margin: 0; box-shadow: none; border: none; }
     }
   </style>
 </head>
-<body>
+<body class="privacy-shield" id="bodyEl">
 
   <div class="toolbar">
     <div>
-      <h1>Stylized Evidence Packet — The Last Chime of Ravenshollow</h1>
-      <p>Full-color vintage parchment edition with the illustrated Ravenshollow Manor Map (5 US Letter pages).</p>
+      <h1>Stylized Evidence Packet — Synced to Case Code</h1>
+      <p>Map is visible; Exhibits A–F are blurred on screen so you can print blind! (Prints crystal-clear.)</p>
     </div>
-    <button class="print-btn" onclick="window.print()">Print Stylized Evidence Packet (5 Pages)</button>
-  </div>
-
-  <!-- PAGE 1: ILLUSTRATED MANOR MAP & PUBLIC TIMELINE -->
-  <div class="page">
-    <div class="ornate-header">
-      <div class="kicker">The Last Chime of Ravenshollow &bull; Public Evidence Board</div>
-      <h2>Ravenshollow Manor — Estate Floorplan</h2>
-    </div>
-
-    <div class="map-frame">
-      <img src="../assets/ravenshollow-manor-map.jpg" alt="Ravenshollow Manor Illustrated Floorplan" />
-    </div>
-
-    <div class="exhibit-card" style="flex: 0 0 auto; padding: 14px 18px;">
-      <div class="wax-seal">Public Record</div>
-      <div class="exhibit-kicker">Always Visible &bull; November 19</div>
-      <h3 style="font-size: 1.1rem; margin-bottom: 7px;">Known Sequence of Events</h3>
-      <ul style="font-size: 0.88rem;">
-        <li><strong>8:45 PM:</strong> Lord Arthur Vance retires alone to his second-floor Study to fetch his unsigned <strong>New Will</strong>, bolting the heavy oak door from the <strong>inside</strong>.</li>
-        <li><strong>8:55 PM:</strong> Guests in the Grand Hall hear Arthur's voice shouting from upstairs: <em>"You've gone too far! I'm calling the police as soon as the lines are back!"</em></li>
-        <li><strong>9:00 PM Sharp:</strong> As the Grand Astronomical Clock chimes nine, the backup generator dies—plunging the manor into <strong>total darkness for 15 seconds</strong>. A sharp crack and heavy thud echo from the Study.</li>
-        <li><strong>9:01 PM:</strong> Lights return. Guests break down the bolted Study door and find Lord Arthur Vance <strong>dead at his desk</strong>.</li>
-      </ul>
+    <div class="controls">
+      <label style="font-size:0.85rem;">Case:</label>
+      <input type="text" id="caseCodeInput" class="code-input" onchange="applyCode()" />
+      <button class="btn" id="blurBtn" onclick="toggleBlur()">Unblur Exhibits</button>
+      <button class="print-btn" onclick="window.print()">Print Stylized Evidence (5 Pages)</button>
     </div>
   </div>
 
-  <!-- PAGE 2: ACT I EXHIBITS -->
-  <div class="page">
-    <div class="ornate-header">
-      <div class="kicker">Unseal at Start of Act I</div>
-      <h2>Act I Evidence — The Locked Study</h2>
-    </div>
+  <div id="pagesContainer"></div>
 
-    <div class="exhibit-card">
-      <div class="wax-seal">Exhibit A</div>
-      <div class="exhibit-kicker">Act I &bull; Recorded 9:02 PM</div>
-      <h3>Study Crime Scene Inspection</h3>
-      <ul>
-        <li><strong>Door &amp; Window:</strong> Heavy oak door bolted from the <strong>inside</strong>. Cliff window latched inside (80-foot sheer drop to coastal rocks).</li>
-        <li><strong>The Body:</strong> Lord Arthur Vance found slumped <strong>face-down</strong> across his leather desk blotter, facing <strong>away from the door</strong>. Rolled over by Dr. Julian Mercer at 9:01 PM.</li>
-        <li><strong>On the Desk:</strong>
-          (1) The <strong>New Will</strong> — lying open, unsigned.
-          (2) A <strong>crystal wine glass</strong> — filled with red wine, <strong>completely full and untouched</strong>.
-          (3) A porcelain <strong>chamomile teapot &amp; cup</strong> — untouched, <strong>stone cold</strong> by 9:02 PM.
-          (4) A <strong>broken pocket watch</strong> on the desk corner.
-        </li>
-        <li><strong>On the Floor (below the Chronos Automaton):</strong> A <strong>shattered glass water carafe</strong> in a puddle of <strong>clear, completely odorless liquid</strong>, beside a heavy <strong>5-lb brass counterweight</strong>.</li>
-      </ul>
-    </div>
+  <script>
+    const E = window.RavenshollowEngine;
+    const params = new URLSearchParams(window.location.search);
+    const playerCount = parseInt(params.get("players") || localStorage.getItem("ravenshollow_players") || "8", 10);
+    let caseCode = params.get("case") || localStorage.getItem("ravenshollow_case_code") || E.CLASSIC_CODE;
+    document.getElementById("caseCodeInput").value = caseCode;
 
-    <div class="cut-line">&#9986; CUT HERE IF DISPLAYING SEPARATELY &#9986;</div>
+    function toggleBlur() {
+      const b = document.getElementById("bodyEl");
+      b.classList.toggle("privacy-shield");
+      document.getElementById("blurBtn").textContent = b.classList.contains("privacy-shield") ? "Unblur Exhibits" : "Blur (Spoiler-Free)";
+    }
 
-    <div class="exhibit-card">
-      <div class="wax-seal">Exhibit B</div>
-      <div class="exhibit-kicker">Act I &bull; Recovered from Desk Corner</div>
-      <h3>Arthur's Shattered Gold Pocket Watch</h3>
-      <ul>
-        <li><strong>Make:</strong> Custom Vance Precision Gold Chronometer (engraved <em>"A.V. — Time Never Lies"</em>).</li>
-        <li><strong>Condition:</strong> Glass crystal cracked cleanly across the face; internal escapement jammed from impact against the desk corner.</li>
-        <li><strong>Frozen Time:</strong> <strong>8:48 PM</strong> (precisely 12 minutes before the 9:00 PM blackout).</li>
-        <li><strong>Witness Note:</strong> Dr. Julian Mercer snapped the gold lid shut at 9:02 PM, stating Arthur's watch <em>"always ran twelve minutes slow."</em></li>
-      </ul>
-    </div>
-  </div>
+    function applyCode() {
+      const dec = E.decodeCaseCode(document.getElementById("caseCodeInput").value);
+      caseCode = dec.code;
+      document.getElementById("caseCodeInput").value = caseCode;
+      localStorage.setItem("ravenshollow_case_code", caseCode);
+      render();
+    }
 
-  <!-- PAGE 3: ACT II EXHIBITS -->
-  <div class="page">
-    <div class="ornate-header">
-      <div class="kicker">Unseal at Start of Act II</div>
-      <h2>Act II Evidence — Shadows in the Clockwork</h2>
-    </div>
+    function render() {
+      const sc = E.buildScenario(caseCode, playerCount);
+      const byId = id => sc.exhibits.find(x => x.id === id);
 
-    <div class="exhibit-card">
-      <div class="wax-seal">Exhibit C</div>
-      <div class="exhibit-kicker">Act II &bull; Pulled from Study Fireplace Embers</div>
-      <h3>Charred Confidential Audit Page</h3>
-      <div class="charred-paper">VANCE PRECISION INSTRUMENTS — CONFIDENTIAL INTERNAL AUDIT
-ARCHIVE BOX #4 (SLATED FOR PUBLIC RELEASE WITH NEW WILL)
----------------------------------------------------------
-SUBJECT:   2008 St. Jude's Clinic — Surgical Pump Trial
-INCIDENT:  Patient fatality (Nov 2008); valve dosing error
-FINDING:   Calibration Log 08-B was deliberately FALSIFIED
-           to conceal operator negligence.
-SIGNED BY: "J.M." [REST OF LINE BURNED]
-STATUS:    Suppressed by A. Vance (2008). Full disclosure
-           ordered upon execution of New Will.</div>
-    </div>
+      document.getElementById("pagesContainer").innerHTML = `
+        <div class="page">
+          <div class="ornate-header">
+            <div class="kicker">The Last Chime of Ravenshollow &bull; Case ${sc.code} &bull; Public Board</div>
+            <h2>Ravenshollow Manor — Estate Floorplan</h2>
+          </div>
+          <div class="map-frame">
+            <img src="../assets/ravenshollow-manor-map.jpg" alt="Ravenshollow Manor Floorplan" />
+          </div>
+          <div class="exhibit-card" style="flex:0 0 auto; padding:14px 18px;">
+            <div class="wax-seal">Public Record</div>
+            <div class="exhibit-kicker">Always Visible &bull; November 19</div>
+            <h3 style="font-size:1.08rem; margin-bottom:7px;">Known Sequence of Events</h3>
+            <ul style="font-size:0.86rem;">
+              <li><strong>8:45 PM:</strong> Lord Arthur Vance retires alone to his second-floor Study to fetch his unsigned <strong>New Will</strong>, bolting the heavy oak door from the <strong>inside</strong>.</li>
+              <li><strong>8:55 PM:</strong> Guests in the Grand Hall hear Arthur shouting from upstairs: <em>"You've gone too far! I'm calling the police as soon as the lines are back!"</em></li>
+              <li><strong>9:00 PM Sharp:</strong> As the Grand Astronomical Clock chimes nine, the backup generator dies—<strong>total darkness for 15 seconds</strong>. A sharp crack and heavy thud echo from the Study.</li>
+              <li><strong>9:01 PM:</strong> Lights return. Guests break down the bolted Study door and find Lord Arthur Vance <strong>dead at his desk</strong>.</li>
+            </ul>
+          </div>
+        </div>
 
-    <div class="cut-line">&#9986; CUT HERE IF DISPLAYING SEPARATELY &#9986;</div>
+        <div class="page secret-page">
+          <div class="ornate-header">
+            <div class="kicker">Case ${sc.code} &bull; Unseal at Start of Act I</div>
+            <h2>Act I Evidence — The Locked Study</h2>
+          </div>
+          <div class="exhibit-card"><div class="wax-seal">Exhibit A</div><div class="exhibit-kicker">Act I</div><h3>${byId("A").title}</h3>${byId("A").html}</div>
+          <div class="cut-line">&#9986; CUT HERE IF DISPLAYING SEPARATELY &#9986;</div>
+          <div class="exhibit-card"><div class="wax-seal">Exhibit B</div><div class="exhibit-kicker">Act I</div><h3>${byId("B").title}</h3>${byId("B").html}</div>
+        </div>
 
-    <div class="exhibit-card">
-      <div class="wax-seal">Exhibit D</div>
-      <div class="exhibit-kicker">Act II &bull; Mechanical Inspection</div>
-      <h3>The Chronos Automaton &amp; Brass Wax Cylinder</h3>
-      <ul>
-        <li><strong>Device:</strong> <em>The Chronos Automaton</em> — a 4-foot brass clockwork figure mounted beside Arthur's desk.</li>
-        <li><strong>Programmable Phonograph Drum:</strong> Plays a removable brass wax cylinder at a scheduled minute. Currently set to <strong>8:55 PM</strong>.</li>
-        <li><strong>Programmable Release Cam:</strong> Drops a 5-pound brass counterweight at <strong>9:00 PM</strong> (shifted 2 inches to strike the water carafe on the desk edge).</li>
-        <li><strong>Cylinder Found Inside:</strong> Paper label reads <em>"9:00 PM Gala Greeting"</em>—<strong>but</strong> the label is peeling and hastily glued over a scratched-out title: <strong>"Memoir Draft — Confrontation."</strong></li>
-      </ul>
-    </div>
-  </div>
+        <div class="page secret-page">
+          <div class="ornate-header">
+            <div class="kicker">Case ${sc.code} &bull; Unseal at Start of Act II</div>
+            <h2>Act II Evidence — Shadows in the Clockwork</h2>
+          </div>
+          <div class="exhibit-card"><div class="wax-seal">Exhibit C</div><div class="exhibit-kicker">Act II</div><h3>${byId("C").title}</h3>${byId("C").html}</div>
+          <div class="cut-line">&#9986; CUT HERE IF DISPLAYING SEPARATELY &#9986;</div>
+          <div class="exhibit-card"><div class="wax-seal">Exhibit D</div><div class="exhibit-kicker">Act II</div><h3>${byId("D").title}</h3>${byId("D").html}</div>
+        </div>
 
-  <!-- PAGE 4: ACT III EXHIBITS -->
-  <div class="page">
-    <div class="ornate-header">
-      <div class="kicker">Unseal at Start of Act III</div>
-      <h2>Act III Evidence — The Last Chime</h2>
-    </div>
+        <div class="page secret-page">
+          <div class="ornate-header">
+            <div class="kicker">Case ${sc.code} &bull; Unseal at Start of Act III</div>
+            <h2>Act III Evidence — The Last Chime</h2>
+          </div>
+          <div class="exhibit-card"><div class="wax-seal">Exhibit E</div><div class="exhibit-kicker">Act III</div><h3>${byId("E").title}</h3>${byId("E").html}</div>
+          <div class="cut-line">&#9986; CUT HERE IF DISPLAYING SEPARATELY &#9986;</div>
+          <div class="exhibit-card"><div class="wax-seal">Exhibit F</div><div class="exhibit-kicker">Act III</div><h3>${byId("F").title}</h3>${byId("F").html}</div>
+        </div>
 
-    <div class="exhibit-card">
-      <div class="wax-seal">Exhibit E</div>
-      <div class="exhibit-kicker">Act III &bull; Unlocked from Private Desk Drawer</div>
-      <h3>Executive Employment Ledger &amp; Horologist Journal</h3>
-      <p><strong>1. Vance Precision Instruments — Executive Hire Dates:</strong></p>
-      <ul style="margin-top: 5px; margin-bottom: 10px;">
-        <li><strong>Thomas Graves</strong> (Head Butler): Hired <strong>1999</strong></li>
-        <li><strong>Clara Sterling</strong> (Estate Attorney): Retained <strong>2005</strong></li>
-        <li><strong>Dr. Julian Mercer</strong> (Personal Physician): Retained <strong>2009</strong> <em>(Prior: Chief Resident, <strong>St. Jude's Clinic, 2006–2008</strong>)</em></li>
-        <li><strong>Jasper Moore</strong> (Chief Engineer): Hired <strong>2012</strong> <em>(Graduated MIT Engineering, <strong>2011</strong>)</em></li>
-      </ul>
-      <p><strong>2. Excerpt from Arthur Vance's Personal Horologist Journal (Nov 15):</strong></p>
-      <div class="journal-excerpt">
-        "A clockmaker whose own pocket watch loses a single second is a fraud. As always, my gold chronometer is calibrated every morning at 7:00 AM to the U.S. Naval Observatory signal. It has not drifted by half a second in eleven years."
-      </div>
-    </div>
+        <div class="page secret-page">
+          <div class="ornate-header">
+            <div class="kicker">Case ${sc.code} &bull; Place Only If Triggered in a Blackout</div>
+            <h2>Blackout False Lead Slips</h2>
+          </div>
+          <div class="exhibit-card"><div class="wax-seal">False Lead #1</div><div class="exhibit-kicker">Blackout Action</div><h3>${byId("FL1").title}</h3>${byId("FL1").html}</div>
+          <div class="cut-line">&#9986; CUT HERE &#9986;</div>
+          <div class="exhibit-card"><div class="wax-seal">False Lead #2</div><div class="exhibit-kicker">Blackout Action</div><h3>${byId("FL2").title}</h3>${byId("FL2").html}</div>
+        </div>
+      `;
+    }
 
-    <div class="cut-line">&#9986; CUT HERE IF DISPLAYING SEPARATELY &#9986;</div>
-
-    <div class="exhibit-card">
-      <div class="wax-seal">Exhibit F</div>
-      <div class="exhibit-kicker">Act III &bull; Field Chemistry Kit Analysis</div>
-      <h3>Field Toxicology Report</h3>
-      <div class="forensic-stamp">VERIFIED FIELD ANALYSIS — HARRIET VANCE-COLE</div>
-      <ul>
-        <li><strong>Sample 1 (Red Wine in Decanter &amp; Untouched Glass):</strong> Positive for <strong>Chloral Hydrate</strong> (non-lethal sleeping sedative). <em>Conclusion: Someone tried to drug Arthur's wine to put him to sleep, NOT kill him—and Arthur never drank it.</em></li>
-        <li><strong>Sample 2 (Trace Residue on Arthur's Lips &amp; Shirt Cuff):</strong> Positive for <strong>Concentrated Aconite</strong> (fast-acting, completely <strong>odorless</strong> cardiac poison; fatal within <strong>2–3 minutes</strong>).</li>
-        <li><strong>Sample 3 (Puddle on Floor):</strong> Plain spring water. Zero wine, zero poison, zero bitter-almond odor.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- PAGE 5: OPTIONAL FALSE LEADS -->
-  <div class="page">
-    <div class="ornate-header">
-      <div class="kicker">Place on Board Only If Triggered During a Blackout</div>
-      <h2>Blackout False Lead Slips</h2>
-    </div>
-
-    <div class="exhibit-card">
-      <div class="wax-seal">False Lead #1</div>
-      <div class="exhibit-kicker">Discovered After Blackout</div>
-      <h3>Crumpled Note Found Near the Generator Room</h3>
-      <p><em>Found crumpled on the basement stairs immediately after the lights returned:</em></p>
-      <div class="false-lead-note">"9:00 PM sharp. Pull the main breaker. Don't let Evelyn see you. — V."</div>
-    </div>
-
-    <div class="cut-line">&#9986; CUT HERE &#9986;</div>
-
-    <div class="exhibit-card">
-      <div class="wax-seal">False Lead #2</div>
-      <div class="exhibit-kicker">Discovered After Blackout</div>
-      <h3>Anonymous Note Slipped Under the Parlor Door</h3>
-      <p><em>Discovered on the Parlor floor when the lights came back on:</em></p>
-      <div class="false-lead-note">"Check the sideboard! Someone wiped down the wine decanter with an almond-scented handkerchief right before 9:00 PM."</div>
-    </div>
-  </div>
-
+    render();
+  </script>
 </body>
 </html>
