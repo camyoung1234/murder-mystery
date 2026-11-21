@@ -1,8 +1,9 @@
 /* ============================================================================
-   THE LAST CHIME OF RAVENSHOLLOW — 20-KILLER DYNAMIC MYSTERY ENGINE
-   Shared across Companion App & All Printable Character / Evidence Sheets.
-   Supports any player count (8-20) and any Killer (#1-#N) via a scrambled
-   spoiler-free Case Code (e.g., RV-4821).
+   THE LAST CHIME OF RAVENSHOLLOW — BALANCED 180-VARIATION MYSTERY ENGINE
+   Shared across Companion App, Printable Sheets & Variation Generator Script.
+   Supports 12-20 players with 20 balanced variations per player count (180
+   total variations), giving every character (#1-#20) equal probability of
+   being the Killer or an Accomplice at every player count.
    ============================================================================ */
 
 (function (global) {
@@ -276,9 +277,17 @@
     return { valid: true, killerId, code: "RV-" + clean };
   }
 
-  function rollRandomCase(playerCount) {
-    const maxP = Math.max(8, Math.min(20, parseInt(playerCount, 10) || 8));
-    const killerId = Math.floor(Math.random() * maxP) + 1;
+  const MIN_PLAYERS = 12;
+  const MAX_PLAYERS = 20;
+
+  function accompliceCountFor(playerCount) {
+    if (playerCount >= 18) return 3;
+    if (playerCount >= 14) return 2;
+    return 1;
+  }
+
+  function rollRandomCase() {
+    const killerId = Math.floor(Math.random() * 20) + 1;
     return encodeCaseCode(killerId);
   }
 
@@ -290,41 +299,80 @@
     return (/^[aeiou]/i.test(clean) ? "an " : "a ") + clean;
   }
 
-  function buildScenario(caseCode, playerCount) {
-    const n = Math.max(8, Math.min(20, parseInt(playerCount, 10) || 8));
+  function getVariationBlueprint(playerCount, killerId) {
+    const table = global && global.RAVENSHOLLOW_VARIATIONS;
+    if (table && table[playerCount] && table[playerCount][killerId]) {
+      return table[playerCount][killerId];
+    }
+    // Fallback if variations-data.js is not loaded: cyclic balanced assignment
+    const accCount = accompliceCountFor(playerCount);
+    const allAccomplices = [
+      ((killerId - 1 + 2) % 20) + 1,
+      ((killerId - 1 + 7) % 20) + 1,
+      ((killerId - 1 + 13) % 20) + 1
+    ];
+    const removalOffsets = [3, 5, 9, 11, 14, 16, 17, 19];
+    const removedIds = removalOffsets
+      .slice(0, 20 - playerCount)
+      .map(off => ((killerId - 1 + off) % 20) + 1);
+    const activeIds = [];
+    for (let id = 1; id <= 20; id++) {
+      if (!removedIds.includes(id)) activeIds.push(id);
+    }
+    return {
+      playerCount,
+      variationId: killerId,
+      killerId,
+      accomplices: allAccomplices.slice(0, accCount),
+      activeIds,
+      removedIds
+    };
+  }
+
+  function pickFirstActive(preferredIds, activeIds, excludedIds) {
+    for (let i = 0; i < preferredIds.length; i++) {
+      const cid = preferredIds[i];
+      if (activeIds.includes(cid) && !excludedIds.includes(cid)) return cid;
+    }
+    for (let i = 0; i < activeIds.length; i++) {
+      const cid = activeIds[i];
+      if (!excludedIds.includes(cid)) return cid;
+    }
+    return activeIds[0];
+  }
+
+  function buildScenario(caseCode, playerCount, blueprintOverride) {
+    const n = Math.max(MIN_PLAYERS, Math.min(MAX_PLAYERS, parseInt(playerCount, 10) || MIN_PLAYERS));
     const decoded = decodeCaseCode(caseCode || CLASSIC_CODE);
-    // If someone loads a code whose killerId > n, wrap cleanly into 1..n
-    const killerId = decoded.killerId <= n ? decoded.killerId : ((decoded.killerId - 1) % n) + 1;
+    const killerId = blueprintOverride ? blueprintOverride.killerId : decoded.killerId;
+    const blueprint = blueprintOverride || getVariationBlueprint(n, killerId);
+
+    const activeIds = blueprint.activeIds.slice().sort((a, b) => a - b);
+    const removedIds = (blueprint.removedIds || []).slice();
+    const accomplices = blueprint.accomplices.slice();
+
     const killerBase = BASE_CHARACTERS[killerId - 1];
-
-    // Fixed Accomplices scaled by player count (never includes killerId, always <= n)
-    const accomplices = [];
-    const cand = killerBase.accomplices;
-    accomplices.push(cand[0]); // Core accomplice (always 1..8)
-    if (n >= 14) accomplices.push(cand[1]);
-    if (n >= 18) accomplices.push(cand[2]);
-
     const shadowIds = [killerId, ...accomplices];
     const coreAccompliceId = accomplices[0];
     const coreAccompliceBase = BASE_CHARACTERS[coreAccompliceId - 1];
 
-    // Choose Inspector (Harriet #8 by default; fallback Clara #2 or Graves #3 if #8 is Shadow)
-    let inspectorId = 8;
-    if (shadowIds.includes(8)) inspectorId = !shadowIds.includes(2) ? 2 : 3;
+    // Choose 4 distinct active Innocent story anchors (never removed, never Shadow Team)
+    const inspectorId = pickFirstActive([8, 2, 3, 4, 10, 13, 14, 17, 19], activeIds, shadowIds);
     const inspectorBase = BASE_CHARACTERS[inspectorId - 1];
 
-    // Key Witness who saw the 8:42 PM delivery (Graves #3, or Clara #2 if Graves is Shadow, or Evelyn #1)
-    let witnessId = 3;
-    if (shadowIds.includes(3)) witnessId = !shadowIds.includes(2) ? 2 : 1;
+    const witnessId = pickFirstActive([3, 2, 1, 15, 9, 11, 14, 19], activeIds, [...shadowIds, inspectorId]);
     const witnessBase = BASE_CHARACTERS[witnessId - 1];
 
-    // Red Herring Wine Spiker (Victor #5, or Lady Evelyn #1 / Celeste #7 if Victor is on Shadow Team)
-    const wineSpikerId = shadowIds.includes(5) ? (!shadowIds.includes(1) ? 1 : 7) : 5;
+    const wineSpikerId = pickFirstActive([5, 1, 7, 11, 16, 12, 20], activeIds, [...shadowIds, inspectorId, witnessId]);
     const wineSpikerBase = BASE_CHARACTERS[wineSpikerId - 1];
 
-    // Alibi Witness who stood beside the Killer at 8:55 PM (prefer guests not upstairs at 8:55 PM)
-    const alibiWitnessId = [4, 8, 2, 7, 3, 1].find(id => !shadowIds.includes(id) && id !== wineSpikerId && id !== witnessId) || 7;
+    const alibiWitnessId = pickFirstActive([4, 7, 2, 8, 3, 1, 13, 19, 10], activeIds, [...shadowIds, inspectorId, witnessId, wineSpikerId]);
     const alibiWitnessBase = BASE_CHARACTERS[alibiWitnessId - 1];
+
+    // Active speaker for Act II Automaton line (prefers Celeste #7, else Jasper #6, Gideon #16, etc.; distinct from other Act II speakers)
+    const act2Reserved = [killerId, coreAccompliceId, inspectorId, witnessId, wineSpikerId];
+    const automatonSpeakerId = pickFirstActive([7, 6, 16, 11, 19, 20, 1, 2, 4, 10], activeIds, act2Reserved);
+    const automatonSpeakerBase = BASE_CHARACTERS[automatonSpeakerId - 1];
 
     // Pillar 4: 2008 Audit Initials Red Herring (matches both Killer & Core Accomplice!)
     const sameInitials = killerBase.initials === coreAccompliceBase.initials;
@@ -334,9 +382,9 @@
       : `'${auditPair[0].initials}' / '${auditPair[1].initials}'`;
     const deliveryWithArticle = withArticle(killerBase.deliveryItem);
 
-    // Build Dynamic Characters 1..20
-    const characters = BASE_CHARACTERS.map(base => {
-      const id = base.id;
+    // Build Dynamic Characters ONLY for activeIds (exact length n)
+    const characters = activeIds.map(id => {
+      const base = BASE_CHARACTERS[id - 1];
       const isKiller = id === killerId;
       const isAccomplice = accomplices.includes(id);
       const isInspector = id === inspectorId;
@@ -352,6 +400,11 @@
       let secret = base.secret;
       let clue = base.clue;
       let detention = base.detention;
+
+      // Avoid referencing (#5) in Lydia's persona if Victor (#5) is not in this game's cast
+      if (id === 12 && !activeIds.includes(5)) {
+        persona = "Icy, ambitious, and furious with your husband Victor for gambling away your savings.";
+      }
 
       if (isKiller) {
         team = "killer";
@@ -397,6 +450,9 @@
 
       if (isWineSpiker && !isKiller && !isAccomplice) {
         secret = `RED HERRING! At 7:58 PM, you snuck into the Dining & Sideboard and put CHLORAL HYDRATE (non-lethal sleeping powder) into Arthur's 1998 Bordeaux wine decanter before a glass was carried up to his Study, then slipped into the Study around 8:05 PM to locate the New Will! You're terrified you killed him—until Exhibit F proves he never drank the wine!`;
+        if (id !== 5) {
+          clue += " Also: once Exhibit F drops in Act III, confess to the sleeping powder so the room stops wasting votes on you and hunts the real killer!";
+        }
         detention = `Searched from ${base.name}'s Pocket: A folded white paper packet labeled 'Chloral Hydrate (Sleep Aid)' and a desperate note about stealing the unsigned New Will.`;
       }
 
@@ -407,6 +463,7 @@
 
       // Dynamic Act I-III Mandatory Dialogues
       const dialogues = buildDialoguesFor(id, {
+        activeIds,
         isKiller, isAccomplice, isCoreAcc, isInspector, isWitness, isWineSpiker,
         accomplices, sameInitials, auditPair, auditInitialsLabel, deliveryWithArticle,
         killerBase, coreAccompliceBase, inspectorBase, witnessBase, wineSpikerBase, alibiWitnessBase, base
@@ -423,13 +480,19 @@
       ? `VANCE PRECISION INSTRUMENTS — CONFIDENTIAL AUDIT\nARCHIVE BOX #4 (SLATED FOR RELEASE WITH NEW WILL)\n-------------------------------------------------\nSUBJECT:   ${killerBase.scandalTitle}\nFINDING:   ${killerBase.scandalDetail}\nSIGNED BY: "${killerBase.initials}" [REST OF LINE BURNED]\nSTATUS:    Suppressed by A. Vance (2008). Full disclosure\n           ordered upon execution of New Will.`
       : `VANCE PRECISION INSTRUMENTS — CONFIDENTIAL AUDIT\nARCHIVE BOX #4 (SLATED FOR RELEASE WITH NEW WILL)\n-------------------------------------------------\nSUBJECT:   ${killerBase.scandalTitle}\nFINDING:   ${killerBase.scandalDetail}\nFLAGGED INITIALS: "${auditPair[0].initials}" / "${auditPair[1].initials}" [ROLES & DATES BURNED]\nNOTE:      One party falsified the 2008 record; the other had\n           no 2008 access to Archive Box #4.\nSTATUS:    Suppressed by A. Vance (2008). Full disclosure\n           ordered upon execution of New Will.`;
 
-    // Build Exhibit E with 6 active guests (Killer, Core Accomplice, Wine Spiker + 3 active innocents with 2008 ties)
+    // Build Exhibit E with 6 active guests (Killer, Core Accomplice, Wine Spiker + 3 active guests with 2008 ties)
     // so players must cross-reference Exhibit C, Exhibit E, and Exhibit F rather than getting an easy giveaway.
     const extraExhibitEIds = [];
-    const preferredExtras = [2, 3, 1, 7, 8, 10, 12, 13, 14, 16];
+    const preferredExtras = [2, 3, 1, 7, 8, 10, 12, 13, 14, 16, ...activeIds];
     for (let i = 0; i < preferredExtras.length && extraExhibitEIds.length < 3; i++) {
       const cid = preferredExtras[i];
-      if (cid <= n && cid !== killerId && cid !== coreAccompliceId && cid !== wineSpikerId) {
+      if (
+        activeIds.includes(cid) &&
+        cid !== killerId &&
+        cid !== coreAccompliceId &&
+        cid !== wineSpikerId &&
+        !extraExhibitEIds.includes(cid)
+      ) {
         extraExhibitEIds.push(cid);
       }
     }
@@ -539,7 +602,7 @@
         sub: "Read Public Opener, unlock Exhibits C & D, mingle (6m), then Vote (3m) & Blackout (1m).",
         html: `
           <div class="script-line"><div class="script-speaker">${inspectorBase.name} (#${inspectorId})</div>"While the upstairs gallery was cleared, we inspected the Study fireplace and the Chronos Automaton. We have two new exhibits—${exhibitCScriptDesc}, and a scratched brass wax cylinder inside the Automaton."</div>
-          <div class="script-line"><div class="script-speaker">Celeste Moreau (#7)</div>"Wait—a scratched cylinder? Arthur built the Chronos Automaton to play a recorded greeting at 9:00 PM. You can also program its brass counterweight to drop on the hour. If someone swapped the cylinder..."</div>
+          <div class="script-line"><div class="script-speaker">${automatonSpeakerBase.name} (#${automatonSpeakerId})</div>"Wait—a scratched cylinder? Arthur built the Chronos Automaton to play a recorded greeting at 9:00 PM. You can also program its brass counterweight to drop on the hour. If someone swapped the cylinder..."</div>
           <div class="script-line"><div class="script-speaker">${coreAccompliceBase.name} (#${coreAccompliceId})</div>"Don't look at me just because '${coreAccompliceBase.initials}' is on that burned page! Half the people in this house had a reason to hate Arthur. And if you're wondering why the lights went out at nine, the storm probably surged the old breaker!"</div>
           <div class="script-line"><div class="script-speaker">${wineSpikerBase.name} (#${wineSpikerId})</div>"Oh, spare us! And what about the wine? ${killerBase.name} said it smelled of poison—who poured Arthur's glass?!"</div>
           <div class="script-line"><div class="script-speaker">${witnessBase.name} (#${witnessId})</div>"Actually... look at our Study re-inspection on Exhibit D. In clear light, the wine glass on the desk is completely full and untouched—it was the water carafe that shattered in odorless water, and Arthur was slumped face-down!"</div>`
@@ -584,6 +647,9 @@
     return {
       code: decoded.code,
       playerCount: n,
+      variationId: killerId,
+      activeIds,
+      removedIds,
       killerId,
       accomplices,
       shadowIds,
@@ -591,12 +657,15 @@
       witnessId,
       wineSpikerId,
       alibiWitnessId,
+      automatonSpeakerId,
+      exhibitEIds: [killerId, coreAccompliceId, wineSpikerId, ...extraExhibitEIds].sort((a, b) => a - b),
       killerBase,
       coreAccompliceBase,
       inspectorBase,
       witnessBase,
       wineSpikerBase,
       alibiWitnessBase,
+      automatonSpeakerBase,
       sameInitials,
       auditPair,
       auditInitialsLabel,
@@ -610,18 +679,24 @@
 
   function buildDialoguesFor(id, ctx) {
     const {
+      activeIds,
       isKiller, isAccomplice, isCoreAcc, isInspector, isWitness, isWineSpiker,
       accomplices, sameInitials, deliveryWithArticle,
       killerBase, coreAccompliceBase, inspectorBase, witnessBase, wineSpikerBase, alibiWitnessBase, base
     } = ctx;
 
-    // Pick a guaranteed-active core character (1..8) that is not the speaker
+    // Pick a guaranteed-active character from this variation's cast that is not the speaker
     function pickTarget(preferredIds) {
       for (let i = 0; i < preferredIds.length; i++) {
         const tid = preferredIds[i];
-        if (tid && tid !== id) return BASE_CHARACTERS[tid - 1];
+        if (tid && tid !== id && activeIds.includes(tid)) return BASE_CHARACTERS[tid - 1];
       }
-      return BASE_CHARACTERS[id === 2 ? 0 : 1];
+      const fallbackOrder = [inspectorBase.id, witnessBase.id, alibiWitnessBase.id, ...activeIds];
+      for (let i = 0; i < fallbackOrder.length; i++) {
+        const tid = fallbackOrder[i];
+        if (tid && tid !== id && activeIds.includes(tid)) return BASE_CHARACTERS[tid - 1];
+      }
+      return BASE_CHARACTERS[activeIds[0] - 1];
     }
 
     if (isKiller) {
@@ -872,13 +947,24 @@
     }
   }
 
-  global.RavenshollowEngine = {
+  const engine = {
+    MIN_PLAYERS,
+    MAX_PLAYERS,
     BASE_CHARACTERS,
     CLASSIC_CODE,
+    accompliceCountFor,
+    getVariationBlueprint,
     withArticle,
     encodeCaseCode,
     decodeCaseCode,
     rollRandomCase,
     buildScenario
   };
-})(window);
+
+  if (typeof module !== "undefined" && module.exports) {
+    module.exports = engine;
+  }
+  if (global) {
+    global.RavenshollowEngine = engine;
+  }
+})(typeof window !== "undefined" ? window : (typeof globalThis !== "undefined" ? globalThis : this));

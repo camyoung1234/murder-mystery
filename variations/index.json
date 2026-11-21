@@ -1,0 +1,6780 @@
+{
+  "totalVariations": 180,
+  "playerCountRange": {
+    "min": 12,
+    "max": 20
+  },
+  "variationsPerPlayerCount": 20,
+  "balanceSummary": [
+    {
+      "playerCount": 20,
+      "variations": 20,
+      "accomplicesPerGame": 3,
+      "appearancesPerCharacter": 20,
+      "killerCountPerCharacter": 1,
+      "accompliceCountPerCharacter": 3,
+      "killerProbabilityOverall": 0.05,
+      "accompliceProbabilityOverall": 0.15,
+      "killerProbabilityWhenPresent": 0.05,
+      "accompliceProbabilityWhenPresent": 0.15
+    },
+    {
+      "playerCount": 19,
+      "variations": 20,
+      "accomplicesPerGame": 3,
+      "appearancesPerCharacter": 19,
+      "killerCountPerCharacter": 1,
+      "accompliceCountPerCharacter": 3,
+      "killerProbabilityOverall": 0.05,
+      "accompliceProbabilityOverall": 0.15,
+      "killerProbabilityWhenPresent": 0.0526,
+      "accompliceProbabilityWhenPresent": 0.1579
+    },
+    {
+      "playerCount": 18,
+      "variations": 20,
+      "accomplicesPerGame": 3,
+      "appearancesPerCharacter": 18,
+      "killerCountPerCharacter": 1,
+      "accompliceCountPerCharacter": 3,
+      "killerProbabilityOverall": 0.05,
+      "accompliceProbabilityOverall": 0.15,
+      "killerProbabilityWhenPresent": 0.0556,
+      "accompliceProbabilityWhenPresent": 0.1667
+    },
+    {
+      "playerCount": 17,
+      "variations": 20,
+      "accomplicesPerGame": 2,
+      "appearancesPerCharacter": 17,
+      "killerCountPerCharacter": 1,
+      "accompliceCountPerCharacter": 2,
+      "killerProbabilityOverall": 0.05,
+      "accompliceProbabilityOverall": 0.1,
+      "killerProbabilityWhenPresent": 0.0588,
+      "accompliceProbabilityWhenPresent": 0.1176
+    },
+    {
+      "playerCount": 16,
+      "variations": 20,
+      "accomplicesPerGame": 2,
+      "appearancesPerCharacter": 16,
+      "killerCountPerCharacter": 1,
+      "accompliceCountPerCharacter": 2,
+      "killerProbabilityOverall": 0.05,
+      "accompliceProbabilityOverall": 0.1,
+      "killerProbabilityWhenPresent": 0.0625,
+      "accompliceProbabilityWhenPresent": 0.125
+    },
+    {
+      "playerCount": 15,
+      "variations": 20,
+      "accomplicesPerGame": 2,
+      "appearancesPerCharacter": 15,
+      "killerCountPerCharacter": 1,
+      "accompliceCountPerCharacter": 2,
+      "killerProbabilityOverall": 0.05,
+      "accompliceProbabilityOverall": 0.1,
+      "killerProbabilityWhenPresent": 0.0667,
+      "accompliceProbabilityWhenPresent": 0.1333
+    },
+    {
+      "playerCount": 14,
+      "variations": 20,
+      "accomplicesPerGame": 2,
+      "appearancesPerCharacter": 14,
+      "killerCountPerCharacter": 1,
+      "accompliceCountPerCharacter": 2,
+      "killerProbabilityOverall": 0.05,
+      "accompliceProbabilityOverall": 0.1,
+      "killerProbabilityWhenPresent": 0.0714,
+      "accompliceProbabilityWhenPresent": 0.1429
+    },
+    {
+      "playerCount": 13,
+      "variations": 20,
+      "accomplicesPerGame": 1,
+      "appearancesPerCharacter": 13,
+      "killerCountPerCharacter": 1,
+      "accompliceCountPerCharacter": 1,
+      "killerProbabilityOverall": 0.05,
+      "accompliceProbabilityOverall": 0.05,
+      "killerProbabilityWhenPresent": 0.0769,
+      "accompliceProbabilityWhenPresent": 0.0769
+    },
+    {
+      "playerCount": 12,
+      "variations": 20,
+      "accomplicesPerGame": 1,
+      "appearancesPerCharacter": 12,
+      "killerCountPerCharacter": 1,
+      "accompliceCountPerCharacter": 1,
+      "killerProbabilityOverall": 0.05,
+      "accompliceProbabilityOverall": 0.05,
+      "killerProbabilityWhenPresent": 0.0833,
+      "accompliceProbabilityWhenPresent": 0.0833
+    }
+  ],
+  "variations": [
+    {
+      "playerCount": 20,
+      "variationId": 1,
+      "caseCode": "RV-1167",
+      "killerId": 1,
+      "killerName": "Lady Evelyn Vance",
+      "accomplices": [
+        2,
+        18,
+        17
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-01.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 2,
+      "caseCode": "RV-1860",
+      "killerId": 2,
+      "killerName": "Clara Sterling",
+      "accomplices": [
+        8,
+        1,
+        19
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-02.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 3,
+      "caseCode": "RV-2553",
+      "killerId": 3,
+      "killerName": "Thomas Graves",
+      "accomplices": [
+        15,
+        7,
+        8
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-03.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 4,
+      "caseCode": "RV-7146",
+      "killerId": 4,
+      "killerName": "Dr. Julian Mercer",
+      "accomplices": [
+        6,
+        20,
+        14
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-04.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 5,
+      "caseCode": "RV-3939",
+      "killerId": 5,
+      "killerName": "Victor Vance",
+      "accomplices": [
+        20,
+        14,
+        18
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-05.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 6,
+      "caseCode": "RV-4632",
+      "killerId": 6,
+      "killerName": "Jasper Moore",
+      "accomplices": [
+        11,
+        3,
+        20
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-06.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 7,
+      "caseCode": "RV-5325",
+      "killerId": 7,
+      "killerName": "Celeste Moreau",
+      "accomplices": [
+        3,
+        19,
+        12
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-07.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 8,
+      "caseCode": "RV-6018",
+      "killerId": 8,
+      "killerName": "Harriet Vance-Cole",
+      "accomplices": [
+        18,
+        10,
+        4
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-08.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 9,
+      "caseCode": "RV-6711",
+      "killerId": 9,
+      "killerName": "Chef Henri Laurent",
+      "accomplices": [
+        10,
+        16,
+        13
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-09.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 10,
+      "caseCode": "RV-7404",
+      "killerId": 10,
+      "killerName": "Margot Bell",
+      "accomplices": [
+        12,
+        9,
+        16
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-10.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 11,
+      "caseCode": "RV-8097",
+      "killerId": 11,
+      "killerName": "Sebastian Cole",
+      "accomplices": [
+        19,
+        17,
+        15
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-11.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 12,
+      "caseCode": "RV-8790",
+      "killerId": 12,
+      "killerName": "Lydia Vance",
+      "accomplices": [
+        5,
+        13,
+        10
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-12.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 13,
+      "caseCode": "RV-9483",
+      "killerId": 13,
+      "killerName": "Father Silas Ward",
+      "accomplices": [
+        16,
+        6,
+        9
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-13.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 14,
+      "caseCode": "RV-0176",
+      "killerId": 14,
+      "killerName": "Damien Cross",
+      "accomplices": [
+        9,
+        5,
+        1
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-14.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 15,
+      "caseCode": "RV-0869",
+      "killerId": 15,
+      "killerName": "Beatrice (Bea) Holloway",
+      "accomplices": [
+        4,
+        11,
+        7
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-15.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 16,
+      "caseCode": "RV-1562",
+      "killerId": 16,
+      "killerName": "Gideon Thorne",
+      "accomplices": [
+        14,
+        4,
+        2
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-16.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 17,
+      "caseCode": "RV-2255",
+      "killerId": 17,
+      "killerName": "Vivienne Sterling",
+      "accomplices": [
+        13,
+        2,
+        3
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-17.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 18,
+      "caseCode": "RV-2948",
+      "killerId": 18,
+      "killerName": "Nadia Vance",
+      "accomplices": [
+        7,
+        8,
+        6
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-18.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 19,
+      "caseCode": "RV-3641",
+      "killerId": 19,
+      "killerName": "Capt. Roderick Hale",
+      "accomplices": [
+        17,
+        12,
+        11
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-19.json"
+    },
+    {
+      "playerCount": 20,
+      "variationId": 20,
+      "caseCode": "RV-4334",
+      "killerId": 20,
+      "killerName": "Alistair Finch",
+      "accomplices": [
+        1,
+        15,
+        5
+      ],
+      "removedThisRound": null,
+      "removedIds": [],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "20-players/variation-20.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 1,
+      "caseCode": "RV-1167",
+      "killerId": 1,
+      "killerName": "Lady Evelyn Vance",
+      "accomplices": [
+        2,
+        18,
+        17
+      ],
+      "removedThisRound": 11,
+      "removedIds": [
+        11
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "19-players/variation-01.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 2,
+      "caseCode": "RV-1860",
+      "killerId": 2,
+      "killerName": "Clara Sterling",
+      "accomplices": [
+        8,
+        1,
+        19
+      ],
+      "removedThisRound": 4,
+      "removedIds": [
+        4
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "19-players/variation-02.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 3,
+      "caseCode": "RV-2553",
+      "killerId": 3,
+      "killerName": "Thomas Graves",
+      "accomplices": [
+        15,
+        7,
+        8
+      ],
+      "removedThisRound": 16,
+      "removedIds": [
+        16
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "19-players/variation-03.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 4,
+      "caseCode": "RV-7146",
+      "killerId": 4,
+      "killerName": "Dr. Julian Mercer",
+      "accomplices": [
+        6,
+        20,
+        14
+      ],
+      "removedThisRound": 10,
+      "removedIds": [
+        10
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "19-players/variation-04.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 5,
+      "caseCode": "RV-3939",
+      "killerId": 5,
+      "killerName": "Victor Vance",
+      "accomplices": [
+        20,
+        14,
+        18
+      ],
+      "removedThisRound": 9,
+      "removedIds": [
+        9
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "19-players/variation-05.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 6,
+      "caseCode": "RV-4632",
+      "killerId": 6,
+      "killerName": "Jasper Moore",
+      "accomplices": [
+        11,
+        3,
+        20
+      ],
+      "removedThisRound": 17,
+      "removedIds": [
+        17
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20
+      ],
+      "file": "19-players/variation-06.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 7,
+      "caseCode": "RV-5325",
+      "killerId": 7,
+      "killerName": "Celeste Moreau",
+      "accomplices": [
+        3,
+        19,
+        12
+      ],
+      "removedThisRound": 20,
+      "removedIds": [
+        20
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "file": "19-players/variation-07.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 8,
+      "caseCode": "RV-6018",
+      "killerId": 8,
+      "killerName": "Harriet Vance-Cole",
+      "accomplices": [
+        18,
+        10,
+        4
+      ],
+      "removedThisRound": 2,
+      "removedIds": [
+        2
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "19-players/variation-08.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 9,
+      "caseCode": "RV-6711",
+      "killerId": 9,
+      "killerName": "Chef Henri Laurent",
+      "accomplices": [
+        10,
+        16,
+        13
+      ],
+      "removedThisRound": 5,
+      "removedIds": [
+        5
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "19-players/variation-09.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 10,
+      "caseCode": "RV-7404",
+      "killerId": 10,
+      "killerName": "Margot Bell",
+      "accomplices": [
+        12,
+        9,
+        16
+      ],
+      "removedThisRound": 1,
+      "removedIds": [
+        1
+      ],
+      "activeIds": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "19-players/variation-10.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 11,
+      "caseCode": "RV-8097",
+      "killerId": 11,
+      "killerName": "Sebastian Cole",
+      "accomplices": [
+        19,
+        17,
+        15
+      ],
+      "removedThisRound": 18,
+      "removedIds": [
+        18
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20
+      ],
+      "file": "19-players/variation-11.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 12,
+      "caseCode": "RV-8790",
+      "killerId": 12,
+      "killerName": "Lydia Vance",
+      "accomplices": [
+        5,
+        13,
+        10
+      ],
+      "removedThisRound": 3,
+      "removedIds": [
+        3
+      ],
+      "activeIds": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "19-players/variation-12.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 13,
+      "caseCode": "RV-9483",
+      "killerId": 13,
+      "killerName": "Father Silas Ward",
+      "accomplices": [
+        16,
+        6,
+        9
+      ],
+      "removedThisRound": 8,
+      "removedIds": [
+        8
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "19-players/variation-13.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 14,
+      "caseCode": "RV-0176",
+      "killerId": 14,
+      "killerName": "Damien Cross",
+      "accomplices": [
+        9,
+        5,
+        1
+      ],
+      "removedThisRound": 13,
+      "removedIds": [
+        13
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "19-players/variation-14.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 15,
+      "caseCode": "RV-0869",
+      "killerId": 15,
+      "killerName": "Beatrice (Bea) Holloway",
+      "accomplices": [
+        4,
+        11,
+        7
+      ],
+      "removedThisRound": 6,
+      "removedIds": [
+        6
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "19-players/variation-15.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 16,
+      "caseCode": "RV-1562",
+      "killerId": 16,
+      "killerName": "Gideon Thorne",
+      "accomplices": [
+        14,
+        4,
+        2
+      ],
+      "removedThisRound": 15,
+      "removedIds": [
+        15
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "19-players/variation-16.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 17,
+      "caseCode": "RV-2255",
+      "killerId": 17,
+      "killerName": "Vivienne Sterling",
+      "accomplices": [
+        13,
+        2,
+        3
+      ],
+      "removedThisRound": 12,
+      "removedIds": [
+        12
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "19-players/variation-17.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 18,
+      "caseCode": "RV-2948",
+      "killerId": 18,
+      "killerName": "Nadia Vance",
+      "accomplices": [
+        7,
+        8,
+        6
+      ],
+      "removedThisRound": 14,
+      "removedIds": [
+        14
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "19-players/variation-18.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 19,
+      "caseCode": "RV-3641",
+      "killerId": 19,
+      "killerName": "Capt. Roderick Hale",
+      "accomplices": [
+        17,
+        12,
+        11
+      ],
+      "removedThisRound": 7,
+      "removedIds": [
+        7
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "19-players/variation-19.json"
+    },
+    {
+      "playerCount": 19,
+      "variationId": 20,
+      "caseCode": "RV-4334",
+      "killerId": 20,
+      "killerName": "Alistair Finch",
+      "accomplices": [
+        1,
+        15,
+        5
+      ],
+      "removedThisRound": 19,
+      "removedIds": [
+        19
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        20
+      ],
+      "file": "19-players/variation-20.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 1,
+      "caseCode": "RV-1167",
+      "killerId": 1,
+      "killerName": "Lady Evelyn Vance",
+      "accomplices": [
+        2,
+        18,
+        17
+      ],
+      "removedThisRound": 9,
+      "removedIds": [
+        11,
+        9
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "18-players/variation-01.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 2,
+      "caseCode": "RV-1860",
+      "killerId": 2,
+      "killerName": "Clara Sterling",
+      "accomplices": [
+        8,
+        1,
+        19
+      ],
+      "removedThisRound": 16,
+      "removedIds": [
+        4,
+        16
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "18-players/variation-02.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 3,
+      "caseCode": "RV-2553",
+      "killerId": 3,
+      "killerName": "Thomas Graves",
+      "accomplices": [
+        15,
+        7,
+        8
+      ],
+      "removedThisRound": 14,
+      "removedIds": [
+        16,
+        14
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "18-players/variation-03.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 4,
+      "caseCode": "RV-7146",
+      "killerId": 4,
+      "killerName": "Dr. Julian Mercer",
+      "accomplices": [
+        6,
+        20,
+        14
+      ],
+      "removedThisRound": 3,
+      "removedIds": [
+        10,
+        3
+      ],
+      "activeIds": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "18-players/variation-04.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 5,
+      "caseCode": "RV-3939",
+      "killerId": 5,
+      "killerName": "Victor Vance",
+      "accomplices": [
+        20,
+        14,
+        18
+      ],
+      "removedThisRound": 15,
+      "removedIds": [
+        9,
+        15
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "18-players/variation-05.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 6,
+      "caseCode": "RV-4632",
+      "killerId": 6,
+      "killerName": "Jasper Moore",
+      "accomplices": [
+        11,
+        3,
+        20
+      ],
+      "removedThisRound": 7,
+      "removedIds": [
+        17,
+        7
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20
+      ],
+      "file": "18-players/variation-06.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 7,
+      "caseCode": "RV-5325",
+      "killerId": 7,
+      "killerName": "Celeste Moreau",
+      "accomplices": [
+        3,
+        19,
+        12
+      ],
+      "removedThisRound": 1,
+      "removedIds": [
+        20,
+        1
+      ],
+      "activeIds": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "file": "18-players/variation-07.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 8,
+      "caseCode": "RV-6018",
+      "killerId": 8,
+      "killerName": "Harriet Vance-Cole",
+      "accomplices": [
+        18,
+        10,
+        4
+      ],
+      "removedThisRound": 6,
+      "removedIds": [
+        2,
+        6
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "18-players/variation-08.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 9,
+      "caseCode": "RV-6711",
+      "killerId": 9,
+      "killerName": "Chef Henri Laurent",
+      "accomplices": [
+        10,
+        16,
+        13
+      ],
+      "removedThisRound": 2,
+      "removedIds": [
+        5,
+        2
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "18-players/variation-09.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 10,
+      "caseCode": "RV-7404",
+      "killerId": 10,
+      "killerName": "Margot Bell",
+      "accomplices": [
+        12,
+        9,
+        16
+      ],
+      "removedThisRound": 18,
+      "removedIds": [
+        1,
+        18
+      ],
+      "activeIds": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20
+      ],
+      "file": "18-players/variation-10.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 11,
+      "caseCode": "RV-8097",
+      "killerId": 11,
+      "killerName": "Sebastian Cole",
+      "accomplices": [
+        19,
+        17,
+        15
+      ],
+      "removedThisRound": 5,
+      "removedIds": [
+        18,
+        5
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20
+      ],
+      "file": "18-players/variation-11.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 12,
+      "caseCode": "RV-8790",
+      "killerId": 12,
+      "killerName": "Lydia Vance",
+      "accomplices": [
+        5,
+        13,
+        10
+      ],
+      "removedThisRound": 4,
+      "removedIds": [
+        3,
+        4
+      ],
+      "activeIds": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "18-players/variation-12.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 13,
+      "caseCode": "RV-9483",
+      "killerId": 13,
+      "killerName": "Father Silas Ward",
+      "accomplices": [
+        16,
+        6,
+        9
+      ],
+      "removedThisRound": 12,
+      "removedIds": [
+        8,
+        12
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "18-players/variation-13.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 14,
+      "caseCode": "RV-0176",
+      "killerId": 14,
+      "killerName": "Damien Cross",
+      "accomplices": [
+        9,
+        5,
+        1
+      ],
+      "removedThisRound": 17,
+      "removedIds": [
+        13,
+        17
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20
+      ],
+      "file": "18-players/variation-14.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 15,
+      "caseCode": "RV-0869",
+      "killerId": 15,
+      "killerName": "Beatrice (Bea) Holloway",
+      "accomplices": [
+        4,
+        11,
+        7
+      ],
+      "removedThisRound": 10,
+      "removedIds": [
+        6,
+        10
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "18-players/variation-15.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 16,
+      "caseCode": "RV-1562",
+      "killerId": 16,
+      "killerName": "Gideon Thorne",
+      "accomplices": [
+        14,
+        4,
+        2
+      ],
+      "removedThisRound": 20,
+      "removedIds": [
+        15,
+        20
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19
+      ],
+      "file": "18-players/variation-16.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 17,
+      "caseCode": "RV-2255",
+      "killerId": 17,
+      "killerName": "Vivienne Sterling",
+      "accomplices": [
+        13,
+        2,
+        3
+      ],
+      "removedThisRound": 11,
+      "removedIds": [
+        12,
+        11
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "18-players/variation-17.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 18,
+      "caseCode": "RV-2948",
+      "killerId": 18,
+      "killerName": "Nadia Vance",
+      "accomplices": [
+        7,
+        8,
+        6
+      ],
+      "removedThisRound": 19,
+      "removedIds": [
+        14,
+        19
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        20
+      ],
+      "file": "18-players/variation-18.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 19,
+      "caseCode": "RV-3641",
+      "killerId": 19,
+      "killerName": "Capt. Roderick Hale",
+      "accomplices": [
+        17,
+        12,
+        11
+      ],
+      "removedThisRound": 8,
+      "removedIds": [
+        7,
+        8
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "18-players/variation-19.json"
+    },
+    {
+      "playerCount": 18,
+      "variationId": 20,
+      "caseCode": "RV-4334",
+      "killerId": 20,
+      "killerName": "Alistair Finch",
+      "accomplices": [
+        1,
+        15,
+        5
+      ],
+      "removedThisRound": 13,
+      "removedIds": [
+        19,
+        13
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        20
+      ],
+      "file": "18-players/variation-20.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 1,
+      "caseCode": "RV-1167",
+      "killerId": 1,
+      "killerName": "Lady Evelyn Vance",
+      "accomplices": [
+        2,
+        18
+      ],
+      "removedThisRound": 19,
+      "removedIds": [
+        11,
+        9,
+        19
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        20
+      ],
+      "file": "17-players/variation-01.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 2,
+      "caseCode": "RV-1860",
+      "killerId": 2,
+      "killerName": "Clara Sterling",
+      "accomplices": [
+        8,
+        1
+      ],
+      "removedThisRound": 15,
+      "removedIds": [
+        4,
+        16,
+        15
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "17-players/variation-02.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 3,
+      "caseCode": "RV-2553",
+      "killerId": 3,
+      "killerName": "Thomas Graves",
+      "accomplices": [
+        15,
+        7
+      ],
+      "removedThisRound": 2,
+      "removedIds": [
+        16,
+        14,
+        2
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "17-players/variation-03.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 4,
+      "caseCode": "RV-7146",
+      "killerId": 4,
+      "killerName": "Dr. Julian Mercer",
+      "accomplices": [
+        6,
+        20
+      ],
+      "removedThisRound": 13,
+      "removedIds": [
+        10,
+        3,
+        13
+      ],
+      "activeIds": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "17-players/variation-04.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 5,
+      "caseCode": "RV-3939",
+      "killerId": 5,
+      "killerName": "Victor Vance",
+      "accomplices": [
+        20,
+        14
+      ],
+      "removedThisRound": 17,
+      "removedIds": [
+        9,
+        15,
+        17
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        18,
+        19,
+        20
+      ],
+      "file": "17-players/variation-05.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 6,
+      "caseCode": "RV-4632",
+      "killerId": 6,
+      "killerName": "Jasper Moore",
+      "accomplices": [
+        11,
+        3
+      ],
+      "removedThisRound": 14,
+      "removedIds": [
+        17,
+        7,
+        14
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        18,
+        19,
+        20
+      ],
+      "file": "17-players/variation-06.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 7,
+      "caseCode": "RV-5325",
+      "killerId": 7,
+      "killerName": "Celeste Moreau",
+      "accomplices": [
+        3,
+        19
+      ],
+      "removedThisRound": 5,
+      "removedIds": [
+        20,
+        1,
+        5
+      ],
+      "activeIds": [
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "file": "17-players/variation-07.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 8,
+      "caseCode": "RV-6018",
+      "killerId": 8,
+      "killerName": "Harriet Vance-Cole",
+      "accomplices": [
+        18,
+        10
+      ],
+      "removedThisRound": 12,
+      "removedIds": [
+        2,
+        6,
+        12
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "17-players/variation-08.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 9,
+      "caseCode": "RV-6711",
+      "killerId": 9,
+      "killerName": "Chef Henri Laurent",
+      "accomplices": [
+        10,
+        16
+      ],
+      "removedThisRound": 20,
+      "removedIds": [
+        5,
+        2,
+        20
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "file": "17-players/variation-09.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 10,
+      "caseCode": "RV-7404",
+      "killerId": 10,
+      "killerName": "Margot Bell",
+      "accomplices": [
+        12,
+        9
+      ],
+      "removedThisRound": 8,
+      "removedIds": [
+        1,
+        18,
+        8
+      ],
+      "activeIds": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20
+      ],
+      "file": "17-players/variation-10.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 11,
+      "caseCode": "RV-8097",
+      "killerId": 11,
+      "killerName": "Sebastian Cole",
+      "accomplices": [
+        19,
+        17
+      ],
+      "removedThisRound": 3,
+      "removedIds": [
+        18,
+        5,
+        3
+      ],
+      "activeIds": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20
+      ],
+      "file": "17-players/variation-11.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 12,
+      "caseCode": "RV-8790",
+      "killerId": 12,
+      "killerName": "Lydia Vance",
+      "accomplices": [
+        5,
+        13
+      ],
+      "removedThisRound": 18,
+      "removedIds": [
+        3,
+        4,
+        18
+      ],
+      "activeIds": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20
+      ],
+      "file": "17-players/variation-12.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 13,
+      "caseCode": "RV-9483",
+      "killerId": 13,
+      "killerName": "Father Silas Ward",
+      "accomplices": [
+        16,
+        6
+      ],
+      "removedThisRound": 11,
+      "removedIds": [
+        8,
+        12,
+        11
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "17-players/variation-13.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 14,
+      "caseCode": "RV-0176",
+      "killerId": 14,
+      "killerName": "Damien Cross",
+      "accomplices": [
+        9,
+        5
+      ],
+      "removedThisRound": 6,
+      "removedIds": [
+        13,
+        17,
+        6
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20
+      ],
+      "file": "17-players/variation-14.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 15,
+      "caseCode": "RV-0869",
+      "killerId": 15,
+      "killerName": "Beatrice (Bea) Holloway",
+      "accomplices": [
+        4,
+        11
+      ],
+      "removedThisRound": 16,
+      "removedIds": [
+        6,
+        10,
+        16
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "17-players/variation-15.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 16,
+      "caseCode": "RV-1562",
+      "killerId": 16,
+      "killerName": "Gideon Thorne",
+      "accomplices": [
+        14,
+        4
+      ],
+      "removedThisRound": 7,
+      "removedIds": [
+        15,
+        20,
+        7
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19
+      ],
+      "file": "17-players/variation-16.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 17,
+      "caseCode": "RV-2255",
+      "killerId": 17,
+      "killerName": "Vivienne Sterling",
+      "accomplices": [
+        13,
+        2
+      ],
+      "removedThisRound": 1,
+      "removedIds": [
+        12,
+        11,
+        1
+      ],
+      "activeIds": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "17-players/variation-17.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 18,
+      "caseCode": "RV-2948",
+      "killerId": 18,
+      "killerName": "Nadia Vance",
+      "accomplices": [
+        7,
+        8
+      ],
+      "removedThisRound": 9,
+      "removedIds": [
+        14,
+        19,
+        9
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        20
+      ],
+      "file": "17-players/variation-18.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 19,
+      "caseCode": "RV-3641",
+      "killerId": 19,
+      "killerName": "Capt. Roderick Hale",
+      "accomplices": [
+        17,
+        12
+      ],
+      "removedThisRound": 4,
+      "removedIds": [
+        7,
+        8,
+        4
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "17-players/variation-19.json"
+    },
+    {
+      "playerCount": 17,
+      "variationId": 20,
+      "caseCode": "RV-4334",
+      "killerId": 20,
+      "killerName": "Alistair Finch",
+      "accomplices": [
+        1,
+        15
+      ],
+      "removedThisRound": 10,
+      "removedIds": [
+        19,
+        13,
+        10
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        20
+      ],
+      "file": "17-players/variation-20.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 1,
+      "caseCode": "RV-1167",
+      "killerId": 1,
+      "killerName": "Lady Evelyn Vance",
+      "accomplices": [
+        2,
+        18
+      ],
+      "removedThisRound": 6,
+      "removedIds": [
+        11,
+        9,
+        19,
+        6
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        20
+      ],
+      "file": "16-players/variation-01.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 2,
+      "caseCode": "RV-1860",
+      "killerId": 2,
+      "killerName": "Clara Sterling",
+      "accomplices": [
+        8,
+        1
+      ],
+      "removedThisRound": 17,
+      "removedIds": [
+        4,
+        16,
+        15,
+        17
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        18,
+        19,
+        20
+      ],
+      "file": "16-players/variation-02.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 3,
+      "caseCode": "RV-2553",
+      "killerId": 3,
+      "killerName": "Thomas Graves",
+      "accomplices": [
+        15,
+        7
+      ],
+      "removedThisRound": 18,
+      "removedIds": [
+        16,
+        14,
+        2,
+        18
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        17,
+        19,
+        20
+      ],
+      "file": "16-players/variation-03.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 4,
+      "caseCode": "RV-7146",
+      "killerId": 4,
+      "killerName": "Dr. Julian Mercer",
+      "accomplices": [
+        6,
+        20
+      ],
+      "removedThisRound": 1,
+      "removedIds": [
+        10,
+        3,
+        13,
+        1
+      ],
+      "activeIds": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "16-players/variation-04.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 5,
+      "caseCode": "RV-3939",
+      "killerId": 5,
+      "killerName": "Victor Vance",
+      "accomplices": [
+        20,
+        14
+      ],
+      "removedThisRound": 8,
+      "removedIds": [
+        9,
+        15,
+        17,
+        8
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        18,
+        19,
+        20
+      ],
+      "file": "16-players/variation-05.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 6,
+      "caseCode": "RV-4632",
+      "killerId": 6,
+      "killerName": "Jasper Moore",
+      "accomplices": [
+        11,
+        3
+      ],
+      "removedThisRound": 19,
+      "removedIds": [
+        17,
+        7,
+        14,
+        19
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        18,
+        20
+      ],
+      "file": "16-players/variation-06.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 7,
+      "caseCode": "RV-5325",
+      "killerId": 7,
+      "killerName": "Celeste Moreau",
+      "accomplices": [
+        3,
+        19
+      ],
+      "removedThisRound": 4,
+      "removedIds": [
+        20,
+        1,
+        5,
+        4
+      ],
+      "activeIds": [
+        2,
+        3,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "file": "16-players/variation-07.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 8,
+      "caseCode": "RV-6018",
+      "killerId": 8,
+      "killerName": "Harriet Vance-Cole",
+      "accomplices": [
+        18,
+        10
+      ],
+      "removedThisRound": 5,
+      "removedIds": [
+        2,
+        6,
+        12,
+        5
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "16-players/variation-08.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 9,
+      "caseCode": "RV-6711",
+      "killerId": 9,
+      "killerName": "Chef Henri Laurent",
+      "accomplices": [
+        10,
+        16
+      ],
+      "removedThisRound": 15,
+      "removedIds": [
+        5,
+        2,
+        20,
+        15
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19
+      ],
+      "file": "16-players/variation-09.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 10,
+      "caseCode": "RV-7404",
+      "killerId": 10,
+      "killerName": "Margot Bell",
+      "accomplices": [
+        12,
+        9
+      ],
+      "removedThisRound": 14,
+      "removedIds": [
+        1,
+        18,
+        8,
+        14
+      ],
+      "activeIds": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        19,
+        20
+      ],
+      "file": "16-players/variation-10.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 11,
+      "caseCode": "RV-8097",
+      "killerId": 11,
+      "killerName": "Sebastian Cole",
+      "accomplices": [
+        19,
+        17
+      ],
+      "removedThisRound": 16,
+      "removedIds": [
+        18,
+        5,
+        3,
+        16
+      ],
+      "activeIds": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        19,
+        20
+      ],
+      "file": "16-players/variation-11.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 12,
+      "caseCode": "RV-8790",
+      "killerId": 12,
+      "killerName": "Lydia Vance",
+      "accomplices": [
+        5,
+        13
+      ],
+      "removedThisRound": 7,
+      "removedIds": [
+        3,
+        4,
+        18,
+        7
+      ],
+      "activeIds": [
+        1,
+        2,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20
+      ],
+      "file": "16-players/variation-12.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 13,
+      "caseCode": "RV-9483",
+      "killerId": 13,
+      "killerName": "Father Silas Ward",
+      "accomplices": [
+        16,
+        6
+      ],
+      "removedThisRound": 10,
+      "removedIds": [
+        8,
+        12,
+        11,
+        10
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "16-players/variation-13.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 14,
+      "caseCode": "RV-0176",
+      "killerId": 14,
+      "killerName": "Damien Cross",
+      "accomplices": [
+        9,
+        5
+      ],
+      "removedThisRound": 12,
+      "removedIds": [
+        13,
+        17,
+        6,
+        12
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20
+      ],
+      "file": "16-players/variation-14.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 15,
+      "caseCode": "RV-0869",
+      "killerId": 15,
+      "killerName": "Beatrice (Bea) Holloway",
+      "accomplices": [
+        4,
+        11
+      ],
+      "removedThisRound": 13,
+      "removedIds": [
+        6,
+        10,
+        16,
+        13
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11,
+        12,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "16-players/variation-15.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 16,
+      "caseCode": "RV-1562",
+      "killerId": 16,
+      "killerName": "Gideon Thorne",
+      "accomplices": [
+        14,
+        4
+      ],
+      "removedThisRound": 9,
+      "removedIds": [
+        15,
+        20,
+        7,
+        9
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19
+      ],
+      "file": "16-players/variation-16.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 17,
+      "caseCode": "RV-2255",
+      "killerId": 17,
+      "killerName": "Vivienne Sterling",
+      "accomplices": [
+        13,
+        2
+      ],
+      "removedThisRound": 20,
+      "removedIds": [
+        12,
+        11,
+        1,
+        20
+      ],
+      "activeIds": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "file": "16-players/variation-17.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 18,
+      "caseCode": "RV-2948",
+      "killerId": 18,
+      "killerName": "Nadia Vance",
+      "accomplices": [
+        7,
+        8
+      ],
+      "removedThisRound": 11,
+      "removedIds": [
+        14,
+        19,
+        9,
+        11
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        20
+      ],
+      "file": "16-players/variation-18.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 19,
+      "caseCode": "RV-3641",
+      "killerId": 19,
+      "killerName": "Capt. Roderick Hale",
+      "accomplices": [
+        17,
+        12
+      ],
+      "removedThisRound": 3,
+      "removedIds": [
+        7,
+        8,
+        4,
+        3
+      ],
+      "activeIds": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "16-players/variation-19.json"
+    },
+    {
+      "playerCount": 16,
+      "variationId": 20,
+      "caseCode": "RV-4334",
+      "killerId": 20,
+      "killerName": "Alistair Finch",
+      "accomplices": [
+        1,
+        15
+      ],
+      "removedThisRound": 2,
+      "removedIds": [
+        19,
+        13,
+        10,
+        2
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        20
+      ],
+      "file": "16-players/variation-20.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 1,
+      "caseCode": "RV-1167",
+      "killerId": 1,
+      "killerName": "Lady Evelyn Vance",
+      "accomplices": [
+        2,
+        18
+      ],
+      "removedThisRound": 16,
+      "removedIds": [
+        11,
+        9,
+        19,
+        6,
+        16
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        10,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        20
+      ],
+      "file": "15-players/variation-01.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 2,
+      "caseCode": "RV-1860",
+      "killerId": 2,
+      "killerName": "Clara Sterling",
+      "accomplices": [
+        8,
+        1
+      ],
+      "removedThisRound": 7,
+      "removedIds": [
+        4,
+        16,
+        15,
+        17,
+        7
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        18,
+        19,
+        20
+      ],
+      "file": "15-players/variation-02.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 3,
+      "caseCode": "RV-2553",
+      "killerId": 3,
+      "killerName": "Thomas Graves",
+      "accomplices": [
+        15,
+        7
+      ],
+      "removedThisRound": 1,
+      "removedIds": [
+        16,
+        14,
+        2,
+        18,
+        1
+      ],
+      "activeIds": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        17,
+        19,
+        20
+      ],
+      "file": "15-players/variation-03.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 4,
+      "caseCode": "RV-7146",
+      "killerId": 4,
+      "killerName": "Dr. Julian Mercer",
+      "accomplices": [
+        6,
+        20
+      ],
+      "removedThisRound": 15,
+      "removedIds": [
+        10,
+        3,
+        13,
+        1,
+        15
+      ],
+      "activeIds": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "15-players/variation-04.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 5,
+      "caseCode": "RV-3939",
+      "killerId": 5,
+      "killerName": "Victor Vance",
+      "accomplices": [
+        20,
+        14
+      ],
+      "removedThisRound": 2,
+      "removedIds": [
+        9,
+        15,
+        17,
+        8,
+        2
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        18,
+        19,
+        20
+      ],
+      "file": "15-players/variation-05.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 6,
+      "caseCode": "RV-4632",
+      "killerId": 6,
+      "killerName": "Jasper Moore",
+      "accomplices": [
+        11,
+        3
+      ],
+      "removedThisRound": 12,
+      "removedIds": [
+        17,
+        7,
+        14,
+        19,
+        12
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        13,
+        15,
+        16,
+        18,
+        20
+      ],
+      "file": "15-players/variation-06.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 7,
+      "caseCode": "RV-5325",
+      "killerId": 7,
+      "killerName": "Celeste Moreau",
+      "accomplices": [
+        3,
+        19
+      ],
+      "removedThisRound": 10,
+      "removedIds": [
+        20,
+        1,
+        5,
+        4,
+        10
+      ],
+      "activeIds": [
+        2,
+        3,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "file": "15-players/variation-07.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 8,
+      "caseCode": "RV-6018",
+      "killerId": 8,
+      "killerName": "Harriet Vance-Cole",
+      "accomplices": [
+        18,
+        10
+      ],
+      "removedThisRound": 9,
+      "removedIds": [
+        2,
+        6,
+        12,
+        5,
+        9
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        7,
+        8,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "15-players/variation-08.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 9,
+      "caseCode": "RV-6711",
+      "killerId": 9,
+      "killerName": "Chef Henri Laurent",
+      "accomplices": [
+        10,
+        16
+      ],
+      "removedThisRound": 19,
+      "removedIds": [
+        5,
+        2,
+        20,
+        15,
+        19
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18
+      ],
+      "file": "15-players/variation-09.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 10,
+      "caseCode": "RV-7404",
+      "killerId": 10,
+      "killerName": "Margot Bell",
+      "accomplices": [
+        12,
+        9
+      ],
+      "removedThisRound": 5,
+      "removedIds": [
+        1,
+        18,
+        8,
+        14,
+        5
+      ],
+      "activeIds": [
+        2,
+        3,
+        4,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        19,
+        20
+      ],
+      "file": "15-players/variation-10.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 11,
+      "caseCode": "RV-8097",
+      "killerId": 11,
+      "killerName": "Sebastian Cole",
+      "accomplices": [
+        19,
+        17
+      ],
+      "removedThisRound": 8,
+      "removedIds": [
+        18,
+        5,
+        3,
+        16,
+        8
+      ],
+      "activeIds": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        19,
+        20
+      ],
+      "file": "15-players/variation-11.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 12,
+      "caseCode": "RV-8790",
+      "killerId": 12,
+      "killerName": "Lydia Vance",
+      "accomplices": [
+        5,
+        13
+      ],
+      "removedThisRound": 20,
+      "removedIds": [
+        3,
+        4,
+        18,
+        7,
+        20
+      ],
+      "activeIds": [
+        1,
+        2,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19
+      ],
+      "file": "15-players/variation-12.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 13,
+      "caseCode": "RV-9483",
+      "killerId": 13,
+      "killerName": "Father Silas Ward",
+      "accomplices": [
+        16,
+        6
+      ],
+      "removedThisRound": 4,
+      "removedIds": [
+        8,
+        12,
+        11,
+        10,
+        4
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "15-players/variation-13.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 14,
+      "caseCode": "RV-0176",
+      "killerId": 14,
+      "killerName": "Damien Cross",
+      "accomplices": [
+        9,
+        5
+      ],
+      "removedThisRound": 11,
+      "removedIds": [
+        13,
+        17,
+        6,
+        12,
+        11
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20
+      ],
+      "file": "15-players/variation-14.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 15,
+      "caseCode": "RV-0869",
+      "killerId": 15,
+      "killerName": "Beatrice (Bea) Holloway",
+      "accomplices": [
+        4,
+        11
+      ],
+      "removedThisRound": 18,
+      "removedIds": [
+        6,
+        10,
+        16,
+        13,
+        18
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11,
+        12,
+        14,
+        15,
+        17,
+        19,
+        20
+      ],
+      "file": "15-players/variation-15.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 16,
+      "caseCode": "RV-1562",
+      "killerId": 16,
+      "killerName": "Gideon Thorne",
+      "accomplices": [
+        14,
+        4
+      ],
+      "removedThisRound": 17,
+      "removedIds": [
+        15,
+        20,
+        7,
+        9,
+        17
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        18,
+        19
+      ],
+      "file": "15-players/variation-16.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 17,
+      "caseCode": "RV-2255",
+      "killerId": 17,
+      "killerName": "Vivienne Sterling",
+      "accomplices": [
+        13,
+        2
+      ],
+      "removedThisRound": 6,
+      "removedIds": [
+        12,
+        11,
+        1,
+        20,
+        6
+      ],
+      "activeIds": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "file": "15-players/variation-17.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 18,
+      "caseCode": "RV-2948",
+      "killerId": 18,
+      "killerName": "Nadia Vance",
+      "accomplices": [
+        7,
+        8
+      ],
+      "removedThisRound": 3,
+      "removedIds": [
+        14,
+        19,
+        9,
+        11,
+        3
+      ],
+      "activeIds": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        20
+      ],
+      "file": "15-players/variation-18.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 19,
+      "caseCode": "RV-3641",
+      "killerId": 19,
+      "killerName": "Capt. Roderick Hale",
+      "accomplices": [
+        17,
+        12
+      ],
+      "removedThisRound": 13,
+      "removedIds": [
+        7,
+        8,
+        4,
+        3,
+        13
+      ],
+      "activeIds": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "15-players/variation-19.json"
+    },
+    {
+      "playerCount": 15,
+      "variationId": 20,
+      "caseCode": "RV-4334",
+      "killerId": 20,
+      "killerName": "Alistair Finch",
+      "accomplices": [
+        1,
+        15
+      ],
+      "removedThisRound": 14,
+      "removedIds": [
+        19,
+        13,
+        10,
+        2,
+        14
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        15,
+        16,
+        17,
+        18,
+        20
+      ],
+      "file": "15-players/variation-20.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 1,
+      "caseCode": "RV-1167",
+      "killerId": 1,
+      "killerName": "Lady Evelyn Vance",
+      "accomplices": [
+        2,
+        18
+      ],
+      "removedThisRound": 4,
+      "removedIds": [
+        11,
+        9,
+        19,
+        6,
+        16,
+        4
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        8,
+        10,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        20
+      ],
+      "file": "14-players/variation-01.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 2,
+      "caseCode": "RV-1860",
+      "killerId": 2,
+      "killerName": "Clara Sterling",
+      "accomplices": [
+        8,
+        1
+      ],
+      "removedThisRound": 11,
+      "removedIds": [
+        4,
+        16,
+        15,
+        17,
+        7,
+        11
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        18,
+        19,
+        20
+      ],
+      "file": "14-players/variation-02.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 3,
+      "caseCode": "RV-2553",
+      "killerId": 3,
+      "killerName": "Thomas Graves",
+      "accomplices": [
+        15,
+        7
+      ],
+      "removedThisRound": 5,
+      "removedIds": [
+        16,
+        14,
+        2,
+        18,
+        1,
+        5
+      ],
+      "activeIds": [
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        17,
+        19,
+        20
+      ],
+      "file": "14-players/variation-03.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 4,
+      "caseCode": "RV-7146",
+      "killerId": 4,
+      "killerName": "Dr. Julian Mercer",
+      "accomplices": [
+        6,
+        20
+      ],
+      "removedThisRound": 19,
+      "removedIds": [
+        10,
+        3,
+        13,
+        1,
+        15,
+        19
+      ],
+      "activeIds": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        14,
+        16,
+        17,
+        18,
+        20
+      ],
+      "file": "14-players/variation-04.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 5,
+      "caseCode": "RV-3939",
+      "killerId": 5,
+      "killerName": "Victor Vance",
+      "accomplices": [
+        20,
+        14
+      ],
+      "removedThisRound": 13,
+      "removedIds": [
+        9,
+        15,
+        17,
+        8,
+        2,
+        13
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        11,
+        12,
+        14,
+        16,
+        18,
+        19,
+        20
+      ],
+      "file": "14-players/variation-05.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 6,
+      "caseCode": "RV-4632",
+      "killerId": 6,
+      "killerName": "Jasper Moore",
+      "accomplices": [
+        11,
+        3
+      ],
+      "removedThisRound": 10,
+      "removedIds": [
+        17,
+        7,
+        14,
+        19,
+        12,
+        10
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        11,
+        13,
+        15,
+        16,
+        18,
+        20
+      ],
+      "file": "14-players/variation-06.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 7,
+      "caseCode": "RV-5325",
+      "killerId": 7,
+      "killerName": "Celeste Moreau",
+      "accomplices": [
+        3,
+        19
+      ],
+      "removedThisRound": 6,
+      "removedIds": [
+        20,
+        1,
+        5,
+        4,
+        10,
+        6
+      ],
+      "activeIds": [
+        2,
+        3,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "file": "14-players/variation-07.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 8,
+      "caseCode": "RV-6018",
+      "killerId": 8,
+      "killerName": "Harriet Vance-Cole",
+      "accomplices": [
+        18,
+        10
+      ],
+      "removedThisRound": 17,
+      "removedIds": [
+        2,
+        6,
+        12,
+        5,
+        9,
+        17
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        7,
+        8,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20
+      ],
+      "file": "14-players/variation-08.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 9,
+      "caseCode": "RV-6711",
+      "killerId": 9,
+      "killerName": "Chef Henri Laurent",
+      "accomplices": [
+        10,
+        16
+      ],
+      "removedThisRound": 12,
+      "removedIds": [
+        5,
+        2,
+        20,
+        15,
+        19,
+        12
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        16,
+        17,
+        18
+      ],
+      "file": "14-players/variation-09.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 10,
+      "caseCode": "RV-7404",
+      "killerId": 10,
+      "killerName": "Margot Bell",
+      "accomplices": [
+        12,
+        9
+      ],
+      "removedThisRound": 7,
+      "removedIds": [
+        1,
+        18,
+        8,
+        14,
+        5,
+        7
+      ],
+      "activeIds": [
+        2,
+        3,
+        4,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        19,
+        20
+      ],
+      "file": "14-players/variation-10.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 11,
+      "caseCode": "RV-8097",
+      "killerId": 11,
+      "killerName": "Sebastian Cole",
+      "accomplices": [
+        19,
+        17
+      ],
+      "removedThisRound": 9,
+      "removedIds": [
+        18,
+        5,
+        3,
+        16,
+        8,
+        9
+      ],
+      "activeIds": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        19,
+        20
+      ],
+      "file": "14-players/variation-11.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 12,
+      "caseCode": "RV-8790",
+      "killerId": 12,
+      "killerName": "Lydia Vance",
+      "accomplices": [
+        5,
+        13
+      ],
+      "removedThisRound": 8,
+      "removedIds": [
+        3,
+        4,
+        18,
+        7,
+        20,
+        8
+      ],
+      "activeIds": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19
+      ],
+      "file": "14-players/variation-12.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 13,
+      "caseCode": "RV-9483",
+      "killerId": 13,
+      "killerName": "Father Silas Ward",
+      "accomplices": [
+        16,
+        6
+      ],
+      "removedThisRound": 1,
+      "removedIds": [
+        8,
+        12,
+        11,
+        10,
+        4,
+        1
+      ],
+      "activeIds": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "file": "14-players/variation-13.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 14,
+      "caseCode": "RV-0176",
+      "killerId": 14,
+      "killerName": "Damien Cross",
+      "accomplices": [
+        9,
+        5
+      ],
+      "removedThisRound": 3,
+      "removedIds": [
+        13,
+        17,
+        6,
+        12,
+        11,
+        3
+      ],
+      "activeIds": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20
+      ],
+      "file": "14-players/variation-14.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 15,
+      "caseCode": "RV-0869",
+      "killerId": 15,
+      "killerName": "Beatrice (Bea) Holloway",
+      "accomplices": [
+        4,
+        11
+      ],
+      "removedThisRound": 2,
+      "removedIds": [
+        6,
+        10,
+        16,
+        13,
+        18,
+        2
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11,
+        12,
+        14,
+        15,
+        17,
+        19,
+        20
+      ],
+      "file": "14-players/variation-15.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 16,
+      "caseCode": "RV-1562",
+      "killerId": 16,
+      "killerName": "Gideon Thorne",
+      "accomplices": [
+        14,
+        4
+      ],
+      "removedThisRound": 18,
+      "removedIds": [
+        15,
+        20,
+        7,
+        9,
+        17,
+        18
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        19
+      ],
+      "file": "14-players/variation-16.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 17,
+      "caseCode": "RV-2255",
+      "killerId": 17,
+      "killerName": "Vivienne Sterling",
+      "accomplices": [
+        13,
+        2
+      ],
+      "removedThisRound": 14,
+      "removedIds": [
+        12,
+        11,
+        1,
+        20,
+        6,
+        14
+      ],
+      "activeIds": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        13,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "file": "14-players/variation-17.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 18,
+      "caseCode": "RV-2948",
+      "killerId": 18,
+      "killerName": "Nadia Vance",
+      "accomplices": [
+        7,
+        8
+      ],
+      "removedThisRound": 15,
+      "removedIds": [
+        14,
+        19,
+        9,
+        11,
+        3,
+        15
+      ],
+      "activeIds": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        12,
+        13,
+        16,
+        17,
+        18,
+        20
+      ],
+      "file": "14-players/variation-18.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 19,
+      "caseCode": "RV-3641",
+      "killerId": 19,
+      "killerName": "Capt. Roderick Hale",
+      "accomplices": [
+        17,
+        12
+      ],
+      "removedThisRound": 20,
+      "removedIds": [
+        7,
+        8,
+        4,
+        3,
+        13,
+        20
+      ],
+      "activeIds": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "file": "14-players/variation-19.json"
+    },
+    {
+      "playerCount": 14,
+      "variationId": 20,
+      "caseCode": "RV-4334",
+      "killerId": 20,
+      "killerName": "Alistair Finch",
+      "accomplices": [
+        1,
+        15
+      ],
+      "removedThisRound": 16,
+      "removedIds": [
+        19,
+        13,
+        10,
+        2,
+        14,
+        16
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        15,
+        17,
+        18,
+        20
+      ],
+      "file": "14-players/variation-20.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 1,
+      "caseCode": "RV-1167",
+      "killerId": 1,
+      "killerName": "Lady Evelyn Vance",
+      "accomplices": [
+        2
+      ],
+      "removedThisRound": 15,
+      "removedIds": [
+        11,
+        9,
+        19,
+        6,
+        16,
+        4,
+        15
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        8,
+        10,
+        12,
+        13,
+        14,
+        17,
+        18,
+        20
+      ],
+      "file": "13-players/variation-01.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 2,
+      "caseCode": "RV-1860",
+      "killerId": 2,
+      "killerName": "Clara Sterling",
+      "accomplices": [
+        8
+      ],
+      "removedThisRound": 3,
+      "removedIds": [
+        4,
+        16,
+        15,
+        17,
+        7,
+        11,
+        3
+      ],
+      "activeIds": [
+        1,
+        2,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        18,
+        19,
+        20
+      ],
+      "file": "13-players/variation-02.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 3,
+      "caseCode": "RV-2553",
+      "killerId": 3,
+      "killerName": "Thomas Graves",
+      "accomplices": [
+        15
+      ],
+      "removedThisRound": 9,
+      "removedIds": [
+        16,
+        14,
+        2,
+        18,
+        1,
+        5,
+        9
+      ],
+      "activeIds": [
+        3,
+        4,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15,
+        17,
+        19,
+        20
+      ],
+      "file": "13-players/variation-03.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 4,
+      "caseCode": "RV-7146",
+      "killerId": 4,
+      "killerName": "Dr. Julian Mercer",
+      "accomplices": [
+        6
+      ],
+      "removedThisRound": 17,
+      "removedIds": [
+        10,
+        3,
+        13,
+        1,
+        15,
+        19,
+        17
+      ],
+      "activeIds": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        14,
+        16,
+        18,
+        20
+      ],
+      "file": "13-players/variation-04.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 5,
+      "caseCode": "RV-3939",
+      "killerId": 5,
+      "killerName": "Victor Vance",
+      "accomplices": [
+        20
+      ],
+      "removedThisRound": 7,
+      "removedIds": [
+        9,
+        15,
+        17,
+        8,
+        2,
+        13,
+        7
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        10,
+        11,
+        12,
+        14,
+        16,
+        18,
+        19,
+        20
+      ],
+      "file": "13-players/variation-05.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 6,
+      "caseCode": "RV-4632",
+      "killerId": 6,
+      "killerName": "Jasper Moore",
+      "accomplices": [
+        11
+      ],
+      "removedThisRound": 13,
+      "removedIds": [
+        17,
+        7,
+        14,
+        19,
+        12,
+        10,
+        13
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        11,
+        15,
+        16,
+        18,
+        20
+      ],
+      "file": "13-players/variation-06.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 7,
+      "caseCode": "RV-5325",
+      "killerId": 7,
+      "killerName": "Celeste Moreau",
+      "accomplices": [
+        3
+      ],
+      "removedThisRound": 11,
+      "removedIds": [
+        20,
+        1,
+        5,
+        4,
+        10,
+        6,
+        11
+      ],
+      "activeIds": [
+        2,
+        3,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "file": "13-players/variation-07.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 8,
+      "caseCode": "RV-6018",
+      "killerId": 8,
+      "killerName": "Harriet Vance-Cole",
+      "accomplices": [
+        18
+      ],
+      "removedThisRound": 19,
+      "removedIds": [
+        2,
+        6,
+        12,
+        5,
+        9,
+        17,
+        19
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        7,
+        8,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        18,
+        20
+      ],
+      "file": "13-players/variation-08.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 9,
+      "caseCode": "RV-6711",
+      "killerId": 9,
+      "killerName": "Chef Henri Laurent",
+      "accomplices": [
+        10
+      ],
+      "removedThisRound": 6,
+      "removedIds": [
+        5,
+        2,
+        20,
+        15,
+        19,
+        12,
+        6
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        16,
+        17,
+        18
+      ],
+      "file": "13-players/variation-09.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 10,
+      "caseCode": "RV-7404",
+      "killerId": 10,
+      "killerName": "Margot Bell",
+      "accomplices": [
+        12
+      ],
+      "removedThisRound": 4,
+      "removedIds": [
+        1,
+        18,
+        8,
+        14,
+        5,
+        7,
+        4
+      ],
+      "activeIds": [
+        2,
+        3,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        19,
+        20
+      ],
+      "file": "13-players/variation-10.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 11,
+      "caseCode": "RV-8097",
+      "killerId": 11,
+      "killerName": "Sebastian Cole",
+      "accomplices": [
+        19
+      ],
+      "removedThisRound": 1,
+      "removedIds": [
+        18,
+        5,
+        3,
+        16,
+        8,
+        9,
+        1
+      ],
+      "activeIds": [
+        2,
+        4,
+        6,
+        7,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        19,
+        20
+      ],
+      "file": "13-players/variation-11.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 12,
+      "caseCode": "RV-8790",
+      "killerId": 12,
+      "killerName": "Lydia Vance",
+      "accomplices": [
+        5
+      ],
+      "removedThisRound": 14,
+      "removedIds": [
+        3,
+        4,
+        18,
+        7,
+        20,
+        8,
+        14
+      ],
+      "activeIds": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        19
+      ],
+      "file": "13-players/variation-12.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 13,
+      "caseCode": "RV-9483",
+      "killerId": 13,
+      "killerName": "Father Silas Ward",
+      "accomplices": [
+        16
+      ],
+      "removedThisRound": 20,
+      "removedIds": [
+        8,
+        12,
+        11,
+        10,
+        4,
+        1,
+        20
+      ],
+      "activeIds": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "file": "13-players/variation-13.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 14,
+      "caseCode": "RV-0176",
+      "killerId": 14,
+      "killerName": "Damien Cross",
+      "accomplices": [
+        9
+      ],
+      "removedThisRound": 2,
+      "removedIds": [
+        13,
+        17,
+        6,
+        12,
+        11,
+        3,
+        2
+      ],
+      "activeIds": [
+        1,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20
+      ],
+      "file": "13-players/variation-14.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 15,
+      "caseCode": "RV-0869",
+      "killerId": 15,
+      "killerName": "Beatrice (Bea) Holloway",
+      "accomplices": [
+        4
+      ],
+      "removedThisRound": 12,
+      "removedIds": [
+        6,
+        10,
+        16,
+        13,
+        18,
+        2,
+        12
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11,
+        14,
+        15,
+        17,
+        19,
+        20
+      ],
+      "file": "13-players/variation-15.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 16,
+      "caseCode": "RV-1562",
+      "killerId": 16,
+      "killerName": "Gideon Thorne",
+      "accomplices": [
+        14
+      ],
+      "removedThisRound": 10,
+      "removedIds": [
+        15,
+        20,
+        7,
+        9,
+        17,
+        18,
+        10
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        11,
+        12,
+        13,
+        14,
+        16,
+        19
+      ],
+      "file": "13-players/variation-16.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 17,
+      "caseCode": "RV-2255",
+      "killerId": 17,
+      "killerName": "Vivienne Sterling",
+      "accomplices": [
+        13
+      ],
+      "removedThisRound": 8,
+      "removedIds": [
+        12,
+        11,
+        1,
+        20,
+        6,
+        14,
+        8
+      ],
+      "activeIds": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        9,
+        10,
+        13,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "file": "13-players/variation-17.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 18,
+      "caseCode": "RV-2948",
+      "killerId": 18,
+      "killerName": "Nadia Vance",
+      "accomplices": [
+        7
+      ],
+      "removedThisRound": 5,
+      "removedIds": [
+        14,
+        19,
+        9,
+        11,
+        3,
+        15,
+        5
+      ],
+      "activeIds": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        10,
+        12,
+        13,
+        16,
+        17,
+        18,
+        20
+      ],
+      "file": "13-players/variation-18.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 19,
+      "caseCode": "RV-3641",
+      "killerId": 19,
+      "killerName": "Capt. Roderick Hale",
+      "accomplices": [
+        17
+      ],
+      "removedThisRound": 16,
+      "removedIds": [
+        7,
+        8,
+        4,
+        3,
+        13,
+        20,
+        16
+      ],
+      "activeIds": [
+        1,
+        2,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        17,
+        18,
+        19
+      ],
+      "file": "13-players/variation-19.json"
+    },
+    {
+      "playerCount": 13,
+      "variationId": 20,
+      "caseCode": "RV-4334",
+      "killerId": 20,
+      "killerName": "Alistair Finch",
+      "accomplices": [
+        1
+      ],
+      "removedThisRound": 18,
+      "removedIds": [
+        19,
+        13,
+        10,
+        2,
+        14,
+        16,
+        18
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        15,
+        17,
+        20
+      ],
+      "file": "13-players/variation-20.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 1,
+      "caseCode": "RV-1167",
+      "killerId": 1,
+      "killerName": "Lady Evelyn Vance",
+      "accomplices": [
+        2
+      ],
+      "removedThisRound": 13,
+      "removedIds": [
+        11,
+        9,
+        19,
+        6,
+        16,
+        4,
+        15,
+        13
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        8,
+        10,
+        12,
+        14,
+        17,
+        18,
+        20
+      ],
+      "file": "12-players/variation-01.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 2,
+      "caseCode": "RV-1860",
+      "killerId": 2,
+      "killerName": "Clara Sterling",
+      "accomplices": [
+        8
+      ],
+      "removedThisRound": 20,
+      "removedIds": [
+        4,
+        16,
+        15,
+        17,
+        7,
+        11,
+        3,
+        20
+      ],
+      "activeIds": [
+        1,
+        2,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        18,
+        19
+      ],
+      "file": "12-players/variation-02.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 3,
+      "caseCode": "RV-2553",
+      "killerId": 3,
+      "killerName": "Thomas Graves",
+      "accomplices": [
+        15
+      ],
+      "removedThisRound": 11,
+      "removedIds": [
+        16,
+        14,
+        2,
+        18,
+        1,
+        5,
+        9,
+        11
+      ],
+      "activeIds": [
+        3,
+        4,
+        6,
+        7,
+        8,
+        10,
+        12,
+        13,
+        15,
+        17,
+        19,
+        20
+      ],
+      "file": "12-players/variation-03.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 4,
+      "caseCode": "RV-7146",
+      "killerId": 4,
+      "killerName": "Dr. Julian Mercer",
+      "accomplices": [
+        6
+      ],
+      "removedThisRound": 12,
+      "removedIds": [
+        10,
+        3,
+        13,
+        1,
+        15,
+        19,
+        17,
+        12
+      ],
+      "activeIds": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        14,
+        16,
+        18,
+        20
+      ],
+      "file": "12-players/variation-04.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 5,
+      "caseCode": "RV-3939",
+      "killerId": 5,
+      "killerName": "Victor Vance",
+      "accomplices": [
+        20
+      ],
+      "removedThisRound": 3,
+      "removedIds": [
+        9,
+        15,
+        17,
+        8,
+        2,
+        13,
+        7,
+        3
+      ],
+      "activeIds": [
+        1,
+        4,
+        5,
+        6,
+        10,
+        11,
+        12,
+        14,
+        16,
+        18,
+        19,
+        20
+      ],
+      "file": "12-players/variation-05.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 6,
+      "caseCode": "RV-4632",
+      "killerId": 6,
+      "killerName": "Jasper Moore",
+      "accomplices": [
+        11
+      ],
+      "removedThisRound": 9,
+      "removedIds": [
+        17,
+        7,
+        14,
+        19,
+        12,
+        10,
+        13,
+        9
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        11,
+        15,
+        16,
+        18,
+        20
+      ],
+      "file": "12-players/variation-06.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 7,
+      "caseCode": "RV-5325",
+      "killerId": 7,
+      "killerName": "Celeste Moreau",
+      "accomplices": [
+        3
+      ],
+      "removedThisRound": 18,
+      "removedIds": [
+        20,
+        1,
+        5,
+        4,
+        10,
+        6,
+        11,
+        18
+      ],
+      "activeIds": [
+        2,
+        3,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19
+      ],
+      "file": "12-players/variation-07.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 8,
+      "caseCode": "RV-6018",
+      "killerId": 8,
+      "killerName": "Harriet Vance-Cole",
+      "accomplices": [
+        18
+      ],
+      "removedThisRound": 14,
+      "removedIds": [
+        2,
+        6,
+        12,
+        5,
+        9,
+        17,
+        19,
+        14
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        7,
+        8,
+        10,
+        11,
+        13,
+        15,
+        16,
+        18,
+        20
+      ],
+      "file": "12-players/variation-08.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 9,
+      "caseCode": "RV-6711",
+      "killerId": 9,
+      "killerName": "Chef Henri Laurent",
+      "accomplices": [
+        10
+      ],
+      "removedThisRound": 4,
+      "removedIds": [
+        5,
+        2,
+        20,
+        15,
+        19,
+        12,
+        6,
+        4
+      ],
+      "activeIds": [
+        1,
+        3,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        16,
+        17,
+        18
+      ],
+      "file": "12-players/variation-09.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 10,
+      "caseCode": "RV-7404",
+      "killerId": 10,
+      "killerName": "Margot Bell",
+      "accomplices": [
+        12
+      ],
+      "removedThisRound": 15,
+      "removedIds": [
+        1,
+        18,
+        8,
+        14,
+        5,
+        7,
+        4,
+        15
+      ],
+      "activeIds": [
+        2,
+        3,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        16,
+        17,
+        19,
+        20
+      ],
+      "file": "12-players/variation-10.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 11,
+      "caseCode": "RV-8097",
+      "killerId": 11,
+      "killerName": "Sebastian Cole",
+      "accomplices": [
+        19
+      ],
+      "removedThisRound": 6,
+      "removedIds": [
+        18,
+        5,
+        3,
+        16,
+        8,
+        9,
+        1,
+        6
+      ],
+      "activeIds": [
+        2,
+        4,
+        7,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        19,
+        20
+      ],
+      "file": "12-players/variation-11.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 12,
+      "caseCode": "RV-8790",
+      "killerId": 12,
+      "killerName": "Lydia Vance",
+      "accomplices": [
+        5
+      ],
+      "removedThisRound": 2,
+      "removedIds": [
+        3,
+        4,
+        18,
+        7,
+        20,
+        8,
+        14,
+        2
+      ],
+      "activeIds": [
+        1,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        19
+      ],
+      "file": "12-players/variation-12.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 13,
+      "caseCode": "RV-9483",
+      "killerId": 13,
+      "killerName": "Father Silas Ward",
+      "accomplices": [
+        16
+      ],
+      "removedThisRound": 19,
+      "removedIds": [
+        8,
+        12,
+        11,
+        10,
+        4,
+        1,
+        20,
+        19
+      ],
+      "activeIds": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "file": "12-players/variation-13.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 14,
+      "caseCode": "RV-0176",
+      "killerId": 14,
+      "killerName": "Damien Cross",
+      "accomplices": [
+        9
+      ],
+      "removedThisRound": 10,
+      "removedIds": [
+        13,
+        17,
+        6,
+        12,
+        11,
+        3,
+        2,
+        10
+      ],
+      "activeIds": [
+        1,
+        4,
+        5,
+        7,
+        8,
+        9,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20
+      ],
+      "file": "12-players/variation-14.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 15,
+      "caseCode": "RV-0869",
+      "killerId": 15,
+      "killerName": "Beatrice (Bea) Holloway",
+      "accomplices": [
+        4
+      ],
+      "removedThisRound": 17,
+      "removedIds": [
+        6,
+        10,
+        16,
+        13,
+        18,
+        2,
+        12,
+        17
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11,
+        14,
+        15,
+        19,
+        20
+      ],
+      "file": "12-players/variation-15.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 16,
+      "caseCode": "RV-1562",
+      "killerId": 16,
+      "killerName": "Gideon Thorne",
+      "accomplices": [
+        14
+      ],
+      "removedThisRound": 8,
+      "removedIds": [
+        15,
+        20,
+        7,
+        9,
+        17,
+        18,
+        10,
+        8
+      ],
+      "activeIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        11,
+        12,
+        13,
+        14,
+        16,
+        19
+      ],
+      "file": "12-players/variation-16.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 17,
+      "caseCode": "RV-2255",
+      "killerId": 17,
+      "killerName": "Vivienne Sterling",
+      "accomplices": [
+        13
+      ],
+      "removedThisRound": 16,
+      "removedIds": [
+        12,
+        11,
+        1,
+        20,
+        6,
+        14,
+        8,
+        16
+      ],
+      "activeIds": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        9,
+        10,
+        13,
+        15,
+        17,
+        18,
+        19
+      ],
+      "file": "12-players/variation-17.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 18,
+      "caseCode": "RV-2948",
+      "killerId": 18,
+      "killerName": "Nadia Vance",
+      "accomplices": [
+        7
+      ],
+      "removedThisRound": 1,
+      "removedIds": [
+        14,
+        19,
+        9,
+        11,
+        3,
+        15,
+        5,
+        1
+      ],
+      "activeIds": [
+        2,
+        4,
+        6,
+        7,
+        8,
+        10,
+        12,
+        13,
+        16,
+        17,
+        18,
+        20
+      ],
+      "file": "12-players/variation-18.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 19,
+      "caseCode": "RV-3641",
+      "killerId": 19,
+      "killerName": "Capt. Roderick Hale",
+      "accomplices": [
+        17
+      ],
+      "removedThisRound": 5,
+      "removedIds": [
+        7,
+        8,
+        4,
+        3,
+        13,
+        20,
+        16,
+        5
+      ],
+      "activeIds": [
+        1,
+        2,
+        6,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        17,
+        18,
+        19
+      ],
+      "file": "12-players/variation-19.json"
+    },
+    {
+      "playerCount": 12,
+      "variationId": 20,
+      "caseCode": "RV-4334",
+      "killerId": 20,
+      "killerName": "Alistair Finch",
+      "accomplices": [
+        1
+      ],
+      "removedThisRound": 7,
+      "removedIds": [
+        19,
+        13,
+        10,
+        2,
+        14,
+        16,
+        18,
+        7
+      ],
+      "activeIds": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        11,
+        12,
+        15,
+        17,
+        20
+      ],
+      "file": "12-players/variation-20.json"
+    }
+  ]
+}

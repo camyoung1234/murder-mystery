@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Last Chime of Ravenshollow — Digital Companion</title>
+  <script src="../assets/variations-data.js"></script>
   <script src="../assets/mystery-engine.js"></script>
   <style>
     :root {
@@ -543,8 +544,8 @@
           <h2>Guest Count &amp; Dynamic Case Setup</h2>
           <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
             <label for="playerCountSlider" style="color:var(--muted);">Players:</label>
-            <input type="range" id="playerCountSlider" min="8" max="20" value="8" oninput="updatePlayerCount(this.value)" />
-            <strong id="playerCountValue" style="color:var(--gold); font-size:1.25rem; min-width:26px;">8</strong>
+            <input type="range" id="playerCountSlider" min="12" max="20" value="12" oninput="updatePlayerCount(this.value)" />
+            <strong id="playerCountValue" style="color:var(--gold); font-size:1.25rem; min-width:26px;">12</strong>
 
             <label for="caseCodeInput" style="color:var(--muted); margin-left:6px;">Case:</label>
             <input id="caseCodeInput" type="text" class="guest-input" style="width:98px; text-align:center; font-family:'Courier New',monospace; font-weight:700; color:var(--gold);" onchange="applyCaseCode(this.value)" />
@@ -665,7 +666,7 @@
     const urlParams = new URLSearchParams(window.location.search);
 
     let state = JSON.parse(localStorage.getItem("ravenshollow_state_v2") || "null") || {
-      playerCount: parseInt(urlParams.get("players") || localStorage.getItem("ravenshollow_players") || "8", 10),
+      playerCount: parseInt(urlParams.get("players") || localStorage.getItem("ravenshollow_players") || "12", 10),
       caseCode: urlParams.get("case") || localStorage.getItem("ravenshollow_case_code") || E.CLASSIC_CODE,
       tvMode: true,
       currentAct: "prologue",
@@ -678,7 +679,8 @@
 
     // Always honor explicit URL query params if passed from Print Sheets
     if (urlParams.get("case")) state.caseCode = E.decodeCaseCode(urlParams.get("case")).code;
-    if (urlParams.get("players")) state.playerCount = Math.max(8, Math.min(20, parseInt(urlParams.get("players"), 10) || 8));
+    if (urlParams.get("players")) state.playerCount = Math.max(E.MIN_PLAYERS, Math.min(E.MAX_PLAYERS, parseInt(urlParams.get("players"), 10) || E.MIN_PLAYERS));
+    if (isNaN(state.playerCount) || state.playerCount < E.MIN_PLAYERS || state.playerCount > E.MAX_PLAYERS) state.playerCount = E.MIN_PLAYERS;
 
     let scenario = E.buildScenario(state.caseCode, state.playerCount);
     let timerSeconds = 7 * 60;
@@ -698,7 +700,7 @@
     }
 
     function getActiveCharacters() {
-      return scenario.characters.slice(0, state.playerCount);
+      return scenario.characters;
     }
 
     // Tabs
@@ -1121,7 +1123,7 @@
 
       const shadowCount = scenario.shadowIds.length;
       document.getElementById("scalingSummary").innerHTML =
-        `Case <strong>${scenario.code}</strong> &nbsp;|&nbsp; Active Roster: <strong>#1–#${state.playerCount}</strong> &nbsp;|&nbsp; Hidden Shadow Team: <strong>${shadowCount}</strong> (1 Killer + ${shadowCount - 1} Accomplice${shadowCount > 2 ? "s" : ""}) &nbsp;|&nbsp; Inspector: <strong>1 Special Role</strong>`;
+        `Case <strong>${scenario.code}</strong> &nbsp;|&nbsp; Active Roster: <strong>${state.playerCount} Guests</strong> (Balanced) &nbsp;|&nbsp; Hidden Shadow Team: <strong>${shadowCount}</strong> (1 Killer + ${shadowCount - 1} Accomplice${shadowCount > 2 ? "s" : ""}) &nbsp;|&nbsp; Inspector: <strong>1 Special Role</strong>`;
 
       document.getElementById("setupCastGrid").innerHTML = getActiveCharacters().map(c => {
         let roleBadge = "";

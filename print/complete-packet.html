@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Complete Game Packet (Single PDF) — The Last Chime of Ravenshollow</title>
+  <script src="../assets/variations-data.js"></script>
   <script src="../assets/mystery-engine.js"></script>
   <style>
     @page { size: letter portrait; margin: 0.4in 0.45in; }
@@ -578,12 +579,12 @@
     </div>
     <div class="controls">
       <label style="font-size:0.85rem;">Players:</label>
-      <input type="range" id="countSlider" min="8" max="20" value="8" oninput="updateConfig()" />
-      <strong id="countVal" style="color:#d4a853; font-size:1.1rem; min-width:24px;">8</strong>
+      <input type="range" id="countSlider" min="12" max="20" value="12" oninput="updateConfig()" />
+      <strong id="countVal" style="color:#d4a853; font-size:1.1rem; min-width:24px;">12</strong>
 
       <label style="font-size:0.85rem; margin-left:4px;">Case:</label>
       <input type="text" id="caseCodeInput" class="code-input" value="" onchange="applyManualCode()" />
-      <button class="btn" onclick="rollNewCase()" title="Picks any character #1–#N randomly as Killer (hidden in the code)">Roll Random Killer</button>
+      <button class="btn" onclick="rollNewCase()" title="Picks any of the 20 balanced variations randomly (hidden in the code)">Roll Random Killer</button>
 
       <select id="evidenceStyle" class="select-input" onchange="render()">
         <option value="stylized">Evidence: Stylized Color</option>
@@ -597,7 +598,7 @@
 
       <button class="btn" id="blurBtn" onclick="toggleBlur()">Unblur Preview</button>
       <a class="btn" id="companionLink" href="../companion/index.html" target="_blank">Companion App</a>
-      <button class="print-btn" onclick="window.print()">Print / Save Single PDF (<span id="totalPagesLabel">15+</span> Pages)</button>
+      <button class="print-btn" onclick="window.print()">Print / Save Single PDF (<span id="totalPagesLabel">20+</span> Pages)</button>
     </div>
   </div>
 
@@ -606,8 +607,8 @@
   <script>
     const E = window.RavenshollowEngine;
     const params = new URLSearchParams(window.location.search);
-    let playerCount = parseInt(params.get("players") || localStorage.getItem("ravenshollow_players") || "8", 10);
-    if (isNaN(playerCount) || playerCount < 8 || playerCount > 20) playerCount = 8;
+    let playerCount = parseInt(params.get("players") || localStorage.getItem("ravenshollow_players") || "12", 10);
+    if (isNaN(playerCount) || playerCount < E.MIN_PLAYERS || playerCount > E.MAX_PLAYERS) playerCount = E.MIN_PLAYERS;
     let caseCode = params.get("case") || localStorage.getItem("ravenshollow_case_code") || E.CLASSIC_CODE;
 
     document.getElementById("countSlider").value = playerCount;
@@ -646,7 +647,6 @@
 
     function renderCharacterSheets(sc) {
       return sc.characters
-        .filter(s => s.id <= playerCount)
         .map(s => `
           <div class="sheet spoiler-content" data-id="${s.id}">
             <div>
@@ -868,7 +868,7 @@
             <strong>SPOILER WARNING:</strong> This Host Guide is dynamically generated for <strong>Case ${sc.code} (${playerCount} players)</strong>. Only a non-playing Human Host should read it. If everyone wants to play blind, uncheck "Include Host Guide" above and use the <strong>Companion Auto-Host App</strong> (<code>companion/index.html</code>) instead!
           </div>
 
-          <h2>1. Active Cast &amp; Secret Roles (#1–#${playerCount})</h2>
+          <h2>1. Active Cast &amp; Secret Roles (${playerCount} Active Guests)</h2>
           <div class="role-grid">
             <div class="role-box killer">
               <div class="role-label">Shadow Team — Killer</div>
@@ -992,7 +992,7 @@
       const parts = [];
       parts.push(`
         <div class="screen-divider">
-          <span>Part 1: Character Sheets (#1–#${playerCount}) &bull; Case ${sc.code}</span>
+          <span>Part 1: Character Sheets (${playerCount} Active Guests) &bull; Case ${sc.code}</span>
           <span class="sub">${playerCount} Pages</span>
         </div>
       `);

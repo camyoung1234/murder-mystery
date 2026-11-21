@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Dynamic Host Guide — The Last Chime of Ravenshollow</title>
+  <script src="../assets/variations-data.js"></script>
   <script src="../assets/mystery-engine.js"></script>
   <style>
     @page { size: letter portrait; margin: 0.45in 0.5in; }
@@ -228,8 +229,8 @@
     </div>
     <div class="controls">
       <label style="font-size:0.85rem;">Players:</label>
-      <input type="range" id="countSlider" min="8" max="20" value="8" oninput="updateConfig()" />
-      <strong id="countVal" style="color:#d4a853; font-size:1.1rem; min-width:24px;">8</strong>
+      <input type="range" id="countSlider" min="12" max="20" value="12" oninput="updateConfig()" />
+      <strong id="countVal" style="color:#d4a853; font-size:1.1rem; min-width:24px;">12</strong>
 
       <label style="font-size:0.85rem; margin-left:4px;">Case:</label>
       <input type="text" id="caseCodeInput" class="code-input" onchange="applyManualCode()" />
@@ -246,7 +247,8 @@
   <script>
     const E = window.RavenshollowEngine;
     const params = new URLSearchParams(window.location.search);
-    let playerCount = parseInt(params.get("players") || localStorage.getItem("ravenshollow_players") || "8", 10);
+    let playerCount = parseInt(params.get("players") || localStorage.getItem("ravenshollow_players") || "12", 10);
+    if (isNaN(playerCount) || playerCount < E.MIN_PLAYERS || playerCount > E.MAX_PLAYERS) playerCount = E.MIN_PLAYERS;
     let caseCode = params.get("case") || localStorage.getItem("ravenshollow_case_code") || E.CLASSIC_CODE;
 
     document.getElementById("countSlider").value = playerCount;
@@ -328,7 +330,7 @@
           <strong>SPOILER WARNING:</strong> This Host Guide is dynamically generated for <strong>Case ${sc.code} (${playerCount} players)</strong>. Only a non-playing Human Host should read it. If everyone wants to play blind, skip this sheet and use the <strong>Companion Auto-Host App</strong> (<code>companion/index.html</code>) instead!
         </div>
 
-        <h2>1. Active Cast &amp; Secret Roles (#1–#${playerCount})</h2>
+        <h2>1. Active Cast &amp; Secret Roles (${playerCount} Active Guests)</h2>
         <div class="role-grid">
           <div class="role-box killer">
             <div class="role-label">Shadow Team — Killer</div>

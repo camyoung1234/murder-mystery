@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Ink-Friendly Evidence Board — The Last Chime of Ravenshollow</title>
+  <script src="../assets/variations-data.js"></script>
   <script src="../assets/mystery-engine.js"></script>
   <style>
     @page { size: letter portrait; margin: 0.45in; }
@@ -67,7 +68,7 @@
   <script>
     const E = window.RavenshollowEngine;
     const params = new URLSearchParams(window.location.search);
-    const playerCount = parseInt(params.get("players") || localStorage.getItem("ravenshollow_players") || "8", 10);
+    const playerCount = parseInt(params.get("players") || localStorage.getItem("ravenshollow_players") || "12", 10);
     let caseCode = params.get("case") || localStorage.getItem("ravenshollow_case_code") || E.CLASSIC_CODE;
     document.getElementById("caseCodeInput").value = caseCode;
 
