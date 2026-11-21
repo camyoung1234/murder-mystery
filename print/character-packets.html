@@ -107,19 +107,48 @@
     }
     .char-title { font-size: 1.5rem; font-weight: 700; margin-top: 2px; }
     .char-subtitle { font-size: 0.92rem; font-style: italic; color: #333; }
+    .fold-role-wrapper {
+      margin-bottom: 8px;
+    }
+    .fold-role-box {
+      border: 1.5px solid #111;
+      background: #fafafa;
+      padding: 7px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .fold-role-text {
+      font-size: 0.81rem;
+      line-height: 1.32;
+      flex: 1;
+    }
     .alignment-box {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 0.72rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      border: 2px solid #111;
-      padding: 4px 10px;
+      border: 1.5px solid #111;
+      background: #fff;
+      color: #111;
+      padding: 5px 10px;
       text-align: center;
       white-space: nowrap;
+      min-width: 215px;
+      flex-shrink: 0;
     }
-    .alignment-box.shadow { background: #111; color: #fff; }
-    .alignment-box.inspector { border-style: double; border-width: 4px; }
+    .fold-line {
+      border-bottom: 1.5px dashed #333;
+      text-align: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.66rem;
+      letter-spacing: 0.1em;
+      color: #444;
+      padding: 4px 0 3px;
+      margin-bottom: 8px;
+    }
 
     .section { margin-bottom: 9px; }
     .section-title {
@@ -300,16 +329,21 @@
       container.innerHTML = scenario.characters.map(s => `
         <div class="sheet ${s.id > playerCount ? "hidden" : ""}" data-id="${s.id}">
           <div>
+            <div class="fold-role-wrapper">
+              <div class="fold-role-box">
+                <div class="fold-role-text"><strong>CONFIDENTIAL ROLE:</strong> ${s.special || "You are Innocent. Share clues, question suspects, and vote to indict the Killer in the Final Verdict."}</div>
+                <div class="alignment-box">${s.badge}</div>
+              </div>
+              <div class="fold-line">&#9986; FOLD TOP FLAP BACK ALONG DASHED LINE TO HIDE YOUR ALIGNMENT &amp; ROLE &#9986;</div>
+            </div>
+
             <div class="sheet-header">
               <div>
-                <div class="game-kicker">The Last Chime of Ravenshollow &bull; Case ${scenario.code} &bull; Character #${s.id}</div>
+                <div class="game-kicker">The Last Chime of Ravenshollow &bull; Case ${scenario.code}</div>
                 <div class="char-title">${s.name}</div>
                 <div class="char-subtitle">${s.role}</div>
               </div>
-              <div class="alignment-box ${s.badgeClass}">${s.badge}</div>
             </div>
-
-            ${s.special ? `<div class="special-callout"><strong>SECRET ROLE:</strong> ${s.special}</div>` : ""}
 
             <div class="section">
               <div class="section-title">Who You Are</div>
@@ -347,7 +381,7 @@
             <div class="cut-line">&#9986; FOLD UP &amp; TAPE SHUT (OR CUT &amp; ENVELOPE) — DO NOT OPEN UNLESS DETAINED OR INSPECTED &#9986;</div>
             <div class="detention-card">
               <div class="detention-header">
-                <span>SEALED DETENTION CARD &bull; #${s.id} ${s.name}</span>
+                <span>SEALED DETENTION CARD &bull; ${s.name}</span>
                 <span>CASE ${scenario.code}</span>
               </div>
               <p>${s.detention}</p>
