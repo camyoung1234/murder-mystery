@@ -6,6 +6,15 @@
 
 ---
 
+## Play & Print Online (GitHub Pages)
+
+- **Generate a Single Complete PDF (Character Sheets + Evidence + Host Guide, synced to one Case Code):**
+  [https://camyoung1234.github.io/murder-mystery/print/complete-packet.html](https://camyoung1234.github.io/murder-mystery/print/complete-packet.html)
+- **Launch the Spoiler-Free Digital Companion App:**
+  [https://camyoung1234.github.io/murder-mystery/companion/index.html](https://camyoung1234.github.io/murder-mystery/companion/index.html)
+
+---
+
 ## Overview
 
 *The Last Chime of Ravenshollow* blends a **fair-play, Agatha Christie-style "impossible crime" mystery** with **Werewolf-style social deduction, hidden teams, Town Hall detention votes, and eyes-closed Blackout phases**.
@@ -22,6 +31,7 @@
 
 | File | Purpose |
 | :--- | :--- |
+| [`print/complete-packet.html`](print/complete-packet.html) | **All-in-One Single PDF Generator:** Combines Character Sheets (`#1`–`#N`), Evidence Packet (Stylized or B&W), and Host Guide locked to **one Case Code** so nothing can mismatch! |
 | [`print/character-packets.html`](print/character-packets.html) | **Print-Ready Character Sheets (`#1`–`#20`):** Open in any browser, pick your player count (`8–20`), and hit Print! Exactly 1 ink-friendly page per character with checkboxes for Act I–III dialogues and a cut-and-fold **Sealed Detention Card**. |
 | [`print/evidence-cards-stylized.html`](print/evidence-cards-stylized.html) | **Stylized Vintage Evidence Packet (Color):** Aged parchment styling, wax seals, and the illustrated **Ravenshollow Manor Map** (`assets/ravenshollow-manor-map.jpg`). |
 | [`print/evidence-cards.html`](print/evidence-cards.html) | **Ink-Friendly B&W Evidence Packet:** Clean black-and-white printable Exhibits A–F, Manor Map, and False Lead slips. |
