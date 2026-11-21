@@ -125,7 +125,7 @@
       "persona": "Dignified, observant butler who notices everything and speaks quietly. You have served Ravenshollow Manor since 1999.",
       "secret": "You skimmed small sums from the wine cellar budget for your sister's medical bills (making you nervous about wine questions), though you are innocent of murder.",
       "clue": "1) At 8:40 PM a piping-hot cup of chamomile tea was poured in the Study—by 9:02 PM the untouched cup was barely lukewarm. 2) At 8:42 PM, YOU PERSONALLY SAW Beatrice (Bea) Holloway (#15) hand Arthur a nightly bedside peppermint infusion in the Grand Hall right before Arthur locked himself in the Study!",
-      "detention": "Searched from Thomas Graves's Pocket: Tonight's handwritten note: '8:40 PM — Hot cup of chamomile tea poured in Study. 8:42 PM — Watched Beatrice (Bea) Holloway (#15) hand Arthur a nightly bedside peppermint infusion in the Grand Hall. 9:02 PM — Tea untouched & barely lukewarm; watch smashed at 8:48 PM.'",
+      "detention": "Searched from Thomas Graves's Belongings: Tonight's handwritten note: '8:40 PM — Poured hot cup of chamomile tea in Study. 8:42 PM — Watched Beatrice (Bea) Holloway (#15) hand Arthur a nightly bedside peppermint infusion in the Grand Hall. 9:02 PM — Tea untouched & barely lukewarm; watch smashed at 8:48 PM.'",
       "dialogues": [
         {
           "act": "ACT I",
@@ -140,7 +140,7 @@
         {
           "act": "ACT III",
           "target": "Say to Celeste Moreau (#7):",
-          "line": "\"Think back! At 8:42 PM in the Grand Hall, I personally watched Beatrice (Bea) Holloway (#15) hand Arthur a nightly bedside peppermint infusion—and Arthur carried it straight up to his locked Study!\""
+          "line": "\"Think back! At 8:42 PM in the Grand Hall, I personally watched Beatrice Holloway (#15) hand Arthur a nightly bedside peppermint infusion—and Arthur carried it straight up to his locked Study!\""
         }
       ]
     },
@@ -153,8 +153,8 @@
       "badge": "SHADOW TEAM — ACCOMPLICE",
       "badgeClass": "shadow",
       "special": "YOU ARE ON THE SHADOW TEAM! You are allied with Beatrice (Bea) Holloway (#15) and win ONLY if the Killer escapes indictment in the Final Verdict. Fellow accomplice: Sebastian Cole (#11). Wake up with the Shadow Team during Blackout Phases.",
-      "persona": "Calm, composed physician who has looked after Arthur's health for years and was standing in the Grand Hall at 8:55 PM.",
-      "secret": "Beatrice (Bea) Holloway (#15) caught your private scandal and blackmailed you into cutting the basement generator breaker for 15 seconds at 9:00 PM sharp! You didn't know Beatrice (Bea) Holloway was going to murder Arthur, but if Beatrice (Bea) Holloway goes down, you go to prison as an accessory. Worse, your initials (J.M.) appear on the burned Exhibit C audit log from 2008—even though you had no access in 2008!",
+      "persona": "Calm, composed physician who has looked after Arthur's health for years.",
+      "secret": "Beatrice (Bea) Holloway (#15) caught your private scandal and blackmailed you into cutting the basement generator breaker for 15 seconds at 9:00 PM sharp! You didn't know Beatrice (Bea) Holloway was going to murder Arthur, but if Beatrice (Bea) Holloway goes down, you go to prison as an accessory. Worse, your initials (J.M.) appear on the burned Exhibit C audit log from 2008—even though you had no access to Archive Box #4 in 2008!",
       "clue": "STRATEGY: Deflect suspicion onto Victor Vance (#5) and defend Beatrice (Bea) Holloway's (#15) 8:55 PM Grand Hall alibi!",
       "detention": "Searched from Dr. Julian Mercer's Belongings: Heavy rubber-insulated electrical gloves (smelling of ozone from the generator breaker) and an unsigned blackmail note: '9:00 PM sharp. Fifteen seconds of dark, or your secret goes to the police.'",
       "dialogues": [
@@ -171,7 +171,7 @@
         {
           "act": "ACT III",
           "target": "Say to Celeste Moreau (#7):",
-          "line": "\"I didn't touch any poison and I didn't rig that Automaton! Look at who stood to gain from the unsigned Will—and remember Beatrice (Bea) Holloway was in the Grand Hall at 8:55!\""
+          "line": "\"I didn't touch any poison and I didn't rig that Automaton! Look at who stood to gain from the unsigned Will—and remember Beatrice Holloway was in the Grand Hall at 8:55!\""
         }
       ]
     },
@@ -187,17 +187,17 @@
       "persona": "Charming, desperate nephew who owes $400,000 to dangerous creditors and desperately needed Arthur's inheritance.",
       "secret": "RED HERRING! At 7:58 PM, you snuck into the Dining & Sideboard and put CHLORAL HYDRATE (non-lethal sleeping powder) into Arthur's 1998 Bordeaux wine decanter before a glass was carried up to his Study, then slipped into the Study around 8:05 PM to locate the New Will! You're terrified you killed him—until Exhibit F proves he never drank the wine!",
       "clue": "Once Exhibit F drops in Act III, confess to the sleeping powder so the room stops wasting votes on you and hunts the real killer!",
-      "detention": "Searched from Victor Vance's Pocket: A folded white paper packet labeled 'Chloral Hydrate (Sleep Aid)' and a desperate note about stealing the unsigned New Will.",
+      "detention": "Searched from Victor Vance's Belongings: A folded white paper packet labeled 'Chloral Hydrate (Sleep Aid)' and a desperate note about stealing the unsigned New Will.",
       "dialogues": [
         {
           "act": "ACT I",
           "target": "Say to Celeste Moreau (#7):",
-          "line": "\"Keep your voice down! Yes, I stepped into the Study around 8:05 PM to talk to Arthur—he wasn't even there! Why is everyone blaming the wine?\""
+          "line": "\"Keep your voice down! People are whispering about the wine—yes, I stepped into the Study around 8:05 PM to talk to Arthur, and he wasn't even there!\""
         },
         {
           "act": "ACT II",
           "target": "Say to Thomas Graves (#3):",
-          "line": "\"Between us—did Lord Arthur drink any of that red wine tonight? Beatrice (Bea) Holloway claimed it smelled of poison, and I'm worried...\""
+          "line": "\"Between us—did Lord Arthur drink any of that red wine tonight? Beatrice Holloway claimed it smelled of poison, and I'm worried...\""
         },
         {
           "act": "ACT III",
@@ -215,7 +215,7 @@
       "badge": "INNOCENT",
       "badgeClass": "",
       "special": "",
-      "persona": "Brilliant, fiercely proud master clockmaker and Arthur's former fiancée (he stole your escapement design 30 years ago). Invited to appraise the Chronos Automaton.",
+      "persona": "Brilliant, fiercely proud master clockmaker and Arthur's former fiancée (he stole your escapement design 30 years ago). Invited to appraise the Chronos Automaton. At 8:55 PM, you were standing right beside Beatrice (Bea) Holloway (#15) in the Grand Hall when Arthur's voice boomed from upstairs.",
       "secret": "At 8:20 PM, you snuck upstairs to peek at the Automaton and saw a figure in a dark coat slip silently out of Arthur's Study carrying a small dark case.",
       "clue": "You know the Chronos Automaton can be programmed to play a pre-recorded brass cylinder at 8:55 PM AND drop its 5-lb counterweight at 9:00 PM—proving Arthur could have died BEFORE 8:55!",
       "detention": "Searched from Celeste's Handbag: A 30-year-old patent blueprint signed 'C. Moreau' ('He stole my life's work') PLUS a sketch showing the Automaton's timer gear can be set 60 minutes ahead.",
@@ -223,7 +223,7 @@
         {
           "act": "ACT I",
           "target": "Say to Thomas Graves (#3):",
-          "line": "\"Alright, I snuck up to the gallery at 8:20 PM for a glimpse of the Automaton—and right as I reached the top of the stairs, I saw a figure in a dark coat slip out of Arthur's Study carrying a small dark case!\""
+          "line": "\"All right, I snuck up to the gallery at 8:20 PM for a glimpse of the Automaton—and right as I reached the top of the stairs, I saw a figure in a dark coat slip out of Arthur's Study carrying a small dark case!\""
         },
         {
           "act": "ACT II",
@@ -258,13 +258,13 @@
         },
         {
           "act": "ACT II",
-          "target": "Say to Beatrice (Bea) Holloway (#15):",
+          "target": "Say to Beatrice (Bea) Holloway (#15) [after Exhibit D]:",
           "line": "\"Wait a second—Exhibit D's Study re-inspection shows Arthur was slumped face-down at 9:01 PM, yet you claimed you saw his pale lips the instant the lights returned—and the puddle was odorless water, not wine!\""
         },
         {
           "act": "ACT III",
           "target": "Say to Victor Vance (#5) [after Exhibit F]:",
-          "line": "\"My field test found chloral hydrate—sleeping powder—in the red wine decanter. Tell the truth right now, or you're getting my final vote!\""
+          "line": "\"My field test found chloral hydrate—sleeping powder—in the red wine decanter. Exhibit F proves Arthur never drank it, so tell the truth right now and help us catch the real killer!\""
         }
       ]
     },
@@ -326,7 +326,7 @@
         {
           "act": "ACT III",
           "target": "Say to Beatrice (Bea) Holloway (#15) [stage-managed defense]:",
-          "line": "\"Look, Beatrice (Bea) Holloway, I don't care what a dusty 2008 ledger says—you were standing right beside Celeste Moreau in the Grand Hall when Arthur was shouting at 8:55! Tell everyone how you could possibly be in two places at once!\""
+          "line": "\"Look, Beatrice Holloway, I don't care what a dusty 2008 ledger says—you were standing right beside Celeste Moreau in the Grand Hall when Arthur was shouting at 8:55! Tell everyone how you could possibly be in two places at once!\""
         }
       ]
     },
@@ -357,7 +357,7 @@
         {
           "act": "ACT III",
           "target": "Say to Clara Sterling (#2):",
-          "line": "\"Stop blaming the storm for the 9:00 PM blackout! I overheard the blackmail threat on the basement stairs at 8:35 PM—whoever cut the lights was forced into it by the real killer!\""
+          "line": "\"Don't let anyone blame the storm for the 9:00 PM blackout! I overheard the blackmail threat on the basement stairs at 8:35 PM—whoever cut the lights was forced into it by the real killer!\""
         }
       ]
     },
@@ -402,7 +402,7 @@
       "badgeClass": "shadow",
       "special": "YOU ARE THE KILLER! Win by avoiding indictment in the Final Verdict (frame Dr. Julian Mercer #4 or Victor Vance #5!). Your Shadow Team allies: Dr. Julian Mercer (#4), Sebastian Cole (#11). During Blackouts, wake up to Intimidate 1 guest OR Plant a False Lead.",
       "persona": "Brisk, sharp-eyed housekeeper who notices everything dropped in a bin or tossed down the laundry chute.",
-      "secret": "In 2008, YOU were behind \"2008 Domestic Payroll — Ghost Employee Fraud\" (signed \"B.H.\"). Tonight: at 8:15 PM you rigged the Chronos Automaton (8:55 PM voice + 9:00 PM carafe smash); at 8:35 PM you blackmailed Dr. Julian Mercer (#4) to cut the generator at 9:00 PM; at 8:42 PM you handed Arthur a nightly bedside peppermint infusion laced with concentrated Aconite (he died at 8:48 PM). You stood next to Celeste Moreau (#7) at 8:55 PM for an alibi, then slipped up at 9:01 PM by claiming you saw his chalk-pale lips (he was face-down!), smelled 'bitter-almond wine,' and lied about the 8:48 PM watch.",
+      "secret": "In 2008, YOU were behind \"2008 Domestic Payroll — Ghost Employee Fraud\" (signed \"B.H.\"). Tonight: at 8:15 PM you rigged the Chronos Automaton (8:55 PM voice + 9:00 PM carafe smash) and tried to burn the 2008 audit log in the Study fireplace; at 8:35 PM you blackmailed Dr. Julian Mercer (#4) to cut the generator at 9:00 PM; at 8:42 PM you handed Arthur a nightly bedside peppermint infusion laced with concentrated Aconite (he died at 8:48 PM). You stood next to Celeste Moreau (#7) at 8:55 PM for an alibi, then rushed to the desk at 9:01 PM—pocketing the nightly bedside peppermint infusion (and dropping your botanical-smudged handkerchief down the upstairs laundry chute at 9:04 PM) while slipping up by claiming you saw his chalk-pale lips (he was face-down!), smelled 'bitter-almond wine,' and lied about the 8:48 PM watch.",
       "clue": "STRATEGY: Stay calm! Let the room suspect Victor Vance (#5) for drugging the wine and Dr. Julian Mercer (#4) for the blackout and Exhibit C. If pressed on Exhibit E, claim Arthur's watch broke earlier or someone forged \"B.H.\" to frame you!",
       "detention": "Searched from Beatrice (Bea) Holloway's Effects: A folded dinner napkin smudged with faint fireplace soot and an unsigned note in Beatrice (Bea) Holloway's handwriting: \"Speak to Arthur privately before the 9:00 PM announcement—he cannot open that 2008 file tonight.\"",
       "dialogues": [
@@ -434,13 +434,13 @@
       "special": "",
       "persona": "Meticulous, ambitious junior attorney who personally typed up Arthur's New Will this afternoon.",
       "secret": "You secretly copied the corporate restructuring pages onto a thumb drive to shop to a rival firm—shady ambition, NOT murder.",
-      "clue": "At 4:00 PM today in the library, you caught someone alone reading Page 14 (the 2008 Archive Box #4 clause) of the New Will—they went pale as a ghost!",
-      "detention": "Searched from Vivienne's Portfolio: A 4:00 PM legal sticky note: 'Caught a guest reading Page 14 (2008 Archive Box #4 clause) of the New Will in the library. They looked terrified.'",
+      "clue": "At 4:00 PM today in the Library, you caught someone alone reading Page 14 (the 2008 Archive Box #4 clause) of the New Will—they went pale as a ghost!",
+      "detention": "Searched from Vivienne's Portfolio: A 4:00 PM legal sticky note: 'Caught someone alone reading Page 14 (2008 Archive Box #4 clause) of the New Will in the Library. They looked terrified.'",
       "dialogues": [
         {
           "act": "ACT I",
           "target": "Say to Clara Sterling (#2):",
-          "line": "\"I probably should have mentioned this sooner—at 4:00 PM today in the Library, I caught a guest alone reading Page 14 (the 2008 Archive Box #4 clause) of the New Will, and they went pale as a ghost!\""
+          "line": "\"I probably should have mentioned this sooner—at 4:00 PM today in the Library, I caught someone alone reading Page 14 (the 2008 Archive Box #4 clause) of the New Will, and they went pale as a ghost!\""
         },
         {
           "act": "ACT II",
@@ -457,25 +457,25 @@
     {
       "id": 18,
       "name": "Nadia Vance",
-      "role": "Pharmacology Student & Cousin",
+      "role": "Pharmacology Researcher & Cousin",
       "initials": "N.V.",
       "team": "innocent",
       "badge": "INNOCENT",
       "badgeClass": "",
       "special": "",
-      "persona": "Brilliant pharmacology student whose medical school tuition is funded by the Vance family trust.",
+      "persona": "Brilliant pharmacology researcher whose doctoral fellowship is funded by the Vance family trust.",
       "secret": "You borrowed rare botanical specimens from the university conservatory for an unauthorized thesis experiment—academic misconduct, NOT murder.",
-      "clue": "As a pharmacology student, you know concentrated Aconite is completely odorless and fatal within 2–3 minutes—totally different from bitter-almond cyanide!",
+      "clue": "As a pharmacology researcher, you know concentrated Aconite is completely odorless and fatal within 2–3 minutes—totally different from bitter-almond cyanide!",
       "detention": "Searched from Nadia's Clutch: Lab notes comparing Chloral Hydrate (non-lethal sedative) vs. Aconite (odorless, fatal in 2–3 minutes).",
       "dialogues": [
         {
           "act": "ACT I",
           "target": "Say to Harriet Vance-Cole (#8):",
-          "line": "\"As a pharmacology student, something bothers me: cyanide has a strong bitter-almond odor, whereas concentrated Aconite is completely odorless and stops the heart in two to three minutes!\""
+          "line": "\"As a pharmacology researcher, something bothers me: cyanide has a strong bitter-almond odor, whereas concentrated Aconite is completely odorless and stops the heart in two to three minutes!\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Thomas Graves (#3):",
+          "target": "Say to Thomas Graves (#3) [after Exhibit D]:",
           "line": "\"Look at Exhibit D's Study re-inspection—the puddle on the floor was clear, odorless water, and the wine glass wasn't even touched. Whoever claimed to smell 'bitter almonds from the wine' was steering us away from an odorless poison!\""
         },
         {
@@ -542,7 +542,7 @@
         },
         {
           "act": "ACT III",
-          "target": "Say to Celeste Moreau (#7) [after Exhibit E]:",
+          "target": "Say to Clara Sterling (#2) [after Exhibit E]:",
           "line": "\"Arthur fired me yesterday just for peeking at his sealed Archive Box #4! Chapter 12 of his memoir was all about that 2008 cover-up—and Exhibit E finally names the culprit he was protecting!\""
         }
       ]
@@ -565,7 +565,7 @@
       "id": "C",
       "act": 2,
       "title": "Exhibit C — Charred Audit Log ('J.M.' / 'B.H.')",
-      "html": "<pre>VANCE PRECISION INSTRUMENTS — CONFIDENTIAL AUDIT\nARCHIVE BOX #4 (SLATED FOR RELEASE WITH NEW WILL)\n-------------------------------------------------\nSUBJECT:   2008 Domestic Payroll — Ghost Employee Fraud\nFINDING:   Over $900k billed to fictitious staff accounts; payroll ledger FALSIFIED\nFLAGGED INITIALS: \"J.M.\" / \"B.H.\" [ROLES & DATES BURNED]\nNOTE:      One party falsified the 2008 record; the other had\n           no 2008 access to Archive Box #4.\nSTATUS:    Suppressed by A. Vance (2008). Full disclosure\n           ordered upon execution of New Will.</pre>"
+      "html": "<pre>VANCE PRECISION INSTRUMENTS — CONFIDENTIAL AUDIT\nARCHIVE BOX #4 (SLATED FOR RELEASE WITH NEW WILL)\n-------------------------------------------------\nSUBJECT:   2008 Domestic Payroll — Ghost Employee Fraud\nFINDING:   Over $900k billed to fictitious staff accounts; payroll ledger FALSIFIED\nFLAGGED INITIALS: \"J.M.\" / \"B.H.\" [ROLES &amp; DATES BURNED]\nNOTE:      One party falsified the 2008 record; the other had\n           no clearance or access to Archive Box #4 in 2008.\nSTATUS:    Suppressed by A. Vance (2008). Full disclosure\n           ordered upon execution of New Will.</pre>"
     },
     {
       "id": "D",
@@ -577,7 +577,7 @@
       "id": "E",
       "act": 3,
       "title": "Exhibit E — 2008 Dossier Ledger & Horologist Journal",
-      "html": "<ul>\n          <li><strong>Selected 2008 Archive Records:</strong><br/>\n            &bull; <strong>Lady Evelyn Vance (#1):</strong> Director of Vance Charity Gala Fund (2006–2008)<br/>\n            &bull; <strong>Clara Sterling (#2):</strong> Lead Trust Counsel, Vance Legal Holdings (2005–present)<br/>\n            &bull; <strong>Thomas Graves (#3):</strong> Estate Steward & Keyholder, Ravenshollow (1999–present)<br/>\n            &bull; <strong>Dr. Julian Mercer (#4):</strong> <em>No access to Archive Box #4 in 2008 (outside the 2008 incident window).</em><br/>\n            &bull; <strong>Victor Vance (#5):</strong> Junior Commodities Broker, Vance Capital (2007–2008)<br/>\n            &bull; <strong>Beatrice (Bea) Holloway (#15):</strong> Estate Housekeeper & Domestic Bookkeeper (2004–2008)\n          </li>\n          <li><strong>Arthur's Horologist Journal (Nov 15):</strong> <em>\"A clockmaker whose own pocket watch loses a single second is a fraud. My gold chronometer is calibrated daily to the U.S. Naval Observatory signal. It has not drifted by half a second in eleven years.\"</em></li>\n        </ul>"
+      "html": "<ul>\n          <li><strong>Selected 2008 Archive Records:</strong><br/>\n            &bull; <strong>Lady Evelyn Vance (#1):</strong> Director of Vance Charity Gala Fund (2006–2008)<br/>\n            &bull; <strong>Clara Sterling (#2):</strong> Lead Trust Counsel, Vance Legal Holdings (2005–present)<br/>\n            &bull; <strong>Thomas Graves (#3):</strong> Estate Steward &amp; Keyholder, Ravenshollow (1999–present)<br/>\n            &bull; <strong>Dr. Julian Mercer (#4):</strong> <em>Cleared — No clearance or access to Archive Box #4 in 2008 (unrelated to the 2008 incident).</em><br/>\n            &bull; <strong>Victor Vance (#5):</strong> Junior Commodities Broker, Vance Capital (2007–2008)<br/>\n            &bull; <strong>Beatrice (Bea) Holloway (#15):</strong> Estate Housekeeper &amp; Domestic Bookkeeper (2004–2008)\n          </li>\n          <li><strong>Arthur's Horologist Journal (Nov 15):</strong> <em>\"A clockmaker whose own pocket watch loses a single second is a fraud. My gold chronometer is calibrated daily to the U.S. Naval Observatory signal. It has not drifted by half a second in eleven years.\"</em></li>\n        </ul>"
     },
     {
       "id": "F",
@@ -612,17 +612,17 @@
     "blackout1": {
       "label": "BLACKOUT PHASE I (1 MIN)",
       "sub": "100% Spoiler-Free Automated Blackout — everyone closes their eyes!",
-      "html": "<p style=\"margin-bottom:14px;\">Click <strong>Start Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team to make a silent tap, then waking the Inspector to privately inspect 1 Detention Card—so <strong>nobody has to sit out as a human host!</strong></p>\n        <button class=\"btn btn-gold\" onclick=\"startAutoBlackout()\">Launch Auto-Blackout Phase I</button>"
+      "html": "<p style=\"margin-bottom:14px;\">Click <strong>Launch Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team to make a silent tap, then waking the Inspector to privately inspect 1 Detention Card—so <strong>nobody has to sit out as a human host!</strong></p>\n        <button class=\"btn btn-gold\" onclick=\"startAutoBlackout()\">Launch Auto-Blackout Phase I</button>"
     },
     "act2": {
       "label": "ACT II — SHADOWS IN THE CLOCKWORK (6 MIN)",
       "sub": "Read Public Opener, unlock Exhibits C & D, mingle (6m), then Vote (3m) & Blackout (1m).",
-      "html": "\n          <div class=\"script-line\"><div class=\"script-speaker\">Harriet Vance-Cole (#8)</div>\"While the upstairs gallery was cleared, we inspected the Study fireplace and the Chronos Automaton. We have two new exhibits—a half-burned 2008 audit log flagging the initials 'J.M.' and 'B.H.', and a scratched brass wax cylinder inside the Automaton.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Celeste Moreau (#7)</div>\"Wait—a scratched cylinder? Arthur built the Chronos Automaton to play a recorded greeting at 9:00 PM. You can also program its brass counterweight to drop on the hour. If someone swapped the cylinder...\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Dr. Julian Mercer (#4)</div>\"Don't look at me just because 'J.M.' is on that burned page! Half the people in this house had a reason to hate Arthur. And if you're wondering why the lights went out at nine, the storm probably surged the old breaker!\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Victor Vance (#5)</div>\"Oh, spare us! And what about the wine? Beatrice (Bea) Holloway said it smelled of poison—who poured Arthur's glass?!\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Thomas Graves (#3)</div>\"Actually... look at our Study re-inspection on Exhibit D. In clear light, the wine glass on the desk is completely full and untouched—it was the water carafe that shattered in odorless water, and Arthur was slumped face-down!\"</div>"
+      "html": "\n          <div class=\"script-line\"><div class=\"script-speaker\">Harriet Vance-Cole (#8)</div>\"While the upstairs gallery was cleared, we inspected the Study fireplace and the Chronos Automaton. We have two new exhibits—a half-burned 2008 audit log flagging the initials 'J.M.' and 'B.H.', and a scratched brass wax cylinder inside the Automaton.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Celeste Moreau (#7)</div>\"Wait—a scratched cylinder? Arthur built the Chronos Automaton to play a recorded greeting at 9:00 PM. You can also program its brass counterweight to drop on the hour. If someone swapped the cylinder...\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Dr. Julian Mercer (#4)</div>\"Don't look at me just because 'J.M.' is on that burned page! Half the people in this house had a reason to hate Arthur. And if you're wondering why the lights went out at nine, the storm probably surged the old breaker!\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Victor Vance (#5)</div>\"Oh, spare us! And what about the wine? Beatrice Holloway said it smelled of poison—who poured Arthur's glass?!\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Thomas Graves (#3)</div>\"Actually... look at our Study re-inspection on Exhibit D. In clear light, the wine glass on the desk is completely full and untouched—it was the water carafe that shattered in odorless water, and Arthur was slumped face-down!\"</div>"
     },
     "blackout2": {
       "label": "BLACKOUT PHASE II (1 MIN)",
       "sub": "100% Spoiler-Free Automated Blackout — everyone closes their eyes!",
-      "html": "<p style=\"margin-bottom:14px;\">Click <strong>Start Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team, then waking the Inspector—with zero spoilers for anyone!</p>\n        <button class=\"btn btn-gold\" onclick=\"startAutoBlackout()\">Launch Auto-Blackout Phase II</button>"
+      "html": "<p style=\"margin-bottom:14px;\">Click <strong>Launch Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team, then waking the Inspector—with zero spoilers for anyone!</p>\n        <button class=\"btn btn-gold\" onclick=\"startAutoBlackout()\">Launch Auto-Blackout Phase II</button>"
     },
     "act3": {
       "label": "ACT III — THE LAST CHIME (7 MIN)",
@@ -630,5 +630,5 @@
       "html": "\n          <div class=\"script-line\"><div class=\"script-speaker\">Harriet Vance-Cole (#8)</div>\"Enough games. We unlocked Arthur's private Horologist Journal and the 2008 Archive Ledger—and tested the residue in the Study with a field chemistry kit.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Thomas Graves (#3)</div>\"Look closely at Exhibit E and Exhibit F before you cast your final vote. The single cup of chamomile tea poured at 8:40 PM was untouched and barely lukewarm by 9:02 PM—and Arthur never touched his wine.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Beatrice (Bea) Holloway (#15)</div>\"Careful, everyone—wild theories will only let the real killer slip away. Look at who had the motive to steal the Will, who rigged the power, and who wasn't in the Grand Hall at nine. Let's settle this.\"</div>"
     }
   },
-  "revealHtml": "\n      <h2 class=\"serif\" style=\"color:var(--gold); font-size:1.6rem; margin-bottom:12px;\">The Truth Behind the Last Chime (RV-0869)</h2>\n      <p style=\"margin-bottom:12px;\">\n        <strong>The Killer:</strong> <span style=\"color:#ff7b7b; font-weight:700;\">Beatrice (Bea) Holloway (#15)</span><br/>\n        <strong>The Accomplices (Shadow Team):</strong> <span style=\"color:var(--gold);\">Dr. Julian Mercer (#4), Sebastian Cole (#11)</span><br/>\n        <strong>The Inspector:</strong> <span style=\"color:#6be0a3;\">Harriet Vance-Cole (#8)</span>\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        Arthur Vance did <strong>not</strong> die at 9:00 PM. He died at <strong>8:48 PM</strong>—alone behind a bolted door—from <strong>concentrated Aconite</strong> hidden in the <strong>nightly bedside peppermint infusion</strong> handed to him by <strong>Beatrice (Bea) Holloway (#15)</strong> at 8:42 PM.\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        Victor Vance (#5) spiked the red wine with harmless sleeping powder, which Arthur never touched. The 8:55 PM argument was a <strong>pre-recorded brass wax cylinder</strong> played by the Chronos Automaton, and the 9:00 PM crash was the counterweight smashing the <strong>water carafe</strong> while blackmailed accomplice <strong>Dr. Julian Mercer (#4)</strong> cut the generator breaker for 15 seconds.\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        <strong>The 4-Pillar Proof:</strong> (1) Arthur's pocket watch froze at <strong>8:48 PM</strong> and his Horologist Journal proves it never lost a second; (2) The wine was untouched and Arthur died of odorless Aconite from the nightly bedside peppermint infusion; (3) Beatrice (Bea) Holloway slipped up in Act I by claiming to see Arthur's pale lips (Arthur was face-down!) and smell bitter almonds from spilled wine (it was odorless water!); (4) Exhibit C flagged both <strong>\"J.M.\"</strong> and <strong>\"B.H.\"</strong>, but Exhibit E clears Dr. Julian Mercer (no 2008 access) and ties <strong>Beatrice (Bea) Holloway</strong> directly to <strong>2008 Domestic Payroll — Ghost Employee Fraud</strong> (Estate Housekeeper & Domestic Bookkeeper (2004–2008))!\n      </p>"
+  "revealHtml": "\n      <h2 class=\"serif\" style=\"color:var(--gold); font-size:1.6rem; margin-bottom:12px;\">The Truth Behind the Last Chime (RV-0869)</h2>\n      <p style=\"margin-bottom:12px;\">\n        <strong>The Killer:</strong> <span style=\"color:#ff7b7b; font-weight:700;\">Beatrice (Bea) Holloway (#15)</span><br/>\n        <strong>The Accomplices (Shadow Team):</strong> <span style=\"color:var(--gold);\">Dr. Julian Mercer (#4), Sebastian Cole (#11)</span><br/>\n        <strong>The Inspector:</strong> <span style=\"color:#6be0a3;\">Harriet Vance-Cole (#8)</span>\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        Arthur Vance did <strong>not</strong> die at 9:00 PM. He died at <strong>8:48 PM</strong>—alone behind a bolted door—from <strong>concentrated Aconite</strong> hidden in the <strong>nightly bedside peppermint infusion</strong> handed to him by <strong>Beatrice (Bea) Holloway (#15)</strong> at 8:42 PM. At 9:01 PM, Beatrice Holloway rushed to the desk first, pocketing the nightly bedside peppermint infusion and later ditching a botanical-smudged handkerchief down the upstairs laundry chute.\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        Victor Vance (#5) spiked the red wine with harmless sleeping powder, which Arthur never touched. The 8:55 PM argument was a <strong>pre-recorded brass wax cylinder</strong> played by the Chronos Automaton, and the 9:00 PM crash was the counterweight smashing the <strong>water carafe</strong> while blackmailed accomplice <strong>Dr. Julian Mercer (#4)</strong> cut the generator breaker for 15 seconds.\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        <strong>The 4-Pillar Proof:</strong> (1) Arthur's pocket watch froze at <strong>8:48 PM</strong> and his Horologist Journal proves it never lost a second; (2) The wine was untouched and Arthur died of odorless Aconite from the nightly bedside peppermint infusion; (3) Beatrice (Bea) Holloway slipped up in Act I by claiming to see Arthur's pale lips (Arthur was face-down!) and smell bitter almonds from spilled wine (it was odorless water!); (4) Exhibit C flagged both <strong>\"J.M.\"</strong> and <strong>\"B.H.\"</strong>, but Exhibit E clears Dr. Julian Mercer (no 2008 access) and ties <strong>Beatrice (Bea) Holloway</strong> directly to <strong>2008 Domestic Payroll — Ghost Employee Fraud</strong> — Estate Housekeeper &amp; Domestic Bookkeeper (2004–2008)!\n      </p>"
 }

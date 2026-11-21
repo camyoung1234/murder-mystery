@@ -70,12 +70,12 @@
         },
         {
           "act": "ACT II",
-          "target": "Say to Father Silas Ward (#13) [after Exhibit D]:",
+          "target": "Say to Gideon Thorne (#16) [after Exhibit D]:",
           "line": "\"Look at Exhibit D—the Automaton's counterweight cam was shifted exactly two inches to strike the water carafe at 9:00 PM sharp. That takes deliberate calibration, not luck!\""
         },
         {
           "act": "ACT III",
-          "target": "Say to Father Silas Ward (#13):",
+          "target": "Say to Capt. Roderick Hale (#19):",
           "line": "\"Think like an engineer: the 9:00 PM blackout and the 9:00 PM counterweight drop happened on the exact same chime. Whoever pulled that basement breaker was working for the real killer!\""
         }
       ]
@@ -92,12 +92,12 @@
       "persona": "Dramatic, fiercely proud head chef—offended anyone would suggest Arthur was poisoned by your food or wine!",
       "secret": "At 7:58 PM in the Dining & Sideboard, you saw someone hovering nervously over the opened 1998 Bordeaux decanter with a tiny white paper packet.",
       "clue": "1) At 8:40 PM a piping-hot cup of chamomile tea was poured in the Study—by 9:02 PM the untouched cup was barely lukewarm. 2) At 8:42 PM, YOU PERSONALLY SAW Margot Bell (#10) hand Arthur a spiced espresso demitasse in the Grand Hall right before Arthur locked himself in the Study!",
-      "detention": "Searched from Chef Henri Laurent's Pocket: Tonight's handwritten note: '8:40 PM — Hot cup of chamomile tea poured in Study. 8:42 PM — Watched Margot Bell (#10) hand Arthur a spiced espresso demitasse in the Grand Hall. 9:02 PM — Tea untouched & barely lukewarm; watch smashed at 8:48 PM.'",
+      "detention": "Searched from Chef Henri Laurent's Belongings: Tonight's handwritten note: '8:40 PM — Saw hot chamomile tea brought up to Study. 8:42 PM — Watched Margot Bell (#10) hand Arthur a spiced espresso demitasse in the Grand Hall. 9:02 PM — Tea untouched & barely lukewarm; watch smashed at 8:48 PM.'",
       "dialogues": [
         {
           "act": "ACT I",
           "target": "Say to Father Silas Ward (#13):",
-          "line": "\"Did you see anyone near Lord Arthur's Study around 8:20 PM? Something about this 9:00 PM timeline doesn't add up—his watch smashed at 8:48!\""
+          "line": "\"Something about this 9:00 PM timeline doesn't add up—Arthur's pocket watch smashed at 8:48 PM, and the chamomile tea poured at 8:40 was untouched and barely lukewarm by 9:02!\""
         },
         {
           "act": "ACT II",
@@ -119,9 +119,9 @@
       "team": "killer",
       "badge": "SHADOW TEAM — KILLER",
       "badgeClass": "shadow",
-      "special": "YOU ARE THE KILLER! Win by avoiding indictment in the Final Verdict (frame Lydia Vance #12 or Sebastian Cole #11!). Your Shadow Team allies: Lydia Vance (#12). During Blackouts, wake up to Intimidate 1 guest OR Plant a False Lead.",
+      "special": "YOU ARE THE KILLER! Win by avoiding indictment in the Final Verdict (frame Lydia Vance #12 or Sebastian Cole #11!). Your Shadow Team ally: Lydia Vance (#12). During Blackouts, wake up to Intimidate 1 guest OR Plant a False Lead.",
       "persona": "Sharp, perceptive investigative reporter with the Boston Chronicle. You arrived as a guest's plus-one, claiming to cover the gala—though your real reason for coming tonight is far more personal.",
-      "secret": "In 2008, YOU were behind \"2008 Blackmail Payout — Suppressed Exposé\" (signed \"M.B.\"). Tonight: at 8:15 PM you rigged the Chronos Automaton (8:55 PM voice + 9:00 PM carafe smash); at 8:35 PM you blackmailed Lydia Vance (#12) to cut the generator at 9:00 PM; at 8:42 PM you handed Arthur a spiced espresso demitasse laced with concentrated Aconite (he died at 8:48 PM). You stood next to Capt. Roderick Hale (#19) at 8:55 PM for an alibi, then slipped up at 9:01 PM by claiming you saw his chalk-pale lips (he was face-down!), smelled 'bitter-almond wine,' and lied about the 8:48 PM watch.",
+      "secret": "In 2008, YOU were behind \"2008 Blackmail Payout — Suppressed Exposé\" (signed \"M.B.\"). Tonight: at 8:15 PM you rigged the Chronos Automaton (8:55 PM voice + 9:00 PM carafe smash) and tried to burn the 2008 audit log in the Study fireplace; at 8:35 PM you blackmailed Lydia Vance (#12) to cut the generator at 9:00 PM; at 8:42 PM you handed Arthur a spiced espresso demitasse laced with concentrated Aconite (he died at 8:48 PM). You stood next to Capt. Roderick Hale (#19) at 8:55 PM for an alibi, then rushed to the desk at 9:01 PM—pocketing the spiced espresso demitasse (and dropping your botanical-smudged handkerchief down the upstairs laundry chute at 9:04 PM) while slipping up by claiming you saw his chalk-pale lips (he was face-down!), smelled 'bitter-almond wine,' and lied about the 8:48 PM watch.",
       "clue": "STRATEGY: Stay calm! Let the room suspect Sebastian Cole (#11) for drugging the wine and Lydia Vance (#12) for the blackout and Exhibit C. If pressed on Exhibit E, claim Arthur's watch broke earlier or someone forged \"M.B.\" to frame you!",
       "detention": "Searched from Margot Bell's Effects: A folded dinner napkin smudged with faint fireplace soot and an unsigned note in Margot Bell's handwriting: \"Speak to Arthur privately before the 9:00 PM announcement—he cannot open that 2008 file tonight.\"",
       "dialogues": [
@@ -152,14 +152,14 @@
       "badgeClass": "",
       "special": "",
       "persona": "Suave antique appraiser with a suspicious habit of disappearing into side rooms.",
-      "secret": "RED HERRING! At 7:58 PM, you snuck into the Dining & Sideboard and put CHLORAL HYDRATE (non-lethal sleeping powder) into Arthur's 1998 Bordeaux wine decanter before a glass was carried up to his Study, then slipped into the Study around 8:05 PM to locate the New Will! You're terrified you killed him—until Exhibit F proves he never drank the wine!",
-      "clue": "At 8:48 PM, while hiding behind a curtain in the upstairs gallery, you heard a heavy muffled THUMP inside Arthur's locked Study—followed by dead silence! Also: once Exhibit F drops in Act III, confess to the sleeping powder so the room stops wasting votes on you and hunts the real killer!",
-      "detention": "Searched from Sebastian Cole's Pocket: A folded white paper packet labeled 'Chloral Hydrate (Sleep Aid)' and a desperate note about stealing the unsigned New Will.",
+      "secret": "RED HERRING! At 7:58 PM, you snuck into the Dining & Sideboard and put CHLORAL HYDRATE (non-lethal sleeping powder) into Arthur's 1998 Bordeaux wine decanter before a glass was carried up to his Study, then slipped into the Study around 8:05 PM to get a secret look at the corporate clauses in Arthur's New Will! You're terrified you killed him—until Exhibit F proves he never drank the wine!",
+      "clue": "Later at 8:48 PM, while slipping back along the upstairs gallery to retrieve a dropped glove, you ducked behind a curtain and heard a heavy muffled THUMP inside Arthur's locked Study—followed by dead silence! Also: once Exhibit F drops in Act III, confess to the sleeping powder so the room stops wasting votes on you and hunts the real killer!",
+      "detention": "Searched from Sebastian Cole's Belongings: A folded white paper packet labeled 'Chloral Hydrate (Sleep Aid)' and a nervous note about getting a private look at the unsigned New Will.",
       "dialogues": [
         {
           "act": "ACT I",
           "target": "Say to Capt. Roderick Hale (#19):",
-          "line": "\"Keep your voice down! Yes, I stepped into the Study around 8:05 PM to talk to Arthur—he wasn't even there! Why is everyone blaming the wine?\""
+          "line": "\"Keep your voice down! People are whispering about the wine—yes, I stepped into the Study around 8:05 PM to talk to Arthur, and he wasn't even there!\""
         },
         {
           "act": "ACT II",
@@ -169,28 +169,28 @@
         {
           "act": "ACT III",
           "target": "Confess to Father Silas Ward (#13) [after Exhibit F]:",
-          "line": "\"Fine! I put sleeping powder—chloral hydrate—in the Bordeaux decanter in the Dining & Sideboard at 7:58 PM to steal the Will! NOT Aconite! And Exhibit F proves he NEVER DRANK THE WINE! I'm a thief, not a murderer!\""
+          "line": "\"Fine! I put sleeping powder—chloral hydrate—in the Bordeaux decanter in the Dining & Sideboard at 7:58 PM to get a look at the New Will! NOT Aconite! And Exhibit F proves he NEVER DRANK THE WINE! I'm a thief, not a murderer!\""
         }
       ]
     },
     {
       "id": 12,
       "name": "Lydia Vance",
-      "role": "Victor's Calculating Wife",
+      "role": "Calculating Vance In-Law",
       "initials": "L.V.",
       "team": "accomplice",
       "badge": "SHADOW TEAM — ACCOMPLICE",
       "badgeClass": "shadow",
       "special": "YOU ARE ON THE SHADOW TEAM! You are allied with Margot Bell (#10) and win ONLY if the Killer escapes indictment in the Final Verdict. Wake up with the Shadow Team during Blackout Phases.",
-      "persona": "Icy, ambitious, and furious with your husband Victor for gambling away your savings.",
-      "secret": "Margot Bell (#10) caught your private scandal and blackmailed you into cutting the basement generator breaker for 15 seconds at 9:00 PM sharp! You didn't know Margot Bell was going to murder Arthur, but if Margot Bell goes down, you go to prison as an accessory. Worse, your initials (L.V.) appear on the burned Exhibit C audit log from 2008—even though you had no access in 2008!",
+      "persona": "Icy, ambitious, and furious with your estranged husband for gambling away your savings.",
+      "secret": "Margot Bell (#10) caught your private scandal and blackmailed you into cutting the basement generator breaker for 15 seconds at 9:00 PM sharp! You didn't know Margot Bell was going to murder Arthur, but if Margot Bell goes down, you go to prison as an accessory. Worse, your initials (L.V.) appear on the burned Exhibit C audit log from 2008—even though you had no access to Archive Box #4 in 2008!",
       "clue": "STRATEGY: Deflect suspicion onto Sebastian Cole (#11) and defend Margot Bell's (#10) 8:55 PM Grand Hall alibi!",
       "detention": "Searched from Lydia Vance's Belongings: Heavy rubber-insulated electrical gloves (smelling of ozone from the generator breaker) and an unsigned blackmail note: '9:00 PM sharp. Fifteen seconds of dark, or your secret goes to the police.'",
       "dialogues": [
         {
           "act": "ACT I",
           "target": "Say to Father Silas Ward (#13):",
-          "line": "\"I wasn't in the Grand Hall at nine because I heard a shutter banging near the basement stairs. Stop pointing fingers at me when everyone knows Sebastian Cole was desperate to stop that Will tonight!\""
+          "line": "\"I wasn't in the Grand Hall at nine because I heard a shutter banging near the basement stairs. Stop pointing fingers at me when everyone knows Sebastian Cole was desperate to get their hands on that Will tonight!\""
         },
         {
           "act": "ACT II",
@@ -199,7 +199,7 @@
         },
         {
           "act": "ACT III",
-          "target": "Say to Father Silas Ward (#13):",
+          "target": "Say to Capt. Roderick Hale (#19):",
           "line": "\"I didn't touch any poison and I didn't rig that Automaton! Look at who stood to gain from the unsigned Will—and remember Margot Bell was in the Grand Hall at 8:55!\""
         }
       ]
@@ -215,8 +215,8 @@
       "special": "SPECIAL ABILITY (BLACKOUT PHASE): During each Blackout, if you are NOT Detained, the Host wakes you alone to secretly read ONE guest's Sealed Detention Card for 12 seconds!",
       "persona": "Gentle, solemn parish priest who has been Arthur Vance's spiritual confessor for twenty years.",
       "secret": "Last Tuesday, Arthur confessed he had spent eighteen years 'shielding a guilty soul from a 2008 sin.' Bound by the Seal of Confession, you speak in pointed truths. You also brought a miniature field chemistry kit in your bag, which you will use between Acts II and III to produce Exhibit F (testing the wine vs. Arthur's cuff).",
-      "clue": "You know Arthur's New Will was his final act of penance to expose the true culprit from 2008.",
-      "detention": "Searched from Father Silas's Breviary: A Nov 14 bookmark in Arthur's hand: 'Father, pray for me. On the 19th I am ending eighteen years of silence about Archive Box #4.'",
+      "clue": "You know Arthur's New Will was his final act of penance to expose the true culprit from 2008. You also did a headcount in the Grand Hall at 9:00 PM and noticed someone was missing during the blackout.",
+      "detention": "Searched from Father Silas's Breviary: A Nov 14 bookmark in Arthur's hand: 'Father, pray for me. On the 19th I am ending eighteen years of silence about Archive Box #4.' Also tucked inside: a miniature field chemistry testing kit.",
       "dialogues": [
         {
           "act": "ACT I",
@@ -225,13 +225,13 @@
         },
         {
           "act": "ACT II",
-          "target": "Say to Margot Bell (#10):",
+          "target": "Say to Margot Bell (#10) [after Exhibit D]:",
           "line": "\"Wait a second—Exhibit D's Study re-inspection shows Arthur was slumped face-down at 9:01 PM, yet you claimed you saw his pale lips the instant the lights returned—and the puddle was odorless water, not wine!\""
         },
         {
           "act": "ACT III",
           "target": "Say to Sebastian Cole (#11) [after Exhibit F]:",
-          "line": "\"My field test found chloral hydrate—sleeping powder—in the red wine decanter. Tell the truth right now, or you're getting my final vote!\""
+          "line": "\"My field test found chloral hydrate—sleeping powder—in the red wine decanter. Exhibit F proves Arthur never drank it, so tell the truth right now and help us catch the real killer!\""
         }
       ]
     },
@@ -246,7 +246,7 @@
       "special": "",
       "persona": "Slick, ruthless business rival invited tonight so Arthur could gloat over the Chronos Automaton.",
       "secret": "You are trying to buy stolen Vance Precision schematics on the sly—corporate espionage, NOT murder!",
-      "clue": "At 8:38 PM, someone panicked and whispered to you that they were being blackmailed into cutting the manor's power at 9:00 PM sharp!",
+      "clue": "At 8:38 PM, you overheard someone panicked in the hall muttering that they were being blackmailed into cutting the manor's power at 9:00 PM sharp!",
       "detention": "Searched from Gideon's Briefcase: A $150,000 cashier's check for 'consulting services' and a note: '8:38 PM — Blackout at 9:00 PM was forced by blackmail!'",
       "dialogues": [
         {
@@ -269,7 +269,7 @@
     {
       "id": 17,
       "name": "Vivienne Sterling",
-      "role": "Clara's Junior Law Associate",
+      "role": "Junior Estate Law Associate",
       "initials": "V.S.",
       "team": "innocent",
       "badge": "INNOCENT",
@@ -277,13 +277,13 @@
       "special": "",
       "persona": "Meticulous, ambitious junior attorney who personally typed up Arthur's New Will this afternoon.",
       "secret": "You secretly copied the corporate restructuring pages onto a thumb drive to shop to a rival firm—shady ambition, NOT murder.",
-      "clue": "At 4:00 PM today in the library, you caught someone alone reading Page 14 (the 2008 Archive Box #4 clause) of the New Will—they went pale as a ghost!",
-      "detention": "Searched from Vivienne's Portfolio: A 4:00 PM legal sticky note: 'Caught a guest reading Page 14 (2008 Archive Box #4 clause) of the New Will in the library. They looked terrified.'",
+      "clue": "At 4:00 PM today in the Library, you caught someone alone reading Page 14 (the 2008 Archive Box #4 clause) of the New Will—they went pale as a ghost!",
+      "detention": "Searched from Vivienne's Portfolio: A 4:00 PM legal sticky note: 'Caught someone alone reading Page 14 (2008 Archive Box #4 clause) of the New Will in the Library. They looked terrified.'",
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Father Silas Ward (#13):",
-          "line": "\"I probably should have mentioned this sooner—at 4:00 PM today in the Library, I caught a guest alone reading Page 14 (the 2008 Archive Box #4 clause) of the New Will, and they went pale as a ghost!\""
+          "target": "Say to Chef Henri Laurent (#9):",
+          "line": "\"I probably should have mentioned this sooner—at 4:00 PM today in the Library, I caught someone alone reading Page 14 (the 2008 Archive Box #4 clause) of the New Will, and they went pale as a ghost!\""
         },
         {
           "act": "ACT II",
@@ -293,7 +293,7 @@
         {
           "act": "ACT III",
           "target": "Say to Sebastian Cole (#11) [after Exhibit E]:",
-          "line": "\"You didn't even know about Page 14's 2008 clause, did you? You only cared about the inheritance. Look at Exhibit E—the real killer was terrified of Archive Box #4!\""
+          "line": "\"You didn't even know about Page 14's 2008 clause, did you? You only cared about getting into Arthur's Study for the New Will. Look at Exhibit E—the real killer was terrified of Archive Box #4!\""
         }
       ]
     },
@@ -306,7 +306,7 @@
       "badge": "INNOCENT",
       "badgeClass": "",
       "special": "",
-      "persona": "Booming, weathered retired naval navigator stranded at the manor by the washed-out bridge.",
+      "persona": "Booming, weathered retired naval navigator stranded at the manor by the washed-out bridge. At 8:55 PM, you were standing right beside Margot Bell (#10) in the Grand Hall when Arthur's voice boomed from upstairs.",
       "secret": "You're obsessed with precision timekeeping—at 8:55 PM you checked your U.S. Naval Observatory chronometer against the manor's Grand Clock (dead-on to the second).",
       "clue": "Yesterday afternoon at the pier, you synced your naval chronometer with Arthur's pocket watch! Arthur's watch did NOT run 12 minutes slow—whoever claimed that in Act I was LYING!",
       "detention": "Searched from Capt. Hale's Pea Coat: A brass U.S. Naval Observatory chronometer and harbor log: '14:00 — Synchronized with Arthur Vance. His gold pocket watch is accurate to ±0.1 sec.'",
@@ -318,7 +318,7 @@
         },
         {
           "act": "ACT II",
-          "target": "Say to Father Silas Ward (#13) [after Exhibit D]:",
+          "target": "Say to Jasper Moore (#6) [after Exhibit D]:",
           "line": "\"If Arthur's watch never lost a second and smashed at 8:48 PM, then whoever we heard yelling at 8:55 PM wasn't Arthur—unless ghosts can shout through oak doors, it had to be that brass cylinder!\""
         },
         {
@@ -346,7 +346,7 @@
       "id": "C",
       "act": 2,
       "title": "Exhibit C — Charred Audit Log ('M.B.' / 'L.V.')",
-      "html": "<pre>VANCE PRECISION INSTRUMENTS — CONFIDENTIAL AUDIT\nARCHIVE BOX #4 (SLATED FOR RELEASE WITH NEW WILL)\n-------------------------------------------------\nSUBJECT:   2008 Blackmail Payout — Suppressed Exposé\nFINDING:   Accepted $500k hush money to bury a fatal corporate scandal; source log FALSIFIED\nFLAGGED INITIALS: \"M.B.\" / \"L.V.\" [ROLES & DATES BURNED]\nNOTE:      One party falsified the 2008 record; the other had\n           no 2008 access to Archive Box #4.\nSTATUS:    Suppressed by A. Vance (2008). Full disclosure\n           ordered upon execution of New Will.</pre>"
+      "html": "<pre>VANCE PRECISION INSTRUMENTS — CONFIDENTIAL AUDIT\nARCHIVE BOX #4 (SLATED FOR RELEASE WITH NEW WILL)\n-------------------------------------------------\nSUBJECT:   2008 Blackmail Payout — Suppressed Exposé\nFINDING:   Accepted $500k hush money to bury a fatal corporate scandal; source log FALSIFIED\nFLAGGED INITIALS: \"M.B.\" / \"L.V.\" [ROLES &amp; DATES BURNED]\nNOTE:      One party falsified the 2008 record; the other had\n           no clearance or access to Archive Box #4 in 2008.\nSTATUS:    Suppressed by A. Vance (2008). Full disclosure\n           ordered upon execution of New Will.</pre>"
     },
     {
       "id": "D",
@@ -358,7 +358,7 @@
       "id": "E",
       "act": 3,
       "title": "Exhibit E — 2008 Dossier Ledger & Horologist Journal",
-      "html": "<ul>\n          <li><strong>Selected 2008 Archive Records:</strong><br/>\n            &bull; <strong>Jasper Moore (#6):</strong> Vance Precision Intern & Lab Assistant (Summer 2008); hired full-time 2012<br/>\n            &bull; <strong>Margot Bell (#10):</strong> Investigative Reporter, Boston Chronicle (2007–2008)<br/>\n            &bull; <strong>Sebastian Cole (#11):</strong> Senior Authenticator, Sotheby's Clock Desk (2006–2008)<br/>\n            &bull; <strong>Lydia Vance (#12):</strong> <em>No access to Archive Box #4 in 2008 (outside the 2008 incident window).</em><br/>\n            &bull; <strong>Father Silas Ward (#13):</strong> Parish Treasurer, St. Jude's Coastal Parish (2005–2008)<br/>\n            &bull; <strong>Gideon Thorne (#16):</strong> VP of Engineering, Vance Precision (2005–2008)\n          </li>\n          <li><strong>Arthur's Horologist Journal (Nov 15):</strong> <em>\"A clockmaker whose own pocket watch loses a single second is a fraud. My gold chronometer is calibrated daily to the U.S. Naval Observatory signal. It has not drifted by half a second in eleven years.\"</em></li>\n        </ul>"
+      "html": "<ul>\n          <li><strong>Selected 2008 Archive Records:</strong><br/>\n            &bull; <strong>Jasper Moore (#6):</strong> Vance Precision Intern &amp; Lab Assistant (Summer 2008); hired full-time 2012<br/>\n            &bull; <strong>Margot Bell (#10):</strong> Investigative Reporter, Boston Chronicle (2007–2008)<br/>\n            &bull; <strong>Sebastian Cole (#11):</strong> Senior Authenticator, Sotheby's Clock Desk (2006–2008)<br/>\n            &bull; <strong>Lydia Vance (#12):</strong> <em>Cleared — No clearance or access to Archive Box #4 in 2008 (unrelated to the 2008 incident).</em><br/>\n            &bull; <strong>Father Silas Ward (#13):</strong> Parish Treasurer, St. Jude's Coastal Parish (2005–2008)<br/>\n            &bull; <strong>Gideon Thorne (#16):</strong> VP of Engineering, Vance Precision (2005–2008)\n          </li>\n          <li><strong>Arthur's Horologist Journal (Nov 15):</strong> <em>\"A clockmaker whose own pocket watch loses a single second is a fraud. My gold chronometer is calibrated daily to the U.S. Naval Observatory signal. It has not drifted by half a second in eleven years.\"</em></li>\n        </ul>"
     },
     {
       "id": "F",
@@ -388,12 +388,12 @@
     "act1": {
       "label": "ACT I — THE LOCKED STUDY (7 MIN)",
       "sub": "Read Public Opener, unlock Exhibits A & B, mingle (7m), then Vote (3m) & Blackout (1m).",
-      "html": "\n          <div class=\"script-line\"><div class=\"script-speaker\">Chef Henri Laurent (#9)</div>\"Nobody touch a thing! The oak door was bolted from the inside, and the window drops eighty feet to the rocks. How on earth could someone kill him in a locked room?\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Capt. Roderick Hale (#19)</div>\"He was shouting at someone at 8:55! We all heard him! Then at 9:00 the lights went out and—my God, was that a gunshot?\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Margot Bell (#10)</div>\"There is no bullet wound. It was poison! The moment the lights came back on at 9:01, I saw Arthur's chalk-pale lips and smelled that unmistakable bitter-almond scent from the spilled wine. He died right around nine.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Chef Henri Laurent (#9)</div>\"Begging your pardon, but when I stepped beside the desk, I noticed Lord Arthur's pocket watch had smashed on the corner—its hands were stopped at 8:48.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Margot Bell (#10)</div>\"Ah, yes, I closed the lid so it wouldn't upset everyone. Arthur's watch always ran twelve minutes slow—he told me so himself just yesterday.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Father Silas Ward (#13)</div>\"Slow or not, the New Will is still on his desk—unsigned. Whoever wanted Arthur dead before 9:00 PM is standing in this room.\"</div>"
+      "html": "\n          <div class=\"script-line\"><div class=\"script-speaker\">Chef Henri Laurent (#9)</div>\"Nobody touch a thing! The oak door was bolted from the inside, and the window drops eighty feet to the rocks. How on earth could someone kill him in a locked room?\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Capt. Roderick Hale (#19)</div>\"He was shouting at someone at 8:55! We all heard him! Then at 9:00 the lights went out and—my God, was that a gunshot?\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Margot Bell (#10)</div>\"There is no bullet wound. It was poison! The moment the lights came back on at 9:01, I saw Arthur's chalk-pale lips and smelled that unmistakable bitter-almond scent from the spilled wine. He died right around nine.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Chef Henri Laurent (#9)</div>\"Wait a moment—when I stepped beside the desk, I noticed Arthur's pocket watch had smashed on the corner—its hands were stopped at 8:48.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Margot Bell (#10)</div>\"Ah, yes, I closed the lid so it wouldn't upset everyone. Arthur's watch always ran twelve minutes slow—he told me so himself just yesterday.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Father Silas Ward (#13)</div>\"Slow or not, the New Will is still on his desk—unsigned. Whoever wanted Arthur dead before 9:00 PM is standing in this room.\"</div>"
     },
     "blackout1": {
       "label": "BLACKOUT PHASE I (1 MIN)",
       "sub": "100% Spoiler-Free Automated Blackout — everyone closes their eyes!",
-      "html": "<p style=\"margin-bottom:14px;\">Click <strong>Start Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team to make a silent tap, then waking the Inspector to privately inspect 1 Detention Card—so <strong>nobody has to sit out as a human host!</strong></p>\n        <button class=\"btn btn-gold\" onclick=\"startAutoBlackout()\">Launch Auto-Blackout Phase I</button>"
+      "html": "<p style=\"margin-bottom:14px;\">Click <strong>Launch Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team to make a silent tap, then waking the Inspector to privately inspect 1 Detention Card—so <strong>nobody has to sit out as a human host!</strong></p>\n        <button class=\"btn btn-gold\" onclick=\"startAutoBlackout()\">Launch Auto-Blackout Phase I</button>"
     },
     "act2": {
       "label": "ACT II — SHADOWS IN THE CLOCKWORK (6 MIN)",
@@ -403,7 +403,7 @@
     "blackout2": {
       "label": "BLACKOUT PHASE II (1 MIN)",
       "sub": "100% Spoiler-Free Automated Blackout — everyone closes their eyes!",
-      "html": "<p style=\"margin-bottom:14px;\">Click <strong>Start Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team, then waking the Inspector—with zero spoilers for anyone!</p>\n        <button class=\"btn btn-gold\" onclick=\"startAutoBlackout()\">Launch Auto-Blackout Phase II</button>"
+      "html": "<p style=\"margin-bottom:14px;\">Click <strong>Launch Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team, then waking the Inspector—with zero spoilers for anyone!</p>\n        <button class=\"btn btn-gold\" onclick=\"startAutoBlackout()\">Launch Auto-Blackout Phase II</button>"
     },
     "act3": {
       "label": "ACT III — THE LAST CHIME (7 MIN)",
@@ -411,5 +411,5 @@
       "html": "\n          <div class=\"script-line\"><div class=\"script-speaker\">Father Silas Ward (#13)</div>\"Enough games. We unlocked Arthur's private Horologist Journal and the 2008 Archive Ledger—and tested the residue in the Study with a field chemistry kit.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Chef Henri Laurent (#9)</div>\"Look closely at Exhibit E and Exhibit F before you cast your final vote. The single cup of chamomile tea poured at 8:40 PM was untouched and barely lukewarm by 9:02 PM—and Arthur never touched his wine.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Margot Bell (#10)</div>\"Careful, everyone—wild theories will only let the real killer slip away. Look at who had the motive to steal the Will, who rigged the power, and who wasn't in the Grand Hall at nine. Let's settle this.\"</div>"
     }
   },
-  "revealHtml": "\n      <h2 class=\"serif\" style=\"color:var(--gold); font-size:1.6rem; margin-bottom:12px;\">The Truth Behind the Last Chime (RV-7404)</h2>\n      <p style=\"margin-bottom:12px;\">\n        <strong>The Killer:</strong> <span style=\"color:#ff7b7b; font-weight:700;\">Margot Bell (#10)</span><br/>\n        <strong>The Accomplice (Shadow Team):</strong> <span style=\"color:var(--gold);\">Lydia Vance (#12)</span><br/>\n        <strong>The Inspector:</strong> <span style=\"color:#6be0a3;\">Father Silas Ward (#13)</span>\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        Arthur Vance did <strong>not</strong> die at 9:00 PM. He died at <strong>8:48 PM</strong>—alone behind a bolted door—from <strong>concentrated Aconite</strong> hidden in the <strong>spiced espresso demitasse</strong> handed to him by <strong>Margot Bell (#10)</strong> at 8:42 PM.\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        Sebastian Cole (#11) spiked the red wine with harmless sleeping powder, which Arthur never touched. The 8:55 PM argument was a <strong>pre-recorded brass wax cylinder</strong> played by the Chronos Automaton, and the 9:00 PM crash was the counterweight smashing the <strong>water carafe</strong> while blackmailed accomplice <strong>Lydia Vance (#12)</strong> cut the generator breaker for 15 seconds.\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        <strong>The 4-Pillar Proof:</strong> (1) Arthur's pocket watch froze at <strong>8:48 PM</strong> and his Horologist Journal proves it never lost a second; (2) The wine was untouched and Arthur died of odorless Aconite from the spiced espresso demitasse; (3) Margot Bell slipped up in Act I by claiming to see Arthur's pale lips (Arthur was face-down!) and smell bitter almonds from spilled wine (it was odorless water!); (4) Exhibit C flagged both <strong>\"M.B.\"</strong> and <strong>\"L.V.\"</strong>, but Exhibit E clears Lydia Vance (no 2008 access) and ties <strong>Margot Bell</strong> directly to <strong>2008 Blackmail Payout — Suppressed Exposé</strong> (Investigative Reporter, Boston Chronicle (2007–2008))!\n      </p>"
+  "revealHtml": "\n      <h2 class=\"serif\" style=\"color:var(--gold); font-size:1.6rem; margin-bottom:12px;\">The Truth Behind the Last Chime (RV-7404)</h2>\n      <p style=\"margin-bottom:12px;\">\n        <strong>The Killer:</strong> <span style=\"color:#ff7b7b; font-weight:700;\">Margot Bell (#10)</span><br/>\n        <strong>The Accomplice (Shadow Team):</strong> <span style=\"color:var(--gold);\">Lydia Vance (#12)</span><br/>\n        <strong>The Inspector:</strong> <span style=\"color:#6be0a3;\">Father Silas Ward (#13)</span>\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        Arthur Vance did <strong>not</strong> die at 9:00 PM. He died at <strong>8:48 PM</strong>—alone behind a bolted door—from <strong>concentrated Aconite</strong> hidden in the <strong>spiced espresso demitasse</strong> handed to him by <strong>Margot Bell (#10)</strong> at 8:42 PM. At 9:01 PM, Margot Bell rushed to the desk first, pocketing the spiced espresso demitasse and later ditching a botanical-smudged handkerchief down the upstairs laundry chute.\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        Sebastian Cole (#11) spiked the red wine with harmless sleeping powder, which Arthur never touched. The 8:55 PM argument was a <strong>pre-recorded brass wax cylinder</strong> played by the Chronos Automaton, and the 9:00 PM crash was the counterweight smashing the <strong>water carafe</strong> while blackmailed accomplice <strong>Lydia Vance (#12)</strong> cut the generator breaker for 15 seconds.\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        <strong>The 4-Pillar Proof:</strong> (1) Arthur's pocket watch froze at <strong>8:48 PM</strong> and his Horologist Journal proves it never lost a second; (2) The wine was untouched and Arthur died of odorless Aconite from the spiced espresso demitasse; (3) Margot Bell slipped up in Act I by claiming to see Arthur's pale lips (Arthur was face-down!) and smell bitter almonds from spilled wine (it was odorless water!); (4) Exhibit C flagged both <strong>\"M.B.\"</strong> and <strong>\"L.V.\"</strong>, but Exhibit E clears Lydia Vance (no 2008 access) and ties <strong>Margot Bell</strong> directly to <strong>2008 Blackmail Payout — Suppressed Exposé</strong> — Investigative Reporter, Boston Chronicle (2007–2008)!\n      </p>"
 }

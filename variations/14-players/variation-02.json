@@ -67,12 +67,12 @@
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Clara Sterling (#2):",
-          "line": "\"Let's not overcomplicate this—Victor Vance was spotted sneaking out of the Study around 8:05 PM, and everyone heard Arthur shouting at 8:55. This is a panicked family job over the Will, plain and simple.\""
+          "target": "Say to Thomas Graves (#3):",
+          "line": "\"Let's not overcomplicate this—word is Victor Vance slipped into the Study around 8:05 PM, and everyone heard Arthur shouting at 8:55. This is a panicked family job over the Will, plain and simple.\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Thomas Graves (#3) [after Exhibit C]:",
+          "target": "Say to Chef Henri Laurent (#9) [after Exhibit C]:",
           "line": "\"Careful chasing ghosts in a half-burned 2008 audit page. Someone cut the power at nine sharp and someone tampered with the wine—focus on who had the motive to stop the Will tonight!\""
         },
         {
@@ -92,7 +92,7 @@
       "badgeClass": "shadow",
       "special": "YOU ARE THE KILLER! Win by avoiding indictment in the Final Verdict (frame Harriet Vance-Cole #8 or Victor Vance #5!). Your Shadow Team allies: Harriet Vance-Cole (#8), Lady Evelyn Vance (#1). During Blackouts, wake up to Intimidate 1 guest OR Plant a False Lead.",
       "persona": "Composed, razor-sharp attorney retained since 2005. You drafted Arthur's New Will and serve as the room's anchor for facts and timelines.",
-      "secret": "In 2008, YOU were behind \"2008 Offshore Escrow — Forged Beneficiary Deed\" (signed \"C.S.\"). Tonight: at 8:15 PM you rigged the Chronos Automaton (8:55 PM voice + 9:00 PM carafe smash); at 8:35 PM you blackmailed Harriet Vance-Cole (#8) to cut the generator at 9:00 PM; at 8:42 PM you handed Arthur a wax-sealed private digestif vial laced with concentrated Aconite (he died at 8:48 PM). You stood next to Father Silas Ward (#13) at 8:55 PM for an alibi, then slipped up at 9:01 PM by claiming you saw his chalk-pale lips (he was face-down!), smelled 'bitter-almond wine,' and lied about the 8:48 PM watch.",
+      "secret": "In 2008, YOU were behind \"2008 Offshore Escrow — Forged Beneficiary Deed\" (signed \"C.S.\"). Tonight: at 8:15 PM you rigged the Chronos Automaton (8:55 PM voice + 9:00 PM carafe smash) and tried to burn the 2008 audit log in the Study fireplace; at 8:35 PM you blackmailed Harriet Vance-Cole (#8) to cut the generator at 9:00 PM; at 8:42 PM you handed Arthur a wax-sealed private digestif vial laced with concentrated Aconite (he died at 8:48 PM). You stood next to Father Silas Ward (#13) at 8:55 PM for an alibi, then rushed to the desk at 9:01 PM—pocketing the wax-sealed private digestif vial (and dropping your botanical-smudged handkerchief down the upstairs laundry chute at 9:04 PM) while slipping up by claiming you saw his chalk-pale lips (he was face-down!), smelled 'bitter-almond wine,' and lied about the 8:48 PM watch.",
       "clue": "STRATEGY: Stay calm! Let the room suspect Victor Vance (#5) for drugging the wine and Harriet Vance-Cole (#8) for the blackout and Exhibit C. If pressed on Exhibit E, claim Arthur's watch broke earlier or someone forged \"C.S.\" to frame you!",
       "detention": "Searched from Clara Sterling's Effects: A folded dinner napkin smudged with faint fireplace soot and an unsigned note in Clara Sterling's handwriting: \"Speak to Arthur privately before the 9:00 PM announcement—he cannot open that 2008 file tonight.\"",
       "dialogues": [
@@ -124,8 +124,8 @@
       "special": "SPECIAL ABILITY (BLACKOUT PHASE): During each Blackout, if you are NOT Detained, the Host wakes you alone to secretly read ONE guest's Sealed Detention Card for 12 seconds!",
       "persona": "Dignified, observant butler who notices everything and speaks quietly. You have served Ravenshollow Manor since 1999.",
       "secret": "You skimmed small sums from the wine cellar budget for your sister's medical bills (making you nervous about wine questions), though you are innocent of murder. You also brought a miniature field chemistry kit in your bag, which you will use between Acts II and III to produce Exhibit F (testing the wine vs. Arthur's cuff).",
-      "clue": "At 8:40 PM you poured a piping-hot cup of chamomile tea in the Study—by 9:02 PM the untouched cup was barely lukewarm. You also saw Arthur's watch smashed at 8:48 PM.",
-      "detention": "Searched from Graves's Coat Pocket: Tonight's butler log: '8:40 PM — Poured hot cup of chamomile tea in Study. 9:02 PM — Cup untouched and barely lukewarm; watch crystal smashed at 8:48 PM.'",
+      "clue": "At 8:40 PM you poured a piping-hot cup of chamomile tea in the Study—by 9:02 PM the untouched cup was barely lukewarm. You also saw Arthur's watch smashed at 8:48 PM. You also did a headcount in the Grand Hall at 9:00 PM and noticed someone was missing during the blackout.",
+      "detention": "Searched from Graves's Coat Pocket: Tonight's butler log: '8:40 PM — Poured hot cup of chamomile tea in Study. 9:02 PM — Cup untouched and barely lukewarm; watch crystal smashed at 8:48 PM.' Also tucked inside: a miniature field chemistry testing kit.",
       "dialogues": [
         {
           "act": "ACT I",
@@ -134,13 +134,13 @@
         },
         {
           "act": "ACT II",
-          "target": "Say to Clara Sterling (#2):",
+          "target": "Say to Clara Sterling (#2) [after Exhibit D]:",
           "line": "\"Wait a second—Exhibit D's Study re-inspection shows Arthur was slumped face-down at 9:01 PM, yet you claimed you saw his pale lips the instant the lights returned—and the puddle was odorless water, not wine!\""
         },
         {
           "act": "ACT III",
           "target": "Say to Victor Vance (#5) [after Exhibit F]:",
-          "line": "\"My field test found chloral hydrate—sleeping powder—in the red wine decanter. Tell the truth right now, or you're getting my final vote!\""
+          "line": "\"My field test found chloral hydrate—sleeping powder—in the red wine decanter. Exhibit F proves Arthur never drank it, so tell the truth right now and help us catch the real killer!\""
         }
       ]
     },
@@ -156,12 +156,12 @@
       "persona": "Charming, desperate nephew who owes $400,000 to dangerous creditors and desperately needed Arthur's inheritance.",
       "secret": "RED HERRING! At 7:58 PM, you snuck into the Dining & Sideboard and put CHLORAL HYDRATE (non-lethal sleeping powder) into Arthur's 1998 Bordeaux wine decanter before a glass was carried up to his Study, then slipped into the Study around 8:05 PM to locate the New Will! You're terrified you killed him—until Exhibit F proves he never drank the wine!",
       "clue": "Once Exhibit F drops in Act III, confess to the sleeping powder so the room stops wasting votes on you and hunts the real killer!",
-      "detention": "Searched from Victor Vance's Pocket: A folded white paper packet labeled 'Chloral Hydrate (Sleep Aid)' and a desperate note about stealing the unsigned New Will.",
+      "detention": "Searched from Victor Vance's Belongings: A folded white paper packet labeled 'Chloral Hydrate (Sleep Aid)' and a desperate note about stealing the unsigned New Will.",
       "dialogues": [
         {
           "act": "ACT I",
           "target": "Say to Father Silas Ward (#13):",
-          "line": "\"Keep your voice down! Yes, I stepped into the Study around 8:05 PM to talk to Arthur—he wasn't even there! Why is everyone blaming the wine?\""
+          "line": "\"Keep your voice down! People are whispering about the wine—yes, I stepped into the Study around 8:05 PM to talk to Arthur, and he wasn't even there!\""
         },
         {
           "act": "ACT II",
@@ -185,7 +185,7 @@
       "badgeClass": "",
       "special": "",
       "persona": "Intense Chief Engineer who maintains the manor's backup generator and knows the Chronos Automaton inside and out.",
-      "secret": "You have been secretly selling Vance Precision clockwork blueprints to a rival tech CEO—you were in the basement hallway at 8:50 PM hiding a schematic tube!",
+      "secret": "You have been secretly selling Vance Precision clockwork blueprints to an outside robotics buyer—you were in the basement hallway at 8:50 PM hiding a schematic tube!",
       "clue": "You know the manor's backup generator breaker can only be cut manually from the basement Generator Room—the storm did NOT cause a clean 15-second blackout.",
       "detention": "Searched from Jasper's Tool Roll: A rolled-up Vance Precision gear blueprint tucked inside a brass tube with a note: 'Wire $150k upon delivery.' (Corporate espionage, not murder!)",
       "dialogues": [
@@ -201,7 +201,7 @@
         },
         {
           "act": "ACT III",
-          "target": "Say to Clara Sterling (#2):",
+          "target": "Say to Lady Evelyn Vance (#1):",
           "line": "\"Think like an engineer: the 9:00 PM blackout and the 9:00 PM counterweight drop happened on the exact same chime. Whoever pulled that basement breaker was working for the real killer!\""
         }
       ]
@@ -215,8 +215,8 @@
       "badge": "SHADOW TEAM — ACCOMPLICE",
       "badgeClass": "shadow",
       "special": "YOU ARE ON THE SHADOW TEAM! You are allied with Clara Sterling (#2) and win ONLY if the Killer escapes indictment in the Final Verdict. Fellow accomplice: Lady Evelyn Vance (#1). Wake up with the Shadow Team during Blackout Phases.",
-      "persona": "Sharp-eyed retired magistrate estranged from Arthur because you suspected he covered up something rotten back in 2008.",
-      "secret": "Clara Sterling (#2) caught your private scandal and blackmailed you into cutting the basement generator breaker for 15 seconds at 9:00 PM sharp! You didn't know Clara Sterling was going to murder Arthur, but if Clara Sterling goes down, you go to prison as an accessory. Worse, your initials (H.V.) appear on the burned Exhibit C audit log from 2008—even though you had no access in 2008!",
+      "persona": "Sharp-eyed retired magistrate long estranged from Arthur—everyone assumes it was over principle, though the truth about 2008 is far darker.",
+      "secret": "Clara Sterling (#2) caught your private scandal and blackmailed you into cutting the basement generator breaker for 15 seconds at 9:00 PM sharp! You didn't know Clara Sterling was going to murder Arthur, but if Clara Sterling goes down, you go to prison as an accessory. Worse, your initials (H.V.) appear on the burned Exhibit C audit log from 2008—even though you had no access to Archive Box #4 in 2008!",
       "clue": "STRATEGY: Deflect suspicion onto Victor Vance (#5) and defend Clara Sterling's (#2) 8:55 PM Grand Hall alibi!",
       "detention": "Searched from Harriet Vance-Cole's Belongings: Heavy rubber-insulated electrical gloves (smelling of ozone from the generator breaker) and an unsigned blackmail note: '9:00 PM sharp. Fifteen seconds of dark, or your secret goes to the police.'",
       "dialogues": [
@@ -232,7 +232,7 @@
         },
         {
           "act": "ACT III",
-          "target": "Say to Lady Evelyn Vance (#1):",
+          "target": "Say to Thomas Graves (#3):",
           "line": "\"I didn't touch any poison and I didn't rig that Automaton! Look at who stood to gain from the unsigned Will—and remember Clara Sterling was in the Grand Hall at 8:55!\""
         }
       ]
@@ -249,12 +249,12 @@
       "persona": "Dramatic, fiercely proud head chef—offended anyone would suggest Arthur was poisoned by your food or wine!",
       "secret": "At 7:58 PM in the Dining & Sideboard, you saw someone hovering nervously over the opened 1998 Bordeaux decanter with a tiny white paper packet.",
       "clue": "1) At 8:40 PM a piping-hot cup of chamomile tea was poured in the Study—by 9:02 PM the untouched cup was barely lukewarm. 2) At 8:42 PM, YOU PERSONALLY SAW Clara Sterling (#2) hand Arthur a wax-sealed private digestif vial in the Grand Hall right before Arthur locked himself in the Study!",
-      "detention": "Searched from Chef Henri Laurent's Pocket: Tonight's handwritten note: '8:40 PM — Hot cup of chamomile tea poured in Study. 8:42 PM — Watched Clara Sterling (#2) hand Arthur a wax-sealed private digestif vial in the Grand Hall. 9:02 PM — Tea untouched & barely lukewarm; watch smashed at 8:48 PM.'",
+      "detention": "Searched from Chef Henri Laurent's Belongings: Tonight's handwritten note: '8:40 PM — Saw hot chamomile tea brought up to Study. 8:42 PM — Watched Clara Sterling (#2) hand Arthur a wax-sealed private digestif vial in the Grand Hall. 9:02 PM — Tea untouched & barely lukewarm; watch smashed at 8:48 PM.'",
       "dialogues": [
         {
           "act": "ACT I",
           "target": "Say to Clara Sterling (#2):",
-          "line": "\"Did you see anyone near Lord Arthur's Study around 8:20 PM? Something about this 9:00 PM timeline doesn't add up—his watch smashed at 8:48!\""
+          "line": "\"Something about this 9:00 PM timeline doesn't add up—Arthur's pocket watch smashed at 8:48 PM, and the chamomile tea poured at 8:40 was untouched and barely lukewarm by 9:02!\""
         },
         {
           "act": "ACT II",
@@ -278,8 +278,8 @@
       "badgeClass": "",
       "special": "",
       "persona": "Sharp Boston Chronicle reporter who secretly crashed the gala posing as a guest's plus-one to investigate Arthur's 2008 cover-up.",
-      "secret": "You paid your way onto the guest list under a fake name to hunt for Archive Box #4 in the manor library.",
-      "clue": "You carry a 2008 newspaper clipping confirming Archive Box #4 implicates someone who held an active 2008 role in Exhibit E—NOT someone who had no 2008 access!",
+      "secret": "You paid your way onto the guest list under a fake name to hunt for Archive Box #4 in the manor Library.",
+      "clue": "You carry a 2008 newspaper clipping confirming Archive Box #4 implicates someone who held direct 2008 access in Exhibit E—NOT someone cleared of 2008 access!",
       "detention": "Searched from Margot's Bag: A Boston Chronicle press pass and a 2008 clipping noting the Archive Box #4 cover-up was buried by Arthur Vance in November 2008.",
       "dialogues": [
         {
@@ -290,12 +290,12 @@
         {
           "act": "ACT II",
           "target": "Say to Harriet Vance-Cole (#8) [after Exhibit C]:",
-          "line": "\"Interesting—I happen to carry a 2008 Boston Chronicle clipping about Archive Box #4. It implicates someone professionally active in 2008. Where were you working in 2008?\""
+          "line": "\"Interesting—I happen to carry a 2008 Boston Chronicle clipping about Archive Box #4. It implicates someone with direct 2008 access. Did you have any access to Archive Box #4 in 2008?\""
         },
         {
           "act": "ACT III",
-          "target": "Say to Clara Sterling (#2) [after Exhibit E]:",
-          "line": "\"I'm actually an investigative reporter with the Boston Chronicle. My 2008 clipping matches Exhibit E—check who was actually in that 2008 role and cross off everyone who wasn't!\""
+          "target": "Say to Lady Evelyn Vance (#1) [after Exhibit E]:",
+          "line": "\"I'm actually an investigative reporter with the Boston Chronicle. My 2008 clipping matches Exhibit E—check who actually had 2008 access and cross off everyone cleared!\""
         }
       ]
     },
@@ -326,7 +326,7 @@
         {
           "act": "ACT III",
           "target": "Say to Clara Sterling (#2):",
-          "line": "\"Stop blaming the storm for the 9:00 PM blackout! I overheard the blackmail threat on the basement stairs at 8:35 PM—whoever cut the lights was forced into it by the real killer!\""
+          "line": "\"Don't let anyone blame the storm for the 9:00 PM blackout! I overheard the blackmail threat on the basement stairs at 8:35 PM—whoever cut the lights was forced into it by the real killer!\""
         }
       ]
     },
@@ -339,7 +339,7 @@
       "badge": "INNOCENT",
       "badgeClass": "",
       "special": "",
-      "persona": "Gentle, solemn parish priest who has been Arthur Vance's spiritual confessor for twenty years.",
+      "persona": "Gentle, solemn parish priest who has been Arthur Vance's spiritual confessor for twenty years. At 8:55 PM, you were standing right beside Clara Sterling (#2) in the Grand Hall when Arthur's voice boomed from upstairs.",
       "secret": "Last Tuesday, Arthur confessed he had spent eighteen years 'shielding a guilty soul from a 2008 sin.' Bound by the Seal of Confession, you speak in pointed truths.",
       "clue": "You know Arthur's New Will was his final act of penance to expose the true culprit from 2008.",
       "detention": "Searched from Father Silas's Breviary: A Nov 14 bookmark in Arthur's hand: 'Father, pray for me. On the 19th I am ending eighteen years of silence about Archive Box #4.'",
@@ -395,25 +395,25 @@
     {
       "id": 18,
       "name": "Nadia Vance",
-      "role": "Pharmacology Student & Cousin",
+      "role": "Pharmacology Researcher & Cousin",
       "initials": "N.V.",
       "team": "innocent",
       "badge": "INNOCENT",
       "badgeClass": "",
       "special": "",
-      "persona": "Brilliant pharmacology student whose medical school tuition is funded by the Vance family trust.",
+      "persona": "Brilliant pharmacology researcher whose doctoral fellowship is funded by the Vance family trust.",
       "secret": "You borrowed rare botanical specimens from the university conservatory for an unauthorized thesis experiment—academic misconduct, NOT murder.",
-      "clue": "As a pharmacology student, you know concentrated Aconite is completely odorless and fatal within 2–3 minutes—totally different from bitter-almond cyanide!",
+      "clue": "As a pharmacology researcher, you know concentrated Aconite is completely odorless and fatal within 2–3 minutes—totally different from bitter-almond cyanide!",
       "detention": "Searched from Nadia's Clutch: Lab notes comparing Chloral Hydrate (non-lethal sedative) vs. Aconite (odorless, fatal in 2–3 minutes).",
       "dialogues": [
         {
           "act": "ACT I",
           "target": "Say to Thomas Graves (#3):",
-          "line": "\"As a pharmacology student, something bothers me: cyanide has a strong bitter-almond odor, whereas concentrated Aconite is completely odorless and stops the heart in two to three minutes!\""
+          "line": "\"As a pharmacology researcher, something bothers me: cyanide has a strong bitter-almond odor, whereas concentrated Aconite is completely odorless and stops the heart in two to three minutes!\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Chef Henri Laurent (#9):",
+          "target": "Say to Chef Henri Laurent (#9) [after Exhibit D]:",
           "line": "\"Look at Exhibit D's Study re-inspection—the puddle on the floor was clear, odorless water, and the wine glass wasn't even touched. Whoever claimed to smell 'bitter almonds from the wine' was steering us away from an odorless poison!\""
         },
         {
@@ -449,7 +449,7 @@
         },
         {
           "act": "ACT III",
-          "target": "Say to Clara Sterling (#2) [after Exhibit E]:",
+          "target": "Say to Thomas Graves (#3) [after Exhibit E]:",
           "line": "\"Arthur's Horologist Journal in Exhibit E backs me up 100%! His watch stopped at 8:48 PM—which means whoever snapped that watch lid shut and called it 'twelve minutes slow' lied to this entire room!\""
         }
       ]
@@ -480,7 +480,7 @@
         },
         {
           "act": "ACT III",
-          "target": "Say to Clara Sterling (#2) [after Exhibit E]:",
+          "target": "Say to Thomas Graves (#3) [after Exhibit E]:",
           "line": "\"Arthur fired me yesterday just for peeking at his sealed Archive Box #4! Chapter 12 of his memoir was all about that 2008 cover-up—and Exhibit E finally names the culprit he was protecting!\""
         }
       ]
@@ -503,7 +503,7 @@
       "id": "C",
       "act": 2,
       "title": "Exhibit C — Charred Audit Log ('C.S.' / 'H.V.')",
-      "html": "<pre>VANCE PRECISION INSTRUMENTS — CONFIDENTIAL AUDIT\nARCHIVE BOX #4 (SLATED FOR RELEASE WITH NEW WILL)\n-------------------------------------------------\nSUBJECT:   2008 Offshore Escrow — Forged Beneficiary Deed\nFINDING:   Trust signature forged to liquidate a partner's estate in Nov 2008\nFLAGGED INITIALS: \"C.S.\" / \"H.V.\" [ROLES & DATES BURNED]\nNOTE:      One party falsified the 2008 record; the other had\n           no 2008 access to Archive Box #4.\nSTATUS:    Suppressed by A. Vance (2008). Full disclosure\n           ordered upon execution of New Will.</pre>"
+      "html": "<pre>VANCE PRECISION INSTRUMENTS — CONFIDENTIAL AUDIT\nARCHIVE BOX #4 (SLATED FOR RELEASE WITH NEW WILL)\n-------------------------------------------------\nSUBJECT:   2008 Offshore Escrow — Forged Beneficiary Deed\nFINDING:   Trust signature forged to liquidate a partner's estate in Nov 2008\nFLAGGED INITIALS: \"C.S.\" / \"H.V.\" [ROLES &amp; DATES BURNED]\nNOTE:      One party falsified the 2008 record; the other had\n           no clearance or access to Archive Box #4 in 2008.\nSTATUS:    Suppressed by A. Vance (2008). Full disclosure\n           ordered upon execution of New Will.</pre>"
     },
     {
       "id": "D",
@@ -515,7 +515,7 @@
       "id": "E",
       "act": 3,
       "title": "Exhibit E — 2008 Dossier Ledger & Horologist Journal",
-      "html": "<ul>\n          <li><strong>Selected 2008 Archive Records:</strong><br/>\n            &bull; <strong>Lady Evelyn Vance (#1):</strong> Director of Vance Charity Gala Fund (2006–2008)<br/>\n            &bull; <strong>Clara Sterling (#2):</strong> Lead Trust Counsel, Vance Legal Holdings (2005–present)<br/>\n            &bull; <strong>Thomas Graves (#3):</strong> Estate Steward & Keyholder, Ravenshollow (1999–present)<br/>\n            &bull; <strong>Victor Vance (#5):</strong> Junior Commodities Broker, Vance Capital (2007–2008)<br/>\n            &bull; <strong>Harriet Vance-Cole (#8):</strong> <em>No access to Archive Box #4 in 2008 (outside the 2008 incident window).</em><br/>\n            &bull; <strong>Margot Bell (#10):</strong> Investigative Reporter, Boston Chronicle (2007–2008)\n          </li>\n          <li><strong>Arthur's Horologist Journal (Nov 15):</strong> <em>\"A clockmaker whose own pocket watch loses a single second is a fraud. My gold chronometer is calibrated daily to the U.S. Naval Observatory signal. It has not drifted by half a second in eleven years.\"</em></li>\n        </ul>"
+      "html": "<ul>\n          <li><strong>Selected 2008 Archive Records:</strong><br/>\n            &bull; <strong>Lady Evelyn Vance (#1):</strong> Director of Vance Charity Gala Fund (2006–2008)<br/>\n            &bull; <strong>Clara Sterling (#2):</strong> Lead Trust Counsel, Vance Legal Holdings (2005–present)<br/>\n            &bull; <strong>Thomas Graves (#3):</strong> Estate Steward &amp; Keyholder, Ravenshollow (1999–present)<br/>\n            &bull; <strong>Victor Vance (#5):</strong> Junior Commodities Broker, Vance Capital (2007–2008)<br/>\n            &bull; <strong>Harriet Vance-Cole (#8):</strong> <em>Cleared — No clearance or access to Archive Box #4 in 2008 (unrelated to the 2008 incident).</em><br/>\n            &bull; <strong>Margot Bell (#10):</strong> Investigative Reporter, Boston Chronicle (2007–2008)\n          </li>\n          <li><strong>Arthur's Horologist Journal (Nov 15):</strong> <em>\"A clockmaker whose own pocket watch loses a single second is a fraud. My gold chronometer is calibrated daily to the U.S. Naval Observatory signal. It has not drifted by half a second in eleven years.\"</em></li>\n        </ul>"
     },
     {
       "id": "F",
@@ -545,12 +545,12 @@
     "act1": {
       "label": "ACT I — THE LOCKED STUDY (7 MIN)",
       "sub": "Read Public Opener, unlock Exhibits A & B, mingle (7m), then Vote (3m) & Blackout (1m).",
-      "html": "\n          <div class=\"script-line\"><div class=\"script-speaker\">Chef Henri Laurent (#9)</div>\"Nobody touch a thing! The oak door was bolted from the inside, and the window drops eighty feet to the rocks. How on earth could someone kill him in a locked room?\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Father Silas Ward (#13)</div>\"He was shouting at someone at 8:55! We all heard him! Then at 9:00 the lights went out and—my God, was that a gunshot?\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Clara Sterling (#2)</div>\"There is no bullet wound. It was poison! The moment the lights came back on at 9:01, I saw Arthur's chalk-pale lips and smelled that unmistakable bitter-almond scent from the spilled wine. He died right around nine.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Chef Henri Laurent (#9)</div>\"Begging your pardon, but when I stepped beside the desk, I noticed Lord Arthur's pocket watch had smashed on the corner—its hands were stopped at 8:48.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Clara Sterling (#2)</div>\"Ah, yes, I closed the lid so it wouldn't upset everyone. Arthur's watch always ran twelve minutes slow—he told me so himself just yesterday.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Thomas Graves (#3)</div>\"Slow or not, the New Will is still on his desk—unsigned. Whoever wanted Arthur dead before 9:00 PM is standing in this room.\"</div>"
+      "html": "\n          <div class=\"script-line\"><div class=\"script-speaker\">Chef Henri Laurent (#9)</div>\"Nobody touch a thing! The oak door was bolted from the inside, and the window drops eighty feet to the rocks. How on earth could someone kill him in a locked room?\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Father Silas Ward (#13)</div>\"He was shouting at someone at 8:55! We all heard him! Then at 9:00 the lights went out and—my God, was that a gunshot?\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Clara Sterling (#2)</div>\"There is no bullet wound. It was poison! The moment the lights came back on at 9:01, I saw Arthur's chalk-pale lips and smelled that unmistakable bitter-almond scent from the spilled wine. He died right around nine.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Chef Henri Laurent (#9)</div>\"Wait a moment—when I stepped beside the desk, I noticed Arthur's pocket watch had smashed on the corner—its hands were stopped at 8:48.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Clara Sterling (#2)</div>\"Ah, yes, I closed the lid so it wouldn't upset everyone. Arthur's watch always ran twelve minutes slow—he told me so himself just yesterday.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Thomas Graves (#3)</div>\"Slow or not, the New Will is still on his desk—unsigned. Whoever wanted Arthur dead before 9:00 PM is standing in this room.\"</div>"
     },
     "blackout1": {
       "label": "BLACKOUT PHASE I (1 MIN)",
       "sub": "100% Spoiler-Free Automated Blackout — everyone closes their eyes!",
-      "html": "<p style=\"margin-bottom:14px;\">Click <strong>Start Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team to make a silent tap, then waking the Inspector to privately inspect 1 Detention Card—so <strong>nobody has to sit out as a human host!</strong></p>\n        <button class=\"btn btn-gold\" onclick=\"startAutoBlackout()\">Launch Auto-Blackout Phase I</button>"
+      "html": "<p style=\"margin-bottom:14px;\">Click <strong>Launch Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team to make a silent tap, then waking the Inspector to privately inspect 1 Detention Card—so <strong>nobody has to sit out as a human host!</strong></p>\n        <button class=\"btn btn-gold\" onclick=\"startAutoBlackout()\">Launch Auto-Blackout Phase I</button>"
     },
     "act2": {
       "label": "ACT II — SHADOWS IN THE CLOCKWORK (6 MIN)",
@@ -560,7 +560,7 @@
     "blackout2": {
       "label": "BLACKOUT PHASE II (1 MIN)",
       "sub": "100% Spoiler-Free Automated Blackout — everyone closes their eyes!",
-      "html": "<p style=\"margin-bottom:14px;\">Click <strong>Start Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team, then waking the Inspector—with zero spoilers for anyone!</p>\n        <button class=\"btn btn-gold\" onclick=\"startAutoBlackout()\">Launch Auto-Blackout Phase II</button>"
+      "html": "<p style=\"margin-bottom:14px;\">Click <strong>Launch Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team, then waking the Inspector—with zero spoilers for anyone!</p>\n        <button class=\"btn btn-gold\" onclick=\"startAutoBlackout()\">Launch Auto-Blackout Phase II</button>"
     },
     "act3": {
       "label": "ACT III — THE LAST CHIME (7 MIN)",
@@ -568,5 +568,5 @@
       "html": "\n          <div class=\"script-line\"><div class=\"script-speaker\">Thomas Graves (#3)</div>\"Enough games. We unlocked Arthur's private Horologist Journal and the 2008 Archive Ledger—and tested the residue in the Study with a field chemistry kit.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Chef Henri Laurent (#9)</div>\"Look closely at Exhibit E and Exhibit F before you cast your final vote. The single cup of chamomile tea poured at 8:40 PM was untouched and barely lukewarm by 9:02 PM—and Arthur never touched his wine.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Clara Sterling (#2)</div>\"Careful, everyone—wild theories will only let the real killer slip away. Look at who had the motive to steal the Will, who rigged the power, and who wasn't in the Grand Hall at nine. Let's settle this.\"</div>"
     }
   },
-  "revealHtml": "\n      <h2 class=\"serif\" style=\"color:var(--gold); font-size:1.6rem; margin-bottom:12px;\">The Truth Behind the Last Chime (RV-1860)</h2>\n      <p style=\"margin-bottom:12px;\">\n        <strong>The Killer:</strong> <span style=\"color:#ff7b7b; font-weight:700;\">Clara Sterling (#2)</span><br/>\n        <strong>The Accomplices (Shadow Team):</strong> <span style=\"color:var(--gold);\">Harriet Vance-Cole (#8), Lady Evelyn Vance (#1)</span><br/>\n        <strong>The Inspector:</strong> <span style=\"color:#6be0a3;\">Thomas Graves (#3)</span>\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        Arthur Vance did <strong>not</strong> die at 9:00 PM. He died at <strong>8:48 PM</strong>—alone behind a bolted door—from <strong>concentrated Aconite</strong> hidden in the <strong>wax-sealed private digestif vial</strong> handed to him by <strong>Clara Sterling (#2)</strong> at 8:42 PM.\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        Victor Vance (#5) spiked the red wine with harmless sleeping powder, which Arthur never touched. The 8:55 PM argument was a <strong>pre-recorded brass wax cylinder</strong> played by the Chronos Automaton, and the 9:00 PM crash was the counterweight smashing the <strong>water carafe</strong> while blackmailed accomplice <strong>Harriet Vance-Cole (#8)</strong> cut the generator breaker for 15 seconds.\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        <strong>The 4-Pillar Proof:</strong> (1) Arthur's pocket watch froze at <strong>8:48 PM</strong> and his Horologist Journal proves it never lost a second; (2) The wine was untouched and Arthur died of odorless Aconite from the wax-sealed private digestif vial; (3) Clara Sterling slipped up in Act I by claiming to see Arthur's pale lips (Arthur was face-down!) and smell bitter almonds from spilled wine (it was odorless water!); (4) Exhibit C flagged both <strong>\"C.S.\"</strong> and <strong>\"H.V.\"</strong>, but Exhibit E clears Harriet Vance-Cole (no 2008 access) and ties <strong>Clara Sterling</strong> directly to <strong>2008 Offshore Escrow — Forged Beneficiary Deed</strong> (Lead Trust Counsel, Vance Legal Holdings (2005–present))!\n      </p>"
+  "revealHtml": "\n      <h2 class=\"serif\" style=\"color:var(--gold); font-size:1.6rem; margin-bottom:12px;\">The Truth Behind the Last Chime (RV-1860)</h2>\n      <p style=\"margin-bottom:12px;\">\n        <strong>The Killer:</strong> <span style=\"color:#ff7b7b; font-weight:700;\">Clara Sterling (#2)</span><br/>\n        <strong>The Accomplices (Shadow Team):</strong> <span style=\"color:var(--gold);\">Harriet Vance-Cole (#8), Lady Evelyn Vance (#1)</span><br/>\n        <strong>The Inspector:</strong> <span style=\"color:#6be0a3;\">Thomas Graves (#3)</span>\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        Arthur Vance did <strong>not</strong> die at 9:00 PM. He died at <strong>8:48 PM</strong>—alone behind a bolted door—from <strong>concentrated Aconite</strong> hidden in the <strong>wax-sealed private digestif vial</strong> handed to him by <strong>Clara Sterling (#2)</strong> at 8:42 PM. At 9:01 PM, Clara Sterling rushed to the desk first, pocketing the wax-sealed private digestif vial and later ditching a botanical-smudged handkerchief down the upstairs laundry chute.\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        Victor Vance (#5) spiked the red wine with harmless sleeping powder, which Arthur never touched. The 8:55 PM argument was a <strong>pre-recorded brass wax cylinder</strong> played by the Chronos Automaton, and the 9:00 PM crash was the counterweight smashing the <strong>water carafe</strong> while blackmailed accomplice <strong>Harriet Vance-Cole (#8)</strong> cut the generator breaker for 15 seconds.\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        <strong>The 4-Pillar Proof:</strong> (1) Arthur's pocket watch froze at <strong>8:48 PM</strong> and his Horologist Journal proves it never lost a second; (2) The wine was untouched and Arthur died of odorless Aconite from the wax-sealed private digestif vial; (3) Clara Sterling slipped up in Act I by claiming to see Arthur's pale lips (Arthur was face-down!) and smell bitter almonds from spilled wine (it was odorless water!); (4) Exhibit C flagged both <strong>\"C.S.\"</strong> and <strong>\"H.V.\"</strong>, but Exhibit E clears Harriet Vance-Cole (no 2008 access) and ties <strong>Clara Sterling</strong> directly to <strong>2008 Offshore Escrow — Forged Beneficiary Deed</strong> — Lead Trust Counsel, Vance Legal Holdings (2005–present)!\n      </p>"
 }

@@ -117,12 +117,12 @@ function findBalancedColumn(usedByRow, rng, fixedPairs) {
 }
 
 /**
- * Builds the balanced 20x12 Latin rectangle schedule:
+ * Builds the balanced 20x16 Latin rectangle schedule:
  *  - Column 0: killerId = 1..20
- *  - Column 1: coreAccomplice (active for all N = 12..20; #4 -> #6 locked for Classic J.M. pair)
+ *  - Column 1: coreAccomplice (active for all N = 8..20; #4 -> #6 locked for Classic J.M. pair)
  *  - Column 2: lookoutAccomplice (active for N = 14..20)
  *  - Column 3: deflectionAccomplice (active for N = 18..20)
- *  - Columns 4..11: innocent character removed at each step (20->19, 19->18, ..., 13->12)
+ *  - Columns 4..15: innocent character removed at each step (20->19, 19->18, ..., 9->8)
  */
 function buildBalancedSchedule() {
   const rng = createRng(20261121);
@@ -141,7 +141,7 @@ function buildBalancedSchedule() {
   const deflectionCol = findBalancedColumn(usedByRow, rng);
   for (let k = 1; k <= NUM_CHARS; k++) usedByRow[k].add(deflectionCol[k]);
 
-  // Columns 4..11: 8 innocent removal rounds (20->19 down to 13->12)
+  // Columns 4..15: 12 innocent removal rounds (20->19 down to 9->8)
   const removalCols = [];
   for (let step = 0; step < REMOVAL_STEPS; step++) {
     const remCol = findBalancedColumn(usedByRow, rng);
@@ -153,7 +153,7 @@ function buildBalancedSchedule() {
 }
 
 /**
- * Generates all 180 variations top-down from 20 players down to 12 players.
+ * Generates all 260 variations top-down from 20 players down to 8 players.
  */
 function generateAllVariations() {
   const { coreCol, lookoutCol, deflectionCol, removalCols } = buildBalancedSchedule();
@@ -183,9 +183,9 @@ function generateAllVariations() {
     scenariosByCount[MAX_PLAYERS][k] = Engine.buildScenario(caseCode, MAX_PLAYERS, blueprint);
   }
 
-  // Rounds 19 down to 12: remove 1 innocent character from each game in the previous round
+  // Rounds 19 down to 8: remove 1 innocent character from each game in the previous round
   for (let n = MAX_PLAYERS - 1; n >= MIN_PLAYERS; n--) {
-    const stepIndex = MAX_PLAYERS - n - 1; // 0 for 19, 1 for 18, ..., 7 for 12
+    const stepIndex = MAX_PLAYERS - n - 1; // 0 for 19, 1 for 18, ..., 11 for 8
     const remCol = removalCols[stepIndex];
     const accCount = Engine.accompliceCountFor(n);
 
@@ -228,7 +228,7 @@ function generateAllVariations() {
 }
 
 /**
- * Exhaustive self-consistency and probability-balance validation across all 180 variations.
+ * Exhaustive self-consistency and probability-balance validation across all 260 variations.
  */
 function validateAll(blueprintsByCount, scenariosByCount) {
   let totalCount = 0;
@@ -303,40 +303,84 @@ function validateAll(blueprintsByCount, scenariosByCount) {
           throw new Error(`${tag} Innocent anchor #${a} is on Shadow Team`);
         }
       }
+      if (sc.alibiWitnessId === 1 || sc.alibiWitnessId === 11) {
+        throw new Error(`${tag} alibiWitnessId #${sc.alibiWitnessId} contradicts upstairs gallery timeline`);
+      }
+      if (shadowSet.has(sc.automatonSpeakerId)) {
+        throw new Error(`${tag} automatonSpeakerId #${sc.automatonSpeakerId} is on Shadow Team`);
+      }
       if (sc.exhibitEIds.length !== 6 || new Set(sc.exhibitEIds).size !== 6) {
         throw new Error(`${tag} Exhibit E must have 6 distinct active characters`);
       }
 
-      // 4. Zero references to removed characters & zero self-addressed dialogues
+      // 4. Zero references to removed characters, zero self-addressed dialogues, and playtest invariants
       const removedChars = sc.removedIds.map(rid => Engine.BASE_CHARACTERS[rid - 1]);
       const checkNoRemovedRefs = (text, label) => {
         for (const rc of removedChars) {
           if (text.includes(`(#${rc.id})`) || text.includes(`#${rc.id})`) || text.includes(rc.name)) {
             throw new Error(`${tag} ${label} references removed character ${rc.name} (#${rc.id})`);
           }
+          if (rc.id === 2 && /\bClara\b/.test(text)) {
+            throw new Error(`${tag} ${label} leaks removed Clara (#2): ${text}`);
+          }
+          if (rc.id === 5 && /\bVictor\b/.test(text)) {
+            throw new Error(`${tag} ${label} leaks removed Victor (#5): ${text}`);
+          }
+          if (rc.id === 16 && /rival tech CEO/i.test(text)) {
+            throw new Error(`${tag} ${label} leaks removed Gideon (#16) role: ${text}`);
+          }
         }
       };
 
+      const rawAmpRegex = /&(?!(amp|lt|gt|quot|bull|mdash|ndash|apos|#\d+);)/;
+
       for (const ch of sc.characters) {
+        checkNoRemovedRefs(ch.role, `char #${ch.id} role`);
         checkNoRemovedRefs(ch.persona, `char #${ch.id} persona`);
         checkNoRemovedRefs(ch.special, `char #${ch.id} special`);
         checkNoRemovedRefs(ch.secret, `char #${ch.id} secret`);
         checkNoRemovedRefs(ch.clue, `char #${ch.id} clue`);
         checkNoRemovedRefs(ch.detention, `char #${ch.id} detention`);
+
+        if (ch.team === "killer" && sc.accomplices.length === 1 && ch.special.includes("Shadow Team allies:")) {
+          throw new Error(`${tag} Killer special uses plural 'allies' for 1 accomplice`);
+        }
+        if (ch.id === sc.alibiWitnessId && !ch.persona.includes("8:55 PM")) {
+          throw new Error(`${tag} alibiWitness #${ch.id} persona missing 8:55 PM Grand Hall alibi confirmation`);
+        }
+
         for (const d of ch.dialogues) {
           checkNoRemovedRefs(d.target + " " + d.line, `char #${ch.id} ${d.act} dialogue`);
           if (d.target.includes(`(#${ch.id})`)) {
             throw new Error(`${tag} char #${ch.id} ${d.act} dialogue addresses itself: ${d.target}`);
           }
+          if (ch.team === "accomplice" && !d.target.includes("[stage-managed defense]")) {
+            const match = d.target.match(/\(#(\d+)\)/);
+            if (match && shadowSet.has(Number(match[1]))) {
+              throw new Error(`${tag} Accomplice #${ch.id} ${d.act} dialogue addresses Shadow Team member #${match[1]}: ${d.target}`);
+            }
+          }
         }
       }
       for (const ex of sc.exhibits) {
         checkNoRemovedRefs(ex.title + " " + ex.html, `exhibit ${ex.id}`);
+        if (rawAmpRegex.test(ex.html)) {
+          throw new Error(`${tag} exhibit ${ex.id} contains unescaped '&' in HTML`);
+        }
       }
       for (const [actKey, actObj] of Object.entries(sc.acts)) {
         checkNoRemovedRefs(actObj.html, `act ${actKey}`);
+        if (rawAmpRegex.test(actObj.html)) {
+          throw new Error(`${tag} act ${actKey} contains unescaped '&' in HTML`);
+        }
       }
       checkNoRemovedRefs(sc.revealHtml, "revealHtml");
+      if (rawAmpRegex.test(sc.revealHtml)) {
+        throw new Error(`${tag} revealHtml contains unescaped '&' in HTML`);
+      }
+      if (sc.revealHtml.includes("))!")) {
+        throw new Error(`${tag} revealHtml contains nested double parentheses '))!'`);
+      }
     }
 
     // Verify exact equality across all 20 characters for round N
