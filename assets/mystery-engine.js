@@ -79,7 +79,7 @@
       ledger2008: "Vance Precision Intern & Lab Assistant (Summer 2008); hired full-time 2012",
       scandalTitle: "2008 Lab Safety — Sabotaged Prototype Test",
       scandalDetail: "High-pressure test rig failure; safety inspection log FALSIFIED",
-      deliveryItem: "rigged brass Automaton winding key (contact toxin)",
+      deliveryItem: "brass Automaton winding key",
       accomplices: [4, 14, 18]
     },
     {
@@ -122,12 +122,12 @@
       id: 10, name: "Margot Bell", role: "Undercover Investigative Journalist", initials: "M.B.",
       persona: "Sharp Boston Chronicle reporter who secretly crashed the gala posing as a guest's plus-one to investigate Arthur's 2008 cover-up.",
       secret: "You paid your way onto the guest list under a fake name to hunt for Archive Box #4 in the manor library.",
-      clue: "You carry a 2008 newspaper clipping confirming Archive Box #4 implicates someone who was professionally active in 2008—NOT someone hired in 2012!",
+      clue: "You carry a 2008 newspaper clipping confirming Archive Box #4 implicates someone who held an active 2008 role in Exhibit E—NOT someone who had no 2008 access!",
       detention: "Searched from Margot's Bag: A Boston Chronicle press pass and a 2008 clipping noting the Archive Box #4 cover-up was buried by Arthur Vance in November 2008.",
       ledger2008: "Investigative Reporter, Boston Chronicle (2007–2008)",
       scandalTitle: "2008 Blackmail Payout — Suppressed Exposé",
       scandalDetail: "Accepted $500k hush money to bury a fatal corporate scandal; source log FALSIFIED",
-      deliveryItem: "spiced espresso demitasse handed before the toast",
+      deliveryItem: "spiced espresso demitasse",
       accomplices: [6, 14, 18]
     },
     {
@@ -151,7 +151,7 @@
       ledger2008: "Corporate Accountant, Vance Holdings (2006–2008)",
       scandalTitle: "2008 Tax Shelter — Embezzled Dividend Ledger",
       scandalDetail: "$1.8M siphoned into Cayman accounts; audit sheet FALSIFIED",
-      deliveryItem: "chilled champagne flute handed at 8:42 PM",
+      deliveryItem: "chilled champagne flute",
       accomplices: [6, 14, 18]
     },
     {
@@ -179,11 +179,11 @@
       accomplices: [6, 12, 18]
     },
     {
-      id: 15, name: "Beatrice \"Bea\" Holloway", role: "Head Housekeeper", initials: "B.H.",
+      id: 15, name: "Beatrice (Bea) Holloway", role: "Head Housekeeper", initials: "B.H.",
       persona: "Brisk, sharp-eyed housekeeper who notices everything dropped in a bin or tossed down the laundry chute.",
       secret: "At 9:04 PM, you heard something drop down the upstairs laundry chute right after the Study door was broken open—someone hastily ditched evidence from the Study!",
       clue: "The upstairs laundry chute is right outside the Study wing and drops straight into the basement Laundry Room.",
-      detention: "Searched from Bea's Apron Pocket: A folded linen handkerchief containing trace shards pulled from the basement laundry chute at 9:04 PM!",
+      detention: "Searched from Bea's Apron Pocket: A crumpled linen handkerchief with faint botanical residue pulled from the basement laundry chute at 9:04 PM!",
       ledger2008: "Estate Housekeeper & Domestic Bookkeeper (2004–2008)",
       scandalTitle: "2008 Domestic Payroll — Ghost Employee Fraud",
       scandalDetail: "Over $900k billed to fictitious staff accounts; payroll ledger FALSIFIED",
@@ -199,7 +199,7 @@
       ledger2008: "VP of Engineering, Vance Precision (2005–2008)",
       scandalTitle: "2008 Patent Espionage — Stolen Defense Blueprints",
       scandalDetail: "Sold classified naval chronometer specs abroad; export log FALSIFIED",
-      deliveryItem: "celebratory Cuban cigar with laced tip",
+      deliveryItem: "celebratory Cuban cigar",
       accomplices: [6, 14, 18]
     },
     {
@@ -211,7 +211,7 @@
       ledger2008: "Legal Clerk, Sterling & Vance (2008)",
       scandalTitle: "2008 Evidence Tampering — Altered Deposition",
       scandalDetail: "Swapped sworn testimony pages in a liability suit; filing log FALSIFIED",
-      deliveryItem: "signature fountain pen & wax-seal stamp (laced)",
+      deliveryItem: "signature fountain pen & wax-seal stamp",
       accomplices: [6, 14, 18]
     },
     {
@@ -247,7 +247,7 @@
       ledger2008: "Ghostwriter & Archivist, Vance Press (2007–2008)",
       scandalTitle: "2008 Plagiarism & Libel — Forged Historical Letters",
       scandalDetail: "Forged rare horologist manuscripts sold for $1.2M; archive log FALSIFIED",
-      deliveryItem: "honey-lemon throat pastille before Arthur's speech",
+      deliveryItem: "honey-lemon throat pastille",
       accomplices: [6, 14, 18]
     }
   ];
@@ -360,6 +360,9 @@
         team = "killer";
         badge = "SHADOW TEAM — KILLER";
         badgeClass = "shadow";
+        if (id === 10) {
+          persona = "Sharp, perceptive investigative reporter with the Boston Chronicle. You arrived as a guest's plus-one, claiming to cover the gala—though your real reason for coming tonight is far more personal.";
+        }
         const allyNames = accomplices.map(aid => `${BASE_CHARACTERS[aid - 1].name} (#${aid})`).join(", ");
         special = `YOU ARE THE KILLER! Win by avoiding indictment in the Final Verdict (frame ${coreAccompliceBase.name} #${coreAccompliceId} or ${wineSpikerBase.name} #${wineSpikerId}!). Your Shadow Team allies: ${allyNames}. During Blackouts, wake up to Intimidate 1 guest OR Plant a False Lead.`;
         secret = `In 2008, YOU were behind "${killerBase.scandalTitle}" (signed "${killerBase.initials}"). Tonight: at 8:15 PM you rigged the Chronos Automaton (8:55 PM voice + 9:00 PM carafe smash); at 8:35 PM you blackmailed ${coreAccompliceBase.name} (#${coreAccompliceId}) to cut the generator at 9:00 PM; at 8:42 PM you handed Arthur ${deliveryWithArticle} laced with concentrated Aconite (he died at 8:48 PM). You stood next to ${alibiWitnessBase.name} (#${alibiWitnessId}) at 8:55 PM for an alibi, then slipped up at 9:01 PM by claiming you saw his chalk-pale lips (he was face-down!), smelled 'bitter-almond wine,' and lied about the 8:48 PM watch.`;
@@ -373,9 +376,12 @@
         if (isCoreAcc) {
           secret = `${killerBase.name} (#${killerId}) caught your private scandal and blackmailed you into cutting the basement generator breaker for 15 seconds at 9:00 PM sharp! You didn't know they were going to murder Arthur, but if they go down, you go to prison as an accessory. Worse, your initials (${base.initials}) appear on the burned Exhibit C audit log from 2008—even though you had no access in 2008!`;
           detention = `Searched from ${base.name}'s Belongings: Heavy rubber-insulated electrical gloves (smelling of ozone from the generator breaker) and an unsigned blackmail note: '9:00 PM sharp. Fifteen seconds of dark, or your secret goes to the police.'`;
-        } else {
+        } else if (accomplices.indexOf(id) === 1) {
           secret = `You are secretly tied to ${killerBase.name}'s (#${killerId}) 2008 cover-up and helped keep the upstairs gallery clear from 8:10–8:20 PM while they rigged the Automaton. Protect ${killerBase.name} in Town Hall votes!`;
           detention = `Searched from ${base.name}'s Belongings: A burner phone with an unsent draft: '${killerBase.initials} — Upstairs corridor clear 8:10 to 8:20 PM. Stop Archive Box #4 at any cost.'`;
+        } else {
+          secret = `You are quietly helping ${killerBase.name} (#${killerId}) bury the 2008 Archive Box #4 trail and agreed to steer the room toward the wine and away from the 2008 ledger. Protect ${killerBase.name} in Town Hall votes!`;
+          detention = `Searched from ${base.name}'s Belongings: A torn corner of a 2008 file folder and a folded slip: '${killerBase.initials} — Keep everyone focused on the wine tonight. Archive Box #4 stays shut.'`;
         }
         clue = `STRATEGY: Deflect suspicion onto ${wineSpikerBase.name} (#${wineSpikerId}) and defend ${killerBase.name}'s (#${killerId}) 8:55 PM Grand Hall alibi!`;
       } else if (isInspector) {
@@ -383,6 +389,9 @@
         badge = "INNOCENT — INSPECTOR";
         badgeClass = "inspector";
         special = "SPECIAL ABILITY (BLACKOUT PHASE): During each Blackout, if you are NOT Detained, the Host wakes you alone to secretly read ONE guest's Sealed Detention Card for 12 seconds!";
+        if (id !== 8) {
+          secret += " You also brought a miniature field chemistry kit in your bag, which you will use between Acts II and III to produce Exhibit F (testing the wine vs. Arthur's cuff).";
+        }
       }
 
       if (isWineSpiker && !isKiller && !isAccomplice) {
@@ -392,7 +401,7 @@
 
       if (isWitness && !isKiller && !isAccomplice) {
         clue = `1) At 8:40 PM a piping-hot cup of chamomile tea was poured in the Study—by 9:02 PM the untouched cup was barely lukewarm. 2) At 8:42 PM, YOU PERSONALLY SAW ${killerBase.name} (#${killerId}) hand Arthur ${deliveryWithArticle} in the Grand Hall right before Arthur locked himself in the Study!`;
-        detention = `Searched from ${base.name}'s Pocket: Tonight's handwritten note: '8:40 PM — Poured hot cup of tea in Study. 8:42 PM — Watched ${killerBase.name} (#${killerId}) hand Arthur ${deliveryWithArticle} in the Grand Hall. 9:02 PM — Tea untouched & barely lukewarm; watch smashed at 8:48 PM.'`;
+        detention = `Searched from ${base.name}'s Pocket: Tonight's handwritten note: '8:40 PM — Hot cup of chamomile tea poured in Study. 8:42 PM — Watched ${killerBase.name} (#${killerId}) hand Arthur ${deliveryWithArticle} in the Grand Hall. 9:02 PM — Tea untouched & barely lukewarm; watch smashed at 8:48 PM.'`;
       }
 
       // Dynamic Act I-III Mandatory Dialogues
@@ -451,7 +460,7 @@
           <li><strong>Make:</strong> Custom Vance Precision Gold Chronometer (<em>"A.V. — Time Never Lies"</em>).</li>
           <li><strong>Condition:</strong> Crystal cracked; internal gears jammed from hitting the desk corner.</li>
           <li><strong>Frozen Time:</strong> <strong>8:48 PM</strong> (12 minutes before the 9:00 PM blackout).</li>
-          <li><strong>Witness Note:</strong> <strong>${killerBase.name} (#${killerId})</strong> snapped the gold lid shut at 9:02 PM, claiming Arthur's watch <em>"always ran twelve minutes slow."</em></li>
+          <li><strong>Witness Note:</strong> <strong>${killerBase.name} (#${killerId})</strong> snapped the gold lid shut at 9:01 PM, claiming Arthur's watch <em>"always ran twelve minutes slow."</em></li>
         </ul>`
       },
       {
@@ -626,7 +635,7 @@
       const act2Line = sameInitials
         ? `"Are you kidding me?! Look at the date on Exhibit C—2008! Just because my initials are '${base.initials}' doesn't mean I had anything to do with '${killerBase.scandalTitle}'! Check the 2008 records!"`
         : `"Look at Exhibit C—2008! Yes, '${base.initials}' was flagged on that burned page, but I had NO access to Archive Box #4 in 2008 and nothing to do with '${killerBase.scandalTitle}'! You're barking up the wrong tree!"`;
-      const acc3Target = pickTarget([7, 2, 1]);
+      const acc3Target = pickTarget([7, 2, 1, 3].filter(tid => tid !== killerBase.id));
       return [
         { act: "ACT I", target: `Say to ${inspectorBase.name} (#${inspectorBase.id}):`, line: `"I wasn't in the Grand Hall at nine because I heard a shutter banging near the basement stairs. Stop pointing fingers at me when ${wineSpikerBase.name} was sneaking out of the Study at 8:05!"` },
         { act: "ACT II", target: `Say to ${witnessBase.name} (#${witnessBase.id}):`, line: act2Line },
@@ -762,7 +771,7 @@
         const t3 = pickTarget([2, 1, 7]);
         return [
           { act: "ACT I", target: `Say to ${t1.name} (#${t1.id}):`, line: `"Forgive my curiosity, but I heard Arthur's New Will creates a transparency foundation. Does it unseal Archive Box #4 from November 2008?"` },
-          { act: "ACT II", target: `Say to ${coreAccompliceBase.name} (#${coreAccompliceBase.id}) [after Exhibit C]:`, line: `"Interesting—I happen to carry a 2008 Boston Chronicle clipping about Archive Box #4. It implicates someone professionally active in November 2008. Where were you working in 2008?"` },
+          { act: "ACT II", target: `Say to ${coreAccompliceBase.name} (#${coreAccompliceBase.id}) [after Exhibit C]:`, line: `"Interesting—I happen to carry a 2008 Boston Chronicle clipping about Archive Box #4. It implicates someone professionally active in 2008. Where were you working in 2008?"` },
           { act: "ACT III", target: `Say to ${t3.name} (#${t3.id}) [after Exhibit E]:`, line: `"I'm actually an investigative reporter with the Boston Chronicle. My 2008 clipping matches Exhibit E—check who was actually in that 2008 role and cross off everyone who wasn't!"` }
         ];
       }
@@ -778,8 +787,11 @@
       }
       case 12: { // Lydia Vance
         const t3 = pickTarget([2, inspectorBase.id, 1]);
+        const act1Line = wineSpikerBase.id === 5
+          ? `"Look me in the eye. If you did something desperate with that wine tonight because of money, I am not going down with you."`
+          : `"I saw someone hovering nervously near the wine decanter before dinner—if you touched that wine, you'd better tell the truth before this room pins a murder on you!"`;
         return [
-          { act: "ACT I", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}):`, line: `"Look me in the eye. If you did something desperate with that wine tonight because of money, I am not going down with you."` },
+          { act: "ACT I", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}):`, line: act1Line },
           { act: "ACT II", target: `Say to ${coreAccompliceBase.name} (#${coreAccompliceBase.id}):`, line: `"Funny thing—at 8:35 PM near the basement stairs, I overheard two people whispering furiously: 'Fifteen seconds of dark at nine sharp, or your secret goes to the police!' Care to tell me who was blackmailing you?"` },
           { act: "ACT III", target: `Say to ${t3.name} (#${t3.id}):`, line: `"Stop blaming the storm for the 9:00 PM blackout! I overheard the blackmail threat on the basement stairs at 8:35 PM—whoever cut the lights was forced into it by the real killer!"` }
         ];
@@ -800,21 +812,21 @@
           { act: "ACT III", target: `Say to ${witnessBase.name} (#${witnessBase.id}) [after Exhibit F]:`, line: `"Locked door from the inside means the Aconite walked into the Study WITH Arthur at 8:45 PM. Whoever handed him something at 8:42 PM in the Grand Hall is our killer!"` }
         ];
       }
-      case 15: { // Beatrice "Bea" Holloway
+      case 15: { // Beatrice (Bea) Holloway
         const t2 = pickTarget([1, 2, 7]);
         const t3 = pickTarget([1, 2, 7]);
         return [
           { act: "ACT I", target: `Say to ${witnessBase.name} (#${witnessBase.id}):`, line: `"Something's mighty odd! At 9:04 PM, right after the Study door was broken open, I was in the basement Laundry Room and heard something drop straight down the upstairs laundry chute!"` },
           { act: "ACT II", target: `Say to ${t2.name} (#${t2.id}):`, line: `"The upstairs laundry chute is right outside the Study wing—someone hastily ditched evidence from the Study at 9:04 PM before anyone could search their pockets!"` },
-          { act: "ACT III", target: `Say to ${t3.name} (#${t3.id}) [after Exhibit F]:`, line: `"I pulled trace shards wrapped in a linen handkerchief from the basement laundry bin at 9:04 PM! Whoever rushed to Arthur's body first at 9:01 pocketed the murder weapon and dumped it down the chute!"` }
+          { act: "ACT III", target: `Say to ${t3.name} (#${t3.id}) [after Exhibit F]:`, line: `"I pulled a crumpled linen handkerchief with faint botanical residue from the basement laundry bin at 9:04 PM! Whoever rushed to Arthur's body first at 9:01 pocketed it from the Study and dumped it down the chute!"` }
         ];
       }
       case 16: { // Gideon Thorne
         const t2 = pickTarget([2, inspectorBase.id, 1]);
         return [
-          { act: "ACT I", target: `Say to ${coreAccompliceBase.name} (#${coreAccompliceBase.id}):`, line: `"A word in private! At 8:38 PM someone panicked and whispered to me that they were being blackmailed into cutting the manor's power at 9:00 PM sharp. What the hell is going on?"` },
+          { act: "ACT I", target: `Say to ${coreAccompliceBase.name} (#${coreAccompliceBase.id}):`, line: `"A word in private! At 8:38 PM I saw you looking panicked in the hall and heard you mutter about being blackmailed into cutting the manor's power at 9:00 PM sharp. What the hell is going on?"` },
           { act: "ACT II", target: `Say to ${t2.name} (#${t2.id}):`, line: `"Arthur and I were business rivals, not enemies to the death. If you want to know why the lights died at nine, stop blaming the storm—someone in this house blackmailed an accomplice into pulling the breaker!"` },
-          { act: "ACT III", target: `Say to ${coreAccompliceBase.name} (#${coreAccompliceBase.id}):`, line: `"A man is dead! Whoever blackmailed you at 8:35 PM used your 9:00 PM blackout as cover for a murder that happened twelve minutes earlier—save yourself before you take the fall!"` }
+          { act: "ACT III", target: `Say to ${coreAccompliceBase.name} (#${coreAccompliceBase.id}):`, line: `"A man is dead! Whoever blackmailed you tonight used your 9:00 PM blackout as cover for a murder that happened twelve minutes earlier—save yourself before you take the fall!"` }
         ];
       }
       case 17: { // Vivienne Sterling
