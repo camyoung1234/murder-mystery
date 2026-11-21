@@ -807,18 +807,18 @@
         return `${c.name} (#${c.id}, ${c.initials})`;
       }).join(", ");
 
-      const extraAccomplices = sc.accomplices.slice(1).map(id => {
-        const c = E.BASE_CHARACTERS[id - 1];
-        return `${c.name} (#${c.id})`;
-      });
+      const lookoutAcc = sc.accomplices[1] ? E.BASE_CHARACTERS[sc.accomplices[1] - 1] : null;
+      const deflectionAcc = sc.accomplices[2] ? E.BASE_CHARACTERS[sc.accomplices[2] - 1] : null;
 
       const pillar4Text = sc.sameInitials
         ? `Exhibit C shows a charred 2008 audit log for <strong>${K.scandalTitle}</strong> signed <strong>"${K.initials}"</strong>—matching BOTH <strong>${K.name} (#${K.id})</strong> and <strong>${A.name} (#${A.id})</strong>. Exhibit E clears ${A.name} (no 2008 access to Archive Box #4) and directly ties ${K.name} (${K.ledger2008}) to the 2008 cover-up.`
         : `Exhibit C shows a charred 2008 audit log for <strong>${K.scandalTitle}</strong> flagging both <strong>"${sc.auditPair[0].initials}"</strong> and <strong>"${sc.auditPair[1].initials}"</strong> (roles &amp; dates burned). Exhibit E clears <strong>${A.name} (#${A.id})</strong> (no 2008 access to Archive Box #4) and directly ties <strong>${K.name} (#${K.id})</strong> (${K.ledger2008}) to the 2008 cover-up.`;
 
-      const extraAccTimeline = extraAccomplices.length > 0
-        ? `<li><strong>8:10–8:20 PM (Lookout):</strong> Shadow Team accomplice${extraAccomplices.length > 1 ? "s" : ""} <strong>${extraAccomplices.join(" &amp; ")}</strong> helped keep the upstairs gallery clear while ${K.name} rigged the Automaton.</li>`
-        : "";
+      const extraAccTimeline = (lookoutAcc
+        ? `<li><strong>8:10–8:20 PM (Lookout):</strong> Shadow Team accomplice <strong>${lookoutAcc.name} (#${lookoutAcc.id})</strong> helped keep the upstairs gallery clear while ${K.name} rigged the Automaton.</li>`
+        : "") + (deflectionAcc
+        ? `<li><strong>Evening Deflection:</strong> Shadow Team accomplice <strong>${deflectionAcc.name} (#${deflectionAcc.id})</strong> agreed to steer suspicion toward the wine and away from Archive Box #4.</li>`
+        : "");
 
       return `
         <div class="guide-doc spoiler-content">
@@ -870,7 +870,7 @@
             <li><strong>8:35 PM (The Blackmail):</strong> <strong>${K.name} (#${K.id})</strong> blackmails <strong>${A.name} (#${A.id})</strong> into cutting the basement Generator Room breaker for 15 seconds at <strong>9:00 PM sharp</strong>.</li>
             <li><strong>8:40 PM:</strong> A piping-hot single cup of chamomile tea is poured in Arthur's Study.</li>
             <li><strong>8:42 PM (The Poisoning):</strong> In the Grand Hall—witnessed by <strong>${W.name} (#${W.id})</strong>—<strong>${K.name} (#${K.id})</strong> hands Arthur <strong>${sc.deliveryWithArticle}</strong> laced with odorless, fast-acting <strong>concentrated Aconite</strong>.</li>
-            <li><strong>8:45 PM:</strong> Arthur enters his Study alone, bolts the oak door from the inside, and ingests the laced item. He never touches his tea or his wine.</li>
+            <li><strong>8:45 PM:</strong> Arthur enters his Study alone, bolts the oak door from the inside, and uses the laced item. He never touches his tea or his wine.</li>
             <li><strong>8:48 PM (Actual Time of Death):</strong> Arthur suffers sudden cardiac arrest, collapses <strong>face-down</strong> onto his desk blotter, and smashes his gold pocket watch—freezing its hands at <strong>8:48 PM</strong>.</li>
             <li><strong>8:55 PM (The Alibi):</strong> The Automaton plays Arthur's recorded shout while <strong>${K.name} (#${K.id})</strong> stands right beside <strong>${AW.name} (#${AW.id})</strong> in the Grand Hall.</li>
             <li><strong>9:00 PM (The Blackout):</strong> <strong>${A.name} (#${A.id})</strong> cuts the generator breaker for 15 seconds while the Automaton counterweight smashes the <strong>water carafe</strong>.</li>
