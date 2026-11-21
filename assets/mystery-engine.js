@@ -1,7 +1,7 @@
 /* ============================================================================
-   THE LAST CHIME OF RAVENSHOLLOW — BALANCED 180-VARIATION MYSTERY ENGINE
+   THE LAST CHIME OF RAVENSHOLLOW — BALANCED 260-VARIATION MYSTERY ENGINE
    Shared across Companion App, Printable Sheets & Variation Generator Script.
-   Supports 12-20 players with 20 balanced variations per player count (180
+   Supports 8-20 players with 20 balanced variations per player count (260
    total variations), giving every character (#1-#20) equal probability of
    being the Killer or an Accomplice at every player count.
    ============================================================================ */
@@ -277,7 +277,7 @@
     return { valid: true, killerId, code: "RV-" + clean };
   }
 
-  const MIN_PLAYERS = 12;
+  const MIN_PLAYERS = 8;
   const MAX_PLAYERS = 20;
 
   function accompliceCountFor(playerCount) {
@@ -311,7 +311,7 @@
       ((killerId - 1 + 7) % 20) + 1,
       ((killerId - 1 + 13) % 20) + 1
     ];
-    const removalOffsets = [3, 5, 9, 11, 14, 16, 17, 19];
+    const removalOffsets = [3, 5, 9, 11, 14, 16, 17, 19, 1, 4, 6, 8];
     const removedIds = removalOffsets
       .slice(0, 20 - playerCount)
       .map(off => ((killerId - 1 + off) % 20) + 1);

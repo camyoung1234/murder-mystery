@@ -229,8 +229,8 @@
     </div>
     <div class="controls">
       <label style="font-size:0.85rem;">Players:</label>
-      <input type="range" id="countSlider" min="12" max="20" value="12" oninput="updateConfig()" />
-      <strong id="countVal" style="color:#d4a853; font-size:1.1rem; min-width:24px;">12</strong>
+      <input type="range" id="countSlider" min="8" max="20" value="8" oninput="updateConfig()" />
+      <strong id="countVal" style="color:#d4a853; font-size:1.1rem; min-width:24px;">8</strong>
 
       <label style="font-size:0.85rem; margin-left:4px;">Case:</label>
       <input type="text" id="caseCodeInput" class="code-input" onchange="applyManualCode()" />
@@ -247,7 +247,7 @@
   <script>
     const E = window.RavenshollowEngine;
     const params = new URLSearchParams(window.location.search);
-    let playerCount = parseInt(params.get("players") || localStorage.getItem("ravenshollow_players") || "12", 10);
+    let playerCount = parseInt(params.get("players") || localStorage.getItem("ravenshollow_players") || "8", 10);
     if (isNaN(playerCount) || playerCount < E.MIN_PLAYERS || playerCount > E.MAX_PLAYERS) playerCount = E.MIN_PLAYERS;
     let caseCode = params.get("case") || localStorage.getItem("ravenshollow_case_code") || E.CLASSIC_CODE;
 

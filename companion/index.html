@@ -544,8 +544,8 @@
           <h2>Guest Count &amp; Dynamic Case Setup</h2>
           <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
             <label for="playerCountSlider" style="color:var(--muted);">Players:</label>
-            <input type="range" id="playerCountSlider" min="12" max="20" value="12" oninput="updatePlayerCount(this.value)" />
-            <strong id="playerCountValue" style="color:var(--gold); font-size:1.25rem; min-width:26px;">12</strong>
+            <input type="range" id="playerCountSlider" min="8" max="20" value="8" oninput="updatePlayerCount(this.value)" />
+            <strong id="playerCountValue" style="color:var(--gold); font-size:1.25rem; min-width:26px;">8</strong>
 
             <label for="caseCodeInput" style="color:var(--muted); margin-left:6px;">Case:</label>
             <input id="caseCodeInput" type="text" class="guest-input" style="width:98px; text-align:center; font-family:'Courier New',monospace; font-weight:700; color:var(--gold);" onchange="applyCaseCode(this.value)" />
@@ -666,7 +666,7 @@
     const urlParams = new URLSearchParams(window.location.search);
 
     let state = JSON.parse(localStorage.getItem("ravenshollow_state_v2") || "null") || {
-      playerCount: parseInt(urlParams.get("players") || localStorage.getItem("ravenshollow_players") || "12", 10),
+      playerCount: parseInt(urlParams.get("players") || localStorage.getItem("ravenshollow_players") || "8", 10),
       caseCode: urlParams.get("case") || localStorage.getItem("ravenshollow_case_code") || E.CLASSIC_CODE,
       tvMode: true,
       currentAct: "prologue",

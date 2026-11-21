@@ -209,7 +209,7 @@
   <script>
     const E = window.RavenshollowEngine;
     const params = new URLSearchParams(window.location.search);
-    const playerCount = parseInt(params.get("players") || localStorage.getItem("ravenshollow_players") || "12", 10);
+    const playerCount = parseInt(params.get("players") || localStorage.getItem("ravenshollow_players") || "8", 10);
     let caseCode = params.get("case") || localStorage.getItem("ravenshollow_case_code") || E.CLASSIC_CODE;
     document.getElementById("caseCodeInput").value = caseCode;
 

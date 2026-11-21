@@ -2,22 +2,22 @@
 "use strict";
 
 /**
- * Generates all 180 balanced variations of "The Last Chime of Ravenshollow"
- * across player counts 20 down to 12 (20 * (20 - 12 + 1) = 180 variations).
+ * Generates all 260 balanced variations of "The Last Chime of Ravenshollow"
+ * across player counts 20 down to 8 (20 * (20 - 8 + 1) = 260 variations).
  *
  * Construction:
  *  1. Start at N = 20 players with 20 variations (one with each character #1..#20 as Killer)
  *     and 3 accomplices per game, assigned so every character is an accomplice equally often (3x).
- *  2. Iteratively step down N = 19, 18, ..., 12:
+ *  2. Iteratively step down N = 19, 18, ..., 8:
  *     - Remove 1 innocent character from each of the 20 variations (forming a bijection of 1..20
  *       at every round so every character appears in exactly N variations).
- *     - Scale accomplices for player count N (3 for 18-20, 2 for 14-17, 1 for 12-13), keeping
+ *     - Scale accomplices for player count N (3 for 18-20, 2 for 14-17, 1 for 8-13), keeping
  *       the number of times each character is an accomplice strictly equal across all 20 characters.
  *     - Rebuild scripts, roles, dialogues, and exhibits via mystery-engine.js so every variation
  *       is 100% self-consistent for its active cast.
- *  3. Validate probability balance and self-consistency across all 180 variations.
+ *  3. Validate probability balance and self-consistency across all 260 variations.
  *  4. Write:
- *     - variations/<N>-players/variation-<01..20>.json  (180 full variations)
+ *     - variations/<N>-players/variation-<01..20>.json  (260 full variations)
  *     - variations/index.json                           (manifest + balance stats)
  *     - assets/variations-data.js                       (browser bundle for web/print pages)
  */
@@ -32,8 +32,8 @@ const VARIATIONS_DATA_JS = path.join(ROOT_DIR, "assets", "variations-data.js");
 
 const NUM_CHARS = 20;
 const MAX_PLAYERS = Engine.MAX_PLAYERS; // 20
-const MIN_PLAYERS = Engine.MIN_PLAYERS; // 12
-const REMOVAL_STEPS = MAX_PLAYERS - MIN_PLAYERS; // 8
+const MIN_PLAYERS = Engine.MIN_PLAYERS; // 8
+const REMOVAL_STEPS = MAX_PLAYERS - MIN_PLAYERS; // 12
 
 // Deterministic Mulberry32 PRNG so re-running the script produces identical output
 function createRng(seed) {

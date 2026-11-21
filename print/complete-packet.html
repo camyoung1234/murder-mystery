@@ -575,12 +575,12 @@
   <div class="toolbar">
     <div>
       <h1>Complete Game Packet — Single PDF Generator</h1>
-      <p>Character Sheets, Evidence Packet &amp; Host Guide locked to one Case Code. Blurred on screen for blind printing—prints crystal-clear!</p>
+      <p>Evidence Packet (starts with spoiler-free Manor Map), Character Sheets &amp; Host Guide locked to one Case Code. Blurred on screen for blind printing—prints crystal-clear!</p>
     </div>
     <div class="controls">
       <label style="font-size:0.85rem;">Players:</label>
-      <input type="range" id="countSlider" min="12" max="20" value="12" oninput="updateConfig()" />
-      <strong id="countVal" style="color:#d4a853; font-size:1.1rem; min-width:24px;">12</strong>
+      <input type="range" id="countSlider" min="8" max="20" value="8" oninput="updateConfig()" />
+      <strong id="countVal" style="color:#d4a853; font-size:1.1rem; min-width:24px;">8</strong>
 
       <label style="font-size:0.85rem; margin-left:4px;">Case:</label>
       <input type="text" id="caseCodeInput" class="code-input" value="" onchange="applyManualCode()" />
@@ -598,7 +598,7 @@
 
       <button class="btn" id="blurBtn" onclick="toggleBlur()">Unblur Preview</button>
       <a class="btn" id="companionLink" href="../companion/index.html" target="_blank">Companion App</a>
-      <button class="print-btn" onclick="window.print()">Print / Save Single PDF (<span id="totalPagesLabel">20+</span> Pages)</button>
+      <button class="print-btn" onclick="window.print()">Print / Save Single PDF (<span id="totalPagesLabel">16+</span> Pages)</button>
     </div>
   </div>
 
@@ -607,7 +607,7 @@
   <script>
     const E = window.RavenshollowEngine;
     const params = new URLSearchParams(window.location.search);
-    let playerCount = parseInt(params.get("players") || localStorage.getItem("ravenshollow_players") || "12", 10);
+    let playerCount = parseInt(params.get("players") || localStorage.getItem("ravenshollow_players") || "8", 10);
     if (isNaN(playerCount) || playerCount < E.MIN_PLAYERS || playerCount > E.MAX_PLAYERS) playerCount = E.MIN_PLAYERS;
     let caseCode = params.get("case") || localStorage.getItem("ravenshollow_case_code") || E.CLASSIC_CODE;
 
@@ -992,19 +992,19 @@
       const parts = [];
       parts.push(`
         <div class="screen-divider">
-          <span>Part 1: Character Sheets (${playerCount} Active Guests) &bull; Case ${sc.code}</span>
-          <span class="sub">${playerCount} Pages</span>
-        </div>
-      `);
-      parts.push(renderCharacterSheets(sc));
-
-      parts.push(`
-        <div class="screen-divider">
-          <span>Part 2: Evidence Packet (Map + Exhibits A–F + False Leads) &bull; Case ${sc.code}</span>
+          <span>Part 1: Evidence Packet (Spoiler-Free Map + Exhibits A–F + False Leads) &bull; Case ${sc.code}</span>
           <span class="sub">5 Pages (${evStyle === "stylized" ? "Stylized Color" : "Ink-Friendly B&W"})</span>
         </div>
       `);
       parts.push(evStyle === "stylized" ? renderEvidenceStylized(sc) : renderEvidenceBW(sc));
+
+      parts.push(`
+        <div class="screen-divider">
+          <span>Part 2: Character Sheets (${playerCount} Active Guests) &bull; Case ${sc.code}</span>
+          <span class="sub">${playerCount} Pages</span>
+        </div>
+      `);
+      parts.push(renderCharacterSheets(sc));
 
       if (includeHost) {
         parts.push(`
