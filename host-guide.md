@@ -58,25 +58,26 @@ Always use **Characters `#1` through `#N`** in exact numerical order.
 
 ---
 
-## 4. Werewolf Voting, Detention & Blackout Rules
+## 4. Public Voting, Group Leader & Detention Rules
 
-### Town Hall Votes (End of Act I & Act II — "Search & Detain" — 3 Minutes Each)
+### All Votes Are Public (No Dedicated Host Needed)
+Every vote is conducted publicly among all players (show of hands or simultaneous pointing). There are **no** private subgroup votes and **no** eyes-closed Blackout phases.
+
+### Town Hall Vote #1 (End of Act I — "Search & Detain" + Group Leader Election — 3 Minutes)
 1. **Rapid Debate (2 minutes):** Everyone gathers in the main room to share findings and make accusations.
-2. **Quick Vote (1 minute):** Every non-detained, non-intimidated player votes for **one suspect** to **Search & Detain** (fast simultaneous point-on-3, paper slip, or Digital Companion). Ties are broken by a 30-second runoff between tied suspects (if still tied, no one is detained).
-3. **Consequences of Detention:**
+2. **Public Detention Vote (1 minute):** Every player publicly votes for **one suspect** to **Search & Detain**.
+3. **Elect Group Leader:** Alongside (or immediately after) the Detention vote, players publicly vote to elect **1 Group Leader**.
+   - **Group Leader Powers:** The Group Leader (who may be Innocent or on the Shadow Team!) **breaks all detention ties** and immediately chooses **1 additional player to Detain** (or uses their extra detention in Act II).
+4. **Consequences of Detention:**
    - The Detained player is **NOT eliminated**—they stay in the room, keep talking, and complete all mandatory dialogues!
    - Their **Sealed Detention Card** is immediately opened and **read aloud to the entire room**, exposing a major secret or clue.
-   - They **lose their vote** in the *next* Town Hall (they regain their vote for the Final Verdict in Act III!) and **cannot act** during the upcoming Blackout Phase.
+   - They **lose their vote** in the *next* Town Hall (everyone regains their vote for the Final Verdict in Act III!).
 
-### Blackout Phases (Between Act I→II and Act II→III — 1 Minute Each)
-Dim the lights and have **everyone close their eyes** (and lightly tap their knees/table to mask footsteps/rustling). The Host narrates briskly:
-
-1. **Shadow Team Wakes (25 sec):** *"Shadow Team, open your eyes. Silently recognize each other."* (In Blackout #1, this is how the Killer and Accomplices confirm each other.) *"If Dr. Mercer is not Detained, point silently to ONE guest to **Intimidate** (they will be Shaken and lose their vote in the next Town Hall) — OR hold up TWO fingers to **Plant a False Lead** on the Evidence Board."* (Host acknowledges silently.) *"Shadow Team, close your eyes."*
-2. **The Inspector Wakes (25 sec):** *"Inspector Harriet Vance-Cole, if you are not Detained, open your eyes. Point silently to ONE player whose Sealed Detention Card you wish to inspect."* Host quietly shows Harriet that player's Detention Card for 10–15 seconds, then takes it back. *"Inspector, close your eyes."*
-3. **Lights Up (10 sec):** *"Everyone, open your eyes!"* If someone was Intimidated, the Host announces: *"[Name] was cornered in the dark hallway by an unseen figure and threatened—they are **Shaken** and cannot vote in the next Town Hall."* If a False Lead was planted, the Host places one **Red Herring Slip** on the Evidence Board.
+### Town Hall Vote #2 (End of Act II — "Search & Detain" — 3 Minutes)
+Every non-detained player publicly votes for **one suspect** to **Search & Detain** (the Group Leader breaks any tie).
 
 ### Final Verdict (End of Act III — "Indictment" — 3 Minutes)
-Every player (including Detained and Shaken players!) submits a final ballot with:
+Every player (including Detained players!) casts a final vote for:
 1. **The Killer** *(Determines Team Victory)*
 2. **The Accomplice(s)** *(Bonus)*
 3. **How & Why It Was Done** *(Bonus — Master Detective Award)*
@@ -87,12 +88,12 @@ Every player (including Detained and Shaken players!) submits a final ballot wit
 
 ---
 
-## 5. Round-by-Round Host Script (30–45 Minute Pacing)
+## 5. Round-by-Round Script (30–45 Minute Pacing)
 
-> **Target Runtime: ~40 Minutes** (flexes naturally between 30–45 min)
+> **Target Runtime: ~38 Minutes** (flexes naturally between 30–45 min)
 > - **Setup & Prologue:** 4 min *(1 min sheet skim + 2 min Prologue + 1 min Act I Opener)*
-> - **Act I:** 11 min *(7 min mingle + 3 min Town Hall Vote #1 + 1 min Blackout #1)*
-> - **Act II:** 11 min *(1 min Opener + 6 min mingle + 3 min Town Hall Vote #2 + 1 min Blackout #2)*
+> - **Act I:** 10 min *(7 min mingle + 3 min Public Vote #1 & Group Leader Election)*
+> - **Act II:** 9 min *(1 min Opener + 6 min mingle + 3 min Public Vote #2)*
 > - **Act III & Reveal:** 14 min *(1 min Opener + 7 min mingle + 3 min Final Verdict + 3 min Grand Reveal)*
 
 ### PROLOGUE (Read Aloud to Start the Game — 2 Min)
@@ -108,7 +109,7 @@ Every player (including Detained and Shaken players!) submits a final ballot wit
 
 ---
 
-### ACT I — THE LOCKED STUDY (7 Min Mingle + 3 Min Vote + 1 Min Blackout)
+### ACT I — THE LOCKED STUDY (7 Min Mingle + 3 Min Public Vote & Leader Election)
 **Unveil Exhibits:** Place **Exhibit A (Study Floor Sketch)** and **Exhibit B (Shattered Pocket Watch)** on the Evidence Board.
 
 **Act I Public Opening Script** *(Have Clara `#2`, Evelyn `#1`, Dr. Mercer `#4`, and Butler Graves `#3` read these lines aloud to kick off the room)*:
@@ -119,12 +120,12 @@ Every player (including Detained and Shaken players!) submits a final ballot wit
 5. **Dr. Julian Mercer (`#4`):** *"Ah, yes, I closed the lid so it wouldn't upset Evelyn. Arthur's watch always ran twelve minutes slow—he told me so himself just yesterday."*
 6. **Clara Sterling (`#2`):** *"Slow or not, the New Will is still on his desk—unsigned. Whoever wanted Arthur dead before 9:00 PM is standing in this room."*
 
-*(Start 7-minute timer. Remind players to complete their **Act I Mandatory Dialogue** right away! After 7 min, run **Town Hall Vote #1** [3 min] and **Blackout Phase #1** [1 min].)*
+*(Start 7-minute timer. Remind players to complete their **Act I Mandatory Dialogue** right away! After 7 min, run **Public Town Hall Vote #1 & Group Leader Election** [3 min].)*
 
 ---
 
-### ACT II — SHADOWS IN THE CLOCKWORK (6 Min Mingle + 3 Min Vote + 1 Min Blackout)
-**Unveil Exhibits:** Place **Exhibit C (Charred Audit Log "J.M.")** and **Exhibit D (Chronos Automaton Blueprint, Wax Cylinder & Study Re-Inspection)** on the Evidence Board.
+### ACT II — SHADOWS IN THE CLOCKWORK (6 Min Mingle + 3 Min Public Vote)
+**Unveil Exhibits:** Place **Exhibit C (Charred Audit Log "J.M.")**, **Exhibit D (Chronos Automaton Blueprint, Wax Cylinder & Study Re-Inspection)**, and **False Lead #1** on the Evidence Board.
 
 **Act II Public Opening Script** *(Have Jasper `#6`, Celeste `#7`, Victor `#5`, and Clara `#2` read aloud)*:
 1. **Clara Sterling (`#2`):** *"While the upstairs gallery was cleared, I inspected the Study fireplace and the Chronos Automaton. We have two new pieces of evidence—a half-burned 2008 audit log signed 'J.M.', and a scratched brass wax cylinder inside the Automaton."*
@@ -133,12 +134,12 @@ Every player (including Detained and Shaken players!) submits a final ballot wit
 4. **Victor Vance (`#5`):** *"Oh, spare us, Jasper! Everyone knows you've been tinkering in that generator room all week. And what about the wine? Dr. Mercer said he smelled poison in the wine—who poured Arthur's glass?!"*
 5. **Clara Sterling (`#2`):** *"Actually, Victor... look at our Study re-inspection on Exhibit D. In clear light, the wine glass on the desk is completely full and untouched—it was the water carafe that shattered in odorless water, and Arthur was slumped face-down!"*
 
-*(Start 6-minute timer. Players complete **Act II Mandatory Dialogue**. Run **Town Hall Vote #2** [3 min] and **Blackout Phase #2** [1 min].)*
+*(Start 6-minute timer. Players complete **Act II Mandatory Dialogue**. Run **Public Town Hall Vote #2** [3 min].)*
 
 ---
 
 ### ACT III — THE LAST CHIME (7 Min Mingle + 3 Min Final Verdict + 3 Min Reveal)
-**Unveil Exhibits:** Place **Exhibit E (2012 Employment Ledger & Arthur's Horologist Journal)** and **Exhibit F (Medical Vial Lab Note)** on the Evidence Board.
+**Unveil Exhibits:** Place **Exhibit E (2012 Employment Ledger & Arthur's Horologist Journal)**, **Exhibit F (Medical Vial Lab Note)**, and **False Lead #2** on the Evidence Board.
 
 **Act III Public Opening Script** *(Have Harriet `#8`, Clara `#2`, Thomas Graves `#3`, and Dr. Mercer `#4` read aloud)*:
 1. **Harriet Vance-Cole (`#8`):** *"Enough games. I found Arthur's private Horologist Journal and the Vance Precision Employment Ledger locked in his desk drawer—and I tested the residue in the Study using Arthur's chemistry kit."*

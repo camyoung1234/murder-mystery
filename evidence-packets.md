@@ -116,9 +116,9 @@ Print these exhibits (or project them via `companion/index.html`) and reveal the
 
 ---
 
-## OPTIONAL RED HERRING SLIPS (For Shadow Team Blackout Action: "Plant a False Lead")
+## ACT II & ACT III RED HERRING SLIPS (False Leads)
 
-If the Shadow Team chooses **"Plant a False Lead"** during a Blackout Phase, the Host places one of these slips on the Evidence Board without saying who put it there:
+Unveil **False Lead #1** on the Evidence Board at the start of **Act II**, and **False Lead #2** at the start of **Act III**:
 
 ### FALSE LEAD #1 — Torn Note Found Near the Generator Room
 > *"Found crumpled on the basement stairs: '9:00 PM sharp. Pull the main breaker. Don't let Evelyn see you. — V.'"*

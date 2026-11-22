@@ -471,7 +471,7 @@
         }
         const allyNames = accomplices.map(aid => `${BASE_CHARACTERS[aid - 1].name}`).join(", ");
         const allyLabel = accomplices.length === 1 ? "ally" : "allies";
-        special = `YOU ARE THE KILLER! Win by avoiding indictment in the Final Verdict (frame ${coreAccompliceBase.name} or ${wineSpikerBase.name}!). Your Shadow Team ${allyLabel}: ${allyNames}. During Blackouts, wake up to Intimidate 1 guest OR Plant a False Lead.`;
+        special = `YOU ARE THE KILLER! Win by avoiding indictment in the Final Verdict (frame ${coreAccompliceBase.name} or ${wineSpikerBase.name}!). Your Shadow Team ${allyLabel}: ${allyNames}. Try to win the Act I Group Leader vote (or get an ally elected) to control tie-breakers and extra detentions!`;
         secret = `In 2008, YOU were behind "${killerBase.scandalTitle}" (signed "${killerBase.initials}"). Tonight: at 8:15 PM you rigged the Chronos Automaton (8:55 PM voice + 9:00 PM carafe smash) and tried to burn the 2008 audit log in the Study fireplace; at 8:35 PM you blackmailed ${coreAccompliceBase.name} to cut the generator at 9:00 PM; at 8:42 PM you handed Arthur ${deliveryWithArticle} laced with concentrated Aconite (he died at 8:48 PM). You stood next to ${alibiWitnessBase.name} at 8:55 PM for an alibi, then rushed to the desk at 9:01 PM—pocketing the ${killerBase.deliveryItem} (and dropping your botanical-smudged handkerchief down the upstairs laundry chute at 9:04 PM) while slipping up by claiming you saw his chalk-pale lips (he was face-down!), smelled 'bitter-almond wine,' and lied about the 8:48 PM watch.`;
         clue = `STRATEGY: Stay calm! Let the room suspect ${wineSpikerBase.name} for drugging the wine and ${coreAccompliceBase.name} for the blackout and Exhibit C. If pressed on Exhibit E, claim Arthur's watch broke earlier or someone forged "${killerBase.initials}" to frame you!`;
         detention = `Searched from ${base.name}'s Effects: A folded dinner napkin smudged with faint fireplace soot and an unsigned note in ${base.name}'s handwriting: "Speak to Arthur privately before the 9:00 PM announcement—he cannot open that 2008 file tonight."`;
@@ -486,7 +486,7 @@
           .filter(aid => aid !== id)
           .map(aid => `${BASE_CHARACTERS[aid - 1].name}`);
         const fellowText = fellowAllies.length > 0 ? ` Fellow accomplice${fellowAllies.length > 1 ? "s" : ""}: ${fellowAllies.join(", ")}.` : "";
-        special = `YOU ARE ON THE SHADOW TEAM! You are allied with ${killerBase.name} and win ONLY if the Killer escapes indictment in the Final Verdict.${fellowText} Wake up with the Shadow Team during Blackout Phases.`;
+        special = `YOU ARE ON THE SHADOW TEAM! You are allied with ${killerBase.name} and win ONLY if the Killer escapes indictment in the Final Verdict.${fellowText} Support ${killerBase.name} in public Town Hall votes and try to win (or steer) the Act I Group Leader election!`;
         if (isCoreAcc) {
           secret = `${killerBase.name} caught your private scandal and blackmailed you into cutting the basement generator breaker for 15 seconds at 9:00 PM sharp! You didn't know ${killerBase.name} was going to murder Arthur, but if ${killerBase.name} goes down, you go to prison as an accessory. Worse, your initials (${base.initials}) appear on the burned Exhibit C audit log from 2008—even though you had no access to Archive Box #4 in 2008!`;
           detention = `Searched from ${base.name}'s Belongings: Heavy rubber-insulated electrical gloves (smelling of ozone from the generator breaker) and an unsigned blackmail note: '9:00 PM sharp. Fifteen seconds of dark, or your secret goes to the police.'`;
@@ -502,7 +502,7 @@
         team = "inspector";
         badge = "INNOCENT — INSPECTOR";
         badgeClass = "inspector";
-        special = "SPECIAL ABILITY (BLACKOUT PHASE): During each Blackout, if you are NOT Detained, the Host wakes you alone to secretly read ONE guest's Sealed Detention Card for 12 seconds!";
+        special = "LEAD FORENSIC WITNESS: You brought a field chemistry kit (used to produce Exhibit F in Act III) and lead the Evidence Board briefings in Acts II & III.";
         if (id !== 8) {
           secret += " You also brought a miniature field chemistry kit in your bag, which you will use between Acts II and III to produce Exhibit F (testing the wine vs. Arthur's cuff).";
           clue += " You also did a headcount in the Grand Hall at 9:00 PM and noticed someone was missing during the blackout.";
@@ -641,12 +641,12 @@
         </ul>`
       },
       {
-        id: "FL1", act: 0, title: "False Lead #1 — Crumpled Generator Note (Blackout Action)",
-        html: `<p><em>Found crumpled on the basement stairs immediately after the blackout:</em></p><pre>"9:00 PM sharp. Pull the main breaker. Don't let anyone see you. — ${wineSpikerBase.initials}"</pre>`
+        id: "FL1", act: 2, title: "False Lead #1 — Crumpled Generator Note",
+        html: `<p><em>Found crumpled on the basement stairs as guests regrouped before Act II:</em></p><pre>"9:00 PM sharp. Pull the main breaker. Don't let anyone see you. — ${wineSpikerBase.initials}"</pre>`
       },
       {
-        id: "FL2", act: 0, title: "False Lead #2 — Anonymous Library Rumor (Blackout Action)",
-        html: `<p><em>Slipped under the Library door during the blackout:</em></p><pre>"Check the Dining &amp; Sideboard! Someone wiped down the Bordeaux decanter left on the sideboard with an almond-scented handkerchief right before 9:00 PM."</pre>`
+        id: "FL2", act: 3, title: "False Lead #2 — Anonymous Library Rumor",
+        html: `<p><em>Found slipped under the Library door before Act III:</em></p><pre>"Check the Dining &amp; Sideboard! Someone wiped down the Bordeaux decanter left on the sideboard with an almond-scented handkerchief right before 9:00 PM."</pre>`
       }
     ];
 
@@ -673,7 +673,7 @@
       },
       act1: {
         label: "ACT I — THE LOCKED STUDY (7 MIN)",
-        sub: "Read Public Opener, unlock Exhibits A & B, mingle (7m), then Vote (3m) & Blackout (1m).",
+        sub: "Read Public Opener, unlock Exhibits A & B, mingle (7m), then Public Vote #1 (Detain 1 + Elect Group Leader).",
         html: `
           <div class="script-line"><div class="script-speaker">${escHtml(witnessBase.name)} (#${witnessId})</div>"Nobody touch a thing! The oak door was bolted from the inside, and the window drops eighty feet to the rocks. How on earth could someone kill him in a locked room?"</div>
           <div class="script-line"><div class="script-speaker">${escHtml(alibiWitnessBase.name)} (#${alibiWitnessId})</div>"He was shouting at someone at 8:55! We all heard him! Then at 9:00 the lights went out and—my God, was that a gunshot?"</div>
@@ -682,15 +682,9 @@
           <div class="script-line"><div class="script-speaker">${escHtml(killerBase.name)} (#${killerId})</div>"Ah, yes, I closed the lid so it wouldn't upset everyone. Arthur's watch always ran twelve minutes slow—he told me so himself just yesterday."</div>
           <div class="script-line"><div class="script-speaker">${escHtml(inspectorBase.name)} (#${inspectorId})</div>"Slow or not, the New Will is still on his desk—unsigned. Whoever wanted Arthur dead before 9:00 PM is standing in this room."</div>`
       },
-      blackout1: {
-        label: "BLACKOUT PHASE I (1 MIN)",
-        sub: "100% Spoiler-Free Automated Blackout — everyone closes their eyes!",
-        html: `<p style="margin-bottom:14px;">Click <strong>Launch Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team to make a silent tap, then waking the Inspector to privately inspect 1 Detention Card—so <strong>nobody has to sit out as a human host!</strong></p>
-        <button class="btn btn-gold" onclick="startAutoBlackout()">Launch Auto-Blackout Phase I</button>`
-      },
       act2: {
         label: "ACT II — SHADOWS IN THE CLOCKWORK (6 MIN)",
-        sub: "Read Public Opener, unlock Exhibits C & D, mingle (6m), then Vote (3m) & Blackout (1m).",
+        sub: "Read Public Opener, unlock Exhibits C, D & False Lead #1, mingle (6m), then Public Vote #2 (Detain 1 + Group Leader's Extra Detention).",
         html: `
           <div class="script-line"><div class="script-speaker">${escHtml(inspectorBase.name)} (#${inspectorId})</div>"While the upstairs gallery was cleared, we inspected the Study fireplace and the Chronos Automaton. We have two new exhibits—${exhibitCScriptDesc}, and a scratched brass wax cylinder inside the Automaton."</div>
           <div class="script-line"><div class="script-speaker">${escHtml(automatonSpeakerBase.name)} (#${automatonSpeakerId})</div>${automatonLine}</div>
@@ -698,15 +692,9 @@
           <div class="script-line"><div class="script-speaker">${escHtml(wineSpikerBase.name)} (#${wineSpikerId})</div>"Oh, spare us! And what about the wine? ${escHtml(spokenName(killerBase))} said it smelled of poison—who poured Arthur's glass?!"</div>
           <div class="script-line"><div class="script-speaker">${escHtml(witnessBase.name)} (#${witnessId})</div>"Actually... look at our Study re-inspection on Exhibit D. In clear light, the wine glass on the desk is completely full and untouched—it was the water carafe that shattered in odorless water, and Arthur was slumped face-down!"</div>`
       },
-      blackout2: {
-        label: "BLACKOUT PHASE II (1 MIN)",
-        sub: "100% Spoiler-Free Automated Blackout — everyone closes their eyes!",
-        html: `<p style="margin-bottom:14px;">Click <strong>Launch Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team, then waking the Inspector—with zero spoilers for anyone!</p>
-        <button class="btn btn-gold" onclick="startAutoBlackout()">Launch Auto-Blackout Phase II</button>`
-      },
       act3: {
         label: "ACT III — THE LAST CHIME (7 MIN)",
-        sub: "Read Public Opener, unlock Exhibits E & F, mingle (7m), then Final Verdict (3m) & Reveal!",
+        sub: "Read Public Opener, unlock Exhibits E, F & False Lead #2, mingle (7m), then Final Verdict (3m) & Reveal!",
         html: `
           <div class="script-line"><div class="script-speaker">${escHtml(inspectorBase.name)} (#${inspectorId})</div>"Enough games. We unlocked Arthur's private Horologist Journal and the 2008 Archive Ledger—and tested the residue in the Study with a field chemistry kit."</div>
           <div class="script-line"><div class="script-speaker">${escHtml(witnessBase.name)} (#${witnessId})</div>"Look closely at Exhibit E and Exhibit F before you cast your final vote. The single cup of chamomile tea poured at 8:40 PM was untouched and barely lukewarm by 9:02 PM—and Arthur never touched his wine."</div>

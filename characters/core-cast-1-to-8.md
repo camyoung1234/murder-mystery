@@ -1,6 +1,6 @@
 # Core Cast Dossiers — Players to (Required for All Games)
 
-> **Host Instructions:** Give each player ONLY their own dossier. Cut out or fold each player's **Sealed Detention Card** into a separate envelope labeled with their name—do NOT let them open or read it aloud unless they are **Detained** in a Town Hall Vote (or inspected by Harriet during a Blackout).
+> **Instructions:** Give each player ONLY their own dossier. Cut out or fold each player's **Sealed Detention Card** into a separate envelope labeled with their name—do NOT let them open or read it aloud unless they are **Detained** in a public Town Hall Vote (or by the elected Group Leader).
 
 ---
 
@@ -76,7 +76,7 @@ You were secretly skimming small sums from the manor's wine cellar budget to pay
 ## CHARACTER: DR. JULIAN MERCER — **THE KILLER (SHADOW TEAM)**
 **Role:** Arthur's Personal Physician | **Alignment:** **SHADOW TEAM (KILLER)**
 
-> **SECRET ROLE:** You murdered Lord Arthur Vance! Your goal is to **avoid being indicted in the Final Verdict** (ideally by framing **Jasper Moore** or **Victor Vance**). You are allied with **Jasper Moore** (and at 14+ players, Damien Cross; at 18+ players, Nadia Vance). During Blackout Phases, you wake up with your Shadow Team to **Intimidate** a guest or **Plant a False Lead**.
+> **SECRET ROLE:** You murdered Lord Arthur Vance! Your goal is to **avoid being indicted in the Final Verdict** (ideally by framing **Jasper Moore** or **Victor Vance**). You are allied with **Jasper Moore** (and at 14+ players, Damien Cross; at 18+ players, Nadia Vance). Try to win the Act I Group Leader vote (or get an ally elected) to control tie-breakers and extra detentions!
 
 ### What You Actually Did
 - In **2008**, as Chief Resident at *St. Jude's Clinic*, you falsified **Calibration Log 08-B ("J.M.")** after a fatal dosing error. Arthur covered it up to keep you as his private doctor—until he decided to publish the 2008 audit in his New Will.
@@ -121,7 +121,7 @@ At **7:58 PM**, you snuck into the **Dining & Sideboard** and slipped **chloral 
 ## CHARACTER: JASPER MOORE — **THE ACCOMPLICE (SHADOW TEAM)**
 **Role:** Chief Engineer at Vance Precision | **Alignment:** **SHADOW TEAM (ACCOMPLICE)**
 
-> **SECRET ROLE:** You are **Dr. Julian Mercer's blackmailed Accomplice**! You win ONLY if **Dr. Mercer escapes indictment** in the Final Verdict. During Blackout Phases, you wake up with Dr. Mercer (and any other Shadow Team members) to coordinate sabotage.
+> **SECRET ROLE:** You are **Dr. Julian Mercer's blackmailed Accomplice**! You win ONLY if **Dr. Mercer escapes indictment** in the Final Verdict. Support Dr. Mercer in public Town Hall votes and try to win (or steer) the Act I Group Leader election!
 
 ### What You Actually Did
 - You have been secretly selling Vance Precision clockwork blueprints to a rival CEO. Last week, while **Dr. Mercer** was treating a cut on your hand in the workshop, he saw the stolen blueprints and threatened to turn you in unless you did one favor tonight: **cut the manor's backup generator breaker for 15 seconds at 9:00 PM sharp.**
@@ -163,7 +163,7 @@ At **8:20 PM**, you snuck up to the Study gallery to peek at the Chronos Automat
 ## CHARACTER: HARRIET VANCE-COLE — **THE INSPECTOR (INNOCENT)**
 **Role:** Arthur's Estranged Younger Sister & Retired Magistrate | **Alignment:** **INNOCENT (SPECIAL ROLE: INSPECTOR)**
 
-> **SPECIAL ABILITY (BLACKOUT PHASE):** During each **Blackout Phase** (between Act I→II and Act II→III), if you are NOT Detained, the Host will wake you up alone. Silently point to **ONE player**, and the Host will let you **secretly read their Sealed Detention Card** for 15 seconds! Use what you learn carefully—if you reveal you're the Inspector too early, the Shadow Team will **Intimidate** you to strip your vote!
+> **LEAD FORENSIC WITNESS:** You brought a miniature field chemistry kit in your bag (used to produce **Exhibit F** in Act III) and lead the room's Evidence Board briefings in Acts II & III.
 
 ### Backstory & Public Persona
 You are 66, sharp-eyed, no-nonsense, and spent 25 years as a county magistrate. You and Arthur barely spoke for a decade because you suspected he covered up something rotten at Vance Precision back in 2008. Tonight, Arthur finally invited you to witness his "penance."

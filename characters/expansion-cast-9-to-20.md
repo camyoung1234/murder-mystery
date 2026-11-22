@@ -114,7 +114,7 @@ Last Tuesday, Arthur confessed to you that he had spent eighteen years **"shield
 ## CHARACTER: DAMIEN CROSS — **SHADOW ACCOMPLICE #2 (Active at 14+ Players)**
 **Role:** Vance Precision Security Consultant & Corporate Fixer | **Alignment:** **SHADOW TEAM (ACCOMPLICE)**
 
-> **SECRET ROLE:** You are **Dr. Julian Mercer's** hired corporate fixer and a member of the **Shadow Team**! You win ONLY if **Dr. Mercer escapes indictment** in the Final Verdict. During Blackout Phases, wake up with Dr. Mercer and Jasper to coordinate sabotage.
+> **SECRET ROLE:** You are **Dr. Julian Mercer's** hired corporate fixer and a member of the **Shadow Team**! You win ONLY if **Dr. Mercer escapes indictment** in the Final Verdict. Support Dr. Mercer in public Town Hall votes and try to steer the Act I Group Leader election!
 
 ### What You Actually Did
 - Years ago, you were paid to bury the **2008 St. Jude's Clinic** investigation alongside Arthur and Dr. Mercer. If Arthur's transparency foundation releases Archive Box #4, **you go to federal prison for obstruction of justice** right alongside Mercer!
@@ -200,7 +200,7 @@ You secretly copied Arthur's **New Will** onto a thumb drive because you thought
 ## CHARACTER: NADIA VANCE — **SHADOW ACCOMPLICE #3 (Active at 18+ Players)**
 **Role:** Medical Student & Dr. Mercer's Protégé | **Alignment:** **SHADOW TEAM (ACCOMPLICE)**
 
-> **SECRET ROLE:** You are Arthur's distant cousin, a brilliant pharmacology student, and **Dr. Julian Mercer's** devoted protégé—and a member of the **Shadow Team**! You win ONLY if **Dr. Mercer escapes indictment** in the Final Verdict. During Blackout Phases, wake up with Dr. Mercer, Jasper, and Damien.
+> **SECRET ROLE:** You are Arthur's distant cousin, a brilliant pharmacology student, and **Dr. Julian Mercer's** devoted protégé—and a member of the **Shadow Team**! You win ONLY if **Dr. Mercer escapes indictment** in the Final Verdict. Support Dr. Mercer in public Town Hall votes and try to steer the Act I Group Leader election!
 
 ### What You Actually Did
 - Two days ago, Dr. Mercer (who is funding your medical school tuition and promising you a residency!) asked you to extract **concentrated Aconite** from the university's botanical conservatory for a "confidential cardiac research paper."

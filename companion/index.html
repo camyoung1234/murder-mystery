@@ -320,7 +320,8 @@
     .badge-shadow { background: var(--crimson-bg); color: #ff7b7b; border: 1px solid var(--crimson); }
     .badge-inspector { background: var(--emerald-bg); color: #6be0a3; border: 1px solid var(--emerald); }
     .badge-detained { background: var(--crimson); color: #fff; }
-    .badge-shaken { background: #b36212; color: #fff; }
+    .badge-leader { background: var(--gold); color: #12151e; }
+    .char-card.leader { border-color: var(--gold); }
 
     .guest-input {
       background: var(--surface);
@@ -441,32 +442,6 @@
     .modal-box ul { margin: 10px 0 10px 20px; }
     .modal-box li { margin-bottom: 6px; }
 
-    /* Blackout Screen */
-    .blackout-overlay {
-      position: fixed;
-      inset: 0;
-      background: #020204;
-      z-index: 300;
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 32px;
-    }
-    .blackout-overlay.open { display: flex; }
-    .blackout-overlay h1 {
-      color: var(--gold);
-      font-size: 2.5rem;
-      margin-bottom: 12px;
-    }
-    .blackout-overlay p {
-      color: var(--muted);
-      max-width: 560px;
-      font-size: 1.1rem;
-      margin-bottom: 28px;
-    }
-
     .map-pre {
       background: #090b10;
       color: var(--gold);
@@ -498,14 +473,13 @@
     </div>
 
     <div class="header-controls">
-      <label class="toggle-pill active" id="voiceToggle" onclick="toggleVoice()" title="Reads Prologue & Blackout instructions aloud so NO human host has to sit out">
+      <label class="toggle-pill active" id="voiceToggle" onclick="toggleVoice()" title="Reads Prologue & Act scripts aloud so NO human host has to sit out">
         <span id="voiceLabel">Voice Auto-Host: ON</span>
       </label>
       <label class="toggle-pill active" id="tvModeToggle" title="Hides Shadow Team roles & spoilers so everyone (including you!) can play blind">
         <input type="checkbox" id="tvModeCheckbox" checked style="display:none" />
         <span id="tvModeLabel">Spoiler-Free Mode: ON</span>
       </label>
-      <button class="btn btn-gold btn-sm" onclick="startAutoBlackout()">Start Auto-Blackout</button>
       <button class="btn btn-sm" onclick="resetGame()">Reset</button>
     </div>
   </header>
@@ -569,9 +543,7 @@
           <div style="display:flex; gap:8px; flex-wrap:wrap;">
             <button class="btn btn-sm" onclick="selectAct('prologue')">Prologue</button>
             <button class="btn btn-sm" onclick="selectAct('act1')">Act I</button>
-            <button class="btn btn-sm" onclick="selectAct('blackout1')">Blackout I</button>
             <button class="btn btn-sm" onclick="selectAct('act2')">Act II</button>
-            <button class="btn btn-sm" onclick="selectAct('blackout2')">Blackout II</button>
             <button class="btn btn-sm" onclick="selectAct('act3')">Act III</button>
             <button class="btn btn-gold btn-sm" onclick="narrateCurrentAct()">Read Aloud</button>
           </div>
@@ -597,8 +569,8 @@
           <h2>Exhibits &amp; False Leads</h2>
           <div style="display:flex; gap:8px; flex-wrap:wrap;">
             <button class="btn btn-sm" onclick="unlockActExhibits(1)">Unlock Act I (A–B)</button>
-            <button class="btn btn-sm" onclick="unlockActExhibits(2)">Unlock Act II (C–D)</button>
-            <button class="btn btn-sm" onclick="unlockActExhibits(3)">Unlock Act III (E–F)</button>
+            <button class="btn btn-sm" onclick="unlockActExhibits(2)">Unlock Act II (C–D + FL1)</button>
+            <button class="btn btn-sm" onclick="unlockActExhibits(3)">Unlock Act III (E–F + FL2)</button>
           </div>
         </div>
         <div class="evidence-grid" id="evidenceGrid"></div>
@@ -609,15 +581,15 @@
     <section id="tab-voting" class="tab-panel">
       <div class="card">
         <div class="card-header">
-          <h2>Town Hall Vote — "Search &amp; Detain"</h2>
+          <h2>Town Hall Vote — Public "Search &amp; Detain"</h2>
           <div style="display:flex; gap:8px; flex-wrap:wrap;">
             <button class="btn btn-crimson btn-sm" onclick="detainTopVoted()">Detain Top Suspect &amp; Open Card</button>
             <button class="btn btn-sm" onclick="clearVotes()">Clear Ballots</button>
-            <button class="btn btn-sm" onclick="clearShaken()">Clear Shaken</button>
           </div>
         </div>
+        <div id="leaderBanner" style="margin-bottom:12px; padding:10px 14px; border-radius:6px; border:1px solid var(--gold-dim); background:rgba(212,175,55,0.08); font-size:0.9rem;"></div>
         <p style="color:var(--muted); margin-bottom:14px; font-size:0.9rem;">
-          Tally secret ballots below. Detained players remain in the game, but their <strong>Sealed Detention Card</strong> is immediately read aloud, and they lose their next Town Hall vote &amp; Blackout action.
+          All Town Hall votes are <strong>public</strong>. At the end of Act I, publicly vote to <strong>Detain 1 suspect</strong> AND elect <strong>1 Group Leader</strong> (who breaks all detention ties and picks <strong>1 additional player</strong> to Detain). Detained players remain in the game, read their <strong>Sealed Detention Card</strong> aloud, and skip their next Town Hall vote.
         </p>
         <div class="cast-grid" id="votingCastGrid"></div>
       </div>
@@ -634,7 +606,7 @@
           </div>
         </div>
         <p style="color:var(--muted); margin-bottom:14px;">
-          Every player (including Detained &amp; Shaken players) casts 1 final indictment vote on the <strong>Town Hall</strong> tab (or below). Click <strong>Check Verdict Result</strong> to see which team wins!
+          Every player (including Detained players) casts 1 final public indictment vote on the <strong>Town Hall</strong> tab. Click <strong>Check Verdict Result</strong> to see which team wins!
         </p>
         <div id="verdictResultBanner" style="margin-bottom:18px;"></div>
         <div id="grandRevealPanel" style="display:none;" class="reveal-box"></div>
@@ -653,14 +625,6 @@
     </div>
   </div>
 
-  <!-- Full-Screen Automated Spoiler-Free Blackout Wizard -->
-  <div class="blackout-overlay" id="blackoutOverlay" style="overflow-y:auto;">
-    <div id="blackoutContent" style="max-width:760px; width:100%;">
-      <h1 class="serif">THE LIGHTS GO OUT...</h1>
-      <p>Everyone close your eyes and gently tap your knees.</p>
-    </div>
-  </div>
-
   <script>
     const E = window.RavenshollowEngine;
     const urlParams = new URLSearchParams(window.location.search);
@@ -672,7 +636,7 @@
       currentAct: "prologue",
       guestNames: {},
       detained: [],
-      shaken: [],
+      leaderId: null,
       votes: {},
       unlockedExhibits: []
     };
@@ -735,7 +699,7 @@
       const dec = E.decodeCaseCode(val);
       state.caseCode = dec.code;
       state.detained = [];
-      state.shaken = [];
+      state.leaderId = null;
       state.votes = {};
       state.unlockedExhibits = [];
       document.getElementById("grandRevealPanel").style.display = "none";
@@ -748,7 +712,7 @@
     function rollNewRandomCase() {
       state.caseCode = E.rollRandomCase(state.playerCount);
       state.detained = [];
-      state.shaken = [];
+      state.leaderId = null;
       state.votes = {};
       state.unlockedExhibits = [];
       document.getElementById("grandRevealPanel").style.display = "none";
@@ -759,6 +723,7 @@
     }
 
     function selectAct(actKey) {
+      if (!scenario.acts[actKey]) actKey = "prologue";
       state.currentAct = actKey;
       const act = scenario.acts[actKey];
       document.getElementById("currentPhaseLabel").textContent = act.label;
@@ -767,7 +732,6 @@
       if (actKey === "act1") setTimer(7);
       if (actKey === "act2") setTimer(6);
       if (actKey === "act3") setTimer(7);
-      if (actKey === "blackout1" || actKey === "blackout2") setTimer(1);
       saveState();
     }
 
@@ -822,15 +786,8 @@
       renderVoting();
     }
 
-    function toggleShaken(charId) {
-      if (state.shaken.includes(charId)) state.shaken = state.shaken.filter(id => id !== charId);
-      else state.shaken.push(charId);
-      saveState();
-      renderVoting();
-    }
-
-    function clearShaken() {
-      state.shaken = [];
+    function toggleLeader(charId) {
+      state.leaderId = (state.leaderId === charId) ? null : charId;
       saveState();
       renderVoting();
     }
@@ -964,146 +921,6 @@
       document.getElementById("modalOverlay").classList.add("open");
     }
 
-    // Spoiler-Free Automated Blackout Wizard (Dynamic Killer & Inspector IDs!)
-    let boState = { pendingShaken: null, pendingFalseLead: false, inspectTimer: null };
-
-    function startAutoBlackout() {
-      boState = { pendingShaken: null, pendingFalseLead: false, inspectTimer: null };
-      document.getElementById("blackoutOverlay").classList.add("open");
-      playChime();
-      document.getElementById("blackoutContent").innerHTML = `
-        <h1 class="serif">THE LIGHTS GO OUT...</h1>
-        <p>Everyone, close your eyes and gently tap your knees.<br/>No human host is needed — the app will guide the Blackout automatically.</p>
-        <p style="font-size:0.9rem; color:var(--gold);">Starting Shadow Team turn in 5 seconds...</p>
-        <button class="btn btn-sm" onclick="closeBlackoutScreen()" style="margin-top:10px;">Cancel Blackout</button>`;
-      speakText("The lights go out across Ravenshollow Manor. Everyone, close your eyes and gently tap your knees.");
-      setTimeout(() => {
-        if (document.getElementById("blackoutOverlay").classList.contains("open")) boShadowStep();
-      }, 5500);
-    }
-
-    function boShadowStep() {
-      const box = document.getElementById("blackoutContent");
-      const killerDetained = state.detained.includes(scenario.killerId);
-      const active = getActiveCharacters();
-      if (killerDetained) {
-        box.innerHTML = `
-          <h1 class="serif" style="font-size:1.9rem;">SHADOW TEAM — SILENT CHECK</h1>
-          <p>The Killer is currently Detained, so no sabotage may occur this Blackout. Tap <strong>Continue</strong> to keep cover and close your eyes.</p>
-          <button class="btn btn-gold" onclick="boAfterShadow()">Continue &amp; Close Eyes</button>`;
-      } else {
-        const guestBtns = active.map(c => {
-          const gName = state.guestNames[c.id] ? ` (${state.guestNames[c.id]})` : "";
-          return `<button class="btn btn-sm" style="margin:4px;" onclick="boPickShaken(${c.id})">#${c.id} ${c.name}${gName}</button>`;
-        }).join("");
-        box.innerHTML = `
-          <h1 class="serif" style="font-size:1.9rem;">SHADOW TEAM — OPEN YOUR EYES</h1>
-          <p style="font-size:0.95rem; margin-bottom:14px;">Silently recognize each other. Tap <strong>ONE guest to Intimidate (Shaken)</strong> OR choose <strong>Plant a False Lead</strong>, then close your eyes.</p>
-          <div style="margin-bottom:16px; display:flex; flex-wrap:wrap; justify-content:center; gap:4px;">${guestBtns}</div>
-          <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
-            <button class="btn btn-crimson" onclick="boPickFalseLead()">Plant a False Lead on Evidence Board</button>
-            <button class="btn" onclick="boAfterShadow()">Skip Action</button>
-          </div>`;
-      }
-      speakText("Shadow Team, open your eyes. Silently recognize each other. Quietly step to the screen, make your choice, and then close your eyes.");
-    }
-
-    function boPickShaken(charId) { boState.pendingShaken = charId; boAfterShadow(); }
-    function boPickFalseLead() { boState.pendingFalseLead = true; boAfterShadow(); }
-
-    function boAfterShadow() {
-      document.getElementById("blackoutContent").innerHTML = `
-        <h1 class="serif" style="font-size:1.9rem;">SHADOW TEAM — CLOSE YOUR EYES</h1>
-        <p>Choice recorded secretly. Moving to Inspector turn in 4 seconds...</p>`;
-      speakText("Shadow Team, close your eyes.");
-      setTimeout(() => {
-        if (document.getElementById("blackoutOverlay").classList.contains("open")) boInspectorStep();
-      }, 4200);
-    }
-
-    function boInspectorStep() {
-      const box = document.getElementById("blackoutContent");
-      const inspectorDetained = state.detained.includes(scenario.inspectorId);
-      const active = getActiveCharacters();
-      if (inspectorDetained) {
-        box.innerHTML = `
-          <h1 class="serif" style="font-size:1.9rem;">INSPECTOR — SILENT CHECK</h1>
-          <p>The Inspector is currently Detained and cannot inspect a card this Blackout. Tap <strong>Continue</strong> to keep cover and close your eyes.</p>
-          <button class="btn btn-gold" onclick="finishAutoBlackout()">Continue &amp; Close Eyes</button>`;
-      } else {
-        const guestBtns = active.map(c => {
-          const gName = state.guestNames[c.id] ? ` (${state.guestNames[c.id]})` : "";
-          return `<button class="btn btn-sm" style="margin:4px;" onclick="boInspectCard(${c.id})">#${c.id} ${c.name}${gName}</button>`;
-        }).join("");
-        box.innerHTML = `
-          <h1 class="serif" style="font-size:1.9rem;">INSPECTOR — OPEN YOUR EYES</h1>
-          <p style="font-size:0.95rem; margin-bottom:14px;">Quietly step to the screen and tap <strong>ONE guest</strong> to privately read their Sealed Detention Card for 12 seconds.</p>
-          <div style="margin-bottom:16px; display:flex; flex-wrap:wrap; justify-content:center; gap:4px;">${guestBtns}</div>
-          <button class="btn" onclick="finishAutoBlackout()">Skip Inspection</button>`;
-      }
-      speakText("Inspector, open your eyes. Quietly step to the screen and select one guest to inspect their sealed detention card.");
-    }
-
-    function boInspectCard(charId) {
-      const ch = scenario.characters.find(c => c.id === charId);
-      let secs = 12;
-      document.getElementById("blackoutContent").innerHTML = `
-        <div style="background:var(--parchment); color:var(--parchment-text); padding:22px; border-radius:8px; border:2px solid var(--gold); text-align:left; margin-bottom:16px;">
-          <h2 class="serif" style="color:#6b1d1d; margin-bottom:8px;">PRIVATE INSPECTION — #${ch.id} ${ch.name}</h2>
-          <p style="color:#221d15; font-size:1rem; line-height:1.6;">${ch.detention}</p>
-        </div>
-        <p style="color:var(--gold); margin-bottom:12px;">Hiding automatically in <strong id="boInspectSec">${secs}</strong>s...</p>
-        <button class="btn btn-gold" onclick="boAfterInspector()">Done — Hide Card &amp; Close Eyes</button>`;
-      boState.inspectTimer = setInterval(() => {
-        secs--;
-        const el = document.getElementById("boInspectSec");
-        if (el) el.textContent = secs;
-        if (secs <= 0) { clearInterval(boState.inspectTimer); boAfterInspector(); }
-      }, 1000);
-    }
-
-    function boAfterInspector() {
-      clearInterval(boState.inspectTimer);
-      document.getElementById("blackoutContent").innerHTML = `
-        <h1 class="serif" style="font-size:1.9rem;">INSPECTOR — CLOSE YOUR EYES</h1>
-        <p>Restoring lights in 3 seconds...</p>`;
-      speakText("Inspector, close your eyes.");
-      setTimeout(() => {
-        if (document.getElementById("blackoutOverlay").classList.contains("open")) finishAutoBlackout();
-      }, 3200);
-    }
-
-    function finishAutoBlackout() {
-      clearInterval(boState.inspectTimer);
-      let summary = "The lights flicker back on. All guests appear unharmed.";
-      if (boState.pendingShaken) {
-        if (!state.shaken.includes(boState.pendingShaken)) state.shaken.push(boState.pendingShaken);
-        const ch = scenario.characters.find(c => c.id === boState.pendingShaken);
-        const gName = state.guestNames[ch.id] ? ` (${state.guestNames[ch.id]})` : "";
-        summary = `In the darkness, ${ch.name}${gName} was cornered and threatened! They are SHAKEN and cannot vote in the next Town Hall.`;
-      } else if (boState.pendingFalseLead) {
-        const nextFL = !state.unlockedExhibits.includes("FL1") ? "FL1" : (!state.unlockedExhibits.includes("FL2") ? "FL2" : null);
-        if (nextFL) {
-          state.unlockedExhibits.push(nextFL);
-          summary = "In the darkness, a mysterious slip of paper was left behind! Check the Evidence Board for a newly discovered clue.";
-        }
-      }
-      saveState();
-      renderAll();
-      playChime();
-      document.getElementById("blackoutContent").innerHTML = `
-        <h1 class="serif">THE LIGHTS RETURN!</h1>
-        <p style="color:var(--text); font-size:1.15rem; margin-bottom:24px;">${summary}</p>
-        <button class="btn btn-gold" onclick="closeBlackoutScreen()">Return to Manor Dashboard</button>`;
-      speakText("Everyone, open your eyes! " + summary);
-    }
-
-    function closeBlackoutScreen() {
-      clearInterval(boState.inspectTimer);
-      if (window.speechSynthesis) window.speechSynthesis.cancel();
-      document.getElementById("blackoutOverlay").classList.remove("open");
-    }
-
     function resetGame() {
       if (!confirm("Reset all votes, detentions, unlocked exhibits, and guest names?")) return;
       localStorage.removeItem("ravenshollow_state_v2");
@@ -1150,7 +967,8 @@
     function renderEvidence() {
       document.getElementById("evidenceGrid").innerHTML = scenario.exhibits.map(ex => {
         const unlocked = state.unlockedExhibits.includes(ex.id);
-        const tag = ex.act > 0 ? `Act ${ex.act}` : "Blackout False Lead";
+        const isFL = ex.id.startsWith("FL");
+        const tag = `Act ${ex.act}${isFL ? " • False Lead" : ""}`;
         return `<div class="exhibit-card ${unlocked ? "unlocked" : "locked"}">
           <div>
             <div style="font-size:0.75rem; color:var(--gold); text-transform:uppercase; margin-bottom:4px;">${tag}</div>
@@ -1165,12 +983,21 @@
     }
 
     function renderVoting() {
+      const leaderChar = state.leaderId ? scenario.characters.find(c => c.id === state.leaderId) : null;
+      const leaderBanner = document.getElementById("leaderBanner");
+      if (leaderChar) {
+        const lgName = state.guestNames[leaderChar.id] ? ` (${state.guestNames[leaderChar.id]})` : "";
+        leaderBanner.innerHTML = `<strong style="color:var(--gold);">Elected Group Leader:</strong> #${leaderChar.id} ${leaderChar.name}${lgName} &mdash; Breaks all detention ties &amp; picks <strong>1 extra player to Detain</strong>.`;
+      } else {
+        leaderBanner.innerHTML = `<strong style="color:var(--gold);">Elected Group Leader:</strong> <em>None elected yet</em> &mdash; Hold a public vote at the end of Act I and click <strong>Leader</strong> on the winner.`;
+      }
+
       document.getElementById("votingCastGrid").innerHTML = getActiveCharacters().map(c => {
         const isDetained = state.detained.includes(c.id);
-        const isShaken = state.shaken.includes(c.id);
+        const isLeader = state.leaderId === c.id;
         const v = state.votes[c.id] || 0;
         const gName = state.guestNames[c.id] ? ` — ${state.guestNames[c.id]}` : "";
-        return `<div class="char-card ${isDetained ? "detained" : ""} ${isShaken ? "shaken" : ""}">
+        return `<div class="char-card ${isDetained ? "detained" : ""} ${isLeader ? "leader" : ""}">
           <div class="char-top">
             <div>
               <span class="char-num">#${c.id}</span>
@@ -1178,8 +1005,8 @@
               <div class="char-role">${c.role}${gName}</div>
             </div>
             <div style="display:flex; gap:4px; flex-wrap:wrap;">
+              ${isLeader ? `<span class="badge badge-leader">GROUP LEADER</span>` : ""}
               ${isDetained ? `<span class="badge badge-detained">DETAINED</span>` : ""}
-              ${isShaken ? `<span class="badge badge-shaken">SHAKEN</span>` : ""}
             </div>
           </div>
           <div class="vote-controls">
@@ -1189,7 +1016,7 @@
               <button class="btn btn-sm btn-gold" onclick="adjustVote(${c.id}, 1)">+ Vote</button>
             </div>
             <div style="display:flex; gap:6px;">
-              <button class="btn btn-sm" onclick="toggleShaken(${c.id})" title="Mark Intimidated in Blackout">Shaken</button>
+              <button class="btn btn-sm ${isLeader ? "btn-gold" : ""}" onclick="toggleLeader(${c.id})" title="Elect as Act I Group Leader">${isLeader ? "Leader ★" : "Leader"}</button>
               ${isDetained
                 ? `<button class="btn btn-sm btn-crimson" onclick="openDetentionModal(${c.id})">Card</button>`
                 : `<button class="btn btn-sm" onclick="detainCharacter(${c.id})">Detain</button>`}

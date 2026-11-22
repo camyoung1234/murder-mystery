@@ -341,12 +341,12 @@
           <div class="role-box">
             <div class="role-label">Shadow Team — Accomplice${sc.accomplices.length > 1 ? "s" : ""} (${sc.accomplices.length})</div>
             <strong>${accompliceList}</strong><br/>
-            <span>Core Blackout Accomplice: <strong>${A.name} (#${A.id})</strong></span>
+            <span>9:00 PM Breaker Accomplice: <strong>${A.name} (#${A.id})</strong></span>
           </div>
           <div class="role-box inspector">
-            <div class="role-label">Innocent — Inspector (Blackout Power)</div>
+            <div class="role-label">Innocent — Lead Forensic Witness</div>
             <strong>${I.name} (#${I.id})</strong><br/>
-            <span>Wakes during each Blackout (if not Detained) to inspect 1 Sealed Detention Card.</span>
+            <span>Brings the field chemistry kit (Exhibit F) &amp; leads Evidence Board briefings.</span>
           </div>
           <div class="role-box">
             <div class="role-label">Key Story Anchors (Innocent)</div>
@@ -369,7 +369,7 @@
           <li><strong>8:45 PM:</strong> Arthur enters his Study alone, bolts the oak door from the inside, and uses the laced item. He never touches his tea or his wine.</li>
           <li><strong>8:48 PM (Actual Time of Death):</strong> Arthur suffers sudden cardiac arrest, collapses <strong>face-down</strong> onto his desk blotter, and smashes his gold pocket watch—freezing its hands at <strong>8:48 PM</strong>.</li>
           <li><strong>8:55 PM (The Alibi):</strong> The Automaton plays Arthur's recorded shout while <strong>${K.name} (#${K.id})</strong> stands right beside <strong>${AW.name} (#${AW.id})</strong> in the Grand Hall.</li>
-          <li><strong>9:00 PM (The Blackout):</strong> <strong>${A.name} (#${A.id})</strong> cuts the generator breaker for 15 seconds while the Automaton counterweight smashes the <strong>water carafe</strong>.</li>
+          <li><strong>9:00 PM (The Power Cut):</strong> <strong>${A.name} (#${A.id})</strong> cuts the generator breaker for 15 seconds while the Automaton counterweight smashes the <strong>water carafe</strong>.</li>
           <li><strong>9:01 PM (The Cover-Up):</strong> Guests break down the bolted Study door. <strong>${K.name} (#${K.id})</strong> rushes to Arthur first, rolls him over, snaps the 8:48 PM pocket watch shut (claiming it <em>"always ran twelve minutes slow"</em>), and slips up by claiming to have seen Arthur's <em>"chalk-pale lips"</em> and smelled <em>"bitter almonds from the spilled wine."</em></li>
         </ul>
 
@@ -400,32 +400,29 @@
 
         <div class="page-break"></div>
 
-        <h2>4. Voting, Detention &amp; Blackout Narration (Synced to Case ${sc.code})</h2>
+        <h2>4. Public Voting, Group Leader &amp; Detention Rules (Case ${sc.code})</h2>
         <ul>
-          <li><strong>Town Hall Votes (End of Act I &amp; Act II — 3 min):</strong> 2 min rapid debate + 1 min vote to <strong>Search &amp; Detain</strong> 1 suspect. Detained players stay in the game, keep mingling, and complete all dialogues—but their <strong>Sealed Detention Card</strong> is immediately read aloud, and they skip their next Town Hall vote &amp; Blackout action.</li>
-          <li><strong>Blackout Phases (Between Act I&rarr;II and Act II&rarr;III — 1 min):</strong> Dim lights, everyone closes their eyes and lightly taps their knees:
-            <ol style="margin-top:4px;">
-              <li><strong>Shadow Team Wakes (25 sec):</strong> <em>"Shadow Team, open your eyes and silently recognize each other. If <strong>${K.name} (#${K.id})</strong> is not Detained, point silently to ONE guest to <strong>Intimidate (Shaken)</strong>—OR hold up TWO fingers to <strong>Plant a False Lead</strong> on the Evidence Board. Shadow Team, close your eyes."</em></li>
-              <li><strong>Inspector Wakes (25 sec):</strong> <em>"Inspector <strong>${I.name} (#${I.id})</strong>, if you are not Detained, open your eyes and point silently to ONE player whose Sealed Detention Card you wish to read."</em> (Show that card for 12 seconds.) <em>"Inspector, close your eyes."</em></li>
-              <li><strong>Lights Up (10 sec):</strong> Announce who was Shaken (cannot vote in next Town Hall) OR place False Lead #1 / #2 on the Evidence Board.</li>
-            </ol>
-          </li>
+          <li><strong>All Votes Are Public (No Host Needed):</strong> Every vote is conducted publicly among all players (show of hands or simultaneous pointing)—no private subgroup votes or eyes-closed Blackout phases.</li>
+          <li><strong>Act I Town Hall Vote (3 min):</strong> 2 min rapid debate + 1 min public vote to <strong>Search &amp; Detain</strong> 1 suspect <em>and</em> elect <strong>1 Group Leader</strong>.</li>
+          <li><strong>Group Leader Powers:</strong> The elected Group Leader (who may be Innocent or on the Shadow Team!) <strong>breaks all detention ties</strong> and immediately chooses <strong>1 additional player to Detain</strong> (or uses their extra detention in Act II).</li>
+          <li><strong>Act II Town Hall Vote (3 min):</strong> Public vote to Detain 1 suspect (Group Leader breaks any tie).</li>
+          <li><strong>Consequences of Detention:</strong> Detained players are <strong>not eliminated</strong>—they stay in the game, keep mingling, and complete all dialogues, but their <strong>Sealed Detention Card</strong> is immediately read aloud, and they skip their next Town Hall vote (everyone votes in the Final Verdict).</li>
           <li><strong>Win Conditions (Final Verdict — End of Act III):</strong> <strong>Innocent Guests Win</strong> if a plurality indicts <strong>${K.name} (#${K.id})</strong>. <strong>Shadow Team Wins</strong> if anyone else is indicted!</li>
         </ul>
 
-        <h2>5. Round-by-Round Host Script (30–45 Min Pacing)</h2>
+        <h2>5. Round-by-Round Script (30–45 Min Pacing)</h2>
         <h3>Prologue — 9:00 PM (Read Aloud — 2 Min)</h3>
         <div style="margin-bottom:10px;">${sc.acts.prologue.html}</div>
 
-        <h3>Act I — The Locked Study (Unveil Exhibits A &amp; B | 7m Mingle + 3m Vote + 1m Blackout)</h3>
+        <h3>Act I — The Locked Study (Unveil Exhibits A &amp; B | 7m Mingle + 3m Public Vote &amp; Leader Election)</h3>
         <p style="font-style:italic; color:#444;">Have the listed characters read these lines aloud to open Act I:</p>
         ${sc.acts.act1.html}
 
-        <h3>Act II — Shadows in the Clockwork (Unveil Exhibits C &amp; D | 6m Mingle + 3m Vote + 1m Blackout)</h3>
+        <h3>Act II — Shadows in the Clockwork (Unveil Exhibits C, D &amp; False Lead #1 | 6m Mingle + 3m Public Vote)</h3>
         <p style="font-style:italic; color:#444;">Have the listed characters read these lines aloud to open Act II:</p>
         ${sc.acts.act2.html}
 
-        <h3>Act III — The Last Chime (Unveil Exhibits E &amp; F | 7m Mingle + 3m Final Verdict + 3m Reveal)</h3>
+        <h3>Act III — The Last Chime (Unveil Exhibits E, F &amp; False Lead #2 | 7m Mingle + 3m Final Verdict + 3m Reveal)</h3>
         <p style="font-style:italic; color:#444;">Have the listed characters read these lines aloud to open Act III:</p>
         ${sc.acts.act3.html}
 
