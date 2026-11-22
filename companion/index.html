@@ -566,11 +566,11 @@
 
       <div class="card">
         <div class="card-header">
-          <h2>Exhibits &amp; False Leads</h2>
+          <h2>Evidence Board</h2>
           <div style="display:flex; gap:8px; flex-wrap:wrap;">
-            <button class="btn btn-sm" onclick="unlockActExhibits(1)">Unlock Act I (A–B)</button>
-            <button class="btn btn-sm" onclick="unlockActExhibits(2)">Unlock Act II (C–D + FL1)</button>
-            <button class="btn btn-sm" onclick="unlockActExhibits(3)">Unlock Act III (E–F + FL2)</button>
+            <button class="btn btn-sm" onclick="unlockActExhibits(1)">Unlock Act I</button>
+            <button class="btn btn-sm" onclick="unlockActExhibits(2)">Unlock Act II</button>
+            <button class="btn btn-sm" onclick="unlockActExhibits(3)">Unlock Act III</button>
           </div>
         </div>
         <div class="evidence-grid" id="evidenceGrid"></div>
@@ -988,8 +988,9 @@
     function renderEvidence() {
       document.getElementById("evidenceGrid").innerHTML = scenario.exhibits.map(ex => {
         const unlocked = state.unlockedExhibits.includes(ex.id);
-        const isFL = ex.id.startsWith("FL");
-        const tag = `Act ${ex.act}${isFL ? " • False Lead" : ""}`;
+        const tag = ex.presenter
+          ? `${ex.actLabel} &bull; Introduced by ${ex.presenterLabel}`
+          : ex.actLabel;
         return `<div class="exhibit-card ${unlocked ? "unlocked" : "locked"}">
           <div>
             <div style="font-size:0.75rem; color:var(--gold); text-transform:uppercase; margin-bottom:4px;">${tag}</div>
@@ -997,7 +998,7 @@
           </div>
           <div style="display:flex; justify-content:space-between; align-items:center;">
             <span style="font-size:0.8rem; color:var(--muted);">${unlocked ? "Unlocked on Board" : "Sealed"}</span>
-            <button class="btn btn-sm ${unlocked ? "btn-gold" : ""}" onclick="toggleExhibit('${ex.id}')">${unlocked ? "View Exhibit" : "Unlock &amp; Show"}</button>
+            <button class="btn btn-sm ${unlocked ? "btn-gold" : ""}" onclick="toggleExhibit('${ex.id}')">${unlocked ? "View Evidence" : "Unlock &amp; Show"}</button>
           </div>
         </div>`;
       }).join("");

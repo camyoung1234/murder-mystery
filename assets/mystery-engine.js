@@ -614,20 +614,25 @@
       })
     ].sort((a, b) => a.id - b.id).map(r => r.html).join("<br/>\n            ");
 
-    // Dynamic Exhibits A–F + False Leads
+    // Dynamic Evidence (Acts I–III, presented by the Act or by specific Innocent characters)
     const exhibits = [
       {
-        id: "A", act: 1, title: "Exhibit A — Study Crime Scene Sketch (9:02 PM)",
-        html: `<ul>
-          <li><strong>Door &amp; Window:</strong> Heavy oak double-door bolted from the <em>inside</em>; cliff window latched inside.</li>
-          <li><strong>The Body:</strong> Lord Arthur Vance slumped across his desk blotter. First reached and rolled over by <strong>${escHtml(killerBase.name)}</strong> at 9:01 PM.</li>
+        id: "A", act: 1, actLabel: "Act I",
+        presenter: null,
+        presenterLabel: "Act I",
+        title: "Study Crime Scene Sketch (9:02 PM)",
+        html: `<div class="sketch-frame"><img src="../assets/study-crime-scene-sketch.jpg" alt="Study Crime Scene Sketch (9:02 PM)" class="sketch-img" style="display:block; width:100%; max-width:560px; height:auto; margin:0 auto 10px; border:1px solid #8a6830; border-radius:4px;" /></div>
+        <ul>
+          <li><strong>The Body:</strong> Lord Arthur Vance found slumped across his desk blotter. First reached and rolled over by <strong>${escHtml(killerBase.name)}</strong> at 9:01 PM.</li>
           <li><strong>Initial Statement (9:01 PM):</strong> As guests rushed in, <strong>${escHtml(killerBase.name)}</strong> loudly claimed to see Arthur's <em>"chalk-pale lips"</em> and smell <em>"bitter almonds from the spilled wine."</em></li>
-          <li><strong>On the Desk:</strong> Unsigned New Will; a crystal wine glass; a single poured porcelain cup of chamomile tea (<strong>barely lukewarm</strong> by 9:02 PM); a broken pocket watch.</li>
-          <li><strong>On the Floor:</strong> Shattered glass beside a heavy 5-lb brass counterweight in a pool of spilled liquid.</li>
+          <li><strong>Desk &amp; Floor Notes:</strong> Unsigned New Will; untouched crystal wine glass; single poured porcelain cup of chamomile tea (<strong>barely lukewarm</strong> by 9:02 PM); broken pocket watch; shattered glass beside a 5-lb brass counterweight in spilled liquid.</li>
         </ul>`
       },
       {
-        id: "B", act: 1, title: "Exhibit B — Arthur's Shattered Pocket Watch",
+        id: "B", act: 1, actLabel: "Act I",
+        presenter: { id: witnessId, name: witnessBase.name },
+        presenterLabel: `${witnessBase.name} (#${witnessId})`,
+        title: "Arthur's Shattered Pocket Watch",
         html: `<ul>
           <li><strong>Make:</strong> Custom Vance Precision Gold Chronometer (<em>"A.V. — Time Never Lies"</em>).</li>
           <li><strong>Condition:</strong> Crystal cracked; internal gears jammed from hitting the desk corner.</li>
@@ -636,11 +641,17 @@
         </ul>`
       },
       {
-        id: "C", act: 2, title: `Exhibit C — Charred Audit Log (${auditInitialsLabel})`,
+        id: "C", act: 2, actLabel: "Act II",
+        presenter: { id: inspectorId, name: inspectorBase.name },
+        presenterLabel: `${inspectorBase.name} (#${inspectorId})`,
+        title: `Charred Audit Log (${auditInitialsLabel})`,
         html: `<pre>${escHtml(exhibitCBody)}</pre>`
       },
       {
-        id: "D", act: 2, title: "Exhibit D — Chronos Automaton, Wax Cylinder & Study Re-Inspection",
+        id: "D", act: 2, actLabel: "Act II",
+        presenter: { id: automatonSpeakerId, name: automatonSpeakerBase.name },
+        presenterLabel: `${automatonSpeakerBase.name} (#${automatonSpeakerId})`,
+        title: "Chronos Automaton, Wax Cylinder & Study Re-Inspection",
         html: `<ul>
           <li><strong>Phonograph Drum:</strong> Plays a removable brass wax cylinder at a scheduled minute. Currently set to <strong>8:55 PM</strong>.</li>
           <li><strong>Release Cam:</strong> Drops a 5-lb brass counterweight at <strong>9:00 PM</strong> (shifted 2 inches to strike the water carafe).</li>
@@ -649,7 +660,17 @@
         </ul>`
       },
       {
-        id: "E", act: 3, title: "Exhibit E — 2008 Dossier Ledger & Horologist Journal",
+        id: "FL1", act: 2, actLabel: "Act II",
+        presenter: null,
+        presenterLabel: "Act II",
+        title: "Crumpled Generator Note",
+        html: `<p><em>Found crumpled on the basement stairs as guests regrouped before Act II:</em></p><pre>"9:00 PM sharp. Pull the main breaker. Don't let anyone see you. — ${wineSpikerBase.initials}"</pre>`
+      },
+      {
+        id: "E", act: 3, actLabel: "Act III",
+        presenter: null,
+        presenterLabel: "Act III",
+        title: "2008 Dossier Ledger & Horologist Journal",
         html: `<ul>
           <li><strong>Selected 2008 Archive Records:</strong><br/>
             ${exhibitERecords}
@@ -658,7 +679,10 @@
         </ul>`
       },
       {
-        id: "F", act: 3, title: "Exhibit F — Field Toxicology Report",
+        id: "F", act: 3, actLabel: "Act III",
+        presenter: { id: inspectorId, name: inspectorBase.name },
+        presenterLabel: `${inspectorBase.name} (#${inspectorId})`,
+        title: "Field Toxicology Report",
         html: `<ul>
           <li><strong>Red Wine (Dining Sideboard Decanter &amp; Untouched Study Glass):</strong> Positive for <strong>Chloral Hydrate</strong> (non-lethal sleeping sedative). Arthur never drank it.</li>
           <li><strong>Residue on Arthur's Lips &amp; Cuff:</strong> Positive for <strong>Concentrated Aconite</strong> (fast-acting, completely <strong>odorless</strong> cardiac poison; fatal in <strong>2–3 minutes</strong>) — matching trace contact from ${escHtml(deliveryWithArticle).replace(escHtml(killerBase.deliveryItem), `<strong>${escHtml(killerBase.deliveryItem)}</strong>`)}.</li>
@@ -666,11 +690,10 @@
         </ul>`
       },
       {
-        id: "FL1", act: 2, title: "False Lead #1 — Crumpled Generator Note",
-        html: `<p><em>Found crumpled on the basement stairs as guests regrouped before Act II:</em></p><pre>"9:00 PM sharp. Pull the main breaker. Don't let anyone see you. — ${wineSpikerBase.initials}"</pre>`
-      },
-      {
-        id: "FL2", act: 3, title: "False Lead #2 — Anonymous Library Rumor",
+        id: "FL2", act: 3, actLabel: "Act III",
+        presenter: null,
+        presenterLabel: "Act III",
+        title: "Anonymous Library Rumor",
         html: `<p><em>Found slipped under the Library door before Act III:</em></p><pre>"Check the Dining &amp; Sideboard! Someone wiped down the Bordeaux decanter left on the sideboard with an almond-scented handkerchief right before 9:00 PM."</pre>`
       }
     ];
@@ -698,7 +721,7 @@
       },
       act1: {
         label: "ACT I — THE LOCKED STUDY (7 MIN)",
-        sub: "Read Public Opener, unlock Exhibits A & B, mingle (7m), then Public Vote #1 (Detain 1 + Elect Group Leader).",
+        sub: "Read Public Opener, reveal Act I Evidence, mingle (7m), then Public Vote #1 (Detain 1 + Elect Group Leader).",
         html: `
           <div class="script-line"><div class="script-speaker">${escHtml(witnessBase.name)} (#${witnessId})</div>"Nobody touch a thing! The oak door was bolted from the inside, and the window drops eighty feet to the rocks. How on earth could someone kill him in a locked room?"</div>
           <div class="script-line"><div class="script-speaker">${escHtml(alibiWitnessBase.name)} (#${alibiWitnessId})</div>"He was shouting at someone at 8:55! We all heard him! Then at 9:00 the lights went out and—my God, was that a gunshot?"</div>
@@ -709,20 +732,20 @@
       },
       act2: {
         label: "ACT II — SHADOWS IN THE CLOCKWORK (6 MIN)",
-        sub: "Read Public Opener, unlock Exhibits C, D & False Lead #1, mingle (6m), then Public Vote #2 (Detain 1 + Group Leader's Extra Detention).",
+        sub: "Read Public Opener, reveal Act II Evidence, mingle (6m), then Public Vote #2 (Detain 1 + Group Leader's Extra Detention).",
         html: `
-          <div class="script-line"><div class="script-speaker">${escHtml(inspectorBase.name)} (#${inspectorId})</div>"While the upstairs gallery was cleared, we inspected the Study fireplace and the Chronos Automaton. We have two new exhibits—${exhibitCScriptDesc}, and a scratched brass wax cylinder inside the Automaton."</div>
+          <div class="script-line"><div class="script-speaker">${escHtml(inspectorBase.name)} (#${inspectorId})</div>"While the upstairs gallery was cleared, we inspected the Study fireplace and the Chronos Automaton. We have new evidence—${exhibitCScriptDesc}, and a scratched brass wax cylinder inside the Automaton."</div>
           <div class="script-line"><div class="script-speaker">${escHtml(automatonSpeakerBase.name)} (#${automatonSpeakerId})</div>${automatonLine}</div>
           <div class="script-line"><div class="script-speaker">${escHtml(coreAccompliceBase.name)} (#${coreAccompliceId})</div>"Don't look at me just because '${coreAccompliceBase.initials}' is on that burned page! Half the people in this house had a reason to hate Arthur. And if you're wondering why the lights went out at nine, the storm probably surged the old breaker!"</div>
           <div class="script-line"><div class="script-speaker">${escHtml(wineSpikerBase.name)} (#${wineSpikerId})</div>"Oh, spare us! And what about the wine? ${escHtml(spokenName(killerBase))} said it smelled of poison—who poured Arthur's glass?!"</div>
-          <div class="script-line"><div class="script-speaker">${escHtml(witnessBase.name)} (#${witnessId})</div>"Actually... look at our Study re-inspection on Exhibit D. In clear light, the wine glass on the desk is completely full and untouched—it was the water carafe that shattered in odorless water, and Arthur was slumped face-down!"</div>`
+          <div class="script-line"><div class="script-speaker">${escHtml(witnessBase.name)} (#${witnessId})</div>"Actually... look at our Study re-inspection in the Chronos Automaton evidence. In clear light, the wine glass on the desk is completely full and untouched—it was the water carafe that shattered in odorless water, and Arthur was slumped face-down!"</div>`
       },
       act3: {
         label: "ACT III — THE LAST CHIME (7 MIN)",
-        sub: "Read Public Opener, unlock Exhibits E, F & False Lead #2, mingle (7m), then Final Verdict (3m) & Reveal!",
+        sub: "Read Public Opener, reveal Act III Evidence, mingle (7m), then Final Verdict (3m) & Reveal!",
         html: `
           <div class="script-line"><div class="script-speaker">${escHtml(inspectorBase.name)} (#${inspectorId})</div>"Enough games. We unlocked Arthur's private Horologist Journal and the 2008 Archive Ledger—and tested the residue in the Study with a field chemistry kit."</div>
-          <div class="script-line"><div class="script-speaker">${escHtml(witnessBase.name)} (#${witnessId})</div>"Look closely at Exhibit E and Exhibit F before you cast your final vote. The single cup of chamomile tea poured at 8:40 PM was untouched and barely lukewarm by 9:02 PM—and Arthur never touched his wine."</div>
+          <div class="script-line"><div class="script-speaker">${escHtml(witnessBase.name)} (#${witnessId})</div>"Look closely at the 2008 Dossier Ledger and Field Toxicology Report before you cast your final vote. The single cup of chamomile tea poured at 8:40 PM was untouched and barely lukewarm by 9:02 PM—and Arthur never touched his wine."</div>
           <div class="script-line"><div class="script-speaker">${escHtml(killerBase.name)} (#${killerId})</div>"Careful, everyone—wild theories will only let the real killer slip away. Look at who had the motive to steal the Will, who rigged the power, and who wasn't in the Grand Hall at nine. Let's settle this."</div>`
       }
     };

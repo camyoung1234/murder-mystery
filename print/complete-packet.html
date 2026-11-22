@@ -351,24 +351,9 @@
       outline: 1px solid #c5a365;
       outline-offset: -6px;
       background: linear-gradient(180deg, #fcf7ec 0%, #f3e7d0 100%);
-      padding: 20px 22px;
+      padding: 16px 20px;
       position: relative;
       flex: 1;
-    }
-    .wax-seal {
-      position: absolute;
-      top: 14px;
-      right: 16px;
-      background: radial-gradient(circle at 35% 35%, #b83232, #731616);
-      color: #f9ebd2;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 0.65rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 6px 11px;
-      border-radius: 999px;
-      border: 2px solid #520d0d;
     }
     .exhibit-kicker {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -376,37 +361,64 @@
       font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #822222;
+      color: #6b4c1c;
       margin-bottom: 4px;
     }
     .exhibit-card h3 {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: #24180c;
       border-bottom: 1.5px solid #bfa16a;
       padding-bottom: 6px;
       margin-bottom: 10px;
-      padding-right: 110px;
     }
-    .exhibit-card ul { margin-left: 18px; font-size: 0.94rem; }
-    .exhibit-card li { margin-bottom: 7px; }
+    .exhibit-card ul { margin-left: 18px; font-size: 0.91rem; }
+    .exhibit-card li { margin-bottom: 6px; }
     .exhibit-card pre {
       font-family: "Courier New", monospace;
-      font-size: 0.85rem;
-      line-height: 1.48;
+      font-size: 0.84rem;
+      line-height: 1.45;
       background: radial-gradient(circle at bottom right, rgba(35, 22, 12, 0.3), transparent 55%), #efe4cc;
       border: 1.5px dashed #4a3319;
-      padding: 14px 16px;
+      padding: 12px 14px;
       white-space: pre-wrap;
       margin-top: 8px;
+    }
+    .evidence-unit {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+    .envelope-label {
+      border: 2px solid #6b4c1c;
+      background: #efe3cb;
+      padding: 8px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .envelope-label .env-main {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: #2b1d0e;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .envelope-label .env-sub {
+      font-size: 0.74rem;
+      color: #5a4220;
+      font-weight: 600;
     }
     .ev-cut-line {
       border-top: 1.5px dashed #7d5b24;
       text-align: center;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 0.68rem;
+      font-size: 0.66rem;
       letter-spacing: 0.14em;
       color: #6b4c1c;
-      padding-top: 3px;
+      padding-top: 2px;
     }
 
     /* Ink-Friendly B&W Mode */
@@ -417,13 +429,17 @@
     .bw-page-title { text-align: center; border-bottom: 2px solid #111; padding-bottom: 8px; }
     .bw-page-title .sub { font-family: -apple-system, sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; color: #444; }
     .bw-page-title h2 { font-size: 1.4rem; margin-top: 2px; border: none; padding: 0; }
-    .exhibit-box { border: 2px solid #111; padding: 16px 18px; border-radius: 4px; flex: 1; }
-    .exhibit-tag { font-family: -apple-system, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; background: #111; color: #fff; display: inline-block; padding: 3px 9px; margin-bottom: 8px; }
-    .exhibit-box h3 { font-size: 1.2rem; border-bottom: 1px solid #999; padding-bottom: 6px; margin-bottom: 10px; }
-    .exhibit-box ul { margin-left: 20px; font-size: 0.95rem; }
-    .exhibit-box li { margin-bottom: 7px; }
-    .exhibit-box pre { font-family: "Courier New", monospace; font-size: 0.86rem; background: #f6f6f6; border: 1px solid #bbb; padding: 12px 14px; white-space: pre-wrap; margin: 8px 0; }
-    .bw-cut-line { border-top: 1.5px dashed #444; text-align: center; font-family: -apple-system, sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; color: #555; padding-top: 4px; }
+    .exhibit-box { border: 2px solid #111; padding: 14px 18px; border-radius: 4px; flex: 1; }
+    .exhibit-tag { font-family: -apple-system, sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #444; margin-bottom: 4px; }
+    .exhibit-box h3 { font-size: 1.15rem; border-bottom: 1px solid #999; padding-bottom: 6px; margin-bottom: 10px; }
+    .exhibit-box ul { margin-left: 20px; font-size: 0.92rem; }
+    .exhibit-box li { margin-bottom: 6px; }
+    .exhibit-box pre { font-family: "Courier New", monospace; font-size: 0.84rem; background: #f6f6f6; border: 1px solid #bbb; padding: 12px 14px; white-space: pre-wrap; margin: 8px 0; }
+    .exhibit-box img.sketch-img { filter: grayscale(100%) contrast(115%); border-color: #111 !important; }
+    .evidence-bw .envelope-label { border-color: #111; background: #f3f3f3; }
+    .evidence-bw .envelope-label .env-main { color: #111; }
+    .evidence-bw .envelope-label .env-sub { color: #444; }
+    .bw-cut-line { border-top: 1.5px dashed #444; text-align: center; font-family: -apple-system, sans-serif; font-size: 0.66rem; letter-spacing: 0.1em; color: #555; padding-top: 2px; }
 
     /* =====================================================================
        PART 3: DYNAMIC HOST GUIDE
@@ -739,7 +755,6 @@
               <img src="../assets/ravenshollow-manor-map.jpg" alt="Ravenshollow Manor Floorplan" />
             </div>
             <div class="exhibit-card" style="flex:0 0 auto; padding:14px 18px;">
-              <div class="wax-seal">Public Record</div>
               <div class="exhibit-kicker">Always Visible &bull; November 19</div>
               <h3 style="font-size:1.08rem; margin-bottom:7px;">Known Sequence of Events</h3>
               <ul style="font-size:0.86rem;">
@@ -751,45 +766,43 @@
             </div>
           </div>
 
-          <div class="ev-page spoiler-content">
-            <div class="ornate-header">
-              <div class="kicker">Case ${sc.code} &bull; Unseal at Start of Act I</div>
-              <h2>Act I Evidence — The Locked Study</h2>
+          ${[
+            { sub: "Act I Evidence", h2: "Act I — The Locked Study", items: [byId("A")] },
+            { sub: "Act I Evidence", h2: "Act I — The Locked Study (Continued)", items: [byId("B")] },
+            { sub: "Act II Evidence", h2: "Act II — Shadows in the Clockwork", items: [byId("C"), byId("D")] },
+            { sub: "Act II Evidence", h2: "Act II — Shadows in the Clockwork (Continued)", items: [byId("FL1")] },
+            { sub: "Act III Evidence", h2: "Act III — The Last Chime", items: [byId("E"), byId("F")] },
+            { sub: "Act III Evidence", h2: "Act III — The Last Chime (Continued)", items: [byId("FL2")] }
+          ].map(pg => `
+            <div class="ev-page spoiler-content">
+              <div class="ornate-header">
+                <div class="kicker">Case ${sc.code} &bull; ${pg.sub}</div>
+                <h2>${pg.h2}</h2>
+              </div>
+              ${pg.items.map(ex => {
+                const envText = ex.presenter
+                  ? `REVEAL IN: ${ex.actLabel} &bull; INTRODUCED BY: ${ex.presenterLabel}`
+                  : `PRESENTED BY: ${ex.actLabel}`;
+                const cardKicker = ex.presenter
+                  ? `${ex.actLabel} &bull; Introduced by ${ex.presenterLabel}`
+                  : ex.actLabel;
+                return `
+                  <div class="evidence-unit">
+                    <div class="envelope-label">
+                      <div class="env-main">${envText}</div>
+                      <div class="env-sub">Envelope Label &bull; Case ${sc.code}</div>
+                    </div>
+                    <div class="ev-cut-line">&#9986; CUT ABOVE FOR OUTSIDE OF ENVELOPE &bull; PUT CARD BELOW INSIDE ENVELOPE &#9986;</div>
+                    <div class="exhibit-card">
+                      <div class="exhibit-kicker">${cardKicker}</div>
+                      <h3>${ex.title}</h3>
+                      ${ex.html}
+                    </div>
+                  </div>
+                `;
+              }).join('<div class="ev-cut-line">&#9986; SEPARATE EVIDENCE ITEMS &#9986;</div>')}
             </div>
-            <div class="exhibit-card"><div class="wax-seal">Exhibit A</div><div class="exhibit-kicker">Act I</div><h3>${byId("A").title}</h3>${byId("A").html}</div>
-            <div class="ev-cut-line">&#9986; CUT HERE IF DISPLAYING SEPARATELY &#9986;</div>
-            <div class="exhibit-card"><div class="wax-seal">Exhibit B</div><div class="exhibit-kicker">Act I</div><h3>${byId("B").title}</h3>${byId("B").html}</div>
-          </div>
-
-          <div class="ev-page spoiler-content">
-            <div class="ornate-header">
-              <div class="kicker">Case ${sc.code} &bull; Unseal at Start of Act II</div>
-              <h2>Act II Evidence — Shadows in the Clockwork</h2>
-            </div>
-            <div class="exhibit-card"><div class="wax-seal">Exhibit C</div><div class="exhibit-kicker">Act II</div><h3>${byId("C").title}</h3>${byId("C").html}</div>
-            <div class="ev-cut-line">&#9986; CUT HERE IF DISPLAYING SEPARATELY &#9986;</div>
-            <div class="exhibit-card"><div class="wax-seal">Exhibit D</div><div class="exhibit-kicker">Act II</div><h3>${byId("D").title}</h3>${byId("D").html}</div>
-          </div>
-
-          <div class="ev-page spoiler-content">
-            <div class="ornate-header">
-              <div class="kicker">Case ${sc.code} &bull; Unseal at Start of Act III</div>
-              <h2>Act III Evidence — The Last Chime</h2>
-            </div>
-            <div class="exhibit-card"><div class="wax-seal">Exhibit E</div><div class="exhibit-kicker">Act III</div><h3>${byId("E").title}</h3>${byId("E").html}</div>
-            <div class="ev-cut-line">&#9986; CUT HERE IF DISPLAYING SEPARATELY &#9986;</div>
-            <div class="exhibit-card"><div class="wax-seal">Exhibit F</div><div class="exhibit-kicker">Act III</div><h3>${byId("F").title}</h3>${byId("F").html}</div>
-          </div>
-
-          <div class="ev-page spoiler-content">
-            <div class="ornate-header">
-              <div class="kicker">Case ${sc.code} &bull; Place on Board in Act II (FL1) &amp; Act III (FL2)</div>
-              <h2>Act II &amp; III False Lead Slips</h2>
-            </div>
-            <div class="exhibit-card"><div class="wax-seal">False Lead #1</div><div class="exhibit-kicker">Unveil in Act II</div><h3>${byId("FL1").title}</h3>${byId("FL1").html}</div>
-            <div class="ev-cut-line">&#9986; CUT HERE &#9986;</div>
-            <div class="exhibit-card"><div class="wax-seal">False Lead #2</div><div class="exhibit-kicker">Unveil in Act III</div><h3>${byId("FL2").title}</h3>${byId("FL2").html}</div>
-          </div>
+          `).join("")}
         </div>
       `;
     }
@@ -812,33 +825,40 @@
             </div>
           </div>
 
-          <div class="ev-page spoiler-content">
-            <div class="bw-page-title"><div class="sub">Case ${sc.code} — Act I</div><h2>Act I Evidence — Exhibits A &amp; B</h2></div>
-            <div class="exhibit-box"><div class="exhibit-tag">Exhibit A</div><h3>${byId("A").title}</h3>${byId("A").html}</div>
-            <div class="bw-cut-line">&#9986; CUT HERE &#9986;</div>
-            <div class="exhibit-box"><div class="exhibit-tag">Exhibit B</div><h3>${byId("B").title}</h3>${byId("B").html}</div>
-          </div>
-
-          <div class="ev-page spoiler-content">
-            <div class="bw-page-title"><div class="sub">Case ${sc.code} — Act II</div><h2>Act II Evidence — Exhibits C &amp; D</h2></div>
-            <div class="exhibit-box"><div class="exhibit-tag">Exhibit C</div><h3>${byId("C").title}</h3>${byId("C").html}</div>
-            <div class="bw-cut-line">&#9986; CUT HERE &#9986;</div>
-            <div class="exhibit-box"><div class="exhibit-tag">Exhibit D</div><h3>${byId("D").title}</h3>${byId("D").html}</div>
-          </div>
-
-          <div class="ev-page spoiler-content">
-            <div class="bw-page-title"><div class="sub">Case ${sc.code} — Act III</div><h2>Act III Evidence — Exhibits E &amp; F</h2></div>
-            <div class="exhibit-box"><div class="exhibit-tag">Exhibit E</div><h3>${byId("E").title}</h3>${byId("E").html}</div>
-            <div class="bw-cut-line">&#9986; CUT HERE &#9986;</div>
-            <div class="exhibit-box"><div class="exhibit-tag">Exhibit F</div><h3>${byId("F").title}</h3>${byId("F").html}</div>
-          </div>
-
-          <div class="ev-page spoiler-content">
-            <div class="bw-page-title"><div class="sub">Case ${sc.code} — Act II &amp; Act III Red Herrings</div><h2>False Lead Slips</h2></div>
-            <div class="exhibit-box"><div class="exhibit-tag">Unveil in Act II</div><h3>${byId("FL1").title}</h3>${byId("FL1").html}</div>
-            <div class="bw-cut-line">&#9986; CUT HERE &#9986;</div>
-            <div class="exhibit-box"><div class="exhibit-tag">Unveil in Act III</div><h3>${byId("FL2").title}</h3>${byId("FL2").html}</div>
-          </div>
+          ${[
+            { sub: "Act I", h2: "Act I Evidence — The Locked Study", items: [byId("A")] },
+            { sub: "Act I", h2: "Act I Evidence — The Locked Study (Continued)", items: [byId("B")] },
+            { sub: "Act II", h2: "Act II Evidence — Shadows in the Clockwork", items: [byId("C"), byId("D")] },
+            { sub: "Act II", h2: "Act II Evidence — Shadows in the Clockwork (Continued)", items: [byId("FL1")] },
+            { sub: "Act III", h2: "Act III Evidence — The Last Chime", items: [byId("E"), byId("F")] },
+            { sub: "Act III", h2: "Act III Evidence — The Last Chime (Continued)", items: [byId("FL2")] }
+          ].map(pg => `
+            <div class="ev-page spoiler-content">
+              <div class="bw-page-title"><div class="sub">Case ${sc.code} — ${pg.sub}</div><h2>${pg.h2}</h2></div>
+              ${pg.items.map(ex => {
+                const envText = ex.presenter
+                  ? `REVEAL IN: ${ex.actLabel} &bull; INTRODUCED BY: ${ex.presenterLabel}`
+                  : `PRESENTED BY: ${ex.actLabel}`;
+                const cardKicker = ex.presenter
+                  ? `${ex.actLabel} &bull; Introduced by ${ex.presenterLabel}`
+                  : ex.actLabel;
+                return `
+                  <div class="evidence-unit">
+                    <div class="envelope-label">
+                      <div class="env-main">${envText}</div>
+                      <div class="env-sub">Envelope Label &bull; Case ${sc.code}</div>
+                    </div>
+                    <div class="bw-cut-line">&#9986; CUT ABOVE FOR OUTSIDE OF ENVELOPE &bull; PUT CARD BELOW INSIDE ENVELOPE &#9986;</div>
+                    <div class="exhibit-box">
+                      <div class="exhibit-tag">${cardKicker}</div>
+                      <h3>${ex.title}</h3>
+                      ${ex.html}
+                    </div>
+                  </div>
+                `;
+              }).join('<div class="bw-cut-line">&#9986; SEPARATE EVIDENCE ITEMS &#9986;</div>')}
+            </div>
+          `).join("")}
         </div>
       `;
     }
@@ -997,14 +1017,14 @@
       const sc = E.buildScenario(caseCode, playerCount);
 
       const hostPagesEst = includeHost ? 3 : 0;
-      const approxPages = playerCount + 5 + hostPagesEst;
+      const approxPages = playerCount + 7 + hostPagesEst;
       document.getElementById("totalPagesLabel").textContent = includeHost ? `${approxPages}+` : `${approxPages}`;
 
       const parts = [];
       parts.push(`
         <div class="screen-divider">
-          <span>Part 1: Evidence Packet (Spoiler-Free Map + Exhibits A–F + False Leads) &bull; Case ${sc.code}</span>
-          <span class="sub">5 Pages (${evStyle === "stylized" ? "Stylized Color" : "Ink-Friendly B&W"})</span>
+          <span>Part 1: Evidence Packet (Spoiler-Free Map + Act I–III Evidence &amp; Envelope Labels) &bull; Case ${sc.code}</span>
+          <span class="sub">7 Pages (${evStyle === "stylized" ? "Stylized Color" : "Ink-Friendly B&W"})</span>
         </div>
       `);
       parts.push(evStyle === "stylized" ? renderEvidenceStylized(sc) : renderEvidenceBW(sc));

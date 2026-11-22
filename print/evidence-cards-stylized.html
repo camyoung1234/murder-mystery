@@ -123,24 +123,9 @@
       outline: 1px solid #c5a365;
       outline-offset: -6px;
       background: linear-gradient(180deg, #fcf7ec 0%, #f3e7d0 100%);
-      padding: 20px 22px;
+      padding: 16px 20px;
       position: relative;
       flex: 1;
-    }
-    .wax-seal {
-      position: absolute;
-      top: 14px;
-      right: 16px;
-      background: radial-gradient(circle at 35% 35%, #b83232, #731616);
-      color: #f9ebd2;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 0.65rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 6px 11px;
-      border-radius: 999px;
-      border: 2px solid #520d0d;
     }
     .exhibit-kicker {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -148,37 +133,65 @@
       font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #822222;
+      color: #6b4c1c;
       margin-bottom: 4px;
     }
     .exhibit-card h3 {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: #24180c;
       border-bottom: 1.5px solid #bfa16a;
       padding-bottom: 6px;
       margin-bottom: 10px;
-      padding-right: 110px;
     }
-    .exhibit-card ul { margin-left: 18px; font-size: 0.94rem; }
-    .exhibit-card li { margin-bottom: 7px; }
+    .exhibit-card ul { margin-left: 18px; font-size: 0.91rem; }
+    .exhibit-card li { margin-bottom: 6px; }
     .exhibit-card pre {
       font-family: "Courier New", monospace;
-      font-size: 0.85rem;
-      line-height: 1.48;
+      font-size: 0.84rem;
+      line-height: 1.45;
       background: radial-gradient(circle at bottom right, rgba(35, 22, 12, 0.3), transparent 55%), #efe4cc;
       border: 1.5px dashed #4a3319;
-      padding: 14px 16px;
+      padding: 12px 14px;
       white-space: pre-wrap;
       margin-top: 8px;
+    }
+
+    .evidence-unit {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+    .envelope-label {
+      border: 2px solid #6b4c1c;
+      background: #efe3cb;
+      padding: 8px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .envelope-label .env-main {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: #2b1d0e;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .envelope-label .env-sub {
+      font-size: 0.74rem;
+      color: #5a4220;
+      font-weight: 600;
     }
     .cut-line {
       border-top: 1.5px dashed #7d5b24;
       text-align: center;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 0.68rem;
+      font-size: 0.66rem;
       letter-spacing: 0.14em;
       color: #6b4c1c;
-      padding-top: 3px;
+      padding-top: 2px;
     }
 
     @media print {
@@ -194,13 +207,13 @@
   <div class="toolbar">
     <div>
       <h1>Stylized Evidence Packet — Synced to Case Code</h1>
-      <p>Map is visible; Exhibits A–F are blurred on screen so you can print blind! (Prints crystal-clear.)</p>
+      <p>Map is visible; Evidence pages are blurred on screen so you can print blind! (Prints crystal-clear.)</p>
     </div>
     <div class="controls">
       <label style="font-size:0.85rem;">Case:</label>
       <input type="text" id="caseCodeInput" class="code-input" onchange="applyCode()" />
-      <button class="btn" id="blurBtn" onclick="toggleBlur()">Unblur Exhibits</button>
-      <button class="print-btn" onclick="window.print()">Print Stylized Evidence (5 Pages)</button>
+      <button class="btn" id="blurBtn" onclick="toggleBlur()">Unblur Evidence</button>
+      <button class="print-btn" onclick="window.print()">Print Stylized Evidence (7 Pages)</button>
     </div>
   </div>
 
@@ -216,7 +229,7 @@
     function toggleBlur() {
       const b = document.getElementById("bodyEl");
       b.classList.toggle("privacy-shield");
-      document.getElementById("blurBtn").textContent = b.classList.contains("privacy-shield") ? "Unblur Exhibits" : "Blur (Spoiler-Free)";
+      document.getElementById("blurBtn").textContent = b.classList.contains("privacy-shield") ? "Unblur Evidence" : "Blur (Spoiler-Free)";
     }
 
     function applyCode() {
@@ -225,6 +238,29 @@
       document.getElementById("caseCodeInput").value = caseCode;
       localStorage.setItem("ravenshollow_case_code", caseCode);
       render();
+    }
+
+    function renderUnit(ex, code) {
+      const envText = ex.presenter
+        ? `REVEAL IN: ${ex.actLabel} &bull; INTRODUCED BY: ${ex.presenterLabel}`
+        : `PRESENTED BY: ${ex.actLabel}`;
+      const cardKicker = ex.presenter
+        ? `${ex.actLabel} &bull; Introduced by ${ex.presenterLabel}`
+        : ex.actLabel;
+      return `
+        <div class="evidence-unit">
+          <div class="envelope-label">
+            <div class="env-main">${envText}</div>
+            <div class="env-sub">Envelope Label &bull; Case ${code}</div>
+          </div>
+          <div class="cut-line">&#9986; CUT ABOVE FOR OUTSIDE OF ENVELOPE &bull; PUT CARD BELOW INSIDE ENVELOPE &#9986;</div>
+          <div class="exhibit-card">
+            <div class="exhibit-kicker">${cardKicker}</div>
+            <h3>${ex.title}</h3>
+            ${ex.html}
+          </div>
+        </div>
+      `;
     }
 
     function render() {
@@ -241,7 +277,6 @@
             <img src="../assets/ravenshollow-manor-map.jpg" alt="Ravenshollow Manor Floorplan" />
           </div>
           <div class="exhibit-card" style="flex:0 0 auto; padding:14px 18px;">
-            <div class="wax-seal">Public Record</div>
             <div class="exhibit-kicker">Always Visible &bull; November 19</div>
             <h3 style="font-size:1.08rem; margin-bottom:7px;">Known Sequence of Events</h3>
             <ul style="font-size:0.86rem;">
@@ -255,42 +290,54 @@
 
         <div class="page secret-page">
           <div class="ornate-header">
-            <div class="kicker">Case ${sc.code} &bull; Unseal at Start of Act I</div>
-            <h2>Act I Evidence — The Locked Study</h2>
+            <div class="kicker">Case ${sc.code} &bull; Act I Evidence</div>
+            <h2>Act I — The Locked Study</h2>
           </div>
-          <div class="exhibit-card"><div class="wax-seal">Exhibit A</div><div class="exhibit-kicker">Act I</div><h3>${byId("A").title}</h3>${byId("A").html}</div>
-          <div class="cut-line">&#9986; CUT HERE IF DISPLAYING SEPARATELY &#9986;</div>
-          <div class="exhibit-card"><div class="wax-seal">Exhibit B</div><div class="exhibit-kicker">Act I</div><h3>${byId("B").title}</h3>${byId("B").html}</div>
+          ${renderUnit(byId("A"), sc.code)}
         </div>
 
         <div class="page secret-page">
           <div class="ornate-header">
-            <div class="kicker">Case ${sc.code} &bull; Unseal at Start of Act II</div>
-            <h2>Act II Evidence — Shadows in the Clockwork</h2>
+            <div class="kicker">Case ${sc.code} &bull; Act I Evidence</div>
+            <h2>Act I — The Locked Study (Continued)</h2>
           </div>
-          <div class="exhibit-card"><div class="wax-seal">Exhibit C</div><div class="exhibit-kicker">Act II</div><h3>${byId("C").title}</h3>${byId("C").html}</div>
-          <div class="cut-line">&#9986; CUT HERE IF DISPLAYING SEPARATELY &#9986;</div>
-          <div class="exhibit-card"><div class="wax-seal">Exhibit D</div><div class="exhibit-kicker">Act II</div><h3>${byId("D").title}</h3>${byId("D").html}</div>
+          ${renderUnit(byId("B"), sc.code)}
         </div>
 
         <div class="page secret-page">
           <div class="ornate-header">
-            <div class="kicker">Case ${sc.code} &bull; Unseal at Start of Act III</div>
-            <h2>Act III Evidence — The Last Chime</h2>
+            <div class="kicker">Case ${sc.code} &bull; Act II Evidence</div>
+            <h2>Act II — Shadows in the Clockwork</h2>
           </div>
-          <div class="exhibit-card"><div class="wax-seal">Exhibit E</div><div class="exhibit-kicker">Act III</div><h3>${byId("E").title}</h3>${byId("E").html}</div>
-          <div class="cut-line">&#9986; CUT HERE IF DISPLAYING SEPARATELY &#9986;</div>
-          <div class="exhibit-card"><div class="wax-seal">Exhibit F</div><div class="exhibit-kicker">Act III</div><h3>${byId("F").title}</h3>${byId("F").html}</div>
+          ${renderUnit(byId("C"), sc.code)}
+          <div class="cut-line">&#9986; SEPARATE EVIDENCE ITEMS &#9986;</div>
+          ${renderUnit(byId("D"), sc.code)}
         </div>
 
         <div class="page secret-page">
           <div class="ornate-header">
-            <div class="kicker">Case ${sc.code} &bull; Place on Board in Act II (FL1) &amp; Act III (FL2)</div>
-            <h2>Act II &amp; III False Lead Slips</h2>
+            <div class="kicker">Case ${sc.code} &bull; Act II Evidence</div>
+            <h2>Act II — Shadows in the Clockwork (Continued)</h2>
           </div>
-          <div class="exhibit-card"><div class="wax-seal">False Lead #1</div><div class="exhibit-kicker">Unveil in Act II</div><h3>${byId("FL1").title}</h3>${byId("FL1").html}</div>
-          <div class="cut-line">&#9986; CUT HERE &#9986;</div>
-          <div class="exhibit-card"><div class="wax-seal">False Lead #2</div><div class="exhibit-kicker">Unveil in Act III</div><h3>${byId("FL2").title}</h3>${byId("FL2").html}</div>
+          ${renderUnit(byId("FL1"), sc.code)}
+        </div>
+
+        <div class="page secret-page">
+          <div class="ornate-header">
+            <div class="kicker">Case ${sc.code} &bull; Act III Evidence</div>
+            <h2>Act III — The Last Chime</h2>
+          </div>
+          ${renderUnit(byId("E"), sc.code)}
+          <div class="cut-line">&#9986; SEPARATE EVIDENCE ITEMS &#9986;</div>
+          ${renderUnit(byId("F"), sc.code)}
+        </div>
+
+        <div class="page secret-page">
+          <div class="ornate-header">
+            <div class="kicker">Case ${sc.code} &bull; Act III Evidence</div>
+            <h2>Act III — The Last Chime (Continued)</h2>
+          </div>
+          ${renderUnit(byId("FL2"), sc.code)}
         </div>
       `;
     }

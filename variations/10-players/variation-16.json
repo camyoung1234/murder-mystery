@@ -62,6 +62,7 @@
       "secret": "At 8:50 PM, you snuck along the Upstairs Gallery to eavesdrop outside the Study door and heard TOTAL SILENCE inside—not a sound until Arthur's voice boomed at 8:55 PM!",
       "clue": "1) At 8:40 PM a piping-hot cup of chamomile tea was poured in the Study—by 9:02 PM the untouched cup was barely lukewarm. 2) At 8:42 PM, YOU PERSONALLY SAW Gideon Thorne hand Arthur a celebratory Cuban cigar in the Grand Hall right before Arthur locked himself in the Study!",
       "detention": "Searched from Lady Evelyn Vance's Belongings: Tonight's handwritten note: '8:40 PM — Saw hot chamomile tea brought up to Study. 8:42 PM — Watched Gideon Thorne hand Arthur a celebratory Cuban cigar in the Grand Hall. 9:02 PM — Tea untouched & barely lukewarm; watch smashed at 8:48 PM.'",
+      "accusedResponse": "INNOCENT DEFENSE: \"I am INNOCENT! Check Exhibit E—in 2008 I was Director of Vance Charity Gala Fund (2006–2008), with no Archive Box #4 motive. I poured the chamomile tea that sat untouched, saw the 8:48 PM watch, and watched the real killer hand Arthur a celebratory Cuban cigar at 8:42 PM!\"",
       "dialogues": [
         {
           "act": "ACT I",
@@ -88,11 +89,12 @@
       "team": "inspector",
       "badge": "INNOCENT — INSPECTOR",
       "badgeClass": "inspector",
-      "special": "SPECIAL ABILITY (BLACKOUT PHASE): During each Blackout, if you are NOT Detained, the Host wakes you alone to secretly read ONE guest's Sealed Detention Card for 12 seconds!",
+      "special": "LEAD FORENSIC WITNESS: You brought a field chemistry kit (used to produce Exhibit F in Act III) and lead the Evidence Board briefings in Acts II & III.",
       "persona": "Composed, razor-sharp attorney retained since 2005. You drafted Arthur's New Will and serve as the room's anchor for facts and timelines.",
       "secret": "You advised Arthur AGAINST publishing Archive Box #4 (the 2008 transparency audit) in his New Will because you knew it would put a target on his back. You also brought a miniature field chemistry kit in your bag, which you will use between Acts II and III to produce Exhibit F (testing the wine vs. Arthur's cuff).",
       "clue": "Arthur's New Will specifically mandated releasing Archive Box #4 from 2008. The 2008 Dossier Ledger and Arthur's Horologist Journal in that archive will prove who had 2008 access and whether his watch ever lost time. You also did a headcount in the Grand Hall at 9:00 PM and noticed someone was missing during the blackout.",
       "detention": "Searched from Clara's Briefcase: A confidential memo from Arthur dated yesterday: 'Clara — Do NOT remove the 2008 Archive Box #4 clause. Eighteen years of silence ends tonight.' Also tucked inside: a miniature field chemistry testing kit.",
+      "accusedResponse": "INNOCENT DEFENSE: \"I am INNOCENT! In 2008 I was Lead Trust Counsel, Vance Legal Holdings (2005–present)—I have zero connection to '2008 Patent Espionage — Stolen Defense Blueprints'. Better yet, I brought the field chemistry kit that produced Exhibit F and proved Arthur died of Aconite! Why would the killer expose their own murder weapon?\"",
       "dialogues": [
         {
           "act": "ACT I",
@@ -124,6 +126,7 @@
       "secret": "You quietly wrote Arthur an off-the-books prescription for severe insomnia last month against hospital guidelines—embarrassing, not lethal.",
       "clue": "You know Arthur's heart was stable at dinner and that fast-acting Aconite is completely odorless—unlike cyanide's bitter-almond smell.",
       "detention": "Searched from Dr. Mercer's Medical Bag: A leather vial case with 6 sealed Heart Tonic vials (all intact) and an off-the-books insomnia prescription for Lord Arthur.",
+      "accusedResponse": "INNOCENT DEFENSE: \"I am INNOCENT! Check Exhibit E—in 2008 I was Chief Resident, St. Jude's Clinic (2006–2008); retained 2009, with zero connection to '2008 Patent Espionage — Stolen Defense Blueprints' or Archive Box #4. I had no concentrated Aconite, didn't touch the Chronos Automaton, and didn't cut the generator!\"",
       "dialogues": [
         {
           "act": "ACT I",
@@ -155,6 +158,7 @@
       "secret": "You have been secretly selling Vance Precision clockwork blueprints to a rival tech CEO—you were in the basement hallway at 8:50 PM hiding a schematic tube!",
       "clue": "You know the manor's backup generator breaker can only be cut manually from the basement Generator Room—the storm did NOT cause a clean 15-second blackout.",
       "detention": "Searched from Jasper's Tool Roll: A rolled-up Vance Precision gear blueprint tucked inside a brass tube with a note: 'Wire $150k upon delivery.' (Corporate espionage, not murder!)",
+      "accusedResponse": "INNOCENT DEFENSE: \"I am INNOCENT! Check Exhibit E—in 2008 I was Vance Precision Intern & Lab Assistant (Summer 2008); hired full-time 2012, with zero connection to '2008 Patent Espionage — Stolen Defense Blueprints' or Archive Box #4. I had no concentrated Aconite, didn't touch the Chronos Automaton, and didn't cut the generator!\"",
       "dialogues": [
         {
           "act": "ACT I",
@@ -186,6 +190,7 @@
       "secret": "RED HERRING! At 7:58 PM, you snuck into the Dining & Sideboard and put CHLORAL HYDRATE (non-lethal sleeping powder) into Arthur's 1998 Bordeaux wine decanter before a glass was carried up to his Study, then slipped into the Study around 8:05 PM to get a secret look at the corporate clauses in Arthur's New Will! You're terrified you killed him—until Exhibit F proves he never drank the wine!",
       "clue": "Later at 8:48 PM, while slipping back along the upstairs gallery to retrieve a dropped glove, you ducked behind a curtain and heard a heavy muffled THUMP inside Arthur's locked Study—followed by dead silence! Also: once Exhibit F drops in Act III, confess to the sleeping powder so the room stops wasting votes on you and hunts the real killer!",
       "detention": "Searched from Sebastian Cole's Belongings: A folded white paper packet labeled 'Chloral Hydrate (Sleep Aid)' and a nervous note about getting a private look at the unsigned New Will.",
+      "accusedResponse": "INNOCENT DEFENSE: \"I am INNOCENT of murder! Yes, I put Chloral Hydrate—harmless sleeping powder—into the Bordeaux decanter at 7:58 PM so I could check the New Will. I was terrified I'd killed him until Exhibit F proved his wine glass was completely full and untouched! Arthur died at 8:48 PM from concentrated Aconite—not my sleeping powder!\"",
       "dialogues": [
         {
           "act": "ACT I",
@@ -217,6 +222,7 @@
       "secret": "At 8:35 PM near the basement stairs, you overheard two people whispering furiously: 'Fifteen seconds of dark at nine sharp, or your secret goes to the police!'",
       "clue": "You know for a fact that the 9:00 PM blackout was a deliberate blackmail job—NOT a storm surge!",
       "detention": "Searched from Lydia's Purse: Signed divorce papers citing $400k in gambling debt, plus a cocktail napkin note: '8:35 PM basement stairs — overheard: 15 seconds of dark at 9 sharp or secret goes to police.'",
+      "accusedResponse": "INNOCENT DEFENSE: \"I am INNOCENT! Check Exhibit E—in 2008 I was Corporate Accountant, Vance Holdings (2006–2008), with zero connection to '2008 Patent Espionage — Stolen Defense Blueprints' or Archive Box #4. I had no concentrated Aconite, didn't touch the Chronos Automaton, and didn't cut the generator!\"",
       "dialogues": [
         {
           "act": "ACT I",
@@ -248,6 +254,7 @@
       "secret": "Last Tuesday, Arthur confessed he had spent eighteen years 'shielding a guilty soul from a 2008 sin.' Bound by the Seal of Confession, you speak in pointed truths.",
       "clue": "You know Arthur's New Will was his final act of penance to expose the true culprit from 2008.",
       "detention": "Searched from Father Silas's Breviary: A Nov 14 bookmark in Arthur's hand: 'Father, pray for me. On the 19th I am ending eighteen years of silence about Archive Box #4.'",
+      "accusedResponse": "INNOCENT DEFENSE: \"I am INNOCENT! Check Exhibit E—in 2008 I was Parish Treasurer, St. Jude's Coastal Parish (2005–2008), with zero connection to '2008 Patent Espionage — Stolen Defense Blueprints' or Archive Box #4. I had no concentrated Aconite, didn't touch the Chronos Automaton, and didn't cut the generator!\"",
       "dialogues": [
         {
           "act": "ACT I",
@@ -274,11 +281,12 @@
       "team": "accomplice",
       "badge": "SHADOW TEAM — ACCOMPLICE",
       "badgeClass": "shadow",
-      "special": "YOU ARE ON THE SHADOW TEAM! You are allied with Gideon Thorne and win ONLY if the Killer escapes indictment in the Final Verdict. Wake up with the Shadow Team during Blackout Phases.",
+      "special": "YOU ARE ON THE SHADOW TEAM! You are allied with Gideon Thorne and win ONLY if the Killer escapes indictment in the Final Verdict. Support Gideon Thorne in public Town Hall votes and try to win (or steer) the Act I Group Leader election!",
       "persona": "Tough, cynical head of security who knows every corridor, lock, and blind spot in Ravenshollow Manor.",
       "secret": "Gideon Thorne caught your private scandal and blackmailed you into cutting the basement generator breaker for 15 seconds at 9:00 PM sharp! You didn't know Gideon Thorne was going to murder Arthur, but if Gideon Thorne goes down, you go to prison as an accessory. Worse, your initials (D.C.) appear on the burned Exhibit C audit log from 2008—even though you had no access to Archive Box #4 in 2008!",
       "clue": "STRATEGY: Deflect suspicion onto Sebastian Cole and defend Gideon Thorne's 8:55 PM Grand Hall alibi!",
       "detention": "Searched from Damien Cross's Belongings: Heavy rubber-insulated electrical gloves (smelling of ozone from the generator breaker) and an unsigned blackmail note: '9:00 PM sharp. Fifteen seconds of dark, or your secret goes to the police.'",
+      "accusedResponse": "ACCOMPLICE CAUGHT (NOT THE KILLER!): \"Wait—stop! I admit I'm on the Shadow Team: I was blackmailed into cutting the basement generator breaker for 15 seconds at 9:00 PM sharp. But I am NOT the killer, and I'm not ratting them out! You caught an accomplice, not the mastermind. Hold ONE Sudden-Death Final Vote right now to name the true killer—if you miss again, the Shadow Team wins!\"",
       "dialogues": [
         {
           "act": "ACT I",
@@ -305,11 +313,12 @@
       "team": "killer",
       "badge": "SHADOW TEAM — KILLER",
       "badgeClass": "shadow",
-      "special": "YOU ARE THE KILLER! Win by avoiding indictment in the Final Verdict (frame Damien Cross or Sebastian Cole!). Your Shadow Team ally: Damien Cross. During Blackouts, wake up to Intimidate 1 guest OR Plant a False Lead.",
+      "special": "YOU ARE THE KILLER! Win by avoiding indictment in the Final Verdict (frame Damien Cross or Sebastian Cole!). Your Shadow Team ally: Damien Cross. Try to win the Act I Group Leader vote (or get an ally elected) to control tie-breakers and extra detentions!",
       "persona": "Slick, ruthless business rival invited tonight so Arthur could gloat over the Chronos Automaton.",
       "secret": "In 2008, YOU were behind \"2008 Patent Espionage — Stolen Defense Blueprints\" (signed \"G.T.\"). Tonight: at 8:15 PM you rigged the Chronos Automaton (8:55 PM voice + 9:00 PM carafe smash) and tried to burn the 2008 audit log in the Study fireplace; at 8:35 PM you blackmailed Damien Cross to cut the generator at 9:00 PM; at 8:42 PM you handed Arthur a celebratory Cuban cigar laced with concentrated Aconite (he died at 8:48 PM). You stood next to Dr. Julian Mercer at 8:55 PM for an alibi, then rushed to the desk at 9:01 PM—pocketing the celebratory Cuban cigar (and dropping your botanical-smudged handkerchief down the upstairs laundry chute at 9:04 PM) while slipping up by claiming you saw his chalk-pale lips (he was face-down!), smelled 'bitter-almond wine,' and lied about the 8:48 PM watch.",
       "clue": "STRATEGY: Stay calm! Let the room suspect Sebastian Cole for drugging the wine and Damien Cross for the blackout and Exhibit C. If pressed on Exhibit E, claim Arthur's watch broke earlier or someone forged \"G.T.\" to frame you!",
       "detention": "Searched from Gideon Thorne's Effects: A folded dinner napkin smudged with faint fireplace soot and an unsigned note in Gideon Thorne's handwriting: \"Speak to Arthur privately before the 9:00 PM announcement—he cannot open that 2008 file tonight.\"",
+      "accusedResponse": "CONFESSION (YOU CAUGHT ME!): \"Alright—you got me! I killed Arthur Vance. In 2008 I was behind '2008 Patent Espionage — Stolen Defense Blueprints', and I couldn't let his New Will open Archive Box #4. At 8:15 PM I rigged the Chronos Automaton to play his angry recording at 8:55 PM and smash the water carafe at 9:00 PM. I blackmailed Damien Cross to cut the lights at nine, and at 8:42 PM I handed Arthur a celebratory Cuban cigar laced with concentrated Aconite—he died alone at 8:48 PM. I used Dr. Julian Mercer for my 8:55 PM alibi, and only slipped up at 9:01 PM when I claimed I smelled bitter-almond wine and saw his pale lips while he was face-down! My Shadow Team ally was Damien Cross.\"",
       "dialogues": [
         {
           "act": "ACT I",
@@ -341,6 +350,7 @@
       "secret": "You're obsessed with precision timekeeping—at 8:55 PM you checked your U.S. Naval Observatory chronometer against the manor's Grand Clock (dead-on to the second).",
       "clue": "Yesterday afternoon at the pier, you synced your naval chronometer with Arthur's pocket watch! Arthur's watch did NOT run 12 minutes slow—whoever claimed that in Act I was LYING!",
       "detention": "Searched from Capt. Hale's Pea Coat: A brass U.S. Naval Observatory chronometer and harbor log: '14:00 — Synchronized with Arthur Vance. His gold pocket watch is accurate to ±0.1 sec.'",
+      "accusedResponse": "INNOCENT DEFENSE: \"I am INNOCENT! Check Exhibit E—in 2008 I was Port Inspector, Coastal Maritime Authority (2005–2008), with zero connection to '2008 Patent Espionage — Stolen Defense Blueprints' or Archive Box #4. I had no concentrated Aconite, didn't touch the Chronos Automaton, and didn't cut the generator!\"",
       "dialogues": [
         {
           "act": "ACT I",
@@ -364,50 +374,86 @@
     {
       "id": "A",
       "act": 1,
-      "title": "Exhibit A — Study Crime Scene Sketch (9:02 PM)",
-      "html": "<ul>\n          <li><strong>Door &amp; Window:</strong> Heavy oak double-door bolted from the <em>inside</em>; cliff window latched inside.</li>\n          <li><strong>The Body:</strong> Lord Arthur Vance slumped across his desk blotter. First reached and rolled over by <strong>Gideon Thorne</strong> at 9:01 PM.</li>\n          <li><strong>Initial Statement (9:01 PM):</strong> As guests rushed in, <strong>Gideon Thorne</strong> loudly claimed to see Arthur's <em>\"chalk-pale lips\"</em> and smell <em>\"bitter almonds from the spilled wine.\"</em></li>\n          <li><strong>On the Desk:</strong> Unsigned New Will; a crystal wine glass; a single poured porcelain cup of chamomile tea (<strong>barely lukewarm</strong> by 9:02 PM); a broken pocket watch.</li>\n          <li><strong>On the Floor:</strong> Shattered glass beside a heavy 5-lb brass counterweight in a pool of spilled liquid.</li>\n        </ul>"
+      "actLabel": "Act I",
+      "presenter": null,
+      "presenterLabel": "Act I",
+      "title": "Study Crime Scene Sketch (9:02 PM)",
+      "html": "<div class=\"sketch-frame\"><img src=\"../assets/study-crime-scene-sketch.jpg\" alt=\"Study Crime Scene Sketch (9:02 PM)\" class=\"sketch-img\" style=\"display:block; width:100%; max-width:560px; height:auto; margin:0 auto 10px; border:1px solid #8a6830; border-radius:4px;\" /></div>\n        <ul>\n          <li><strong>The Body:</strong> Lord Arthur Vance found slumped across his desk blotter. First reached and rolled over by <strong>Gideon Thorne</strong> at 9:01 PM.</li>\n          <li><strong>Initial Statement (9:01 PM):</strong> As guests rushed in, <strong>Gideon Thorne</strong> loudly claimed to see Arthur's <em>\"chalk-pale lips\"</em> and smell <em>\"bitter almonds from the spilled wine.\"</em></li>\n          <li><strong>Desk &amp; Floor Notes:</strong> Unsigned New Will; untouched crystal wine glass; single poured porcelain cup of chamomile tea (<strong>barely lukewarm</strong> by 9:02 PM); broken pocket watch; shattered glass beside a 5-lb brass counterweight in spilled liquid.</li>\n        </ul>"
     },
     {
       "id": "B",
       "act": 1,
-      "title": "Exhibit B — Arthur's Shattered Pocket Watch",
+      "actLabel": "Act I",
+      "presenter": {
+        "id": 1,
+        "name": "Lady Evelyn Vance"
+      },
+      "presenterLabel": "Lady Evelyn Vance (#1)",
+      "title": "Arthur's Shattered Pocket Watch",
       "html": "<ul>\n          <li><strong>Make:</strong> Custom Vance Precision Gold Chronometer (<em>\"A.V. — Time Never Lies\"</em>).</li>\n          <li><strong>Condition:</strong> Crystal cracked; internal gears jammed from hitting the desk corner.</li>\n          <li><strong>Frozen Time:</strong> <strong>8:48 PM</strong> (12 minutes before the 9:00 PM blackout).</li>\n          <li><strong>Witness Note:</strong> <strong>Gideon Thorne</strong> snapped the gold lid shut at 9:01 PM, claiming Arthur's watch <em>\"always ran twelve minutes slow.\"</em></li>\n        </ul>"
     },
     {
       "id": "C",
       "act": 2,
-      "title": "Exhibit C — Charred Audit Log ('D.C.' / 'G.T.')",
+      "actLabel": "Act II",
+      "presenter": {
+        "id": 2,
+        "name": "Clara Sterling"
+      },
+      "presenterLabel": "Clara Sterling (#2)",
+      "title": "Charred Audit Log ('D.C.' / 'G.T.')",
       "html": "<pre>VANCE PRECISION INSTRUMENTS — CONFIDENTIAL AUDIT\nARCHIVE BOX #4 (SLATED FOR RELEASE WITH NEW WILL)\n-------------------------------------------------\nSUBJECT:   2008 Patent Espionage — Stolen Defense Blueprints\nFINDING:   Sold classified naval chronometer specs abroad; export log FALSIFIED\nFLAGGED INITIALS: \"D.C.\" / \"G.T.\" [ROLES &amp; DATES BURNED]\nNOTE:      One party falsified the 2008 record; the other had\n           no clearance or access to Archive Box #4 in 2008.\nSTATUS:    Suppressed by A. Vance (2008). Full disclosure\n           ordered upon execution of New Will.</pre>"
     },
     {
       "id": "D",
       "act": 2,
-      "title": "Exhibit D — Chronos Automaton, Wax Cylinder & Study Re-Inspection",
+      "actLabel": "Act II",
+      "presenter": {
+        "id": 6,
+        "name": "Jasper Moore"
+      },
+      "presenterLabel": "Jasper Moore (#6)",
+      "title": "Chronos Automaton, Wax Cylinder & Study Re-Inspection",
       "html": "<ul>\n          <li><strong>Phonograph Drum:</strong> Plays a removable brass wax cylinder at a scheduled minute. Currently set to <strong>8:55 PM</strong>.</li>\n          <li><strong>Release Cam:</strong> Drops a 5-lb brass counterweight at <strong>9:00 PM</strong> (shifted 2 inches to strike the water carafe).</li>\n          <li><strong>Cylinder Label:</strong> Reads <em>\"9:00 PM Gala Greeting\"</em> — hastily glued over a scratched-out title: <strong>\"Memoir Draft — Confrontation.\"</strong></li>\n          <li><strong>Study Re-Inspection (Clear Light):</strong> The crystal wine glass on the desk is <strong>completely full &amp; untouched</strong>; the shattered glass on the floor is a <strong>water carafe</strong> in <strong>clear, odorless liquid</strong> (zero wine, zero bitter-almond scent). Desk-blotter impressions confirm Arthur collapsed <strong>face-down, facing away from the door</strong> until <strong>Gideon Thorne</strong> rolled him over.</li>\n        </ul>"
+    },
+    {
+      "id": "FL1",
+      "act": 2,
+      "actLabel": "Act II",
+      "presenter": null,
+      "presenterLabel": "Act II",
+      "title": "Crumpled Generator Note",
+      "html": "<p><em>Found crumpled on the basement stairs as guests regrouped before Act II:</em></p><pre>\"9:00 PM sharp. Pull the main breaker. Don't let anyone see you. — S.C.\"</pre>"
     },
     {
       "id": "E",
       "act": 3,
-      "title": "Exhibit E — 2008 Dossier Ledger & Horologist Journal",
+      "actLabel": "Act III",
+      "presenter": null,
+      "presenterLabel": "Act III",
+      "title": "2008 Dossier Ledger & Horologist Journal",
       "html": "<ul>\n          <li><strong>Selected 2008 Archive Records:</strong><br/>\n            &bull; <strong>Lady Evelyn Vance:</strong> Director of Vance Charity Gala Fund (2006–2008)<br/>\n            &bull; <strong>Clara Sterling:</strong> Lead Trust Counsel, Vance Legal Holdings (2005–present)<br/>\n            &bull; <strong>Sebastian Cole:</strong> Senior Authenticator, Sotheby's Clock Desk (2006–2008)<br/>\n            &bull; <strong>Lydia Vance:</strong> Corporate Accountant, Vance Holdings (2006–2008)<br/>\n            &bull; <strong>Damien Cross:</strong> <em>Cleared — No clearance or access to Archive Box #4 in 2008 (unrelated to the 2008 incident).</em><br/>\n            &bull; <strong>Gideon Thorne:</strong> VP of Engineering, Vance Precision (2005–2008)\n          </li>\n          <li><strong>Arthur's Horologist Journal (Nov 15):</strong> <em>\"A clockmaker whose own pocket watch loses a single second is a fraud. My gold chronometer is calibrated daily to the U.S. Naval Observatory signal. It has not drifted by half a second in eleven years.\"</em></li>\n        </ul>"
     },
     {
       "id": "F",
       "act": 3,
-      "title": "Exhibit F — Field Toxicology Report",
+      "actLabel": "Act III",
+      "presenter": {
+        "id": 2,
+        "name": "Clara Sterling"
+      },
+      "presenterLabel": "Clara Sterling (#2)",
+      "title": "Field Toxicology Report",
       "html": "<ul>\n          <li><strong>Red Wine (Dining Sideboard Decanter &amp; Untouched Study Glass):</strong> Positive for <strong>Chloral Hydrate</strong> (non-lethal sleeping sedative). Arthur never drank it.</li>\n          <li><strong>Residue on Arthur's Lips &amp; Cuff:</strong> Positive for <strong>Concentrated Aconite</strong> (fast-acting, completely <strong>odorless</strong> cardiac poison; fatal in <strong>2–3 minutes</strong>) — matching trace contact from a <strong>celebratory Cuban cigar</strong>.</li>\n          <li><strong>Floor Puddle:</strong> Plain spring water. Zero wine, zero bitter-almond odor.</li>\n        </ul>"
     },
     {
-      "id": "FL1",
-      "act": 0,
-      "title": "False Lead #1 — Crumpled Generator Note (Blackout Action)",
-      "html": "<p><em>Found crumpled on the basement stairs immediately after the blackout:</em></p><pre>\"9:00 PM sharp. Pull the main breaker. Don't let anyone see you. — S.C.\"</pre>"
-    },
-    {
       "id": "FL2",
-      "act": 0,
-      "title": "False Lead #2 — Anonymous Library Rumor (Blackout Action)",
-      "html": "<p><em>Slipped under the Library door during the blackout:</em></p><pre>\"Check the Dining &amp; Sideboard! Someone wiped down the Bordeaux decanter left on the sideboard with an almond-scented handkerchief right before 9:00 PM.\"</pre>"
+      "act": 3,
+      "actLabel": "Act III",
+      "presenter": null,
+      "presenterLabel": "Act III",
+      "title": "Anonymous Library Rumor",
+      "html": "<p><em>Found slipped under the Library door before Act III:</em></p><pre>\"Check the Dining &amp; Sideboard! Someone wiped down the Bordeaux decanter left on the sideboard with an almond-scented handkerchief right before 9:00 PM.\"</pre>"
     }
   ],
   "acts": {
@@ -418,28 +464,18 @@
     },
     "act1": {
       "label": "ACT I — THE LOCKED STUDY (7 MIN)",
-      "sub": "Read Public Opener, unlock Exhibits A & B, mingle (7m), then Vote (3m) & Blackout (1m).",
+      "sub": "Read Public Opener, reveal Act I Evidence, mingle (7m), then Public Vote #1 (Detain 1 + Elect Group Leader).",
       "html": "\n          <div class=\"script-line\"><div class=\"script-speaker\">Lady Evelyn Vance (#1)</div>\"Nobody touch a thing! The oak door was bolted from the inside, and the window drops eighty feet to the rocks. How on earth could someone kill him in a locked room?\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Dr. Julian Mercer (#4)</div>\"He was shouting at someone at 8:55! We all heard him! Then at 9:00 the lights went out and—my God, was that a gunshot?\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Gideon Thorne (#16)</div>\"There is no bullet wound. It was poison! The moment the lights came back on at 9:01, I saw Arthur's chalk-pale lips and smelled that unmistakable bitter-almond scent from the spilled wine. He died right around nine.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Lady Evelyn Vance (#1)</div>\"Wait a moment—when I stepped beside the desk, I noticed Arthur's pocket watch had smashed on the corner—its hands were stopped at 8:48.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Gideon Thorne (#16)</div>\"Ah, yes, I closed the lid so it wouldn't upset everyone. Arthur's watch always ran twelve minutes slow—he told me so himself just yesterday.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Clara Sterling (#2)</div>\"Slow or not, the New Will is still on his desk—unsigned. Whoever wanted Arthur dead before 9:00 PM is standing in this room.\"</div>"
-    },
-    "blackout1": {
-      "label": "BLACKOUT PHASE I (1 MIN)",
-      "sub": "100% Spoiler-Free Automated Blackout — everyone closes their eyes!",
-      "html": "<p style=\"margin-bottom:14px;\">Click <strong>Launch Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team to make a silent tap, then waking the Inspector to privately inspect 1 Detention Card—so <strong>nobody has to sit out as a human host!</strong></p>\n        <button class=\"btn btn-gold\" onclick=\"startAutoBlackout()\">Launch Auto-Blackout Phase I</button>"
     },
     "act2": {
       "label": "ACT II — SHADOWS IN THE CLOCKWORK (6 MIN)",
-      "sub": "Read Public Opener, unlock Exhibits C & D, mingle (6m), then Vote (3m) & Blackout (1m).",
-      "html": "\n          <div class=\"script-line\"><div class=\"script-speaker\">Clara Sterling (#2)</div>\"While the upstairs gallery was cleared, we inspected the Study fireplace and the Chronos Automaton. We have two new exhibits—a half-burned 2008 audit log flagging the initials 'D.C.' and 'G.T.', and a scratched brass wax cylinder inside the Automaton.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Jasper Moore (#6)</div>\"Wait—a scratched cylinder? Arthur built the Chronos Automaton to play a recorded greeting at 9:00 PM. You can also program its brass counterweight to drop on the hour. If someone swapped the cylinder...\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Damien Cross (#14)</div>\"Don't look at me just because 'D.C.' is on that burned page! Half the people in this house had a reason to hate Arthur. And if you're wondering why the lights went out at nine, the storm probably surged the old breaker!\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Sebastian Cole (#11)</div>\"Oh, spare us! And what about the wine? Gideon Thorne said it smelled of poison—who poured Arthur's glass?!\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Lady Evelyn Vance (#1)</div>\"Actually... look at our Study re-inspection on Exhibit D. In clear light, the wine glass on the desk is completely full and untouched—it was the water carafe that shattered in odorless water, and Arthur was slumped face-down!\"</div>"
-    },
-    "blackout2": {
-      "label": "BLACKOUT PHASE II (1 MIN)",
-      "sub": "100% Spoiler-Free Automated Blackout — everyone closes their eyes!",
-      "html": "<p style=\"margin-bottom:14px;\">Click <strong>Launch Auto-Blackout</strong> below (or in the top bar). The app will narrate the entire Blackout phase aloud—waking the Shadow Team, then waking the Inspector—with zero spoilers for anyone!</p>\n        <button class=\"btn btn-gold\" onclick=\"startAutoBlackout()\">Launch Auto-Blackout Phase II</button>"
+      "sub": "Read Public Opener, reveal Act II Evidence, mingle (6m), then Public Vote #2 (Detain 1 + Group Leader's Extra Detention).",
+      "html": "\n          <div class=\"script-line\"><div class=\"script-speaker\">Clara Sterling (#2)</div>\"While the upstairs gallery was cleared, we inspected the Study fireplace and the Chronos Automaton. We have new evidence—a half-burned 2008 audit log flagging the initials 'D.C.' and 'G.T.', and a scratched brass wax cylinder inside the Automaton.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Jasper Moore (#6)</div>\"Wait—a scratched cylinder? Arthur built the Chronos Automaton to play a recorded greeting at 9:00 PM. You can also program its brass counterweight to drop on the hour. If someone swapped the cylinder...\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Damien Cross (#14)</div>\"Don't look at me just because 'D.C.' is on that burned page! Half the people in this house had a reason to hate Arthur. And if you're wondering why the lights went out at nine, the storm probably surged the old breaker!\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Sebastian Cole (#11)</div>\"Oh, spare us! And what about the wine? Gideon Thorne said it smelled of poison—who poured Arthur's glass?!\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Lady Evelyn Vance (#1)</div>\"Actually... look at our Study re-inspection in the Chronos Automaton evidence. In clear light, the wine glass on the desk is completely full and untouched—it was the water carafe that shattered in odorless water, and Arthur was slumped face-down!\"</div>"
     },
     "act3": {
       "label": "ACT III — THE LAST CHIME (7 MIN)",
-      "sub": "Read Public Opener, unlock Exhibits E & F, mingle (7m), then Final Verdict (3m) & Reveal!",
-      "html": "\n          <div class=\"script-line\"><div class=\"script-speaker\">Clara Sterling (#2)</div>\"Enough games. We unlocked Arthur's private Horologist Journal and the 2008 Archive Ledger—and tested the residue in the Study with a field chemistry kit.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Lady Evelyn Vance (#1)</div>\"Look closely at Exhibit E and Exhibit F before you cast your final vote. The single cup of chamomile tea poured at 8:40 PM was untouched and barely lukewarm by 9:02 PM—and Arthur never touched his wine.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Gideon Thorne (#16)</div>\"Careful, everyone—wild theories will only let the real killer slip away. Look at who had the motive to steal the Will, who rigged the power, and who wasn't in the Grand Hall at nine. Let's settle this.\"</div>"
+      "sub": "Read Public Opener, reveal Act III Evidence, mingle (7m), then Final Verdict (3m) & Reveal!",
+      "html": "\n          <div class=\"script-line\"><div class=\"script-speaker\">Clara Sterling (#2)</div>\"Enough games. We unlocked Arthur's private Horologist Journal and the 2008 Archive Ledger—and tested the residue in the Study with a field chemistry kit.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Lady Evelyn Vance (#1)</div>\"Look closely at the 2008 Dossier Ledger and Field Toxicology Report before you cast your final vote. The single cup of chamomile tea poured at 8:40 PM was untouched and barely lukewarm by 9:02 PM—and Arthur never touched his wine.\"</div>\n          <div class=\"script-line\"><div class=\"script-speaker\">Gideon Thorne (#16)</div>\"Careful, everyone—wild theories will only let the real killer slip away. Look at who had the motive to steal the Will, who rigged the power, and who wasn't in the Grand Hall at nine. Let's settle this.\"</div>"
     }
   },
   "revealHtml": "\n      <h2 class=\"serif\" style=\"color:var(--gold); font-size:1.6rem; margin-bottom:12px;\">The Truth Behind the Last Chime (RV-1562)</h2>\n      <p style=\"margin-bottom:12px;\">\n        <strong>The Killer:</strong> <span style=\"color:#ff7b7b; font-weight:700;\">Gideon Thorne (#16)</span><br/>\n        <strong>The Accomplice (Shadow Team):</strong> <span style=\"color:var(--gold);\">Damien Cross (#14)</span><br/>\n        <strong>The Inspector:</strong> <span style=\"color:#6be0a3;\">Clara Sterling (#2)</span>\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        Arthur Vance did <strong>not</strong> die at 9:00 PM. He died at <strong>8:48 PM</strong>—alone behind a bolted door—from <strong>concentrated Aconite</strong> hidden in the <strong>celebratory Cuban cigar</strong> handed to him by <strong>Gideon Thorne (#16)</strong> at 8:42 PM. At 9:01 PM, Gideon Thorne rushed to the desk first, pocketing the celebratory Cuban cigar and later ditching a botanical-smudged handkerchief down the upstairs laundry chute.\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        Sebastian Cole (#11) spiked the red wine with harmless sleeping powder, which Arthur never touched. The 8:55 PM argument was a <strong>pre-recorded brass wax cylinder</strong> played by the Chronos Automaton, and the 9:00 PM crash was the counterweight smashing the <strong>water carafe</strong> while blackmailed accomplice <strong>Damien Cross (#14)</strong> cut the generator breaker for 15 seconds.\n      </p>\n      <p style=\"margin-bottom:10px;\">\n        <strong>The 4-Pillar Proof:</strong> (1) Arthur's pocket watch froze at <strong>8:48 PM</strong> and his Horologist Journal proves it never lost a second; (2) The wine was untouched and Arthur died of odorless Aconite from the celebratory Cuban cigar; (3) Gideon Thorne slipped up in Act I by claiming to see Arthur's pale lips (Arthur was face-down!) and smell bitter almonds from spilled wine (it was odorless water!); (4) Exhibit C flagged both <strong>\"D.C.\"</strong> and <strong>\"G.T.\"</strong>, but Exhibit E clears Damien Cross (no 2008 access) and ties <strong>Gideon Thorne</strong> directly to <strong>2008 Patent Espionage — Stolen Defense Blueprints</strong> — VP of Engineering, Vance Precision (2005–2008)!\n      </p>"

@@ -28,11 +28,13 @@ Print these exhibits (or project them via `companion/index.html`) and reveal the
 
 ---
 
-## ACT I EXHIBITS (Reveal at Start of Act I)
+## ACT I EVIDENCE (Reveal at Start of Act I)
 
-### EXHIBIT A — Study Crime Scene Sketch (9:02 PM)
-> **Recorded by Estate Attorney Clara Sterling & Inspector Harriet Vance-Cole**
->
+### Study Crime Scene Sketch (9:02 PM)
+*Presented by: Act I*
+
+![Study Crime Scene Sketch](assets/study-crime-scene-sketch.jpg)
+
 > - **Door:** Heavy oak, steel deadbolt engaged from the **inside**. Forced open at 9:01 PM.
 > - **Window:** Latched from the inside; sheer 80-foot drop to coastal rocks.
 > - **The Body:** Lord Arthur Vance found slumped across his leather desk blotter. First reached and rolled over by Dr. Julian Mercer at 9:01 PM.
@@ -47,7 +49,9 @@ Print these exhibits (or project them via `companion/index.html`) and reveal the
 
 ---
 
-### EXHIBIT B — Arthur's Shattered Pocket Watch
+### Arthur's Shattered Pocket Watch
+*Presented by: Act I — Introduced by Witness (e.g., Thomas Graves #3)*
+
 > **Recovered from the corner of Arthur's desk at 9:02 PM**
 >
 > - **Make:** Custom Vance Precision Gold Chronometer (engraved *"A.V. — Time Never Lies"*).
@@ -57,9 +61,11 @@ Print these exhibits (or project them via `companion/index.html`) and reveal the
 
 ---
 
-## ACT II EXHIBITS (Reveal at Start of Act II)
+## ACT II EVIDENCE (Reveal at Start of Act II)
 
-### EXHIBIT C — Charred Audit Ledger Page (Study Fireplace)
+### Charred Audit Log
+*Presented by: Act II — Introduced by Inspector (e.g., Harriet Vance-Cole #8)*
+
 > **Pulled half-burned from the cold embers of the Study fireplace**
 >
 > ```text
@@ -77,9 +83,9 @@ Print these exhibits (or project them via `companion/index.html`) and reveal the
 
 ---
 
-### EXHIBIT D — The Chronos Automaton Blueprint, Wax Cylinder & Study Re-Inspection
-> **Inspected by Celeste Moreau & Clara Sterling**
->
+### Chronos Automaton, Wax Cylinder & Study Re-Inspection
+*Presented by: Act II — Introduced by Clockwork Witness (e.g., Celeste Moreau #7)*
+
 > - **Device:** *The Chronos Automaton* — a 4-foot brass clockwork figure mounted beside Arthur's desk.
 > - **Programmable Triggers:**
 >   1. **Phonograph Drum:** Plays a removable brass wax cylinder at a scheduled minute. Currently set to **`8:55 PM`**.
@@ -89,10 +95,23 @@ Print these exhibits (or project them via `companion/index.html`) and reveal the
 
 ---
 
-## ACT III EXHIBITS (Reveal at Start of Act III)
+### Crumpled Generator Note
+*Presented by: Act II*
 
-### EXHIBIT E — Employment Ledger & Horologist's Journal
-> **Unlocked from Arthur's private desk drawer by Inspector Harriet Vance-Cole**
+> *Found crumpled on the basement stairs as guests regrouped before Act II:*
+>
+> ```text
+> "9:00 PM sharp. Pull the main breaker. Don't let anyone see you. — V."
+> ```
+
+---
+
+## ACT III EVIDENCE (Reveal at Start of Act III)
+
+### 2008 Dossier Ledger & Horologist Journal
+*Presented by: Act III*
+
+> **Unlocked from Arthur's private desk drawer**
 >
 > **1. Vance Precision Instruments — Selected 2008 Archive & Employment Records:**
 > - *Lady Evelyn Vance:* Director of Vance Charity Gala Fund (**2006–2008**)
@@ -107,23 +126,20 @@ Print these exhibits (or project them via `companion/index.html`) and reveal the
 
 ---
 
-### EXHIBIT F — Field Toxicology Note (Arthur's Chemistry Kit)
-> **Tested by Inspector Harriet Vance-Cole**
->
+### Field Toxicology Report
+*Presented by: Act III — Introduced by Inspector (e.g., Harriet Vance-Cole #8)*
+
 > - **Sample 1 (Red Wine in Dining Sideboard Decanter & Untouched Study Glass):** Tests positive for **Chloral Hydrate** (a non-lethal sleeping sedative). *Conclusion: Someone tried to drug Arthur's wine to put him to sleep, NOT kill him—and Arthur never drank it.*
 > - **Sample 2 (Trace Residue on Arthur's Lips & Shirt Cuff):** Tests positive for **Concentrated Aconite** (fast-acting, completely **odorless** cardiac poison; fatal within **2–3 minutes** of ingestion).
 > - **Sample 3 (Puddle on Floor):** Plain spring water. Zero wine, zero poison, zero bitter-almond odor.
 
 ---
 
-## ACT II & ACT III RED HERRING SLIPS (False Leads)
+### Anonymous Library Rumor
+*Presented by: Act III*
 
-Unveil **False Lead #1** on the Evidence Board at the start of **Act II**, and **False Lead #2** at the start of **Act III**:
-
-### FALSE LEAD #1 — Torn Note Found Near the Generator Room
-> *"Found crumpled on the basement stairs: '9:00 PM sharp. Pull the main breaker. Don't let Evelyn see you. — V.'"*
-> *(Misdirection: Implicates Victor `#5` and Evelyn `#1`, even though it's a forgery planted in the dark!)*
-
-### FALSE LEAD #2 — Rumor Slip: The Missing Kitchen Knife & Bitter Almonds
-> *"An anonymous note slipped under the Library door: 'Check the Dining & Sideboard! Someone wiped down the Bordeaux decanter left on the sideboard with an almond-scented handkerchief right before 9:00 PM.'"*
-> *(Misdirection: Reinforces Mercer's false bitter-almond wine theory!)*
+> *Found slipped under the Library door before Act III:*
+>
+> ```text
+> "Check the Dining & Sideboard! Someone wiped down the Bordeaux decanter left on the sideboard with an almond-scented handkerchief right before 9:00 PM."
+> ```
