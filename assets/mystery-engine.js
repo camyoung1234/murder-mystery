@@ -145,7 +145,7 @@
     },
     {
       id: 12, name: "Lydia Vance", role: "Victor's Calculating Wife", initials: "L.V.",
-      persona: "Icy, ambitious, and furious with Victor (#5) for gambling away your savings.",
+      persona: "Icy, ambitious, and furious with Victor for gambling away your savings.",
       secret: "At 8:35 PM near the basement stairs, you overheard two people whispering furiously: 'Fifteen seconds of dark at nine sharp, or your secret goes to the police!'",
       clue: "You know for a fact that the 9:00 PM blackout was a deliberate blackmail job—NOT a storm surge!",
       detention: "Searched from Lydia's Purse: Signed divorce papers naming Victor's $400k debt, plus a cocktail napkin note: '8:35 PM basement stairs — overheard: 15 seconds of dark at 9 sharp or secret goes to police.'",
@@ -456,7 +456,7 @@
 
       // Confirm 8:55 PM Grand Hall alibi on the Alibi Witness's own sheet
       if (isAlibiWitness) {
-        persona += ` At 8:55 PM, you were standing right beside ${killerBase.name} (#${killerId}) in the Grand Hall when Arthur's voice boomed from upstairs.`;
+        persona += ` At 8:55 PM, you were standing right beside ${killerBase.name} in the Grand Hall when Arthur's voice boomed from upstairs.`;
       }
 
       if (isKiller) {
@@ -469,11 +469,11 @@
         if (id === 10) {
           persona = "Sharp, perceptive investigative reporter with the Boston Chronicle. You arrived as a guest's plus-one, claiming to cover the gala—though your real reason for coming tonight is far more personal.";
         }
-        const allyNames = accomplices.map(aid => `${BASE_CHARACTERS[aid - 1].name} (#${aid})`).join(", ");
+        const allyNames = accomplices.map(aid => `${BASE_CHARACTERS[aid - 1].name}`).join(", ");
         const allyLabel = accomplices.length === 1 ? "ally" : "allies";
-        special = `YOU ARE THE KILLER! Win by avoiding indictment in the Final Verdict (frame ${coreAccompliceBase.name} #${coreAccompliceId} or ${wineSpikerBase.name} #${wineSpikerId}!). Your Shadow Team ${allyLabel}: ${allyNames}. During Blackouts, wake up to Intimidate 1 guest OR Plant a False Lead.`;
-        secret = `In 2008, YOU were behind "${killerBase.scandalTitle}" (signed "${killerBase.initials}"). Tonight: at 8:15 PM you rigged the Chronos Automaton (8:55 PM voice + 9:00 PM carafe smash) and tried to burn the 2008 audit log in the Study fireplace; at 8:35 PM you blackmailed ${coreAccompliceBase.name} (#${coreAccompliceId}) to cut the generator at 9:00 PM; at 8:42 PM you handed Arthur ${deliveryWithArticle} laced with concentrated Aconite (he died at 8:48 PM). You stood next to ${alibiWitnessBase.name} (#${alibiWitnessId}) at 8:55 PM for an alibi, then rushed to the desk at 9:01 PM—pocketing the ${killerBase.deliveryItem} (and dropping your botanical-smudged handkerchief down the upstairs laundry chute at 9:04 PM) while slipping up by claiming you saw his chalk-pale lips (he was face-down!), smelled 'bitter-almond wine,' and lied about the 8:48 PM watch.`;
-        clue = `STRATEGY: Stay calm! Let the room suspect ${wineSpikerBase.name} (#${wineSpikerId}) for drugging the wine and ${coreAccompliceBase.name} (#${coreAccompliceId}) for the blackout and Exhibit C. If pressed on Exhibit E, claim Arthur's watch broke earlier or someone forged "${killerBase.initials}" to frame you!`;
+        special = `YOU ARE THE KILLER! Win by avoiding indictment in the Final Verdict (frame ${coreAccompliceBase.name} or ${wineSpikerBase.name}!). Your Shadow Team ${allyLabel}: ${allyNames}. During Blackouts, wake up to Intimidate 1 guest OR Plant a False Lead.`;
+        secret = `In 2008, YOU were behind "${killerBase.scandalTitle}" (signed "${killerBase.initials}"). Tonight: at 8:15 PM you rigged the Chronos Automaton (8:55 PM voice + 9:00 PM carafe smash) and tried to burn the 2008 audit log in the Study fireplace; at 8:35 PM you blackmailed ${coreAccompliceBase.name} to cut the generator at 9:00 PM; at 8:42 PM you handed Arthur ${deliveryWithArticle} laced with concentrated Aconite (he died at 8:48 PM). You stood next to ${alibiWitnessBase.name} at 8:55 PM for an alibi, then rushed to the desk at 9:01 PM—pocketing the ${killerBase.deliveryItem} (and dropping your botanical-smudged handkerchief down the upstairs laundry chute at 9:04 PM) while slipping up by claiming you saw his chalk-pale lips (he was face-down!), smelled 'bitter-almond wine,' and lied about the 8:48 PM watch.`;
+        clue = `STRATEGY: Stay calm! Let the room suspect ${wineSpikerBase.name} for drugging the wine and ${coreAccompliceBase.name} for the blackout and Exhibit C. If pressed on Exhibit E, claim Arthur's watch broke earlier or someone forged "${killerBase.initials}" to frame you!`;
         detention = `Searched from ${base.name}'s Effects: A folded dinner napkin smudged with faint fireplace soot and an unsigned note in ${base.name}'s handwriting: "Speak to Arthur privately before the 9:00 PM announcement—he cannot open that 2008 file tonight."`;
       } else if (isAccomplice) {
         team = "accomplice";
@@ -484,20 +484,20 @@
         }
         const fellowAllies = accomplices
           .filter(aid => aid !== id)
-          .map(aid => `${BASE_CHARACTERS[aid - 1].name} (#${aid})`);
+          .map(aid => `${BASE_CHARACTERS[aid - 1].name}`);
         const fellowText = fellowAllies.length > 0 ? ` Fellow accomplice${fellowAllies.length > 1 ? "s" : ""}: ${fellowAllies.join(", ")}.` : "";
-        special = `YOU ARE ON THE SHADOW TEAM! You are allied with ${killerBase.name} (#${killerId}) and win ONLY if the Killer escapes indictment in the Final Verdict.${fellowText} Wake up with the Shadow Team during Blackout Phases.`;
+        special = `YOU ARE ON THE SHADOW TEAM! You are allied with ${killerBase.name} and win ONLY if the Killer escapes indictment in the Final Verdict.${fellowText} Wake up with the Shadow Team during Blackout Phases.`;
         if (isCoreAcc) {
-          secret = `${killerBase.name} (#${killerId}) caught your private scandal and blackmailed you into cutting the basement generator breaker for 15 seconds at 9:00 PM sharp! You didn't know ${killerBase.name} was going to murder Arthur, but if ${killerBase.name} goes down, you go to prison as an accessory. Worse, your initials (${base.initials}) appear on the burned Exhibit C audit log from 2008—even though you had no access to Archive Box #4 in 2008!`;
+          secret = `${killerBase.name} caught your private scandal and blackmailed you into cutting the basement generator breaker for 15 seconds at 9:00 PM sharp! You didn't know ${killerBase.name} was going to murder Arthur, but if ${killerBase.name} goes down, you go to prison as an accessory. Worse, your initials (${base.initials}) appear on the burned Exhibit C audit log from 2008—even though you had no access to Archive Box #4 in 2008!`;
           detention = `Searched from ${base.name}'s Belongings: Heavy rubber-insulated electrical gloves (smelling of ozone from the generator breaker) and an unsigned blackmail note: '9:00 PM sharp. Fifteen seconds of dark, or your secret goes to the police.'`;
         } else if (accomplices.indexOf(id) === 1) {
-          secret = `You are secretly tied to ${killerBase.name}'s (#${killerId}) 2008 cover-up and helped keep the upstairs gallery clear from 8:10–8:20 PM while ${killerBase.name} rigged the Automaton. Protect ${killerBase.name} in Town Hall votes!`;
+          secret = `You are secretly tied to ${killerBase.name}'s 2008 cover-up and helped keep the upstairs gallery clear from 8:10–8:20 PM while ${killerBase.name} rigged the Automaton. Protect ${killerBase.name} in Town Hall votes!`;
           detention = `Searched from ${base.name}'s Belongings: A burner phone with an unsent draft: '${killerBase.initials} — Upstairs corridor clear 8:10 to 8:20 PM. Stop Archive Box #4 at any cost.'`;
         } else {
-          secret = `You are quietly helping ${killerBase.name} (#${killerId}) bury the 2008 Archive Box #4 trail and agreed to steer the room toward the wine and away from the 2008 ledger. Protect ${killerBase.name} in Town Hall votes!`;
+          secret = `You are quietly helping ${killerBase.name} bury the 2008 Archive Box #4 trail and agreed to steer the room toward the wine and away from the 2008 ledger. Protect ${killerBase.name} in Town Hall votes!`;
           detention = `Searched from ${base.name}'s Belongings: A torn corner of a 2008 file folder and a folded slip: '${killerBase.initials} — Keep everyone focused on the wine tonight. Archive Box #4 stays shut.'`;
         }
-        clue = `STRATEGY: Deflect suspicion onto ${wineSpikerBase.name} (#${wineSpikerId}) and defend ${killerBase.name}'s (#${killerId}) 8:55 PM Grand Hall alibi!`;
+        clue = `STRATEGY: Deflect suspicion onto ${wineSpikerBase.name} and defend ${killerBase.name}'s 8:55 PM Grand Hall alibi!`;
       } else if (isInspector) {
         team = "inspector";
         badge = "INNOCENT — INSPECTOR";
@@ -535,8 +535,8 @@
         const teaNote = id === 3
           ? "8:40 PM — Poured hot cup of chamomile tea in Study."
           : "8:40 PM — Saw hot chamomile tea brought up to Study.";
-        clue = `1) At 8:40 PM a piping-hot cup of chamomile tea was poured in the Study—by 9:02 PM the untouched cup was barely lukewarm. 2) At 8:42 PM, YOU PERSONALLY SAW ${killerBase.name} (#${killerId}) hand Arthur ${deliveryWithArticle} in the Grand Hall right before Arthur locked himself in the Study!`;
-        detention = `Searched from ${base.name}'s Belongings: Tonight's handwritten note: '${teaNote} 8:42 PM — Watched ${killerBase.name} (#${killerId}) hand Arthur ${deliveryWithArticle} in the Grand Hall. 9:02 PM — Tea untouched & barely lukewarm; watch smashed at 8:48 PM.'`;
+        clue = `1) At 8:40 PM a piping-hot cup of chamomile tea was poured in the Study—by 9:02 PM the untouched cup was barely lukewarm. 2) At 8:42 PM, YOU PERSONALLY SAW ${killerBase.name} hand Arthur ${deliveryWithArticle} in the Grand Hall right before Arthur locked himself in the Study!`;
+        detention = `Searched from ${base.name}'s Belongings: Tonight's handwritten note: '${teaNote} 8:42 PM — Watched ${killerBase.name} hand Arthur ${deliveryWithArticle} in the Grand Hall. 9:02 PM — Tea untouched & barely lukewarm; watch smashed at 8:48 PM.'`;
       }
 
       // Dynamic Act I-III Mandatory Dialogues
@@ -580,12 +580,12 @@
       }
     }
     const exhibitERecords = [
-      { id: killerId, html: `&bull; <strong>${escHtml(killerBase.name)} (#${killerId}):</strong> ${escHtml(killerBase.ledger2008)}` },
-      { id: coreAccompliceId, html: `&bull; <strong>${escHtml(coreAccompliceBase.name)} (#${coreAccompliceId}):</strong> <em>Cleared — No clearance or access to Archive Box #4 in 2008 (unrelated to the 2008 incident).</em>` },
-      { id: wineSpikerId, html: `&bull; <strong>${escHtml(wineSpikerBase.name)} (#${wineSpikerId}):</strong> ${escHtml(wineSpikerBase.ledger2008)}` },
+      { id: killerId, html: `&bull; <strong>${escHtml(killerBase.name)}:</strong> ${escHtml(killerBase.ledger2008)}` },
+      { id: coreAccompliceId, html: `&bull; <strong>${escHtml(coreAccompliceBase.name)}:</strong> <em>Cleared — No clearance or access to Archive Box #4 in 2008 (unrelated to the 2008 incident).</em>` },
+      { id: wineSpikerId, html: `&bull; <strong>${escHtml(wineSpikerBase.name)}:</strong> ${escHtml(wineSpikerBase.ledger2008)}` },
       ...extraExhibitEIds.map(cid => {
         const c = BASE_CHARACTERS[cid - 1];
-        return { id: cid, html: `&bull; <strong>${escHtml(c.name)} (#${cid}):</strong> ${escHtml(c.ledger2008)}` };
+        return { id: cid, html: `&bull; <strong>${escHtml(c.name)}:</strong> ${escHtml(c.ledger2008)}` };
       })
     ].sort((a, b) => a.id - b.id).map(r => r.html).join("<br/>\n            ");
 
@@ -595,8 +595,8 @@
         id: "A", act: 1, title: "Exhibit A — Study Crime Scene Sketch (9:02 PM)",
         html: `<ul>
           <li><strong>Door &amp; Window:</strong> Heavy oak double-door bolted from the <em>inside</em>; cliff window latched inside.</li>
-          <li><strong>The Body:</strong> Lord Arthur Vance slumped across his desk blotter. First reached and rolled over by <strong>${escHtml(killerBase.name)} (#${killerId})</strong> at 9:01 PM.</li>
-          <li><strong>Initial Statement (9:01 PM):</strong> As guests rushed in, <strong>${escHtml(killerBase.name)} (#${killerId})</strong> loudly claimed to see Arthur's <em>"chalk-pale lips"</em> and smell <em>"bitter almonds from the spilled wine."</em></li>
+          <li><strong>The Body:</strong> Lord Arthur Vance slumped across his desk blotter. First reached and rolled over by <strong>${escHtml(killerBase.name)}</strong> at 9:01 PM.</li>
+          <li><strong>Initial Statement (9:01 PM):</strong> As guests rushed in, <strong>${escHtml(killerBase.name)}</strong> loudly claimed to see Arthur's <em>"chalk-pale lips"</em> and smell <em>"bitter almonds from the spilled wine."</em></li>
           <li><strong>On the Desk:</strong> Unsigned New Will; a crystal wine glass; a single poured porcelain cup of chamomile tea (<strong>barely lukewarm</strong> by 9:02 PM); a broken pocket watch.</li>
           <li><strong>On the Floor:</strong> Shattered glass beside a heavy 5-lb brass counterweight in a pool of spilled liquid.</li>
         </ul>`
@@ -607,7 +607,7 @@
           <li><strong>Make:</strong> Custom Vance Precision Gold Chronometer (<em>"A.V. — Time Never Lies"</em>).</li>
           <li><strong>Condition:</strong> Crystal cracked; internal gears jammed from hitting the desk corner.</li>
           <li><strong>Frozen Time:</strong> <strong>8:48 PM</strong> (12 minutes before the 9:00 PM blackout).</li>
-          <li><strong>Witness Note:</strong> <strong>${escHtml(killerBase.name)} (#${killerId})</strong> snapped the gold lid shut at 9:01 PM, claiming Arthur's watch <em>"always ran twelve minutes slow."</em></li>
+          <li><strong>Witness Note:</strong> <strong>${escHtml(killerBase.name)}</strong> snapped the gold lid shut at 9:01 PM, claiming Arthur's watch <em>"always ran twelve minutes slow."</em></li>
         </ul>`
       },
       {
@@ -620,7 +620,7 @@
           <li><strong>Phonograph Drum:</strong> Plays a removable brass wax cylinder at a scheduled minute. Currently set to <strong>8:55 PM</strong>.</li>
           <li><strong>Release Cam:</strong> Drops a 5-lb brass counterweight at <strong>9:00 PM</strong> (shifted 2 inches to strike the water carafe).</li>
           <li><strong>Cylinder Label:</strong> Reads <em>"9:00 PM Gala Greeting"</em> — hastily glued over a scratched-out title: <strong>"Memoir Draft — Confrontation."</strong></li>
-          <li><strong>Study Re-Inspection (Clear Light):</strong> The crystal wine glass on the desk is <strong>completely full &amp; untouched</strong>; the shattered glass on the floor is a <strong>water carafe</strong> in <strong>clear, odorless liquid</strong> (zero wine, zero bitter-almond scent). Desk-blotter impressions confirm Arthur collapsed <strong>face-down, facing away from the door</strong> until <strong>${escHtml(killerBase.name)} (#${killerId})</strong> rolled him over.</li>
+          <li><strong>Study Re-Inspection (Clear Light):</strong> The crystal wine glass on the desk is <strong>completely full &amp; untouched</strong>; the shattered glass on the floor is a <strong>water carafe</strong> in <strong>clear, odorless liquid</strong> (zero wine, zero bitter-almond scent). Desk-blotter impressions confirm Arthur collapsed <strong>face-down, facing away from the door</strong> until <strong>${escHtml(killerBase.name)}</strong> rolled him over.</li>
         </ul>`
       },
       {
@@ -807,9 +807,9 @@
         ? "Since you oversee the Study service, who had access to Arthur's Bordeaux decanter tonight?"
         : "With guests coming and going all evening, who had access to Arthur's Bordeaux decanter tonight?";
       return [
-        { act: "ACT I", target: `Say to ${witnessBase.name} (#${witnessBase.id}):`, line: `"I was standing right beside ${awSpoken} in the Grand Hall at 8:55 PM when Arthur was shouting! ${witnessPrompt} Someone clearly poisoned that wine before nine."` },
-        { act: "ACT II", target: `Say to ${inspectorBase.name} (#${inspectorBase.id}):`, line: `"I rolled Arthur over at 9:01 to check his pulse—pure reflex! Don't get distracted by a half-burned 2008 page; ask ${caSpoken} why the lights conveniently died at nine!"` },
-        { act: "ACT III", target: `Say to ${witnessBase.name} (#${witnessBase.id}):`, line: `"Yes, I handed Arthur ${deliveryWithArticle} at 8:42 PM—completely harmless! If his watch stopped at 8:48, he must have dropped it before arguing at 8:55. Don't fall for a frame-up!"` }
+        { act: "ACT I", target: `Say to ${witnessBase.name}:`, line: `"I was standing right beside ${awSpoken} in the Grand Hall at 8:55 PM when Arthur was shouting! ${witnessPrompt} Someone clearly poisoned that wine before nine."` },
+        { act: "ACT II", target: `Say to ${inspectorBase.name}:`, line: `"I rolled Arthur over at 9:01 to check his pulse—pure reflex! Don't get distracted by a half-burned 2008 page; ask ${caSpoken} why the lights conveniently died at nine!"` },
+        { act: "ACT III", target: `Say to ${witnessBase.name}:`, line: `"Yes, I handed Arthur ${deliveryWithArticle} at 8:42 PM—completely harmless! If his watch stopped at 8:48, he must have dropped it before arguing at 8:55. Don't fall for a frame-up!"` }
       ];
     }
 
@@ -822,9 +822,9 @@
         : `"Look at Exhibit C—2008! Yes, '${base.initials}' was flagged on that burned page, but I had NO access to Archive Box #4 in 2008 and nothing to do with '${killerBase.scandalTitle}'! You're barking up the wrong tree!"`;
       const acc3Target = pickTarget([7, 2, 1, 3, alibiWitnessBase.id, inspectorBase.id], shadowIds);
       return [
-        { act: "ACT I", target: `Say to ${inspectorBase.name} (#${inspectorBase.id}):`, line: `"I wasn't in the Grand Hall at nine because I heard a shutter banging near the basement stairs. Stop pointing fingers at me when ${act1WillClaim}"` },
-        { act: "ACT II", target: `Say to ${witnessBase.name} (#${witnessBase.id}) [after Exhibit C]:`, line: act2Line },
-        { act: "ACT III", target: `Say to ${acc3Target.name} (#${acc3Target.id}):`, line: `"I didn't touch any poison and I didn't rig that Automaton! Look at who stood to gain from the unsigned Will—and remember ${kSpoken} was in the Grand Hall at 8:55!"` }
+        { act: "ACT I", target: `Say to ${inspectorBase.name}:`, line: `"I wasn't in the Grand Hall at nine because I heard a shutter banging near the basement stairs. Stop pointing fingers at me when ${act1WillClaim}"` },
+        { act: "ACT II", target: `Say to ${witnessBase.name} [after Exhibit C]:`, line: act2Line },
+        { act: "ACT III", target: `Say to ${acc3Target.name}:`, line: `"I didn't touch any poison and I didn't rig that Automaton! Look at who stood to gain from the unsigned Will—and remember ${kSpoken} was in the Grand Hall at 8:55!"` }
       ];
     }
 
@@ -841,9 +841,9 @@
           ? "a panicked family job over the Will"
           : "a desperate scheme over the Will";
         return [
-          { act: "ACT I", target: `Say to ${t1.name} (#${t1.id}):`, line: `"Let's not overcomplicate this—${sightingPhrase}, and everyone heard Arthur shouting at 8:55. This is ${motivePhrase}, plain and simple."` },
-          { act: "ACT II", target: `Say to ${t2.name} (#${t2.id}) [after Exhibit C]:`, line: `"Careful chasing ghosts in a half-burned 2008 audit page. Someone cut the power at nine sharp and someone tampered with the wine—focus on who had the motive to stop the Will tonight!"` },
-          { act: "ACT III", target: `Say to ${killerBase.name} (#${killerBase.id}) [stage-managed defense]:`, line: `"Look, ${kSpoken}, I don't care what a dusty 2008 ledger says—you were standing right beside ${awSpoken} in the Grand Hall when Arthur was shouting at 8:55! Tell everyone how you could possibly be in two places at once!"` }
+          { act: "ACT I", target: `Say to ${t1.name}:`, line: `"Let's not overcomplicate this—${sightingPhrase}, and everyone heard Arthur shouting at 8:55. This is ${motivePhrase}, plain and simple."` },
+          { act: "ACT II", target: `Say to ${t2.name} [after Exhibit C]:`, line: `"Careful chasing ghosts in a half-burned 2008 audit page. Someone cut the power at nine sharp and someone tampered with the wine—focus on who had the motive to stop the Will tonight!"` },
+          { act: "ACT III", target: `Say to ${killerBase.name} [stage-managed defense]:`, line: `"Look, ${kSpoken}, I don't care what a dusty 2008 ledger says—you were standing right beside ${awSpoken} in the Grand Hall when Arthur was shouting at 8:55! Tell everyone how you could possibly be in two places at once!"` }
         ];
       }
       // Shadow Accomplice #3 (18+ players — Cover-up / toxicology deflection ally)
@@ -853,18 +853,18 @@
         ? "Everybody knows you slipped into the Study around 8:05"
         : "Word is you slipped into the Study around 8:05";
       return [
-        { act: "ACT I", target: `Say to ${t1.name} (#${t1.id}):`, line: `"If ${kSpoken} smelled bitter almonds the moment we opened the door, that's textbook fast-acting poison in the wine. Why are we ignoring the decanter on the sideboard?"` },
-        { act: "ACT II", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}):`, line: `"You've been sweating since 9:01 PM! ${studyClaim}—stop trying to pin this on a clockwork toy and admit what you put in that wine!"` },
-        { act: "ACT III", target: `Say to ${t3.name} (#${t3.id}) [after Exhibit F]:`, line: `"Even if Exhibit F found Aconite, trace residue can transfer from anything in a crowded hall—it doesn't prove ${kSpoken} killed Arthur! Don't let an 18-year-old audit blind you!"` }
+        { act: "ACT I", target: `Say to ${t1.name}:`, line: `"If ${kSpoken} smelled bitter almonds the moment we opened the door, that's textbook fast-acting poison in the wine. Why are we ignoring the decanter on the sideboard?"` },
+        { act: "ACT II", target: `Say to ${wineSpikerBase.name}:`, line: `"You've been sweating since 9:01 PM! ${studyClaim}—stop trying to pin this on a clockwork toy and admit what you put in that wine!"` },
+        { act: "ACT III", target: `Say to ${t3.name} [after Exhibit F]:`, line: `"Even if Exhibit F found Aconite, trace residue can transfer from anything in a crowded hall—it doesn't prove ${kSpoken} killed Arthur! Don't let an 18-year-old audit blind you!"` }
       ];
     }
 
     if (isWineSpiker) {
       const confessGoal = wineSpikerIsFamily ? "to steal the Will!" : "to get a look at the New Will!";
       return [
-        { act: "ACT I", target: `Say to ${alibiWitnessBase.name} (#${alibiWitnessBase.id}):`, line: `"Keep your voice down! People are whispering about the wine—yes, I stepped into the Study around 8:05 PM to talk to Arthur, and he wasn't even there!"` },
-        { act: "ACT II", target: `Say to ${witnessBase.name} (#${witnessBase.id}):`, line: `"Between us—did Lord Arthur drink any of that red wine tonight? ${kSpoken} claimed it smelled of poison, and I'm worried..."` },
-        { act: "ACT III", target: `Confess to ${inspectorBase.name} (#${inspectorBase.id}) [after Exhibit F]:`, line: `"Fine! I put sleeping powder—chloral hydrate—in the Bordeaux decanter in the Dining & Sideboard at 7:58 PM ${confessGoal} NOT Aconite! And Exhibit F proves he NEVER DRANK THE WINE! I'm a thief, not a murderer!"` }
+        { act: "ACT I", target: `Say to ${alibiWitnessBase.name}:`, line: `"Keep your voice down! People are whispering about the wine—yes, I stepped into the Study around 8:05 PM to talk to Arthur, and he wasn't even there!"` },
+        { act: "ACT II", target: `Say to ${witnessBase.name}:`, line: `"Between us—did Lord Arthur drink any of that red wine tonight? ${kSpoken} claimed it smelled of poison, and I'm worried..."` },
+        { act: "ACT III", target: `Confess to ${inspectorBase.name} [after Exhibit F]:`, line: `"Fine! I put sleeping powder—chloral hydrate—in the Bordeaux decanter in the Dining & Sideboard at 7:58 PM ${confessGoal} NOT Aconite! And Exhibit F proves he NEVER DRANK THE WINE! I'm a thief, not a murderer!"` }
       ];
     }
 
@@ -876,17 +876,17 @@
         ? `"Did you see anyone near Lord Arthur's Study around 8:20 PM? Something about this 9:00 PM timeline doesn't add up—his watch smashed at 8:48!"`
         : `"Something about this 9:00 PM timeline doesn't add up—Arthur's pocket watch smashed at 8:48 PM, and the chamomile tea poured at 8:40 was untouched and barely lukewarm by 9:02!"`;
       return [
-        { act: "ACT I", target: `Say to ${act1Target.name} (#${act1Target.id}):`, line: act1Line },
-        { act: "ACT II", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}):`, line: `"The wine glass on Arthur's desk was completely full. What troubles me is the single cup of hot chamomile tea poured at 8:40 PM—by 9:02 PM, it was untouched and barely lukewarm!"` },
-        { act: "ACT III", target: `Say to ${alibiWitnessBase.name} (#${alibiWitnessBase.id}):`, line: `"Think back! At 8:42 PM in the Grand Hall, I personally watched ${kSpoken} (#${killerBase.id}) hand Arthur ${deliveryWithArticle}—and Arthur carried it straight up to his locked Study!"` }
+        { act: "ACT I", target: `Say to ${act1Target.name}:`, line: act1Line },
+        { act: "ACT II", target: `Say to ${wineSpikerBase.name}:`, line: `"The wine glass on Arthur's desk was completely full. What troubles me is the single cup of hot chamomile tea poured at 8:40 PM—by 9:02 PM, it was untouched and barely lukewarm!"` },
+        { act: "ACT III", target: `Say to ${alibiWitnessBase.name}:`, line: `"Think back! At 8:42 PM in the Grand Hall, I personally watched ${kSpoken} hand Arthur ${deliveryWithArticle}—and Arthur carried it straight up to his locked Study!"` }
       ];
     }
 
     if (isInspector) {
       return [
-        { act: "ACT I", target: `Say to ${coreAccompliceBase.name} (#${coreAccompliceBase.id}):`, line: `"I did a headcount in the Grand Hall when the clock struck nine. You weren't there. Where exactly were you when the lights went out?"` },
-        { act: "ACT II", target: `Say to ${killerBase.name} (#${killerBase.id}) [after Exhibit D]:`, line: `"Wait a second—Exhibit D's Study re-inspection shows Arthur was slumped face-down at 9:01 PM, yet you claimed you saw his pale lips the instant the lights returned—and the puddle was odorless water, not wine!"` },
-        { act: "ACT III", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}) [after Exhibit F]:`, line: `"My field test found chloral hydrate—sleeping powder—in the red wine decanter. Exhibit F proves Arthur never drank it, so tell the truth right now and help us catch the real killer!"` }
+        { act: "ACT I", target: `Say to ${coreAccompliceBase.name}:`, line: `"I did a headcount in the Grand Hall when the clock struck nine. You weren't there. Where exactly were you when the lights went out?"` },
+        { act: "ACT II", target: `Say to ${killerBase.name} [after Exhibit D]:`, line: `"Wait a second—Exhibit D's Study re-inspection shows Arthur was slumped face-down at 9:01 PM, yet you claimed you saw his pale lips the instant the lights returned—and the puddle was odorless water, not wine!"` },
+        { act: "ACT III", target: `Say to ${wineSpikerBase.name} [after Exhibit F]:`, line: `"My field test found chloral hydrate—sleeping powder—in the red wine decanter. Exhibit F proves Arthur never drank it, so tell the truth right now and help us catch the real killer!"` }
       ];
     }
 
@@ -895,84 +895,84 @@
       case 1: { // Lady Evelyn Vance
         const t2 = pickTarget([7, 2, 3, 20, 4], [wineSpikerBase.id, witnessBase.id]);
         return [
-          { act: "ACT I", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}):`, line: `"Don't play innocent with me! I saw you slipping out of Arthur's Study around 8:05 PM looking like you'd seen a ghost. What were you doing in there?"` },
-          { act: "ACT II", target: `Say to ${t2.name} (#${t2.id}) [after Exhibit D]:`, line: `"Wait a second—a brass wax cylinder?! Two days ago I heard Arthur recording that exact line—'You've gone too far! I'm calling the police'—for his memoirs! Could the Automaton have played it?!"` },
-          { act: "ACT III", target: `Say to ${witnessBase.name} (#${witnessBase.id}):`, line: `"I snuck along the Upstairs Gallery to eavesdrop outside the Study door at 8:50 PM and heard TOTAL SILENCE inside! Think back—did anyone hand Arthur something right before he locked himself in at 8:45?"` }
+          { act: "ACT I", target: `Say to ${wineSpikerBase.name}:`, line: `"Don't play innocent with me! I saw you slipping out of Arthur's Study around 8:05 PM looking like you'd seen a ghost. What were you doing in there?"` },
+          { act: "ACT II", target: `Say to ${t2.name} [after Exhibit D]:`, line: `"Wait a second—a brass wax cylinder?! Two days ago I heard Arthur recording that exact line—'You've gone too far! I'm calling the police'—for his memoirs! Could the Automaton have played it?!"` },
+          { act: "ACT III", target: `Say to ${witnessBase.name}:`, line: `"I snuck along the Upstairs Gallery to eavesdrop outside the Study door at 8:50 PM and heard TOTAL SILENCE inside! Think back—did anyone hand Arthur something right before he locked himself in at 8:45?"` }
         ];
       }
       case 2: { // Clara Sterling
         return [
-          { act: "ACT I", target: `Say to ${witnessBase.name} (#${witnessBase.id}):`, line: `"Arthur's New Will is lying open and unsigned—and it specifically mandated releasing Archive Box #4 from 2008. Who spoke to Arthur between 8:40 and 8:45 PM?"` },
-          { act: "ACT II", target: `Say to ${coreAccompliceBase.name} (#${coreAccompliceBase.id}) [after Exhibit C]:`, line: `"Look at Exhibit C—Archive Box #4 from 2008! Your initials are right there on the burned page, and the lights died at nine sharp. Explain yourself!"` },
-          { act: "ACT III", target: `Say to ${inspectorBase.name} (#${inspectorBase.id}) [after Exhibit E]:`, line: `"Exhibit E settles two lies at once: Arthur's Horologist Journal proves his pocket watch never drifted a second, and the 2008 Archive Records clear one suspect and point straight to the true culprit!"` }
+          { act: "ACT I", target: `Say to ${witnessBase.name}:`, line: `"Arthur's New Will is lying open and unsigned—and it specifically mandated releasing Archive Box #4 from 2008. Who spoke to Arthur between 8:40 and 8:45 PM?"` },
+          { act: "ACT II", target: `Say to ${coreAccompliceBase.name} [after Exhibit C]:`, line: `"Look at Exhibit C—Archive Box #4 from 2008! Your initials are right there on the burned page, and the lights died at nine sharp. Explain yourself!"` },
+          { act: "ACT III", target: `Say to ${inspectorBase.name} [after Exhibit E]:`, line: `"Exhibit E settles two lies at once: Arthur's Horologist Journal proves his pocket watch never drifted a second, and the 2008 Archive Records clear one suspect and point straight to the true culprit!"` }
         ];
       }
       case 3: { // Thomas Graves (when not Witness)
         const t1 = celesteHas820 ? BASE_CHARACTERS[6] : pickTarget([2, 1, 14, 13], [wineSpikerBase.id]);
         const t3 = pickTarget([2, inspectorBase.id, 1, 4], [t1.id, wineSpikerBase.id]);
         return [
-          { act: "ACT I", target: `Say to ${t1.name} (#${t1.id}):`, line: `"Forgive me, but I saw someone on the upstairs gallery at 8:20 PM well before the gala toast. Did you spot anyone slipping out of Lord Arthur's Study?"` },
-          { act: "ACT II", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}):`, line: `"Everyone keeps talking about the wine, yet the crystal glass on Lord Arthur's desk was completely full. What troubles me is the piping-hot cup of chamomile tea I poured at 8:40 PM—untouched and barely lukewarm by 9:02!"` },
-          { act: "ACT III", target: `Say to ${t3.name} (#${t3.id}):`, line: `"When we entered the Study at 9:02 PM, Lord Arthur's pocket watch had smashed at 8:48 PM—and someone snapped the gold lid shut almost immediately. Why hide the time?"` }
+          { act: "ACT I", target: `Say to ${t1.name}:`, line: `"Forgive me, but I saw someone on the upstairs gallery at 8:20 PM well before the gala toast. Did you spot anyone slipping out of Lord Arthur's Study?"` },
+          { act: "ACT II", target: `Say to ${wineSpikerBase.name}:`, line: `"Everyone keeps talking about the wine, yet the crystal glass on Lord Arthur's desk was completely full. What troubles me is the piping-hot cup of chamomile tea I poured at 8:40 PM—untouched and barely lukewarm by 9:02!"` },
+          { act: "ACT III", target: `Say to ${t3.name}:`, line: `"When we entered the Study at 9:02 PM, Lord Arthur's pocket watch had smashed at 8:48 PM—and someone snapped the gold lid shut almost immediately. Why hide the time?"` }
         ];
       }
       case 4: { // Dr. Julian Mercer (when Innocent)
         const t1 = pickTarget([2, 1, 3, 7, 13], [inspectorBase.id, witnessBase.id]);
         return [
-          { act: "ACT I", target: `Say to ${t1.name} (#${t1.id}):`, line: `"As Arthur's physician, I can swear his heart was completely stable at dinner. Whatever killed him tonight behind that locked door was fast-acting foul play, not natural failure."` },
-          { act: "ACT II", target: `Say to ${inspectorBase.name} (#${inspectorBase.id}) [after Exhibit D]:`, line: `"Something about that 'bitter-almond' claim makes zero medical sense. Cyanide smells of bitter almonds, yes—but Exhibit D's Study re-inspection says the puddle had no scent at all! An odorless plant poison fits far better than cyanide."` },
-          { act: "ACT III", target: `Say to ${witnessBase.name} (#${witnessBase.id}) [after Exhibit F]:`, line: `"Exhibit F confirms concentrated Aconite—fatal in two to three minutes. If Arthur collapsed at 8:48 PM, it entered his system right around 8:45 PM from whatever he carried into the Study!"` }
+          { act: "ACT I", target: `Say to ${t1.name}:`, line: `"As Arthur's physician, I can swear his heart was completely stable at dinner. Whatever killed him tonight behind that locked door was fast-acting foul play, not natural failure."` },
+          { act: "ACT II", target: `Say to ${inspectorBase.name} [after Exhibit D]:`, line: `"Something about that 'bitter-almond' claim makes zero medical sense. Cyanide smells of bitter almonds, yes—but Exhibit D's Study re-inspection says the puddle had no scent at all! An odorless plant poison fits far better than cyanide."` },
+          { act: "ACT III", target: `Say to ${witnessBase.name} [after Exhibit F]:`, line: `"Exhibit F confirms concentrated Aconite—fatal in two to three minutes. If Arthur collapsed at 8:48 PM, it entered his system right around 8:45 PM from whatever he carried into the Study!"` }
         ];
       }
       case 5: { // Victor Vance (when Innocent & not Wine Spiker)
         const t1 = pickTarget([1, 2, 3, 7], [inspectorBase.id]);
         const t2 = pickTarget([2, 7, 1, 4], [inspectorBase.id, t1.id]);
         return [
-          { act: "ACT I", target: `Say to ${t1.name} (#${t1.id}):`, line: `"Don't look at me just because I needed money! Everybody here knows Arthur's New Will wasn't just about disinheriting family—it was going to blow open a 2008 scandal!"` },
-          { act: "ACT II", target: `Say to ${t2.name} (#${t2.id}) [after Exhibit C]:`, line: `"Someone tried to burn Exhibit C in the Study fireplace before nine o'clock! Who in this room was desperate enough to kill Arthur to keep Archive Box #4 sealed?"` },
-          { act: "ACT III", target: `Say to ${inspectorBase.name} (#${inspectorBase.id}) [after Exhibit F]:`, line: `"Exhibit F proves the wine wasn't the murder weapon at all! Follow the odorless Aconite and the 8:42 PM handoff—that's where the real killer is hiding!"` }
+          { act: "ACT I", target: `Say to ${t1.name}:`, line: `"Don't look at me just because I needed money! Everybody here knows Arthur's New Will wasn't just about disinheriting family—it was going to blow open a 2008 scandal!"` },
+          { act: "ACT II", target: `Say to ${t2.name} [after Exhibit C]:`, line: `"Someone tried to burn Exhibit C in the Study fireplace before nine o'clock! Who in this room was desperate enough to kill Arthur to keep Archive Box #4 sealed?"` },
+          { act: "ACT III", target: `Say to ${inspectorBase.name} [after Exhibit F]:`, line: `"Exhibit F proves the wine wasn't the murder weapon at all! Follow the odorless Aconite and the 8:42 PM handoff—that's where the real killer is hiding!"` }
         ];
       }
       case 6: { // Jasper Moore (when Innocent & not Accomplice)
         const t2 = pickTarget([7, 2, 3, 16, 4], [inspectorBase.id]);
         const t3 = pickTarget([2, 1, 3, 4, 13, 19], [inspectorBase.id, t2.id]);
         return [
-          { act: "ACT I", target: `Say to ${inspectorBase.name} (#${inspectorBase.id}):`, line: `"I built the backup power system in this manor, and I'm telling you right now: the storm did NOT cause a clean 15-second blackout. Someone manually pulled the main breaker in the basement Generator Room!"` },
-          { act: "ACT II", target: `Say to ${t2.name} (#${t2.id}) [after Exhibit D]:`, line: `"Look at Exhibit D—the Automaton's counterweight cam was shifted exactly two inches to strike the water carafe at 9:00 PM sharp. That takes deliberate calibration, not luck!"` },
-          { act: "ACT III", target: `Say to ${t3.name} (#${t3.id}):`, line: `"Think like an engineer: the 9:00 PM blackout and the 9:00 PM counterweight drop happened on the exact same chime. Whoever pulled that basement breaker was working for the real killer!"` }
+          { act: "ACT I", target: `Say to ${inspectorBase.name}:`, line: `"I built the backup power system in this manor, and I'm telling you right now: the storm did NOT cause a clean 15-second blackout. Someone manually pulled the main breaker in the basement Generator Room!"` },
+          { act: "ACT II", target: `Say to ${t2.name} [after Exhibit D]:`, line: `"Look at Exhibit D—the Automaton's counterweight cam was shifted exactly two inches to strike the water carafe at 9:00 PM sharp. That takes deliberate calibration, not luck!"` },
+          { act: "ACT III", target: `Say to ${t3.name}:`, line: `"Think like an engineer: the 9:00 PM blackout and the 9:00 PM counterweight drop happened on the exact same chime. Whoever pulled that basement breaker was working for the real killer!"` }
         ];
       }
       case 7: { // Celeste Moreau
         const t2 = pickTarget([1, 2, 3, 4, 6], [witnessBase.id, coreAccompliceBase.id]);
         return [
-          { act: "ACT I", target: `Say to ${witnessBase.name} (#${witnessBase.id}):`, line: `"All right, I snuck up to the gallery at 8:20 PM for a glimpse of the Automaton—and right as I reached the top of the stairs, I saw a figure in a dark coat slip out of Arthur's Study carrying a small dark case!"` },
-          { act: "ACT II", target: `Say to ${t2.name} (#${t2.id}) [after Exhibit D]:`, line: `"Mon Dieu—look at Exhibit D! The Chronos Automaton can play a pre-recorded brass cylinder at 8:55 PM AND drop its 5-pound counterweight at 9:00 PM! Arthur could have been dead BEFORE 8:55!"` },
-          { act: "ACT III", target: `Say to ${coreAccompliceBase.name} (#${coreAccompliceBase.id}):`, line: `"The Automaton's counterweight was shifted two inches to smash that carafe at 9:00 PM—the exact second the lights went out while you were missing from the Grand Hall. Don't tell me that's a coincidence!"` }
+          { act: "ACT I", target: `Say to ${witnessBase.name}:`, line: `"All right, I snuck up to the gallery at 8:20 PM for a glimpse of the Automaton—and right as I reached the top of the stairs, I saw a figure in a dark coat slip out of Arthur's Study carrying a small dark case!"` },
+          { act: "ACT II", target: `Say to ${t2.name} [after Exhibit D]:`, line: `"Mon Dieu—look at Exhibit D! The Chronos Automaton can play a pre-recorded brass cylinder at 8:55 PM AND drop its 5-pound counterweight at 9:00 PM! Arthur could have been dead BEFORE 8:55!"` },
+          { act: "ACT III", target: `Say to ${coreAccompliceBase.name}:`, line: `"The Automaton's counterweight was shifted two inches to smash that carafe at 9:00 PM—the exact second the lights went out while you were missing from the Grand Hall. Don't tell me that's a coincidence!"` }
         ];
       }
       case 8: { // Harriet Vance-Cole (when Innocent & not Inspector)
         const t2 = pickTarget([2, 1, 3, 4, 13], [coreAccompliceBase.id, witnessBase.id]);
         return [
-          { act: "ACT I", target: `Say to ${coreAccompliceBase.name} (#${coreAccompliceBase.id}):`, line: `"Old magistrate's habit—I did a headcount in the Grand Hall when the clock struck nine. You weren't there. Care to tell me where you vanished during the blackout?"` },
-          { act: "ACT II", target: `Say to ${t2.name} (#${t2.id}):`, line: `"Arthur invited me back after ten years of silence for one reason: tonight he was finally exposing the 2008 Archive Box #4 cover-up, and he warned me to watch the people he trusted most."` },
-          { act: "ACT III", target: `Say to ${witnessBase.name} (#${witnessBase.id}) [after Exhibit F]:`, line: `"Exhibit F settled it: the wine only held sleeping sedative, while Arthur's lips and cuff tested positive for odorless Aconite. Who handed him something right before 8:45?"` }
+          { act: "ACT I", target: `Say to ${coreAccompliceBase.name}:`, line: `"Old magistrate's habit—I did a headcount in the Grand Hall when the clock struck nine. You weren't there. Care to tell me where you vanished during the blackout?"` },
+          { act: "ACT II", target: `Say to ${t2.name}:`, line: `"Arthur invited me back after ten years of silence for one reason: tonight he was finally exposing the 2008 Archive Box #4 cover-up, and he warned me to watch the people he trusted most."` },
+          { act: "ACT III", target: `Say to ${witnessBase.name} [after Exhibit F]:`, line: `"Exhibit F settled it: the wine only held sleeping sedative, while Arthur's lips and cuff tested positive for odorless Aconite. Who handed him something right before 8:45?"` }
         ];
       }
       case 9: { // Chef Henri Laurent
         const t3 = pickTarget([7, 1, 2, 4, 13], [wineSpikerBase.id, inspectorBase.id]);
         return [
-          { act: "ACT I", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}):`, line: `"Do not insult my kitchen! At 7:58 PM I stepped into the Dining & Sideboard and saw someone hovering nervously over my 1998 Bordeaux decanter with a tiny white paper packet. What did you put in my wine?!"` },
-          { act: "ACT II", target: `Say to ${inspectorBase.name} (#${inspectorBase.id}) [after Exhibit D]:`, line: `"I personally decanted that Bordeaux at 7:45 PM—notes of dark cherry, NEVER bitter almonds! And Exhibit D's Study re-inspection says the puddle on the Study floor was odorless water. Someone lied about smelling almonds!"` },
-          { act: "ACT III", target: `Say to ${t3.name} (#${t3.id}):`, line: `"I brewed Lord Arthur's chamomile tea at a rolling boil at 8:38 PM! If that single poured cup sat untouched until it was barely lukewarm by 9:02 PM, then he never took a sip—he was already gone well before nine!"` }
+          { act: "ACT I", target: `Say to ${wineSpikerBase.name}:`, line: `"Do not insult my kitchen! At 7:58 PM I stepped into the Dining & Sideboard and saw someone hovering nervously over my 1998 Bordeaux decanter with a tiny white paper packet. What did you put in my wine?!"` },
+          { act: "ACT II", target: `Say to ${inspectorBase.name} [after Exhibit D]:`, line: `"I personally decanted that Bordeaux at 7:45 PM—notes of dark cherry, NEVER bitter almonds! And Exhibit D's Study re-inspection says the puddle on the Study floor was odorless water. Someone lied about smelling almonds!"` },
+          { act: "ACT III", target: `Say to ${t3.name}:`, line: `"I brewed Lord Arthur's chamomile tea at a rolling boil at 8:38 PM! If that single poured cup sat untouched until it was barely lukewarm by 9:02 PM, then he never took a sip—he was already gone well before nine!"` }
         ];
       }
       case 10: { // Margot Bell
         const t1 = pickTarget([2, 1, 3, 4], [coreAccompliceBase.id]);
         const t3 = pickTarget([2, 1, 7, 4, 13], [coreAccompliceBase.id, t1.id]);
         return [
-          { act: "ACT I", target: `Say to ${t1.name} (#${t1.id}):`, line: `"Forgive my curiosity, but I heard Arthur's New Will creates a transparency foundation. Does it unseal Archive Box #4 from November 2008?"` },
-          { act: "ACT II", target: `Say to ${coreAccompliceBase.name} (#${coreAccompliceBase.id}) [after Exhibit C]:`, line: `"Interesting—I happen to carry a 2008 Boston Chronicle clipping about Archive Box #4. It implicates someone with direct 2008 access. Did you have any access to Archive Box #4 in 2008?"` },
-          { act: "ACT III", target: `Say to ${t3.name} (#${t3.id}) [after Exhibit E]:`, line: `"I'm actually an investigative reporter with the Boston Chronicle. My 2008 clipping matches Exhibit E—check who actually had 2008 access and cross off everyone cleared!"` }
+          { act: "ACT I", target: `Say to ${t1.name}:`, line: `"Forgive my curiosity, but I heard Arthur's New Will creates a transparency foundation. Does it unseal Archive Box #4 from November 2008?"` },
+          { act: "ACT II", target: `Say to ${coreAccompliceBase.name} [after Exhibit C]:`, line: `"Interesting—I happen to carry a 2008 Boston Chronicle clipping about Archive Box #4. It implicates someone with direct 2008 access. Did you have any access to Archive Box #4 in 2008?"` },
+          { act: "ACT III", target: `Say to ${t3.name} [after Exhibit E]:`, line: `"I'm actually an investigative reporter with the Boston Chronicle. My 2008 clipping matches Exhibit E—check who actually had 2008 access and cross off everyone cleared!"` }
         ];
       }
       case 11: { // Sebastian Cole
@@ -983,9 +983,9 @@
           ? "You know clockwork better than anyone here—could the Automaton play a voice at 8:55 and drop a counterweight at 9:00?"
           : "Look at Exhibit D—could the Automaton really play a voice at 8:55 and drop a counterweight at 9:00?";
         return [
-          { act: "ACT I", target: `Say to ${t1.name} (#${t1.id}):`, line: `"Don't let anyone tell you Arthur was alive and well at 8:50. I was... admiring the upstairs gallery around 8:48 PM, and I distinctly heard a heavy, muffled THUMP inside his locked Study—followed by dead silence."` },
-          { act: "ACT II", target: `Say to ${t2.name} (#${t2.id}) [after Exhibit D]:`, line: `"${clockworkPrefix} Because whatever thumped at 8:48 PM sounded like a man hitting the floor!"` },
-          { act: "ACT III", target: `Say to ${t3.name} (#${t3.id}):`, line: `"Fine, I had no business lingering in the upstairs gallery at 8:48 PM—I was eyeing a Fabergé clock, all right? Arrest me for bad taste, not murder! But I swear Arthur collapsed at 8:48 PM!"` }
+          { act: "ACT I", target: `Say to ${t1.name}:`, line: `"Don't let anyone tell you Arthur was alive and well at 8:50. I was... admiring the upstairs gallery around 8:48 PM, and I distinctly heard a heavy, muffled THUMP inside his locked Study—followed by dead silence."` },
+          { act: "ACT II", target: `Say to ${t2.name} [after Exhibit D]:`, line: `"${clockworkPrefix} Because whatever thumped at 8:48 PM sounded like a man hitting the floor!"` },
+          { act: "ACT III", target: `Say to ${t3.name}:`, line: `"Fine, I had no business lingering in the upstairs gallery at 8:48 PM—I was eyeing a Fabergé clock, all right? Arrest me for bad taste, not murder! But I swear Arthur collapsed at 8:48 PM!"` }
         ];
       }
       case 12: { // Lydia Vance
@@ -994,42 +994,42 @@
           ? `"Look me in the eye. If you did something desperate with that wine tonight because of money, I am not going down with you."`
           : `"Everyone's whispering about the wine decanter tonight—if you touched that wine before dinner, tell the truth right now before this room pins a murder on the wrong person!"`;
         return [
-          { act: "ACT I", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}):`, line: act1Line },
-          { act: "ACT II", target: `Say to ${coreAccompliceBase.name} (#${coreAccompliceBase.id}):`, line: `"Funny thing—at 8:35 PM near the basement stairs, I overheard two people whispering furiously: 'Fifteen seconds of dark at nine sharp, or your secret goes to the police!' Care to tell me who was blackmailing you?"` },
-          { act: "ACT III", target: `Say to ${t3.name} (#${t3.id}):`, line: `"Don't let anyone blame the storm for the 9:00 PM blackout! I overheard the blackmail threat on the basement stairs at 8:35 PM—whoever cut the lights was forced into it by the real killer!"` }
+          { act: "ACT I", target: `Say to ${wineSpikerBase.name}:`, line: act1Line },
+          { act: "ACT II", target: `Say to ${coreAccompliceBase.name}:`, line: `"Funny thing—at 8:35 PM near the basement stairs, I overheard two people whispering furiously: 'Fifteen seconds of dark at nine sharp, or your secret goes to the police!' Care to tell me who was blackmailing you?"` },
+          { act: "ACT III", target: `Say to ${t3.name}:`, line: `"Don't let anyone blame the storm for the 9:00 PM blackout! I overheard the blackmail threat on the basement stairs at 8:35 PM—whoever cut the lights was forced into it by the real killer!"` }
         ];
       }
       case 13: { // Father Silas Ward
         const t1 = pickTarget([2, 1, 3, 4, 7], [inspectorBase.id, wineSpikerBase.id]);
         return [
-          { act: "ACT I", target: `Say to ${t1.name} (#${t1.id}):`, line: `"I have been Arthur's confessor for twenty years. Last Tuesday he came to me burdened by eighteen years of shielding a guilty soul from a 2008 sin he could no longer keep buried."` },
-          { act: "ACT II", target: `Say to ${inspectorBase.name} (#${inspectorBase.id}) [after Exhibit C]:`, line: `"I am bound by the Seal of Confession, so listen carefully: Arthur's New Will was his final act of penance to unseal Archive Box #4. The guilty soul feared the truth of 2008 far more than losing an inheritance."` },
-          { act: "ACT III", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}) [after Exhibit E]:`, line: `"Look past the noise of the 9:00 PM blackout and read Exhibit E with clear eyes. The person who truly belonged to that 2008 sin is the one who silenced Arthur before he could sign."` }
+          { act: "ACT I", target: `Say to ${t1.name}:`, line: `"I have been Arthur's confessor for twenty years. Last Tuesday he came to me burdened by eighteen years of shielding a guilty soul from a 2008 sin he could no longer keep buried."` },
+          { act: "ACT II", target: `Say to ${inspectorBase.name} [after Exhibit C]:`, line: `"I am bound by the Seal of Confession, so listen carefully: Arthur's New Will was his final act of penance to unseal Archive Box #4. The guilty soul feared the truth of 2008 far more than losing an inheritance."` },
+          { act: "ACT III", target: `Say to ${wineSpikerBase.name} [after Exhibit E]:`, line: `"Look past the noise of the 9:00 PM blackout and read Exhibit E with clear eyes. The person who truly belonged to that 2008 sin is the one who silenced Arthur before he could sign."` }
         ];
       }
       case 14: { // Damien Cross (when Innocent)
         const t2 = pickTarget([7, 2, 1, 6, 4], [inspectorBase.id, witnessBase.id]);
         return [
-          { act: "ACT I", target: `Say to ${inspectorBase.name} (#${inspectorBase.id}):`, line: `"As head of security, I inspected the Study door at 9:01 PM myself—the steel deadbolt was genuinely thrown from the inside. Nobody walked in or out after Arthur locked it at 8:45 PM."` },
-          { act: "ACT II", target: `Say to ${t2.name} (#${t2.id}) [after Exhibit D]:`, line: `"Think tactically: if the Study deadbolt was locked from inside at 8:45, the ONLY way to stage an 8:55 shout and a 9:00 crash was a rigged mechanical timer inside the room!"` },
-          { act: "ACT III", target: `Say to ${witnessBase.name} (#${witnessBase.id}) [after Exhibit F]:`, line: `"Locked door from the inside means the Aconite walked into the Study WITH Arthur at 8:45 PM. Whoever handed him something at 8:42 PM in the Grand Hall is our killer!"` }
+          { act: "ACT I", target: `Say to ${inspectorBase.name}:`, line: `"As head of security, I inspected the Study door at 9:01 PM myself—the steel deadbolt was genuinely thrown from the inside. Nobody walked in or out after Arthur locked it at 8:45 PM."` },
+          { act: "ACT II", target: `Say to ${t2.name} [after Exhibit D]:`, line: `"Think tactically: if the Study deadbolt was locked from inside at 8:45, the ONLY way to stage an 8:55 shout and a 9:00 crash was a rigged mechanical timer inside the room!"` },
+          { act: "ACT III", target: `Say to ${witnessBase.name} [after Exhibit F]:`, line: `"Locked door from the inside means the Aconite walked into the Study WITH Arthur at 8:45 PM. Whoever handed him something at 8:42 PM in the Grand Hall is our killer!"` }
         ];
       }
       case 15: { // Beatrice (Bea) Holloway
         const t2 = pickTarget([1, 2, 7, 4, 13, 19], [witnessBase.id]);
         const t3 = pickTarget([2, 7, 1, 4, 13, 19], [witnessBase.id, t2.id]);
         return [
-          { act: "ACT I", target: `Say to ${witnessBase.name} (#${witnessBase.id}):`, line: `"Something's mighty odd! At 9:04 PM, minutes after the Study door was broken open, I was in the basement Laundry Room and heard something drop straight down the upstairs laundry chute!"` },
-          { act: "ACT II", target: `Say to ${t2.name} (#${t2.id}):`, line: `"The upstairs laundry chute is in the second-floor hall near the Grand Staircase—someone hastily ditched evidence from the Study at 9:04 PM before anyone could search their pockets!"` },
-          { act: "ACT III", target: `Say to ${t3.name} (#${t3.id}) [after Exhibit F]:`, line: `"I pulled a crumpled linen handkerchief with faint botanical residue from the basement laundry bin beneath the chute at 9:04 PM! Whoever rushed to Arthur's body first at 9:01 pocketed it from the Study and dumped it down the chute!"` }
+          { act: "ACT I", target: `Say to ${witnessBase.name}:`, line: `"Something's mighty odd! At 9:04 PM, minutes after the Study door was broken open, I was in the basement Laundry Room and heard something drop straight down the upstairs laundry chute!"` },
+          { act: "ACT II", target: `Say to ${t2.name}:`, line: `"The upstairs laundry chute is in the second-floor hall near the Grand Staircase—someone hastily ditched evidence from the Study at 9:04 PM before anyone could search their pockets!"` },
+          { act: "ACT III", target: `Say to ${t3.name} [after Exhibit F]:`, line: `"I pulled a crumpled linen handkerchief with faint botanical residue from the basement laundry bin beneath the chute at 9:04 PM! Whoever rushed to Arthur's body first at 9:01 pocketed it from the Study and dumped it down the chute!"` }
         ];
       }
       case 16: { // Gideon Thorne
         const t2 = pickTarget([2, inspectorBase.id, 1, 4], [coreAccompliceBase.id]);
         return [
-          { act: "ACT I", target: `Say to ${coreAccompliceBase.name} (#${coreAccompliceBase.id}):`, line: `"A word in private! At 8:38 PM I saw you looking panicked in the hall and heard you mutter about being blackmailed into cutting the manor's power at 9:00 PM sharp. What the hell is going on?"` },
-          { act: "ACT II", target: `Say to ${t2.name} (#${t2.id}):`, line: `"Arthur and I were business rivals, not enemies to the death. If you want to know why the lights died at nine, stop blaming the storm—someone in this house blackmailed an accomplice into pulling the breaker!"` },
-          { act: "ACT III", target: `Say to ${coreAccompliceBase.name} (#${coreAccompliceBase.id}):`, line: `"A man is dead! Whoever blackmailed you tonight used your 9:00 PM blackout as cover for a murder that happened twelve minutes earlier—save yourself before you take the fall!"` }
+          { act: "ACT I", target: `Say to ${coreAccompliceBase.name}:`, line: `"A word in private! At 8:38 PM I saw you looking panicked in the hall and heard you mutter about being blackmailed into cutting the manor's power at 9:00 PM sharp. What the hell is going on?"` },
+          { act: "ACT II", target: `Say to ${t2.name}:`, line: `"Arthur and I were business rivals, not enemies to the death. If you want to know why the lights died at nine, stop blaming the storm—someone in this house blackmailed an accomplice into pulling the breaker!"` },
+          { act: "ACT III", target: `Say to ${coreAccompliceBase.name}:`, line: `"A man is dead! Whoever blackmailed you tonight used your 9:00 PM blackout as cover for a murder that happened twelve minutes earlier—save yourself before you take the fall!"` }
         ];
       }
       case 17: { // Vivienne Sterling
@@ -1038,26 +1038,26 @@
           ? "You only cared about the inheritance."
           : "You only cared about getting into Arthur's Study for the New Will.";
         return [
-          { act: "ACT I", target: `Say to ${t1.name} (#${t1.id}):`, line: `"I probably should have mentioned this sooner—at 4:00 PM today in the Library, I caught someone alone reading Page 14 (the 2008 Archive Box #4 clause) of the New Will, and they went pale as a ghost!"` },
-          { act: "ACT II", target: `Say to ${inspectorBase.name} (#${inspectorBase.id}) [after Exhibit C]:`, line: `"I typed up the New Will myself this afternoon. Arthur added the Archive Box #4 release clause at the very last minute—whoever read Page 14 at 4:00 PM realized they had until 9:00 PM to stop him!"` },
-          { act: "ACT III", target: `Say to ${wineSpikerBase.name} (#${wineSpikerBase.id}) [after Exhibit E]:`, line: `"You didn't even know about Page 14's 2008 clause, did you? ${act3Motive} Look at Exhibit E—the real killer was terrified of Archive Box #4!"` }
+          { act: "ACT I", target: `Say to ${t1.name}:`, line: `"I probably should have mentioned this sooner—at 4:00 PM today in the Library, I caught someone alone reading Page 14 (the 2008 Archive Box #4 clause) of the New Will, and they went pale as a ghost!"` },
+          { act: "ACT II", target: `Say to ${inspectorBase.name} [after Exhibit C]:`, line: `"I typed up the New Will myself this afternoon. Arthur added the Archive Box #4 release clause at the very last minute—whoever read Page 14 at 4:00 PM realized they had until 9:00 PM to stop him!"` },
+          { act: "ACT III", target: `Say to ${wineSpikerBase.name} [after Exhibit E]:`, line: `"You didn't even know about Page 14's 2008 clause, did you? ${act3Motive} Look at Exhibit E—the real killer was terrified of Archive Box #4!"` }
         ];
       }
       case 18: { // Nadia Vance (when Innocent)
         const t3 = pickTarget([2, 1, 7, 4, 13], [inspectorBase.id, witnessBase.id]);
         return [
-          { act: "ACT I", target: `Say to ${inspectorBase.name} (#${inspectorBase.id}):`, line: `"As a pharmacology researcher, something bothers me: cyanide has a strong bitter-almond odor, whereas concentrated Aconite is completely odorless and stops the heart in two to three minutes!"` },
-          { act: "ACT II", target: `Say to ${witnessBase.name} (#${witnessBase.id}) [after Exhibit D]:`, line: `"Look at Exhibit D's Study re-inspection—the puddle on the floor was clear, odorless water, and the wine glass wasn't even touched. Whoever claimed to smell 'bitter almonds from the wine' was steering us away from an odorless poison!"` },
-          { act: "ACT III", target: `Say to ${t3.name} (#${t3.id}) [after Exhibit F]:`, line: `"Exhibit F confirms my hunch! Chloral Hydrate in the wine is just a non-lethal sedative, while concentrated Aconite on Arthur's lips kills in 2–3 minutes—matching an 8:45 PM dose and an 8:48 PM collapse!"` }
+          { act: "ACT I", target: `Say to ${inspectorBase.name}:`, line: `"As a pharmacology researcher, something bothers me: cyanide has a strong bitter-almond odor, whereas concentrated Aconite is completely odorless and stops the heart in two to three minutes!"` },
+          { act: "ACT II", target: `Say to ${witnessBase.name} [after Exhibit D]:`, line: `"Look at Exhibit D's Study re-inspection—the puddle on the floor was clear, odorless water, and the wine glass wasn't even touched. Whoever claimed to smell 'bitter almonds from the wine' was steering us away from an odorless poison!"` },
+          { act: "ACT III", target: `Say to ${t3.name} [after Exhibit F]:`, line: `"Exhibit F confirms my hunch! Chloral Hydrate in the wine is just a non-lethal sedative, while concentrated Aconite on Arthur's lips kills in 2–3 minutes—matching an 8:45 PM dose and an 8:48 PM collapse!"` }
         ];
       }
       case 19: { // Capt. Roderick Hale
         const t2 = pickTarget([7, 2, 1, 4, 6], [witnessBase.id]);
         const t3 = pickTarget([2, inspectorBase.id, 1, 4, 13], [witnessBase.id, t2.id]);
         return [
-          { act: "ACT I", target: `Say to ${witnessBase.name} (#${witnessBase.id}):`, line: `"Hold everything! Someone just claimed Arthur's pocket watch ran twelve minutes slow? Hogwash! I synced my U.S. Naval Observatory chronometer with Arthur's watch at the pier yesterday—dead-on to the second!"` },
-          { act: "ACT II", target: `Say to ${t2.name} (#${t2.id}) [after Exhibit D]:`, line: `"If Arthur's watch never lost a second and smashed at 8:48 PM, then whoever we heard yelling at 8:55 PM wasn't Arthur—unless ghosts can shout through oak doors, it had to be that brass cylinder!"` },
-          { act: "ACT III", target: `Say to ${t3.name} (#${t3.id}) [after Exhibit E]:`, line: `"Arthur's Horologist Journal in Exhibit E backs me up 100%! His watch stopped at 8:48 PM—which means whoever snapped that watch lid shut and called it 'twelve minutes slow' lied to this entire room!"` }
+          { act: "ACT I", target: `Say to ${witnessBase.name}:`, line: `"Hold everything! Someone just claimed Arthur's pocket watch ran twelve minutes slow? Hogwash! I synced my U.S. Naval Observatory chronometer with Arthur's watch at the pier yesterday—dead-on to the second!"` },
+          { act: "ACT II", target: `Say to ${t2.name} [after Exhibit D]:`, line: `"If Arthur's watch never lost a second and smashed at 8:48 PM, then whoever we heard yelling at 8:55 PM wasn't Arthur—unless ghosts can shout through oak doors, it had to be that brass cylinder!"` },
+          { act: "ACT III", target: `Say to ${t3.name} [after Exhibit E]:`, line: `"Arthur's Horologist Journal in Exhibit E backs me up 100%! His watch stopped at 8:48 PM—which means whoever snapped that watch lid shut and called it 'twelve minutes slow' lied to this entire room!"` }
         ];
       }
       case 20: // Alistair Finch
@@ -1066,9 +1066,9 @@
         const t2 = pickTarget([7, 2, 1, 6, 4], [t1.id]);
         const t3 = pickTarget([2, 1, 7, 3, 4, 13], [t1.id, t2.id]);
         return [
-          { act: "ACT I", target: `Say to ${t1.name} (#${t1.id}):`, line: `"Don't you find it extraordinary? The exact words we heard Arthur shouting at 8:55 PM—'You've gone too far! I'm calling the police as soon as the lines are back!'—are word-for-word from Chapter 12 of the memoir he dictated to me two days ago!"` },
-          { act: "ACT II", target: `Say to ${t2.name} (#${t2.id}) [after Exhibit D]:`, line: `"I personally helped Arthur record Chapter 12 onto a blank brass cylinder two days ago and watched him set it beside the Automaton! If that cylinder is inside Exhibit D, someone swapped it to fake his voice!"` },
-          { act: "ACT III", target: `Say to ${t3.name} (#${t3.id}) [after Exhibit E]:`, line: `"Arthur fired me yesterday just for peeking at his sealed Archive Box #4! Chapter 12 of his memoir was all about that 2008 cover-up—and Exhibit E finally names the culprit he was protecting!"` }
+          { act: "ACT I", target: `Say to ${t1.name}:`, line: `"Don't you find it extraordinary? The exact words we heard Arthur shouting at 8:55 PM—'You've gone too far! I'm calling the police as soon as the lines are back!'—are word-for-word from Chapter 12 of the memoir he dictated to me two days ago!"` },
+          { act: "ACT II", target: `Say to ${t2.name} [after Exhibit D]:`, line: `"I personally helped Arthur record Chapter 12 onto a blank brass cylinder two days ago and watched him set it beside the Automaton! If that cylinder is inside Exhibit D, someone swapped it to fake his voice!"` },
+          { act: "ACT III", target: `Say to ${t3.name} [after Exhibit E]:`, line: `"Arthur fired me yesterday just for peeking at his sealed Archive Box #4! Chapter 12 of his memoir was all about that 2008 cover-up—and Exhibit E finally names the culprit he was protecting!"` }
         ];
       }
     }

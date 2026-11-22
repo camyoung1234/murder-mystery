@@ -57,25 +57,25 @@
       "team": "accomplice",
       "badge": "SHADOW TEAM — ACCOMPLICE",
       "badgeClass": "shadow",
-      "special": "YOU ARE ON THE SHADOW TEAM! You are allied with Alistair Finch (#20) and win ONLY if the Killer escapes indictment in the Final Verdict. Wake up with the Shadow Team during Blackout Phases.",
+      "special": "YOU ARE ON THE SHADOW TEAM! You are allied with Alistair Finch and win ONLY if the Killer escapes indictment in the Final Verdict. Wake up with the Shadow Team during Blackout Phases.",
       "persona": "Sharp-tongued, glamorous heiress. At 8:30 PM, you had a furious public argument with Arthur about being disinherited and shouted, 'You'll regret this before nine!'",
-      "secret": "Alistair Finch (#20) caught your private scandal and blackmailed you into cutting the basement generator breaker for 15 seconds at 9:00 PM sharp! You didn't know Alistair Finch was going to murder Arthur, but if Alistair Finch goes down, you go to prison as an accessory. Worse, your initials (E.V.) appear on the burned Exhibit C audit log from 2008—even though you had no access to Archive Box #4 in 2008!",
-      "clue": "STRATEGY: Deflect suspicion onto Victor Vance (#5) and defend Alistair Finch's (#20) 8:55 PM Grand Hall alibi!",
+      "secret": "Alistair Finch caught your private scandal and blackmailed you into cutting the basement generator breaker for 15 seconds at 9:00 PM sharp! You didn't know Alistair Finch was going to murder Arthur, but if Alistair Finch goes down, you go to prison as an accessory. Worse, your initials (E.V.) appear on the burned Exhibit C audit log from 2008—even though you had no access to Archive Box #4 in 2008!",
+      "clue": "STRATEGY: Deflect suspicion onto Victor Vance and defend Alistair Finch's 8:55 PM Grand Hall alibi!",
       "detention": "Searched from Lady Evelyn Vance's Belongings: Heavy rubber-insulated electrical gloves (smelling of ozone from the generator breaker) and an unsigned blackmail note: '9:00 PM sharp. Fifteen seconds of dark, or your secret goes to the police.'",
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Harriet Vance-Cole (#8):",
+          "target": "Say to Harriet Vance-Cole:",
           "line": "\"I wasn't in the Grand Hall at nine because I heard a shutter banging near the basement stairs. Stop pointing fingers at me when everyone knows Victor Vance was desperate to stop that Will tonight!\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Beatrice (Bea) Holloway (#15) [after Exhibit C]:",
+          "target": "Say to Beatrice (Bea) Holloway [after Exhibit C]:",
           "line": "\"Look at Exhibit C—2008! Yes, 'E.V.' was flagged on that burned page, but I had NO access to Archive Box #4 in 2008 and nothing to do with '2008 Plagiarism & Libel — Forged Historical Letters'! You're barking up the wrong tree!\""
         },
         {
           "act": "ACT III",
-          "target": "Say to Dr. Julian Mercer (#4):",
+          "target": "Say to Dr. Julian Mercer:",
           "line": "\"I didn't touch any poison and I didn't rig that Automaton! Look at who stood to gain from the unsigned Will—and remember Alistair Finch was in the Grand Hall at 8:55!\""
         }
       ]
@@ -89,24 +89,24 @@
       "badge": "INNOCENT",
       "badgeClass": "",
       "special": "",
-      "persona": "Calm, composed physician who has looked after Arthur's health for years. At 8:55 PM, you were standing right beside Alistair Finch (#20) in the Grand Hall when Arthur's voice boomed from upstairs.",
+      "persona": "Calm, composed physician who has looked after Arthur's health for years. At 8:55 PM, you were standing right beside Alistair Finch in the Grand Hall when Arthur's voice boomed from upstairs.",
       "secret": "You quietly wrote Arthur an off-the-books prescription for severe insomnia last month against hospital guidelines—embarrassing, not lethal.",
       "clue": "You know Arthur's heart was stable at dinner and that fast-acting Aconite is completely odorless—unlike cyanide's bitter-almond smell.",
       "detention": "Searched from Dr. Mercer's Medical Bag: A leather vial case with 6 sealed Heart Tonic vials (all intact) and an off-the-books insomnia prescription for Lord Arthur.",
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Lady Evelyn Vance (#1):",
+          "target": "Say to Lady Evelyn Vance:",
           "line": "\"As Arthur's physician, I can swear his heart was completely stable at dinner. Whatever killed him tonight behind that locked door was fast-acting foul play, not natural failure.\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Harriet Vance-Cole (#8) [after Exhibit D]:",
+          "target": "Say to Harriet Vance-Cole [after Exhibit D]:",
           "line": "\"Something about that 'bitter-almond' claim makes zero medical sense. Cyanide smells of bitter almonds, yes—but Exhibit D's Study re-inspection says the puddle had no scent at all! An odorless plant poison fits far better than cyanide.\""
         },
         {
           "act": "ACT III",
-          "target": "Say to Beatrice (Bea) Holloway (#15) [after Exhibit F]:",
+          "target": "Say to Beatrice (Bea) Holloway [after Exhibit F]:",
           "line": "\"Exhibit F confirms concentrated Aconite—fatal in two to three minutes. If Arthur collapsed at 8:48 PM, it entered his system right around 8:45 PM from whatever he carried into the Study!\""
         }
       ]
@@ -127,17 +127,17 @@
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Dr. Julian Mercer (#4):",
+          "target": "Say to Dr. Julian Mercer:",
           "line": "\"Keep your voice down! People are whispering about the wine—yes, I stepped into the Study around 8:05 PM to talk to Arthur, and he wasn't even there!\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Beatrice (Bea) Holloway (#15):",
+          "target": "Say to Beatrice (Bea) Holloway:",
           "line": "\"Between us—did Lord Arthur drink any of that red wine tonight? Alistair Finch claimed it smelled of poison, and I'm worried...\""
         },
         {
           "act": "ACT III",
-          "target": "Confess to Harriet Vance-Cole (#8) [after Exhibit F]:",
+          "target": "Confess to Harriet Vance-Cole [after Exhibit F]:",
           "line": "\"Fine! I put sleeping powder—chloral hydrate—in the Bordeaux decanter in the Dining & Sideboard at 7:58 PM to steal the Will! NOT Aconite! And Exhibit F proves he NEVER DRANK THE WINE! I'm a thief, not a murderer!\""
         }
       ]
@@ -158,17 +158,17 @@
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Harriet Vance-Cole (#8):",
+          "target": "Say to Harriet Vance-Cole:",
           "line": "\"I built the backup power system in this manor, and I'm telling you right now: the storm did NOT cause a clean 15-second blackout. Someone manually pulled the main breaker in the basement Generator Room!\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Dr. Julian Mercer (#4) [after Exhibit D]:",
+          "target": "Say to Dr. Julian Mercer [after Exhibit D]:",
           "line": "\"Look at Exhibit D—the Automaton's counterweight cam was shifted exactly two inches to strike the water carafe at 9:00 PM sharp. That takes deliberate calibration, not luck!\""
         },
         {
           "act": "ACT III",
-          "target": "Say to Lady Evelyn Vance (#1):",
+          "target": "Say to Lady Evelyn Vance:",
           "line": "\"Think like an engineer: the 9:00 PM blackout and the 9:00 PM counterweight drop happened on the exact same chime. Whoever pulled that basement breaker was working for the real killer!\""
         }
       ]
@@ -189,17 +189,17 @@
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Lady Evelyn Vance (#1):",
+          "target": "Say to Lady Evelyn Vance:",
           "line": "\"I did a headcount in the Grand Hall when the clock struck nine. You weren't there. Where exactly were you when the lights went out?\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Alistair Finch (#20) [after Exhibit D]:",
+          "target": "Say to Alistair Finch [after Exhibit D]:",
           "line": "\"Wait a second—Exhibit D's Study re-inspection shows Arthur was slumped face-down at 9:01 PM, yet you claimed you saw his pale lips the instant the lights returned—and the puddle was odorless water, not wine!\""
         },
         {
           "act": "ACT III",
-          "target": "Say to Victor Vance (#5) [after Exhibit F]:",
+          "target": "Say to Victor Vance [after Exhibit F]:",
           "line": "\"My field test found chloral hydrate—sleeping powder—in the red wine decanter. Exhibit F proves Arthur never drank it, so tell the truth right now and help us catch the real killer!\""
         }
       ]
@@ -213,24 +213,24 @@
       "badge": "INNOCENT",
       "badgeClass": "",
       "special": "",
-      "persona": "Icy, ambitious, and furious with Victor (#5) for gambling away your savings.",
+      "persona": "Icy, ambitious, and furious with Victor for gambling away your savings.",
       "secret": "At 8:35 PM near the basement stairs, you overheard two people whispering furiously: 'Fifteen seconds of dark at nine sharp, or your secret goes to the police!'",
       "clue": "You know for a fact that the 9:00 PM blackout was a deliberate blackmail job—NOT a storm surge!",
       "detention": "Searched from Lydia's Purse: Signed divorce papers naming Victor's $400k debt, plus a cocktail napkin note: '8:35 PM basement stairs — overheard: 15 seconds of dark at 9 sharp or secret goes to police.'",
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Victor Vance (#5):",
+          "target": "Say to Victor Vance:",
           "line": "\"Look me in the eye. If you did something desperate with that wine tonight because of money, I am not going down with you.\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Lady Evelyn Vance (#1):",
+          "target": "Say to Lady Evelyn Vance:",
           "line": "\"Funny thing—at 8:35 PM near the basement stairs, I overheard two people whispering furiously: 'Fifteen seconds of dark at nine sharp, or your secret goes to the police!' Care to tell me who was blackmailing you?\""
         },
         {
           "act": "ACT III",
-          "target": "Say to Beatrice (Bea) Holloway (#15):",
+          "target": "Say to Beatrice (Bea) Holloway:",
           "line": "\"Don't let anyone blame the storm for the 9:00 PM blackout! I overheard the blackmail threat on the basement stairs at 8:35 PM—whoever cut the lights was forced into it by the real killer!\""
         }
       ]
@@ -246,23 +246,23 @@
       "special": "",
       "persona": "Brisk, sharp-eyed housekeeper who notices everything dropped in a bin or tossed down the laundry chute.",
       "secret": "At 9:04 PM, minutes after the Study door was broken open, you heard something drop down the laundry chute—someone hastily ditched evidence from the Study!",
-      "clue": "1) At 8:40 PM a piping-hot cup of chamomile tea was poured in the Study—by 9:02 PM the untouched cup was barely lukewarm. 2) At 8:42 PM, YOU PERSONALLY SAW Alistair Finch (#20) hand Arthur a honey-lemon throat pastille in the Grand Hall right before Arthur locked himself in the Study!",
-      "detention": "Searched from Beatrice (Bea) Holloway's Belongings: Tonight's handwritten note: '8:40 PM — Saw hot chamomile tea brought up to Study. 8:42 PM — Watched Alistair Finch (#20) hand Arthur a honey-lemon throat pastille in the Grand Hall. 9:02 PM — Tea untouched & barely lukewarm; watch smashed at 8:48 PM.'",
+      "clue": "1) At 8:40 PM a piping-hot cup of chamomile tea was poured in the Study—by 9:02 PM the untouched cup was barely lukewarm. 2) At 8:42 PM, YOU PERSONALLY SAW Alistair Finch hand Arthur a honey-lemon throat pastille in the Grand Hall right before Arthur locked himself in the Study!",
+      "detention": "Searched from Beatrice (Bea) Holloway's Belongings: Tonight's handwritten note: '8:40 PM — Saw hot chamomile tea brought up to Study. 8:42 PM — Watched Alistair Finch hand Arthur a honey-lemon throat pastille in the Grand Hall. 9:02 PM — Tea untouched & barely lukewarm; watch smashed at 8:48 PM.'",
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Lady Evelyn Vance (#1):",
+          "target": "Say to Lady Evelyn Vance:",
           "line": "\"Something about this 9:00 PM timeline doesn't add up—Arthur's pocket watch smashed at 8:48 PM, and the chamomile tea poured at 8:40 was untouched and barely lukewarm by 9:02!\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Victor Vance (#5):",
+          "target": "Say to Victor Vance:",
           "line": "\"The wine glass on Arthur's desk was completely full. What troubles me is the single cup of hot chamomile tea poured at 8:40 PM—by 9:02 PM, it was untouched and barely lukewarm!\""
         },
         {
           "act": "ACT III",
-          "target": "Say to Dr. Julian Mercer (#4):",
-          "line": "\"Think back! At 8:42 PM in the Grand Hall, I personally watched Alistair Finch (#20) hand Arthur a honey-lemon throat pastille—and Arthur carried it straight up to his locked Study!\""
+          "target": "Say to Dr. Julian Mercer:",
+          "line": "\"Think back! At 8:42 PM in the Grand Hall, I personally watched Alistair Finch hand Arthur a honey-lemon throat pastille—and Arthur carried it straight up to his locked Study!\""
         }
       ]
     },
@@ -274,25 +274,25 @@
       "team": "killer",
       "badge": "SHADOW TEAM — KILLER",
       "badgeClass": "shadow",
-      "special": "YOU ARE THE KILLER! Win by avoiding indictment in the Final Verdict (frame Lady Evelyn Vance #1 or Victor Vance #5!). Your Shadow Team ally: Lady Evelyn Vance (#1). During Blackouts, wake up to Intimidate 1 guest OR Plant a False Lead.",
+      "special": "YOU ARE THE KILLER! Win by avoiding indictment in the Final Verdict (frame Lady Evelyn Vance or Victor Vance!). Your Shadow Team ally: Lady Evelyn Vance. During Blackouts, wake up to Intimidate 1 guest OR Plant a False Lead.",
       "persona": "Theatrical, scatterbrained ghostwriter living at the manor for two months to write Arthur's tell-all memoirs.",
-      "secret": "In 2008, YOU were behind \"2008 Plagiarism & Libel — Forged Historical Letters\" (signed \"A.F.\"). Tonight: at 8:15 PM you rigged the Chronos Automaton (8:55 PM voice + 9:00 PM carafe smash) and tried to burn the 2008 audit log in the Study fireplace; at 8:35 PM you blackmailed Lady Evelyn Vance (#1) to cut the generator at 9:00 PM; at 8:42 PM you handed Arthur a honey-lemon throat pastille laced with concentrated Aconite (he died at 8:48 PM). You stood next to Dr. Julian Mercer (#4) at 8:55 PM for an alibi, then rushed to the desk at 9:01 PM—pocketing the honey-lemon throat pastille (and dropping your botanical-smudged handkerchief down the upstairs laundry chute at 9:04 PM) while slipping up by claiming you saw his chalk-pale lips (he was face-down!), smelled 'bitter-almond wine,' and lied about the 8:48 PM watch.",
-      "clue": "STRATEGY: Stay calm! Let the room suspect Victor Vance (#5) for drugging the wine and Lady Evelyn Vance (#1) for the blackout and Exhibit C. If pressed on Exhibit E, claim Arthur's watch broke earlier or someone forged \"A.F.\" to frame you!",
+      "secret": "In 2008, YOU were behind \"2008 Plagiarism & Libel — Forged Historical Letters\" (signed \"A.F.\"). Tonight: at 8:15 PM you rigged the Chronos Automaton (8:55 PM voice + 9:00 PM carafe smash) and tried to burn the 2008 audit log in the Study fireplace; at 8:35 PM you blackmailed Lady Evelyn Vance to cut the generator at 9:00 PM; at 8:42 PM you handed Arthur a honey-lemon throat pastille laced with concentrated Aconite (he died at 8:48 PM). You stood next to Dr. Julian Mercer at 8:55 PM for an alibi, then rushed to the desk at 9:01 PM—pocketing the honey-lemon throat pastille (and dropping your botanical-smudged handkerchief down the upstairs laundry chute at 9:04 PM) while slipping up by claiming you saw his chalk-pale lips (he was face-down!), smelled 'bitter-almond wine,' and lied about the 8:48 PM watch.",
+      "clue": "STRATEGY: Stay calm! Let the room suspect Victor Vance for drugging the wine and Lady Evelyn Vance for the blackout and Exhibit C. If pressed on Exhibit E, claim Arthur's watch broke earlier or someone forged \"A.F.\" to frame you!",
       "detention": "Searched from Alistair Finch's Effects: A folded dinner napkin smudged with faint fireplace soot and an unsigned note in Alistair Finch's handwriting: \"Speak to Arthur privately before the 9:00 PM announcement—he cannot open that 2008 file tonight.\"",
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Beatrice (Bea) Holloway (#15):",
+          "target": "Say to Beatrice (Bea) Holloway:",
           "line": "\"I was standing right beside Dr. Julian Mercer in the Grand Hall at 8:55 PM when Arthur was shouting! With guests coming and going all evening, who had access to Arthur's Bordeaux decanter tonight? Someone clearly poisoned that wine before nine.\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Harriet Vance-Cole (#8):",
+          "target": "Say to Harriet Vance-Cole:",
           "line": "\"I rolled Arthur over at 9:01 to check his pulse—pure reflex! Don't get distracted by a half-burned 2008 page; ask Lady Evelyn Vance why the lights conveniently died at nine!\""
         },
         {
           "act": "ACT III",
-          "target": "Say to Beatrice (Bea) Holloway (#15):",
+          "target": "Say to Beatrice (Bea) Holloway:",
           "line": "\"Yes, I handed Arthur a honey-lemon throat pastille at 8:42 PM—completely harmless! If his watch stopped at 8:48, he must have dropped it before arguing at 8:55. Don't fall for a frame-up!\""
         }
       ]
@@ -303,13 +303,13 @@
       "id": "A",
       "act": 1,
       "title": "Exhibit A — Study Crime Scene Sketch (9:02 PM)",
-      "html": "<ul>\n          <li><strong>Door &amp; Window:</strong> Heavy oak double-door bolted from the <em>inside</em>; cliff window latched inside.</li>\n          <li><strong>The Body:</strong> Lord Arthur Vance slumped across his desk blotter. First reached and rolled over by <strong>Alistair Finch (#20)</strong> at 9:01 PM.</li>\n          <li><strong>Initial Statement (9:01 PM):</strong> As guests rushed in, <strong>Alistair Finch (#20)</strong> loudly claimed to see Arthur's <em>\"chalk-pale lips\"</em> and smell <em>\"bitter almonds from the spilled wine.\"</em></li>\n          <li><strong>On the Desk:</strong> Unsigned New Will; a crystal wine glass; a single poured porcelain cup of chamomile tea (<strong>barely lukewarm</strong> by 9:02 PM); a broken pocket watch.</li>\n          <li><strong>On the Floor:</strong> Shattered glass beside a heavy 5-lb brass counterweight in a pool of spilled liquid.</li>\n        </ul>"
+      "html": "<ul>\n          <li><strong>Door &amp; Window:</strong> Heavy oak double-door bolted from the <em>inside</em>; cliff window latched inside.</li>\n          <li><strong>The Body:</strong> Lord Arthur Vance slumped across his desk blotter. First reached and rolled over by <strong>Alistair Finch</strong> at 9:01 PM.</li>\n          <li><strong>Initial Statement (9:01 PM):</strong> As guests rushed in, <strong>Alistair Finch</strong> loudly claimed to see Arthur's <em>\"chalk-pale lips\"</em> and smell <em>\"bitter almonds from the spilled wine.\"</em></li>\n          <li><strong>On the Desk:</strong> Unsigned New Will; a crystal wine glass; a single poured porcelain cup of chamomile tea (<strong>barely lukewarm</strong> by 9:02 PM); a broken pocket watch.</li>\n          <li><strong>On the Floor:</strong> Shattered glass beside a heavy 5-lb brass counterweight in a pool of spilled liquid.</li>\n        </ul>"
     },
     {
       "id": "B",
       "act": 1,
       "title": "Exhibit B — Arthur's Shattered Pocket Watch",
-      "html": "<ul>\n          <li><strong>Make:</strong> Custom Vance Precision Gold Chronometer (<em>\"A.V. — Time Never Lies\"</em>).</li>\n          <li><strong>Condition:</strong> Crystal cracked; internal gears jammed from hitting the desk corner.</li>\n          <li><strong>Frozen Time:</strong> <strong>8:48 PM</strong> (12 minutes before the 9:00 PM blackout).</li>\n          <li><strong>Witness Note:</strong> <strong>Alistair Finch (#20)</strong> snapped the gold lid shut at 9:01 PM, claiming Arthur's watch <em>\"always ran twelve minutes slow.\"</em></li>\n        </ul>"
+      "html": "<ul>\n          <li><strong>Make:</strong> Custom Vance Precision Gold Chronometer (<em>\"A.V. — Time Never Lies\"</em>).</li>\n          <li><strong>Condition:</strong> Crystal cracked; internal gears jammed from hitting the desk corner.</li>\n          <li><strong>Frozen Time:</strong> <strong>8:48 PM</strong> (12 minutes before the 9:00 PM blackout).</li>\n          <li><strong>Witness Note:</strong> <strong>Alistair Finch</strong> snapped the gold lid shut at 9:01 PM, claiming Arthur's watch <em>\"always ran twelve minutes slow.\"</em></li>\n        </ul>"
     },
     {
       "id": "C",
@@ -321,13 +321,13 @@
       "id": "D",
       "act": 2,
       "title": "Exhibit D — Chronos Automaton, Wax Cylinder & Study Re-Inspection",
-      "html": "<ul>\n          <li><strong>Phonograph Drum:</strong> Plays a removable brass wax cylinder at a scheduled minute. Currently set to <strong>8:55 PM</strong>.</li>\n          <li><strong>Release Cam:</strong> Drops a 5-lb brass counterweight at <strong>9:00 PM</strong> (shifted 2 inches to strike the water carafe).</li>\n          <li><strong>Cylinder Label:</strong> Reads <em>\"9:00 PM Gala Greeting\"</em> — hastily glued over a scratched-out title: <strong>\"Memoir Draft — Confrontation.\"</strong></li>\n          <li><strong>Study Re-Inspection (Clear Light):</strong> The crystal wine glass on the desk is <strong>completely full &amp; untouched</strong>; the shattered glass on the floor is a <strong>water carafe</strong> in <strong>clear, odorless liquid</strong> (zero wine, zero bitter-almond scent). Desk-blotter impressions confirm Arthur collapsed <strong>face-down, facing away from the door</strong> until <strong>Alistair Finch (#20)</strong> rolled him over.</li>\n        </ul>"
+      "html": "<ul>\n          <li><strong>Phonograph Drum:</strong> Plays a removable brass wax cylinder at a scheduled minute. Currently set to <strong>8:55 PM</strong>.</li>\n          <li><strong>Release Cam:</strong> Drops a 5-lb brass counterweight at <strong>9:00 PM</strong> (shifted 2 inches to strike the water carafe).</li>\n          <li><strong>Cylinder Label:</strong> Reads <em>\"9:00 PM Gala Greeting\"</em> — hastily glued over a scratched-out title: <strong>\"Memoir Draft — Confrontation.\"</strong></li>\n          <li><strong>Study Re-Inspection (Clear Light):</strong> The crystal wine glass on the desk is <strong>completely full &amp; untouched</strong>; the shattered glass on the floor is a <strong>water carafe</strong> in <strong>clear, odorless liquid</strong> (zero wine, zero bitter-almond scent). Desk-blotter impressions confirm Arthur collapsed <strong>face-down, facing away from the door</strong> until <strong>Alistair Finch</strong> rolled him over.</li>\n        </ul>"
     },
     {
       "id": "E",
       "act": 3,
       "title": "Exhibit E — 2008 Dossier Ledger & Horologist Journal",
-      "html": "<ul>\n          <li><strong>Selected 2008 Archive Records:</strong><br/>\n            &bull; <strong>Lady Evelyn Vance (#1):</strong> <em>Cleared — No clearance or access to Archive Box #4 in 2008 (unrelated to the 2008 incident).</em><br/>\n            &bull; <strong>Dr. Julian Mercer (#4):</strong> Chief Resident, St. Jude's Clinic (2006–2008); retained 2009<br/>\n            &bull; <strong>Victor Vance (#5):</strong> Junior Commodities Broker, Vance Capital (2007–2008)<br/>\n            &bull; <strong>Harriet Vance-Cole (#8):</strong> County Magistrate, Coastal District (2004–2008)<br/>\n            &bull; <strong>Lydia Vance (#12):</strong> Corporate Accountant, Vance Holdings (2006–2008)<br/>\n            &bull; <strong>Alistair Finch (#20):</strong> Ghostwriter &amp; Archivist, Vance Press (2007–2008)\n          </li>\n          <li><strong>Arthur's Horologist Journal (Nov 15):</strong> <em>\"A clockmaker whose own pocket watch loses a single second is a fraud. My gold chronometer is calibrated daily to the U.S. Naval Observatory signal. It has not drifted by half a second in eleven years.\"</em></li>\n        </ul>"
+      "html": "<ul>\n          <li><strong>Selected 2008 Archive Records:</strong><br/>\n            &bull; <strong>Lady Evelyn Vance:</strong> <em>Cleared — No clearance or access to Archive Box #4 in 2008 (unrelated to the 2008 incident).</em><br/>\n            &bull; <strong>Dr. Julian Mercer:</strong> Chief Resident, St. Jude's Clinic (2006–2008); retained 2009<br/>\n            &bull; <strong>Victor Vance:</strong> Junior Commodities Broker, Vance Capital (2007–2008)<br/>\n            &bull; <strong>Harriet Vance-Cole:</strong> County Magistrate, Coastal District (2004–2008)<br/>\n            &bull; <strong>Lydia Vance:</strong> Corporate Accountant, Vance Holdings (2006–2008)<br/>\n            &bull; <strong>Alistair Finch:</strong> Ghostwriter &amp; Archivist, Vance Press (2007–2008)\n          </li>\n          <li><strong>Arthur's Horologist Journal (Nov 15):</strong> <em>\"A clockmaker whose own pocket watch loses a single second is a fraud. My gold chronometer is calibrated daily to the U.S. Naval Observatory signal. It has not drifted by half a second in eleven years.\"</em></li>\n        </ul>"
     },
     {
       "id": "F",

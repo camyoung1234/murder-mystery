@@ -65,17 +65,17 @@
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Jasper Moore (#6):",
+          "target": "Say to Jasper Moore:",
           "line": "\"I did a headcount in the Grand Hall when the clock struck nine. You weren't there. Where exactly were you when the lights went out?\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Dr. Julian Mercer (#4) [after Exhibit D]:",
+          "target": "Say to Dr. Julian Mercer [after Exhibit D]:",
           "line": "\"Wait a second—Exhibit D's Study re-inspection shows Arthur was slumped face-down at 9:01 PM, yet you claimed you saw his pale lips the instant the lights returned—and the puddle was odorless water, not wine!\""
         },
         {
           "act": "ACT III",
-          "target": "Say to Victor Vance (#5) [after Exhibit F]:",
+          "target": "Say to Victor Vance [after Exhibit F]:",
           "line": "\"My field test found chloral hydrate—sleeping powder—in the red wine decanter. Exhibit F proves Arthur never drank it, so tell the truth right now and help us catch the real killer!\""
         }
       ]
@@ -88,25 +88,25 @@
       "team": "killer",
       "badge": "SHADOW TEAM — KILLER",
       "badgeClass": "shadow",
-      "special": "YOU ARE THE KILLER! Win by avoiding indictment in the Final Verdict (frame Jasper Moore #6 or Victor Vance #5!). Your Shadow Team ally: Jasper Moore (#6). During Blackouts, wake up to Intimidate 1 guest OR Plant a False Lead.",
+      "special": "YOU ARE THE KILLER! Win by avoiding indictment in the Final Verdict (frame Jasper Moore or Victor Vance!). Your Shadow Team ally: Jasper Moore. During Blackouts, wake up to Intimidate 1 guest OR Plant a False Lead.",
       "persona": "Calm, composed physician who has looked after Arthur's health for years.",
-      "secret": "In 2008, YOU were behind \"2008 St. Jude's Clinic — Surgical Pump Trial\" (signed \"J.M.\"). Tonight: at 8:15 PM you rigged the Chronos Automaton (8:55 PM voice + 9:00 PM carafe smash) and tried to burn the 2008 audit log in the Study fireplace; at 8:35 PM you blackmailed Jasper Moore (#6) to cut the generator at 9:00 PM; at 8:42 PM you handed Arthur a nightly 8:45 PM sealed amber Heart Tonic vial laced with concentrated Aconite (he died at 8:48 PM). You stood next to Damien Cross (#14) at 8:55 PM for an alibi, then rushed to the desk at 9:01 PM—pocketing the nightly 8:45 PM sealed amber Heart Tonic vial (and dropping your botanical-smudged handkerchief down the upstairs laundry chute at 9:04 PM) while slipping up by claiming you saw his chalk-pale lips (he was face-down!), smelled 'bitter-almond wine,' and lied about the 8:48 PM watch.",
-      "clue": "STRATEGY: Stay calm! Let the room suspect Victor Vance (#5) for drugging the wine and Jasper Moore (#6) for the blackout and Exhibit C. If pressed on Exhibit E, claim Arthur's watch broke earlier or someone forged \"J.M.\" to frame you!",
+      "secret": "In 2008, YOU were behind \"2008 St. Jude's Clinic — Surgical Pump Trial\" (signed \"J.M.\"). Tonight: at 8:15 PM you rigged the Chronos Automaton (8:55 PM voice + 9:00 PM carafe smash) and tried to burn the 2008 audit log in the Study fireplace; at 8:35 PM you blackmailed Jasper Moore to cut the generator at 9:00 PM; at 8:42 PM you handed Arthur a nightly 8:45 PM sealed amber Heart Tonic vial laced with concentrated Aconite (he died at 8:48 PM). You stood next to Damien Cross at 8:55 PM for an alibi, then rushed to the desk at 9:01 PM—pocketing the nightly 8:45 PM sealed amber Heart Tonic vial (and dropping your botanical-smudged handkerchief down the upstairs laundry chute at 9:04 PM) while slipping up by claiming you saw his chalk-pale lips (he was face-down!), smelled 'bitter-almond wine,' and lied about the 8:48 PM watch.",
+      "clue": "STRATEGY: Stay calm! Let the room suspect Victor Vance for drugging the wine and Jasper Moore for the blackout and Exhibit C. If pressed on Exhibit E, claim Arthur's watch broke earlier or someone forged \"J.M.\" to frame you!",
       "detention": "Searched from Dr. Julian Mercer's Effects: A folded dinner napkin smudged with faint fireplace soot and an unsigned note in Dr. Julian Mercer's handwriting: \"Speak to Arthur privately before the 9:00 PM announcement—he cannot open that 2008 file tonight.\"",
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Chef Henri Laurent (#9):",
+          "target": "Say to Chef Henri Laurent:",
           "line": "\"I was standing right beside Damien Cross in the Grand Hall at 8:55 PM when Arthur was shouting! With guests coming and going all evening, who had access to Arthur's Bordeaux decanter tonight? Someone clearly poisoned that wine before nine.\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Clara Sterling (#2):",
+          "target": "Say to Clara Sterling:",
           "line": "\"I rolled Arthur over at 9:01 to check his pulse—pure reflex! Don't get distracted by a half-burned 2008 page; ask Jasper Moore why the lights conveniently died at nine!\""
         },
         {
           "act": "ACT III",
-          "target": "Say to Chef Henri Laurent (#9):",
+          "target": "Say to Chef Henri Laurent:",
           "line": "\"Yes, I handed Arthur a nightly 8:45 PM sealed amber Heart Tonic vial at 8:42 PM—completely harmless! If his watch stopped at 8:48, he must have dropped it before arguing at 8:55. Don't fall for a frame-up!\""
         }
       ]
@@ -127,17 +127,17 @@
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Damien Cross (#14):",
+          "target": "Say to Damien Cross:",
           "line": "\"Keep your voice down! People are whispering about the wine—yes, I stepped into the Study around 8:05 PM to talk to Arthur, and he wasn't even there!\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Chef Henri Laurent (#9):",
+          "target": "Say to Chef Henri Laurent:",
           "line": "\"Between us—did Lord Arthur drink any of that red wine tonight? Dr. Julian Mercer claimed it smelled of poison, and I'm worried...\""
         },
         {
           "act": "ACT III",
-          "target": "Confess to Clara Sterling (#2) [after Exhibit F]:",
+          "target": "Confess to Clara Sterling [after Exhibit F]:",
           "line": "\"Fine! I put sleeping powder—chloral hydrate—in the Bordeaux decanter in the Dining & Sideboard at 7:58 PM to steal the Will! NOT Aconite! And Exhibit F proves he NEVER DRANK THE WINE! I'm a thief, not a murderer!\""
         }
       ]
@@ -150,25 +150,25 @@
       "team": "accomplice",
       "badge": "SHADOW TEAM — ACCOMPLICE",
       "badgeClass": "shadow",
-      "special": "YOU ARE ON THE SHADOW TEAM! You are allied with Dr. Julian Mercer (#4) and win ONLY if the Killer escapes indictment in the Final Verdict. Wake up with the Shadow Team during Blackout Phases.",
+      "special": "YOU ARE ON THE SHADOW TEAM! You are allied with Dr. Julian Mercer and win ONLY if the Killer escapes indictment in the Final Verdict. Wake up with the Shadow Team during Blackout Phases.",
       "persona": "Intense Chief Engineer who maintains the manor's backup generator and knows the Chronos Automaton inside and out.",
-      "secret": "Dr. Julian Mercer (#4) caught your private scandal and blackmailed you into cutting the basement generator breaker for 15 seconds at 9:00 PM sharp! You didn't know Dr. Julian Mercer was going to murder Arthur, but if Dr. Julian Mercer goes down, you go to prison as an accessory. Worse, your initials (J.M.) appear on the burned Exhibit C audit log from 2008—even though you had no access to Archive Box #4 in 2008!",
-      "clue": "STRATEGY: Deflect suspicion onto Victor Vance (#5) and defend Dr. Julian Mercer's (#4) 8:55 PM Grand Hall alibi!",
+      "secret": "Dr. Julian Mercer caught your private scandal and blackmailed you into cutting the basement generator breaker for 15 seconds at 9:00 PM sharp! You didn't know Dr. Julian Mercer was going to murder Arthur, but if Dr. Julian Mercer goes down, you go to prison as an accessory. Worse, your initials (J.M.) appear on the burned Exhibit C audit log from 2008—even though you had no access to Archive Box #4 in 2008!",
+      "clue": "STRATEGY: Deflect suspicion onto Victor Vance and defend Dr. Julian Mercer's 8:55 PM Grand Hall alibi!",
       "detention": "Searched from Jasper Moore's Belongings: Heavy rubber-insulated electrical gloves (smelling of ozone from the generator breaker) and an unsigned blackmail note: '9:00 PM sharp. Fifteen seconds of dark, or your secret goes to the police.'",
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Clara Sterling (#2):",
+          "target": "Say to Clara Sterling:",
           "line": "\"I wasn't in the Grand Hall at nine because I heard a shutter banging near the basement stairs. Stop pointing fingers at me when everyone knows Victor Vance was desperate to stop that Will tonight!\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Chef Henri Laurent (#9) [after Exhibit C]:",
+          "target": "Say to Chef Henri Laurent [after Exhibit C]:",
           "line": "\"Are you kidding me?! Look at the date on Exhibit C—2008! Just because my initials are 'J.M.' doesn't mean I had anything to do with '2008 St. Jude's Clinic — Surgical Pump Trial'! Check the 2008 records!\""
         },
         {
           "act": "ACT III",
-          "target": "Say to Clara Sterling (#2):",
+          "target": "Say to Clara Sterling:",
           "line": "\"I didn't touch any poison and I didn't rig that Automaton! Look at who stood to gain from the unsigned Will—and remember Dr. Julian Mercer was in the Grand Hall at 8:55!\""
         }
       ]
@@ -184,23 +184,23 @@
       "special": "",
       "persona": "Dramatic, fiercely proud head chef—offended anyone would suggest Arthur was poisoned by your food or wine!",
       "secret": "At 7:58 PM in the Dining & Sideboard, you saw someone hovering nervously over the opened 1998 Bordeaux decanter with a tiny white paper packet.",
-      "clue": "1) At 8:40 PM a piping-hot cup of chamomile tea was poured in the Study—by 9:02 PM the untouched cup was barely lukewarm. 2) At 8:42 PM, YOU PERSONALLY SAW Dr. Julian Mercer (#4) hand Arthur a nightly 8:45 PM sealed amber Heart Tonic vial in the Grand Hall right before Arthur locked himself in the Study!",
-      "detention": "Searched from Chef Henri Laurent's Belongings: Tonight's handwritten note: '8:40 PM — Saw hot chamomile tea brought up to Study. 8:42 PM — Watched Dr. Julian Mercer (#4) hand Arthur a nightly 8:45 PM sealed amber Heart Tonic vial in the Grand Hall. 9:02 PM — Tea untouched & barely lukewarm; watch smashed at 8:48 PM.'",
+      "clue": "1) At 8:40 PM a piping-hot cup of chamomile tea was poured in the Study—by 9:02 PM the untouched cup was barely lukewarm. 2) At 8:42 PM, YOU PERSONALLY SAW Dr. Julian Mercer hand Arthur a nightly 8:45 PM sealed amber Heart Tonic vial in the Grand Hall right before Arthur locked himself in the Study!",
+      "detention": "Searched from Chef Henri Laurent's Belongings: Tonight's handwritten note: '8:40 PM — Saw hot chamomile tea brought up to Study. 8:42 PM — Watched Dr. Julian Mercer hand Arthur a nightly 8:45 PM sealed amber Heart Tonic vial in the Grand Hall. 9:02 PM — Tea untouched & barely lukewarm; watch smashed at 8:48 PM.'",
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Clara Sterling (#2):",
+          "target": "Say to Clara Sterling:",
           "line": "\"Something about this 9:00 PM timeline doesn't add up—Arthur's pocket watch smashed at 8:48 PM, and the chamomile tea poured at 8:40 was untouched and barely lukewarm by 9:02!\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Victor Vance (#5):",
+          "target": "Say to Victor Vance:",
           "line": "\"The wine glass on Arthur's desk was completely full. What troubles me is the single cup of hot chamomile tea poured at 8:40 PM—by 9:02 PM, it was untouched and barely lukewarm!\""
         },
         {
           "act": "ACT III",
-          "target": "Say to Damien Cross (#14):",
-          "line": "\"Think back! At 8:42 PM in the Grand Hall, I personally watched Dr. Julian Mercer (#4) hand Arthur a nightly 8:45 PM sealed amber Heart Tonic vial—and Arthur carried it straight up to his locked Study!\""
+          "target": "Say to Damien Cross:",
+          "line": "\"Think back! At 8:42 PM in the Grand Hall, I personally watched Dr. Julian Mercer hand Arthur a nightly 8:45 PM sealed amber Heart Tonic vial—and Arthur carried it straight up to his locked Study!\""
         }
       ]
     },
@@ -220,17 +220,17 @@
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Clara Sterling (#2):",
+          "target": "Say to Clara Sterling:",
           "line": "\"Don't let anyone tell you Arthur was alive and well at 8:50. I was... admiring the upstairs gallery around 8:48 PM, and I distinctly heard a heavy, muffled THUMP inside his locked Study—followed by dead silence.\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Jasper Moore (#6) [after Exhibit D]:",
+          "target": "Say to Jasper Moore [after Exhibit D]:",
           "line": "\"You know clockwork better than anyone here—could the Automaton play a voice at 8:55 and drop a counterweight at 9:00? Because whatever thumped at 8:48 PM sounded like a man hitting the floor!\""
         },
         {
           "act": "ACT III",
-          "target": "Say to Dr. Julian Mercer (#4):",
+          "target": "Say to Dr. Julian Mercer:",
           "line": "\"Fine, I had no business lingering in the upstairs gallery at 8:48 PM—I was eyeing a Fabergé clock, all right? Arrest me for bad taste, not murder! But I swear Arthur collapsed at 8:48 PM!\""
         }
       ]
@@ -244,24 +244,24 @@
       "badge": "INNOCENT",
       "badgeClass": "",
       "special": "",
-      "persona": "Tough, cynical head of security who knows every corridor, lock, and blind spot in Ravenshollow Manor. At 8:55 PM, you were standing right beside Dr. Julian Mercer (#4) in the Grand Hall when Arthur's voice boomed from upstairs.",
+      "persona": "Tough, cynical head of security who knows every corridor, lock, and blind spot in Ravenshollow Manor. At 8:55 PM, you were standing right beside Dr. Julian Mercer in the Grand Hall when Arthur's voice boomed from upstairs.",
       "secret": "You were paid years ago to bury corporate PR headaches for Arthur—and you're terrified of federal subpoenas.",
       "clue": "You inspected the Study door at 9:01 PM and confirmed the steel deadbolt was genuinely thrown from the inside—meaning the poison entered the room WITH Arthur at 8:45 PM.",
       "detention": "Searched from Damien's Jacket: A security log confirming the Study deadbolt was bolted from inside, plus an old NDA from Vance Precision.",
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Clara Sterling (#2):",
+          "target": "Say to Clara Sterling:",
           "line": "\"As head of security, I inspected the Study door at 9:01 PM myself—the steel deadbolt was genuinely thrown from the inside. Nobody walked in or out after Arthur locked it at 8:45 PM.\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Jasper Moore (#6) [after Exhibit D]:",
+          "target": "Say to Jasper Moore [after Exhibit D]:",
           "line": "\"Think tactically: if the Study deadbolt was locked from inside at 8:45, the ONLY way to stage an 8:55 shout and a 9:00 crash was a rigged mechanical timer inside the room!\""
         },
         {
           "act": "ACT III",
-          "target": "Say to Chef Henri Laurent (#9) [after Exhibit F]:",
+          "target": "Say to Chef Henri Laurent [after Exhibit F]:",
           "line": "\"Locked door from the inside means the Aconite walked into the Study WITH Arthur at 8:45 PM. Whoever handed him something at 8:42 PM in the Grand Hall is our killer!\""
         }
       ]
@@ -282,17 +282,17 @@
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Jasper Moore (#6):",
+          "target": "Say to Jasper Moore:",
           "line": "\"A word in private! At 8:38 PM I saw you looking panicked in the hall and heard you mutter about being blackmailed into cutting the manor's power at 9:00 PM sharp. What the hell is going on?\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Clara Sterling (#2):",
+          "target": "Say to Clara Sterling:",
           "line": "\"Arthur and I were business rivals, not enemies to the death. If you want to know why the lights died at nine, stop blaming the storm—someone in this house blackmailed an accomplice into pulling the breaker!\""
         },
         {
           "act": "ACT III",
-          "target": "Say to Jasper Moore (#6):",
+          "target": "Say to Jasper Moore:",
           "line": "\"A man is dead! Whoever blackmailed you tonight used your 9:00 PM blackout as cover for a murder that happened twelve minutes earlier—save yourself before you take the fall!\""
         }
       ]
@@ -313,17 +313,17 @@
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Clara Sterling (#2):",
+          "target": "Say to Clara Sterling:",
           "line": "\"As a pharmacology researcher, something bothers me: cyanide has a strong bitter-almond odor, whereas concentrated Aconite is completely odorless and stops the heart in two to three minutes!\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Chef Henri Laurent (#9) [after Exhibit D]:",
+          "target": "Say to Chef Henri Laurent [after Exhibit D]:",
           "line": "\"Look at Exhibit D's Study re-inspection—the puddle on the floor was clear, odorless water, and the wine glass wasn't even touched. Whoever claimed to smell 'bitter almonds from the wine' was steering us away from an odorless poison!\""
         },
         {
           "act": "ACT III",
-          "target": "Say to Dr. Julian Mercer (#4) [after Exhibit F]:",
+          "target": "Say to Dr. Julian Mercer [after Exhibit F]:",
           "line": "\"Exhibit F confirms my hunch! Chloral Hydrate in the wine is just a non-lethal sedative, while concentrated Aconite on Arthur's lips kills in 2–3 minutes—matching an 8:45 PM dose and an 8:48 PM collapse!\""
         }
       ]
@@ -344,17 +344,17 @@
       "dialogues": [
         {
           "act": "ACT I",
-          "target": "Say to Clara Sterling (#2):",
+          "target": "Say to Clara Sterling:",
           "line": "\"Don't you find it extraordinary? The exact words we heard Arthur shouting at 8:55 PM—'You've gone too far! I'm calling the police as soon as the lines are back!'—are word-for-word from Chapter 12 of the memoir he dictated to me two days ago!\""
         },
         {
           "act": "ACT II",
-          "target": "Say to Jasper Moore (#6) [after Exhibit D]:",
+          "target": "Say to Jasper Moore [after Exhibit D]:",
           "line": "\"I personally helped Arthur record Chapter 12 onto a blank brass cylinder two days ago and watched him set it beside the Automaton! If that cylinder is inside Exhibit D, someone swapped it to fake his voice!\""
         },
         {
           "act": "ACT III",
-          "target": "Say to Dr. Julian Mercer (#4) [after Exhibit E]:",
+          "target": "Say to Dr. Julian Mercer [after Exhibit E]:",
           "line": "\"Arthur fired me yesterday just for peeking at his sealed Archive Box #4! Chapter 12 of his memoir was all about that 2008 cover-up—and Exhibit E finally names the culprit he was protecting!\""
         }
       ]
@@ -365,13 +365,13 @@
       "id": "A",
       "act": 1,
       "title": "Exhibit A — Study Crime Scene Sketch (9:02 PM)",
-      "html": "<ul>\n          <li><strong>Door &amp; Window:</strong> Heavy oak double-door bolted from the <em>inside</em>; cliff window latched inside.</li>\n          <li><strong>The Body:</strong> Lord Arthur Vance slumped across his desk blotter. First reached and rolled over by <strong>Dr. Julian Mercer (#4)</strong> at 9:01 PM.</li>\n          <li><strong>Initial Statement (9:01 PM):</strong> As guests rushed in, <strong>Dr. Julian Mercer (#4)</strong> loudly claimed to see Arthur's <em>\"chalk-pale lips\"</em> and smell <em>\"bitter almonds from the spilled wine.\"</em></li>\n          <li><strong>On the Desk:</strong> Unsigned New Will; a crystal wine glass; a single poured porcelain cup of chamomile tea (<strong>barely lukewarm</strong> by 9:02 PM); a broken pocket watch.</li>\n          <li><strong>On the Floor:</strong> Shattered glass beside a heavy 5-lb brass counterweight in a pool of spilled liquid.</li>\n        </ul>"
+      "html": "<ul>\n          <li><strong>Door &amp; Window:</strong> Heavy oak double-door bolted from the <em>inside</em>; cliff window latched inside.</li>\n          <li><strong>The Body:</strong> Lord Arthur Vance slumped across his desk blotter. First reached and rolled over by <strong>Dr. Julian Mercer</strong> at 9:01 PM.</li>\n          <li><strong>Initial Statement (9:01 PM):</strong> As guests rushed in, <strong>Dr. Julian Mercer</strong> loudly claimed to see Arthur's <em>\"chalk-pale lips\"</em> and smell <em>\"bitter almonds from the spilled wine.\"</em></li>\n          <li><strong>On the Desk:</strong> Unsigned New Will; a crystal wine glass; a single poured porcelain cup of chamomile tea (<strong>barely lukewarm</strong> by 9:02 PM); a broken pocket watch.</li>\n          <li><strong>On the Floor:</strong> Shattered glass beside a heavy 5-lb brass counterweight in a pool of spilled liquid.</li>\n        </ul>"
     },
     {
       "id": "B",
       "act": 1,
       "title": "Exhibit B — Arthur's Shattered Pocket Watch",
-      "html": "<ul>\n          <li><strong>Make:</strong> Custom Vance Precision Gold Chronometer (<em>\"A.V. — Time Never Lies\"</em>).</li>\n          <li><strong>Condition:</strong> Crystal cracked; internal gears jammed from hitting the desk corner.</li>\n          <li><strong>Frozen Time:</strong> <strong>8:48 PM</strong> (12 minutes before the 9:00 PM blackout).</li>\n          <li><strong>Witness Note:</strong> <strong>Dr. Julian Mercer (#4)</strong> snapped the gold lid shut at 9:01 PM, claiming Arthur's watch <em>\"always ran twelve minutes slow.\"</em></li>\n        </ul>"
+      "html": "<ul>\n          <li><strong>Make:</strong> Custom Vance Precision Gold Chronometer (<em>\"A.V. — Time Never Lies\"</em>).</li>\n          <li><strong>Condition:</strong> Crystal cracked; internal gears jammed from hitting the desk corner.</li>\n          <li><strong>Frozen Time:</strong> <strong>8:48 PM</strong> (12 minutes before the 9:00 PM blackout).</li>\n          <li><strong>Witness Note:</strong> <strong>Dr. Julian Mercer</strong> snapped the gold lid shut at 9:01 PM, claiming Arthur's watch <em>\"always ran twelve minutes slow.\"</em></li>\n        </ul>"
     },
     {
       "id": "C",
@@ -383,13 +383,13 @@
       "id": "D",
       "act": 2,
       "title": "Exhibit D — Chronos Automaton, Wax Cylinder & Study Re-Inspection",
-      "html": "<ul>\n          <li><strong>Phonograph Drum:</strong> Plays a removable brass wax cylinder at a scheduled minute. Currently set to <strong>8:55 PM</strong>.</li>\n          <li><strong>Release Cam:</strong> Drops a 5-lb brass counterweight at <strong>9:00 PM</strong> (shifted 2 inches to strike the water carafe).</li>\n          <li><strong>Cylinder Label:</strong> Reads <em>\"9:00 PM Gala Greeting\"</em> — hastily glued over a scratched-out title: <strong>\"Memoir Draft — Confrontation.\"</strong></li>\n          <li><strong>Study Re-Inspection (Clear Light):</strong> The crystal wine glass on the desk is <strong>completely full &amp; untouched</strong>; the shattered glass on the floor is a <strong>water carafe</strong> in <strong>clear, odorless liquid</strong> (zero wine, zero bitter-almond scent). Desk-blotter impressions confirm Arthur collapsed <strong>face-down, facing away from the door</strong> until <strong>Dr. Julian Mercer (#4)</strong> rolled him over.</li>\n        </ul>"
+      "html": "<ul>\n          <li><strong>Phonograph Drum:</strong> Plays a removable brass wax cylinder at a scheduled minute. Currently set to <strong>8:55 PM</strong>.</li>\n          <li><strong>Release Cam:</strong> Drops a 5-lb brass counterweight at <strong>9:00 PM</strong> (shifted 2 inches to strike the water carafe).</li>\n          <li><strong>Cylinder Label:</strong> Reads <em>\"9:00 PM Gala Greeting\"</em> — hastily glued over a scratched-out title: <strong>\"Memoir Draft — Confrontation.\"</strong></li>\n          <li><strong>Study Re-Inspection (Clear Light):</strong> The crystal wine glass on the desk is <strong>completely full &amp; untouched</strong>; the shattered glass on the floor is a <strong>water carafe</strong> in <strong>clear, odorless liquid</strong> (zero wine, zero bitter-almond scent). Desk-blotter impressions confirm Arthur collapsed <strong>face-down, facing away from the door</strong> until <strong>Dr. Julian Mercer</strong> rolled him over.</li>\n        </ul>"
     },
     {
       "id": "E",
       "act": 3,
       "title": "Exhibit E — 2008 Dossier Ledger & Horologist Journal",
-      "html": "<ul>\n          <li><strong>Selected 2008 Archive Records:</strong><br/>\n            &bull; <strong>Clara Sterling (#2):</strong> Lead Trust Counsel, Vance Legal Holdings (2005–present)<br/>\n            &bull; <strong>Dr. Julian Mercer (#4):</strong> Chief Resident, St. Jude's Clinic (2006–2008); retained 2009<br/>\n            &bull; <strong>Victor Vance (#5):</strong> Junior Commodities Broker, Vance Capital (2007–2008)<br/>\n            &bull; <strong>Jasper Moore (#6):</strong> <em>Cleared — No clearance or access to Archive Box #4 in 2008 (unrelated to the 2008 incident).</em><br/>\n            &bull; <strong>Damien Cross (#14):</strong> Private Investigator &amp; Fixer, Cross Security (2006–2008)<br/>\n            &bull; <strong>Gideon Thorne (#16):</strong> VP of Engineering, Vance Precision (2005–2008)\n          </li>\n          <li><strong>Arthur's Horologist Journal (Nov 15):</strong> <em>\"A clockmaker whose own pocket watch loses a single second is a fraud. My gold chronometer is calibrated daily to the U.S. Naval Observatory signal. It has not drifted by half a second in eleven years.\"</em></li>\n        </ul>"
+      "html": "<ul>\n          <li><strong>Selected 2008 Archive Records:</strong><br/>\n            &bull; <strong>Clara Sterling:</strong> Lead Trust Counsel, Vance Legal Holdings (2005–present)<br/>\n            &bull; <strong>Dr. Julian Mercer:</strong> Chief Resident, St. Jude's Clinic (2006–2008); retained 2009<br/>\n            &bull; <strong>Victor Vance:</strong> Junior Commodities Broker, Vance Capital (2007–2008)<br/>\n            &bull; <strong>Jasper Moore:</strong> <em>Cleared — No clearance or access to Archive Box #4 in 2008 (unrelated to the 2008 incident).</em><br/>\n            &bull; <strong>Damien Cross:</strong> Private Investigator &amp; Fixer, Cross Security (2006–2008)<br/>\n            &bull; <strong>Gideon Thorne:</strong> VP of Engineering, Vance Precision (2005–2008)\n          </li>\n          <li><strong>Arthur's Horologist Journal (Nov 15):</strong> <em>\"A clockmaker whose own pocket watch loses a single second is a fraud. My gold chronometer is calibrated daily to the U.S. Naval Observatory signal. It has not drifted by half a second in eleven years.\"</em></li>\n        </ul>"
     },
     {
       "id": "F",
