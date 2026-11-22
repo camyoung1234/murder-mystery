@@ -548,9 +548,34 @@
         killerBase, coreAccompliceBase, inspectorBase, witnessBase, wineSpikerBase, alibiWitnessBase, base
       });
 
+      // Final Verdict Accusation Response (Read aloud only if indicted in the Final Verdict)
+      let accusedResponse = "";
+      if (isKiller) {
+        const allyNames = accomplices.map(aid => BASE_CHARACTERS[aid - 1].name).join(" and ");
+        accusedResponse = `CONFESSION (YOU CAUGHT ME!): "Alright—you got me! I killed Arthur Vance. In 2008 I was behind '${killerBase.scandalTitle}', and I couldn't let his New Will open Archive Box #4. At 8:15 PM I rigged the Chronos Automaton to play his angry recording at 8:55 PM and smash the water carafe at 9:00 PM. I blackmailed ${coreAccompliceBase.name} to cut the lights at nine, and at 8:42 PM I handed Arthur ${deliveryWithArticle} laced with concentrated Aconite—he died alone at 8:48 PM. I used ${alibiWitnessBase.name} for my 8:55 PM alibi, and only slipped up at 9:01 PM when I claimed I smelled bitter-almond wine and saw his pale lips while he was face-down! My Shadow Team ${accomplices.length === 1 ? "ally was" : "allies were"} ${allyNames}."`;
+      } else if (isAccomplice) {
+        let helpDetail = "";
+        if (isCoreAcc) {
+          helpDetail = "I was blackmailed into cutting the basement generator breaker for 15 seconds at 9:00 PM sharp";
+        } else if (accomplices.indexOf(id) === 1) {
+          helpDetail = "I kept the upstairs gallery clear from 8:10 to 8:20 PM while the Automaton was rigged";
+        } else {
+          helpDetail = "I helped steer suspicion toward the wine and away from the 2008 Archive Box #4 trail";
+        }
+        accusedResponse = `ACCOMPLICE CAUGHT (NOT THE KILLER!): "Wait—stop! I admit I'm on the Shadow Team: ${helpDetail}. But I am NOT the killer, and I'm not ratting them out! You caught an accomplice, not the mastermind. Hold ONE Sudden-Death Final Vote right now to name the true killer—if you miss again, the Shadow Team wins!"`;
+      } else if (isWineSpiker) {
+        accusedResponse = `INNOCENT DEFENSE: "I am INNOCENT of murder! Yes, I put Chloral Hydrate—harmless sleeping powder—into the Bordeaux decanter at 7:58 PM so I could check the New Will. I was terrified I'd killed him until Exhibit F proved his wine glass was completely full and untouched! Arthur died at 8:48 PM from concentrated Aconite—not my sleeping powder!"`;
+      } else if (isInspector) {
+        accusedResponse = `INNOCENT DEFENSE: "I am INNOCENT! In 2008 I was ${base.ledger2008}—I have zero connection to '${killerBase.scandalTitle}'. Better yet, I brought the field chemistry kit that produced Exhibit F and proved Arthur died of Aconite! Why would the killer expose their own murder weapon?"`;
+      } else if (isWitness) {
+        accusedResponse = `INNOCENT DEFENSE: "I am INNOCENT! Check Exhibit E—in 2008 I was ${base.ledger2008}, with no Archive Box #4 motive. I poured the chamomile tea that sat untouched, saw the 8:48 PM watch, and watched the real killer hand Arthur ${deliveryWithArticle} at 8:42 PM!"`;
+      } else {
+        accusedResponse = `INNOCENT DEFENSE: "I am INNOCENT! Check Exhibit E—in 2008 I was ${base.ledger2008}, with zero connection to '${killerBase.scandalTitle}' or Archive Box #4. I had no concentrated Aconite, didn't touch the Chronos Automaton, and didn't cut the generator!"`;
+      }
+
       return {
         id, name: base.name, role, initials: base.initials,
-        team, badge, badgeClass, special, persona, secret, clue, detention, dialogues
+        team, badge, badgeClass, special, persona, secret, clue, detention, accusedResponse, dialogues
       };
     });
 

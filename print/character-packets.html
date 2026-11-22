@@ -226,21 +226,26 @@
       padding-top: 3px;
       margin-bottom: 6px;
     }
-    .detention-card { border: 2px solid #111; padding: 9px 12px; background: #fafafa; }
+    .sealed-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 8px;
+    }
+    .detention-card { border: 2px solid #111; padding: 8px 10px; background: #fafafa; }
     .detention-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
       border-bottom: 1px solid #999;
-      padding-bottom: 4px;
-      margin-bottom: 6px;
+      padding-bottom: 3px;
+      margin-bottom: 5px;
     }
-    .detention-card p { font-size: 0.84rem; }
+    .detention-card p { font-size: 0.78rem; line-height: 1.32; }
 
     @media print {
       body { background: #fff; }
@@ -380,13 +385,22 @@
           </div>
 
           <div class="detention-wrapper">
-            <div class="cut-line">&#9986; FOLD UP &amp; TAPE SHUT (OR CUT &amp; ENVELOPE) — DO NOT OPEN UNLESS DETAINED OR INSPECTED &#9986;</div>
-            <div class="detention-card">
-              <div class="detention-header">
-                <span>SEALED DETENTION CARD &bull; ${s.name}</span>
-                <span>CASE ${scenario.code}</span>
+            <div class="cut-line">&#9986; FOLD UP &amp; TAPE SHUT — DO NOT OPEN UNLESS DETAINED OR ACCUSED IN FINAL VERDICT &#9986;</div>
+            <div class="sealed-grid">
+              <div class="detention-card">
+                <div class="detention-header">
+                  <span>SEALED DETENTION CARD</span>
+                  <span>${s.name}</span>
+                </div>
+                <p>${s.detention}</p>
               </div>
-              <p>${s.detention}</p>
+              <div class="detention-card">
+                <div class="detention-header">
+                  <span>IF INDICTED IN FINAL VERDICT</span>
+                  <span>CASE ${scenario.code}</span>
+                </div>
+                <p>${s.accusedResponse}</p>
+              </div>
             </div>
           </div>
         </div>

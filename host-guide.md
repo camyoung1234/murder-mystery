@@ -1,8 +1,8 @@
-# Host Guide — *The Last Chime of Ravenshollow*
+# Case Solution & Verification Guide — *The Last Chime of Ravenshollow*
 
-> **SPOILER WARNING:** This document contains the complete solution, hidden roles, and logical proof for the **Classic Default Case (Dr. Julian Mercer `#4`)**. Only a non-playing **Host** should read this before the game!
+> **OPTIONAL REFERENCE (NOT NEEDED TO PLAY):** This game is 100% hostless—you do **not** need this guide to run a session. It contains the complete solution, hidden roles, and logical proof for the **Classic Default Case (Dr. Julian Mercer `#4`)**, which is useful for **double-checking results, post-game review, and testing for inconsistencies**.
 >
-> **Playing a Randomized Case Code (`RV-XXXX`)?** Do **NOT** use this static file—open [`print/host-guide.html`](print/host-guide.html) (dynamically synced to your Case Code & player count) or use the spoiler-free Auto-Host in [`companion/index.html`](companion/index.html)!
+> **Checking a Randomized Case Code (`RV-XXXX`)?** Open [`print/host-guide.html`](print/host-guide.html) (dynamically synced to your Case Code & player count) or use **Reveal Full Solution** in [`companion/index.html`](companion/index.html).
 
 ---
 
@@ -76,15 +76,11 @@ Every vote is conducted publicly among all players (show of hands or simultaneou
 ### Town Hall Vote #2 (End of Act II — "Search & Detain" — 3 Minutes)
 Every non-detained player publicly votes for **one suspect** to **Search & Detain** (the Group Leader breaks any tie).
 
-### Final Verdict (End of Act III — "Indictment" — 3 Minutes)
-Every player (including Detained players!) casts a final vote for:
-1. **The Killer** *(Determines Team Victory)*
-2. **The Accomplice(s)** *(Bonus)*
-3. **How & Why It Was Done** *(Bonus — Master Detective Award)*
-
-### Win Conditions
-- **Innocent Guests Win** if a plurality/majority of Final Verdict ballots indict **Dr. Julian Mercer (`#4`)**.
-- **Shadow Team Wins** if the Final Verdict indicts **anyone else** (including if they successfully frame Jasper Moore or Victor Vance!).
+### Final Verdict & Accusation Responses (End of Act III — 3 Minutes)
+Every player (including Detained players!) casts a final public vote for **The Killer**. Whoever is indicted immediately opens and reads their **If Indicted in Final Verdict** card aloud:
+- **If an Innocent is indicted:** They read their **Innocent Defense** proving their innocence—**Shadow Team Wins!**
+- **If an Accomplice is indicted:** They admit how they helped the Shadow Team, declare they are **not** the Killer (without ratting out the Killer), and trigger **one Sudden-Death Final Vote** to name the true Killer!
+- **If the Killer is indicted:** They read their **Confession** on the spot, explaining how they committed the murder—**Innocent Guests Win!**
 
 ---
 
